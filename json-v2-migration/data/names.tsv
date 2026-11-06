@@ -1,0 +1,31 @@
+key	role	repository	visibility
+agon	adversarial code review	latere-ai/agon	public
+ai-as-an-infrastructure	code for a book	latere-ai/ai-as-an-infrastructure	public
+apps	app hosting API types	latere-ai/apps	public
+arca	file storage service	latere-ai/arca	public
+auth	identity provider	latere-ai/auth	private
+cella	sandbox host	latere-ai/cella	public
+census	dependency dashboard	latere-ai/census	private
+ci-gate	CI quality gate	latere-ai/ci-gate	public
+examen	agent evaluation service	latere-ai/examen	public
+faber	chat web app	latere-ai/faber	private
+forma	LLM inference engine	latere-ai/forma	public
+gradus	Mac and iPhone app core	latere-ai/gradus	private
+insula	app hosting service	latere-ai/insula	private
+latere-ai	company website	latere-ai/latere-ai	private
+latere-cli	command-line tool	latere-ai/latere-cli	public
+lectio	document parsing service	latere-ai/lectio	public
+limen	agent oversight service	latere-ai/limen	public
+lux	model gateway	latere-ai/lux	public
+managed-agents	agent sessions interface	latere-ai/managed-agents	public
+managed-agents_latere	agent sessions adapter	latere-ai/managed-agents	public
+onboarding	engineer onboarding	latere-ai/onboarding	private
+origo	git host	latere-ai/origo	public
+pay	prepaid credit library	latere-ai/pay	public
+pkg	shared library	latere-ai/pkg	public
+platform	API platform	latere-ai/platform	private
+pons	credential broker	latere-ai/pons	public
+replichai	reproducibility auditor	latere-ai/replichai	public
+sdk	public Go SDK	latere-ai/sdk-go	public
+sermo	encrypted messaging	latere-ai/sermo	public
+topos	agent runtime	latere-ai/topos	public

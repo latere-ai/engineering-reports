@@ -6,4 +6,8 @@ the figures, and the tools and scripts that produced them.
 
 | Study | What it measured |
 |---|---|
-| [json-v2-migration](json-v2-migration) | 29 Go repositories moved from `encoding/json` to `encoding/json/v2` on Go 1.27: 762 JSON benchmarks under the classic engine, Go 1.27's default and the migrated code, with the migration's full log |
+| [json-v2-migration](json-v2-migration) | 1.9 million lines of Go in 29 repositories moved from `encoding/json` to `encoding/json/v2` on Go 1.27: 762 JSON benchmarks under the classic engine, Go 1.27's default and the migrated code, the lessons, and the migration's full log |
+
+## License
+
+The text, data, scripts and tools are under the [MIT license](LICENSE).

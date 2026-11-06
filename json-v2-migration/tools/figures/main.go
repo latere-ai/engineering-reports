@@ -1,11 +1,13 @@
 // Command figures draws the post's charts as SVG, each in a light and a dark
 // variant (name.svg and name-dark.svg), from the analyzer output, the repo
-// census and the timeline.
+// census and the timeline. Repositories and modules are labeled by the role
+// column of the names table, so a reader who does not know the codebase
+// can read them.
 //
 // Usage:
 //
-//	figures -stats data/final/stats.json -census data/census-before.tsv \
-//	    -timeline data/timeline.tsv -out figures
+//	figures -stats data/final/stats.json -census data/census-pre.tsv \
+//	    -timeline data/timeline.tsv -names data/names.tsv -out figures
 package main
 
 import (
@@ -79,8 +81,17 @@ func main() {
 	statsPath := flag.String("stats", "", "analyzer output of the final A/B run")
 	censusPath := flag.String("census", "", "census TSV of the repos before the migration")
 	timelinePath := flag.String("timeline", "", "timeline TSV: start, end, label")
+	namesPath := flag.String("names", "", "names TSV: key, role, repository, visibility")
 	out := flag.String("out", "figures", "output directory")
 	flag.Parse()
+	if *namesPath != "" {
+		for _, row := range readTSV(*namesPath) {
+			if len(row) < 2 {
+				fail(fmt.Errorf("names: a row without a role: %q", row))
+			}
+			names[row[0]] = row[1]
+		}
+	}
 	if err := os.MkdirAll(*out, 0o755); err != nil {
 		fail(err)
 	}
@@ -158,7 +169,17 @@ func atof(s string) float64 {
 	return v
 }
 
-func display(module string) string { return strings.ReplaceAll(module, "_", "/") }
+// names maps a repository or module key to the role it is labeled by.
+var names = map[string]string{}
+
+// display is the label of a repository or module: its role when the names
+// table has one, else its key with "/" restored.
+func display(module string) string {
+	if r, ok := names[module]; ok {
+		return r
+	}
+	return strings.ReplaceAll(module, "_", "/")
+}
 
 func aggsFor(st stats, from, to, unit string) map[string]agg {
 	m := map[string]agg{}
@@ -342,8 +363,8 @@ func sizeChart(t theme, rows [][]string) string {
 	c.text(w-right+14, top-12, "files on v1", 11, t.muted, "start", "400")
 	for i, x := range rs {
 		y := top + rowH*float64(i)
-		c.text(left-10, y+14, x.repo, 12, t.ink2, "end", "400")
-		c.hbar(left, scale(x.lines), y+4, 12, t.s1, fmt.Sprintf("%s: %s lines of Go, %s files on v1", x.repo, thousands(x.lines), thousands(x.files)))
+		c.text(left-10, y+14, display(x.repo), 12, t.ink2, "end", "400")
+		c.hbar(left, scale(x.lines), y+4, 12, t.s1, fmt.Sprintf("%s: %s lines of Go, %s files on v1", display(x.repo), thousands(x.lines), thousands(x.files)))
 		c.text(scale(x.lines)+6, y+14, compact(x.lines), 11, t.ink2, "start", "400")
 		c.text(w-right+14, y+14, thousands(x.files), 12, t.ink, "start", "400")
 	}
@@ -521,7 +542,7 @@ func engines(t theme, st stats) string {
 		b, a := base[k], after[k]
 		vals = append(vals, []pt{{b.Geomean, math.NaN(), math.NaN()}, {a.Geomean, math.NaN(), math.NaN()}})
 	}
-	return dotRows(t, "Three engines against the classic v1 encoder",
+	return dotRows(t, "Go 1.27 and the move, against the classic v1 engine",
 		"Time per operation relative to the original v1 engine (GOEXPERIMENT=nojsonv2) = 1×",
 		"left of 1× is faster than the classic engine",
 		[]string{"v1 API on the v2 engine (Go 1.27 default, our code unchanged)", "v2 API (after the move)"}, labels, vals)
