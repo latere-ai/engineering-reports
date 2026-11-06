@@ -1,7 +1,7 @@
 #!/bin/zsh
 # trees.sh DEST SHAFILE : export each "repo sha" line of SHAFILE as a clean
 # tree under DEST/<repo>, so measurements never see a working tree that
-# another session is editing.
+# other work is changing.
 ROOT=${ROOT:-$HOME/src/latere-ai}
 dest=$1; shas=$2
 mkdir -p $dest

@@ -2,8 +2,8 @@
 # flake.sh TREE SHAFILE OUT : per "repo sha" line, rerun three times every
 # package whose test files that commit changed, in the clean tree
 # TREE/<repo>. A test that compares map-built JSON byte for byte passes a
-# single run often enough to land, so one green run proves nothing about
-# map order. Writes OUT/<repo>-<module>.log and OUT/summary.txt, one line
+# single run often enough to be merged, so one green run proves nothing
+# about map order. Writes OUT/<repo>-<module>.log and OUT/summary.txt, one line
 # per module: "ok (N pkgs)" or the first failing tests.
 #
 # A failure here is a lead, not a verdict: a test that cannot repeat in one

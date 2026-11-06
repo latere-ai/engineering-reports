@@ -1,9 +1,12 @@
 #!/bin/zsh
-# land-mig.sh TAG REPO... : land one repo's encoding/json/v2 migration.
-# For each repo, stages exactly the files listed in files/REPO.txt, runs
-# the gate and every module's whole go test ./..., then commits, rebases onto
-# the remote main and pushes. One status line per repo goes to land-TAG.log;
-# hold.txt repos are committed but not pushed.
+# land.sh TAG REPO... : commit and push each repository's encoding/json/v2
+# migration once its checks pass. For each repository it stages exactly the
+# files listed in files/REPO.txt, runs the repository's full CI checks
+# locally with lateregate (the check runner CI uses,
+# github.com/latere-ai/ci-gate) and every module's whole go test ./..., then
+# commits, rebases onto the remote main and pushes. One status line per
+# repository goes to land-TAG.log; repositories listed in hold.txt are
+# committed but not pushed.
 S=${S:-$(cd "$(dirname "$0")/.." && pwd)/data}
 ROOT=${ROOT:-$HOME/src/latere-ai}
 # DOCKER_HOST may point at a Podman socket; a docker shim on PATH serves kind.
@@ -27,8 +30,8 @@ for repo in "$@"; do
   list=$S/files/$repo.txt
   [ -s $list ] || { echo "$repo NOFILES" >> $log; continue; }
   files=("${(@f)$(cat $list)}")
-  # Commits already on this checkout's main and not on the remote belong to
-  # another session unless this one wrote them; pushing would publish them.
+  # Commits on this checkout's main that are not on the remote and were not
+  # written by this script belong to other work; pushing would publish them.
   git fetch -q origin
   foreign=$(git rev-list origin/main..HEAD | grep -vxF -f $S/own-commits.txt | head -1)
   case $repo in
@@ -36,11 +39,11 @@ for repo in "$@"; do
     *) gate=(go tool lateregate) ;;
   esac
   git add -A -- "${files[@]}"
-  # One retry: a suite that loses a port or a cluster to the machine's load
-  # passes the second time, and the tests that passed are cached.
-  # Only a run whose failures are all in the suite, e2e or image gates is
-  # retried; a lint, license, modernize or coverage-floor finding fails the
-  # same way twice.
+  # One retry: a test suite that loses a port or a cluster to the machine's
+  # load passes the second time, and the tests that passed are cached.
+  # Only a run whose failures are all in the test, end-to-end or image
+  # checks is retried; a lint, license, modernize or coverage-floor finding
+  # fails the same way twice.
   if ! "${gate[@]}" > $S/gate-$tag-$repo.log 2>&1 &&
      { ! grep -qE 'gates? failed: ' $S/gate-$tag-$repo.log ||
        grep -E 'gates? failed: ' $S/gate-$tag-$repo.log | sed 's/.*failed: //' | tr ',' '\n' | tr -d ' ' | grep -qvxE 'suite|e2e|image' ||
@@ -74,7 +77,7 @@ for repo in "$@"; do
     continue
   fi
   if [ -n "$foreign" ]; then
-    echo "$repo COMMITTED-HELD $(git rev-parse HEAD): unpushed commit $foreign from another session" >> $log
+    echo "$repo COMMITTED-HELD $(git rev-parse HEAD): unpushed commit $foreign not written by this script" >> $log
     continue
   fi
   ok=0

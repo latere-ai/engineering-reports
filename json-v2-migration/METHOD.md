@@ -10,18 +10,23 @@ service calls. They were committed on their own, before any code changed.
 
 Each repository's migration is one commit, `json: move to encoding/json/v2`.
 The final comparison measures that commit (`after`) against its parent
-(`before`), so it isolates the migration from whatever else landed in
-between. In a repository that depends on the shared libraries, the same
-commit also raises them to their migrated releases (`latere.ai/x/sdk-go`
-v0.33.0; `latere.ai/x/pkg` v0.112.0 or v0.113.0, which differ only in the
-order of an error body's details; `latere.ai/x/apps` v0.0.4 where it is
-used): the library's own JSON code is then part of the `after` side, as it
-is in production.
+(`before`), so it isolates the migration from whatever else was merged
+in between. In a repository that depends on our shared libraries, the same
+commit also raises them to their migrated releases (the public SDK
+v0.33.0; the shared library v0.112.0 or v0.113.0, which differ only in the
+order of an error body's details; the app hosting API types v0.0.4 where
+they are used). The library's own JSON code is then part of the `after`
+side, as it is in production.
 
-Three later commits are not in the comparison: insula's removal of its
-copies of the app manifest types (06975a7), platform's move to lux v0.22.0
-(cd72250), and pkg's deterministic error writer (released as v0.113.0 and
-measured only through its consumers).
+Three later commits are not in the comparison: the app hosting service
+dropping its copies of the app manifest types, the API platform moving to
+the migrated model gateway release, and the shared library's sorted error
+details (its v0.113.0, measured only through the repositories that use
+it).
+
+Repositories are named by their role in the text and figures. The data
+files use each repository's directory name; [data/names.tsv](data/names.tsv)
+maps one to the other and says which repositories are public.
 
 The migration commit changes the benchmark files exactly as it changes other
 tests: imports and calls move to `encoding/json/v2` with the options the
@@ -33,7 +38,7 @@ the same, so each "before" result pairs with one "after" result by name.
 | Variant | Tree | Build | What it is |
 |---|---|---|---|
 | `classic` | before | `GOEXPERIMENT=nojsonv2` | the v1 package on its original engine, as before Go 1.27 |
-| `base` | before | default | the v1 package on the v2 engine, the Go 1.27 default: our code untouched |
+| `base` | before | default | the v1 package on the v2 engine, the Go 1.27 default, with our code unchanged |
 | `after` | after | default | our code on the v2 API |
 
 `classic` against `base` isolates what the Go 1.27 toolchain changed with no
@@ -117,9 +122,9 @@ to read the standard tool; it compares each variant with `classic`.
   (1.27.3). The relative results matter more than the absolute times.
 - Benchmarks measure JSON work in isolation. A request handler that spends
   most of its time in a database will see a smaller share of the gain.
-- The benchmarks were written for this migration, before any code changed,
-  by the same process that then migrated the code. They were not tuned
-  afterwards. The migration commit changed them only as the API required:
-  raw values became `jsontext.Value`, `MarshalIndent` became `Marshal`
+- The benchmarks were written for this study before any code changed, by
+  agents of the same Claude Code session that later migrated the code
+  ([PROCESS.md](PROCESS.md)). They were not tuned afterwards. The
+  migration commit changed them only as the API required: raw values became `jsontext.Value`, `MarshalIndent` became `Marshal`
   with indentation options, and setup data is built with v2. No benchmark
   was added, removed or renamed between the two sides.

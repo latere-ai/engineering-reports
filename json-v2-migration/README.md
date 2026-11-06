@@ -81,7 +81,7 @@ decodes and 304 response encodes.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/timeline-dark.svg">
-  <img alt="Timeline of the migration, from the request to the final measurement" src="figures/timeline.svg">
+  <img alt="Timeline of the migration, from its start to the final measurement" src="figures/timeline.svg">
 </picture>
 
 One engineer and one coordinating Claude Code session ran the move. The
@@ -456,6 +456,11 @@ that had depended on v1's sorted maps without saying so. The v1-style
 methods in three files and one needless `Decoder` are still to convert, and
 the benchmarks will show what converting them is worth.
 
+If you are planning a migration of your own, ran into something we did
+not, or think we got a number wrong, we would like to hear about it. Write
+to Changkun at `changkun at latere dot ai`, or find Changkun on the
+[Gophers Slack](https://gophers.slack.com).
+
 ## The repositories
 
 | Repository | Lines of Go | Files on v1 | Migration commit |
@@ -530,5 +535,5 @@ public. The raw results for all 29 are in [data/](data).
    test package the migration changed three times
    ([data/flake/](data/flake)).
 
-[PROCESS.md](PROCESS.md) is the full log of the night: every step, every
-CI failure and its fix, in our own working vocabulary.
+[PROCESS.md](PROCESS.md) is the full record: every step, in order, with
+every CI failure and its fix.

@@ -2,7 +2,7 @@
 # final-shas.sh : for every repo with a benchmark commit, find the migration
 # commit on origin/main and write "repo sha" lines for its parent
 # (shas-before.txt) and for itself (shas-after.txt). The pair isolates what
-# the migration commit changed, whatever else landed since the benchmarks.
+# the migration commit changed, whatever else was merged after the benchmarks.
 S=${S:-$(cd "$(dirname "$0")/.." && pwd)/data}
 ROOT=${ROOT:-$HOME/src/latere-ai}
 : > $S/shas-before.txt; : > $S/shas-after.txt
