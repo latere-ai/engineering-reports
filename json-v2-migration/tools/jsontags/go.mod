@@ -1,4 +1,4 @@
-module github.com/latere-ai/benchmark-results/json-v2-migration/tools/jsontags
+module github.com/latere-ai/engineering-reports/json-v2-migration/tools/jsontags
 
 go 1.27.0
 
