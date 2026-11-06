@@ -6,7 +6,7 @@
 // interface, len 0 string/slice/map/array; struct values are never omitted.
 // v2 omitempty is decided by the encoded JSON (null, "", {}, []). The rewrite
 // per kind is exact under v2 and behavior-neutral under v1, which supports
-// omitzero too:
+// omitzero too (since Go 1.24):
 //
 //	bool, numbers, pointers, interfaces  omitempty -> omitzero
 //	pointer to time.Time                  unchanged (same in both)

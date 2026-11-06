@@ -11,12 +11,14 @@ JSON paths, and we ran them again after.
 The short version:
 
 - Go 1.27 alone made our JSON code 1.4× faster, with no code change.
-- Moving to the v2 API cut the time by another 17%, for 1.7× in all.
+- Switching to the v2 API cut the time by another 17% (1.2× faster), for
+  1.7× faster in all.
 - The new API was the easy part. The work was deciding which bytes on the
   wire were allowed to change, and finding the tests that had quietly
-  relied on v1 sorting map keys.
+  relied on v1 sorting map keys. By "the wire" we mean the JSON bytes our
+  services send, store and receive.
 
-The whole move took one night: a little over nine hours from the first
+The whole migration took one night: a little over nine hours from the first
 survey to the last repository merged. AI agents made most of the edits, and
 each repository's CI checks decided what merged. 21 of the 29 repositories
 are open source; their migration commits are [linked at the end](#the-repositories).
@@ -25,31 +27,39 @@ are open source; their migration commits are [linked at the end](#the-repositori
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/engines-dark.svg">
-  <img alt="Geometric mean time per operation of 762 JSON benchmarks under three builds: the classic v1 engine (GOEXPERIMENT=nojsonv2), Go 1.27's default, and our code on the v2 API" src="figures/engines.svg">
+  <img alt="For each repository, three dots: the classic v1 engine (GOEXPERIMENT=nojsonv2) at 1x, Go 1.27's default build with our code unchanged, and the same build after the migration to the v2 API. Over all 762 benchmarks: 0.70x, then 0.58x" src="figures/engines.svg">
 </picture>
 
 We compared three builds of the same benchmarks: the classic v1 engine
-(Go 1.27 with `GOEXPERIMENT=nojsonv2`), Go 1.27's default, and our code
-after the move. The 350 benchmark functions give 762 results with their
-sub-benchmarks.
+(Go 1.27 with `GOEXPERIMENT=nojsonv2`, called `classic` in the data files),
+Go 1.27's default with our code unchanged (`base`), and our code after the
+migration (`after`). The 350 benchmark functions give 762 results with
+their sub-benchmarks.
+
+For each benchmark we take the time per operation of one build divided by
+that of another. That ratio is 0.83 when the later build takes 17% less
+time. We summarize many benchmarks with the geometric mean of their ratios.
 
 - **The toolchain alone: 1.4× faster.** With our code unchanged, the
-  geometric mean time fell to 70% of the classic engine's, and allocations
-  to 61%.
-- **The move to the v2 API: a further 17%** (geometric mean 0.831, 95%
-  interval 0.817 to 0.845). 505 benchmarks got faster and 76 slower, each
-  significant over 10 paired rounds; 181 did not change.
+  geometric mean of the time ratios fell to 0.70 of the classic engine's,
+  and allocations to 0.61.
+- **Switching to the v2 API: a further 17%** (geometric mean of the time
+  ratios 0.831, 95% interval 0.817 to 0.845). 505 benchmarks got faster
+  and 76 slower, each significant in a sign test over 10 rounds in which
+  the builds ran back to back; 181 did not change.
 - **In all: 58% of the time and 59% of the allocations**, 1.7× faster.
 
-About two thirds of the gain comes with Go 1.27 itself, and one third with
-the move. Most of that third is work the v1 API keeps doing on the new
-engine and v2 lets a caller drop: matching member names in any letter case,
-escaping `<`, `>` and `&`, sorting map keys. Some of it is code that got
-simpler. Where a v1 `Decoder` read one value from bytes already in memory, a
-single `Unmarshal` call does it now, and that alone made our chat web app's
-event decode 3.5 times faster, with its case-insensitive matching kept.
-Where we chose to keep v1's bytes, we pay for it, and that is where the 76
-slower benchmarks are ([below](#where-it-got-slower)).
+About two thirds of the gain (on a log scale of the ratios) comes with Go
+1.27 itself, and one third with
+the migration. We did not measure each cause on its own. We believe most
+of that third comes from work the v1 API keeps doing on the new engine and
+v2 skips by default: matching member names in any letter case, escaping
+`<`, `>` and `&`, sorting map keys. Some of it is code that got simpler. Where a v1 `Decoder` read one value from bytes already in memory, a
+single `Unmarshal` call does it now. That alone made the chat web app's
+medium-size event payload decode 3.5 times faster (the small one 2.8
+times), with its case-insensitive matching kept. Where we chose to keep
+v1's bytes, we pay for it. The 76 slower benchmarks cluster there, and
+the next section names three causes ([below](#where-it-got-slower)).
 
 All numbers come from one machine (Apple M5 Pro, 18 cores, Go 1.27.3), with
 each benchmark binary built once per build and the three run side by side in
@@ -61,7 +71,7 @@ every per-benchmark statistic.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/size-dark.svg">
-  <img alt="Lines of Go per repository, and the files in each that imported encoding/json" src="figures/size.svg">
+  <img alt="Two bar charts side by side, one row per repository: lines of Go, and files that imported encoding/json, before the migration" src="figures/size.svg">
 </picture>
 
 The code is what a company building a platform for AI agents runs: an API
@@ -81,14 +91,15 @@ decodes and 304 response encodes.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/timeline-dark.svg">
-  <img alt="Timeline of the migration, from its start to the final measurement" src="figures/timeline.svg">
+  <img alt="Timeline of the migration: one bar per step on an axis of hours since it began, from the survey to the final measurement, 10 hours in all" src="figures/timeline.svg">
 </picture>
 
-One engineer and one coordinating Claude Code session ran the move. The
-coordinating session surveyed the code, wrote the tools, the benchmarks'
-brief and the migration guide, and handed each repository (the large ones
-split by directory) to two Claude Sonnet agents: one migrated, one reviewed.
-The engineer made the calls that needed a person, chiefly what the wire may
+One engineer, Changkun Ou, who wrote this post, and one Claude Code
+session that directed the agents ran the migration. The session surveyed
+the code and wrote the tools, the written task for the benchmark agents and
+the migration guide. It then handed each repository (the large ones split
+by directory) to two Claude Sonnet agents: one migrated, one reviewed.
+Changkun made the calls that needed a person, chiefly what the wire may
 change. Nothing merged without passing the repository's full CI checks.
 
 ### 1. Decide what the wire may change
@@ -98,7 +109,7 @@ output differs: nil slices encode as `[]`, map keys are not sorted, `<`,
 `>` and `&` are not escaped, field names match case-sensitively, invalid
 UTF-8 is an error. Each of those is right for new code, and each can break
 a client, a stored digest or a third party. So before any code moved we
-wrote down one policy, and held every change to it:
+wrote down one policy, the wire policy, and held every change to it:
 
 | Kept exactly as before | Accepted as v2's default |
 |---|---|
@@ -128,14 +139,14 @@ err := json.Unmarshal(body, &event, foreignJSON)
 
 ### 2. Benchmarks before code
 
-The benchmarks came first, committed on their own before any code changed.
-One agent per repository added `BenchmarkJSON...` functions for that
+To get a clean before and after comparison, we committed the benchmarks on
+their own before changing any code. One agent per repository added `BenchmarkJSON...` functions for that
 service's hot paths, called through the functions the service actually
 uses, at realistic sizes: 100 files and 350 benchmark functions. Benchmark
 names stay the same through the migration, so every result before pairs
 with one after.
 
-### 3. Check the toolchain, don't remember it
+### 3. Test the toolchain's behavior with small programs
 
 Every behavior a rule depended on was checked with a small probe program on
 Go 1.27.3 ([tools/probe](tools/probe), [tools/rawprobe](tools/rawprobe)).
@@ -149,8 +160,8 @@ Some results were not what we expected:
   the JSON it would write (`null`, `""`, `{}`, `[]`). The same tag omits
   different fields.
 - For a raw value, v2's `omitempty` drops `null`, `{}`, `[]` and `""`, which
-  v1 kept. `omitzero` matches v1, except that a non-nil empty value is an
-  error under both tags.
+  v1 kept. `omitzero` matches v1. A non-nil, zero-length raw value is an
+  error under either tag.
 - `UnmarshalRead` of an empty body returns `io.ErrUnexpectedEOF`, not
   `io.EOF`. `MarshalWrite` writes no trailing newline.
 - Options passed at a call site don't reach a v1-style `UnmarshalJSON`
@@ -165,7 +176,7 @@ every tag by the field's type, to the tag that encodes the same under v2:
 
 | Field | Tag change |
 |---|---|
-| bool, number, pointer, interface | `omitempty` to `omitzero` |
+| bool, number, interface, any other pointer | `omitempty` to `omitzero` |
 | pointer to `time.Time` | unchanged |
 | raw value | `omitempty` to `omitzero` |
 | string with a custom marshaler | `omitempty` to `omitzero` |
@@ -191,7 +202,8 @@ agents:
    and calls, apply the wire policy at each call site, add a test for every
    pin, and report every pin, accepted change and open question in a fixed
    form.
-2. A reviewing agent that read the whole diff against 11 kinds of mistake
+2. A reviewing agent that read the whole diff against
+   [11 kinds of mistake](GUIDE.md#the-reviewers-checklist)
    (a lost pin, lenient input made strict, a raw value newly omitted, a
    weakened test, and so on) and fixed what it found.
 
@@ -202,9 +214,8 @@ agents:
 | migrate and review three more, once their other releases were out | 10 | 14 to 25 min | 1.6M |
 | migrate and review the model gateway | 4 | 23 min | 0.7M |
 
-The reviewers found 136 problems and fixed 107 of them. Reading all the
-reports together turned up one more. The rest they judged and left, each
-with a reason. Most were about lenient input: a decode of foreign data that
+The reviewers found 136 problems, fixed 107 and left 28, each with a
+reason. The session, reading all the reports together, fixed one more. Most findings were about lenient input: a decode of foreign data that
 had become strict about duplicate names or invalid UTF-8.
 
 ### 6. Merge only through CI
@@ -212,11 +223,15 @@ had become strict about duplicate names or invalid UTF-8.
 Each repository merged as one commit, `json: move to encoding/json/v2`,
 after its full CI checks passed: lint, license headers, coverage floors,
 the whole test suite, end-to-end suites against real Postgres and kind
-clusters, and an image build. Of the 67 check runs the logs kept, 31 failed
-and one was stopped, and each failure was fixed in the code or the test
-before the push ([PROCESS.md](PROCESS.md) tables the causes). Other work
+(Kubernetes in Docker) clusters, and an image build. The logs keep 71
+check runs for the migration commits and their follow-ups, and 33 of them
+did not pass: 32 failed and one was stopped. No repository was pushed
+until its checks passed. Most failures were fixed in the code or its
+tests; the ones the machine caused (a port another process held, a full
+Podman disk) passed once the repositories ran one at a time
+([PROCESS.md](PROCESS.md) tables the causes). Other work
 kept arriving in the same repositories through the night, so the merge
-script rebased onto it and never pushed a commit it had not written.
+script ([scripts/land.sh](scripts/land.sh)) rebased onto it and never pushed a commit it had not written.
 
 ### 7. Ban the v1 import
 
@@ -249,13 +264,14 @@ repositories looked like they could move in any order. The wire bytes told
 a different story. A migrated service that encodes a struct from an
 unmigrated library applies v2's `omitempty` to the library's v1-era tags,
 and fields that used to be omitted (`false`, `0`) appear. Agents saw it
-locally and wrote shadow marshalers to compensate. We removed those and
+locally and wrote extra `MarshalJSON` methods on the library's types to
+compensate. We removed those and
 went in dependency order: the shared library and the SDK first, released,
 then every consumer raised to the new versions in the same commit as its
-own migration. "The libraries" turned out to mean every module that another
-module imports: a third one, the manifest types of our app hosting service,
-had been migrated but not released, and one consumer kept copies of its
-types until we released it.
+own migration. "Library" turned out to mean every module that another
+module imports. A third one, the manifest types of our app hosting
+service, had been migrated but not released. One consumer kept copies of
+its types until we released it.
 
 **Map order was the biggest class of test failures.** v1 sorts map keys;
 v2 doesn't. Every test that compared a map-built body byte for byte failed
@@ -263,15 +279,16 @@ at random: golden files, tests that re-marshal a decoded map, and, the
 interesting ones, security tests asserting that a refused request reads
 exactly like a request for something that doesn't exist. Those are
 byte-equality tests by design. We fixed the rule rather than each test:
-the shared error writer sorts its details again (error bodies are a cold
-path), response shapes that are fixed became structs, and tests that
-re-encode a map ask for `json.Deterministic(true)`. A three-key map comes
-out in v1's order about one run in three, so one green run proves nothing.
-After the move we reran every test package it touched three times: 421 of
-426 passed every run, four of the other five fail the same way on the code
-from before the move because they cannot repeat in one process, and the
-fifth only runs past Go's 10-minute test timeout when repeated. All five
-pass as separate runs.
+the shared error writer sorts the details list in an error body again
+(error bodies are a cold path), response shapes that are fixed became
+structs, and tests that re-encode a map ask for `json.Deterministic(true)`.
+A map with a few keys often comes out in v1's order by chance, so such a
+test passes some runs and fails others. One green run proves nothing.
+After the migration we reran, three times each, every test package whose
+tests the migration changed. 421 of 426 passed every run. Four of the other
+five fail the same way on the code from before the migration, because they
+cannot repeat in one process. The fifth only runs past Go's 10-minute test
+timeout when repeated. All five pass as separate runs.
 
 **Escaping is part of the bytes a server compares.** v2 doesn't escape
 `<`, `>` and `&`, which is harmless for anything that parses JSON, and we
@@ -280,8 +297,8 @@ on every run: a sandbox whose command held a shell redirection could not be
 started again after a failure. The host guards each write of a sandbox's
 record with a JSON Patch `test` operation holding the record as it read it,
 and the Kubernetes API server, whose encoder still escapes the v1 way,
-compares that value byte for byte with its own encoding. `a > b` and
-`a > b` are the same string and different bytes, so the guard never
+compares that value byte for byte with its own encoding. `"a > b"` and
+`"a \u003e b"` are the same string and different bytes, so the guard never
 passed and the write was retried until it gave up. JSON sent to the cluster
 now asks for v1's escaping, and a test reproduces the failure on the fake
 clientset. Only one case in the whole suite had a `>` in it.
@@ -301,7 +318,7 @@ var outboundJSON = json.JoinOptions(
 
 **Strict reads changed what our tests saw.** Once the SDK and the shared
 library read with v2's defaults, three repositories' tests failed. Two had
-fakes that sent what no server of ours sends: a fixture that wrote
+test fakes (stub servers) that sent what no server of ours sends: a fixture that wrote
 `created_at` twice, and a fake authorizer that answered with an untagged Go
 struct holding a `time.Duration`. v1 had read both without complaint. The
 third was a test request that repeated a member to check which copy a
@@ -321,40 +338,43 @@ We also left raw values on `omitempty`, which under v2 drops a `null` or
 `{}` that v1 kept. The probe caught both, the tool was fixed, and a script
 corrected 65 fields across the repositories.
 
-**Linters that only know v1 went quiet.** `errchkjson` and `gosec`'s
-secret-marshaling check don't recognize v2 calls, so their `//nolint`
-directives became unused and failed `nolintlint`. `errorlint` now flags
-`err != io.EOF` after `jsontext.Decoder.ReadToken`, which v1's `Decoder`
-didn't need. Raising the `go` directive to 1.27 turned on Go 1.27's own
-modernizers in every file we touched.
+**Linters that only know v1 broke or went blind.** `errchkjson` and
+`gosec`'s secret-marshaling check don't recognize v2 calls, so their
+`//nolint` directives became unused and failed `nolintlint`. `errorlint`
+now flags `err != io.EOF` after `jsontext.Decoder.ReadToken`, which v1's
+`Decoder` didn't need. Raising the `go` directive to 1.27 turned on Go
+1.27's own modernizers (the `go fix` rewrites of old idioms) in every file
+we touched.
 
-**A library that supports older Go releases has to drop them.** Our public
-SDK supported the two newest Go releases. `encoding/json/v2` exists only
-from 1.27, so its floor moved to Go 1.27, released as a breaking change.
+**A library that supports older Go releases has to drop the older ones.**
+Our public SDK supported the two newest Go releases. `encoding/json/v2`
+exists only from 1.27, so its floor moved to Go 1.27, released as a
+breaking change.
 
 ## The numbers in detail
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/per-repo-dark.svg">
-  <img alt="Geometric mean change in time per operation for each repository after the move; the agent sessions interface has two modules, so it has two rows" src="figures/per-repo.svg">
+  <img alt="For each repository, time per operation after the migration divided by time before, with its 95% interval and its number of benchmarks; 0.83x over all 762" src="figures/per-repo.svg">
 </picture>
 
-25 of the 29 repositories got faster, with the whole 95% interval of their
-geometric mean below 1. The largest gains are in the services whose hot
-paths carry model and tool traffic: the agent runtime went to 0.62 of its
-time, the credential broker to 0.71, the chat web app to 0.72. Three small
-repositories with six benchmarks each show no clear change (the company
-website at 0.99, the code for a book at 0.89 and the prepaid credit library
-at 0.97, each interval crossing 1).
+25 of the 29 repositories got faster. For each, the whole 95% interval of
+the geometric mean of its time ratios is below 1. The largest gains are in
+the services whose hot paths carry model and tool traffic. The agent
+runtime went to 0.62 of its time, the credential broker to 0.71 and the
+chat web app to 0.72. Three small repositories with six benchmarks each
+show no clear change: the company website at 0.99, the code for a book at
+0.89 and the prepaid credit library at 0.97 of their time, each interval
+crossing 1.
 
-The sandbox host is the exception: 12 benchmarks faster, 12 slower, 1.06
-overall. To keep durations as integer nanoseconds on its worker protocol,
-the migration wrapped two message types in v1-style `MarshalJSON` methods,
-and its state messages took 1.9 times as long as before. Giving the state
-type v2's own `MarshalJSONTo`, which writes into the caller's encoder
-instead of returning bytes the encoder must check and copy, brought that to
-1.26 times in a scratch copy. The v1-style method is most of the cost; the
-rest we have not traced.
+The sandbox host is the exception: 12 benchmarks faster, 12 slower, and 1.06
+of its previous time overall. To keep durations as integer nanoseconds on
+its worker protocol, the migration wrapped two message types in v1-style
+`MarshalJSON` methods. Its state messages then took 1.9 times as long as
+before. Giving the state type v2's own `MarshalJSONTo` brought that to 1.26
+times in a scratch copy. That method writes into the caller's encoder
+instead of returning bytes the encoder must check and copy. The v1-style
+method is most of the cost; the rest we have not traced.
 
 ```go
 // v1 style: returns bytes, which the v2 encoder then validates and copies.
@@ -376,18 +396,18 @@ func (s State) MarshalJSONTo(enc *jsontext.Encoder) error {
 }
 ```
 
-The migration added v1-style methods in three files, two of them these;
-everywhere else the agents wrote 32 methods of v2's kind.
+The migration added v1-style methods in three files, two of them the
+message types above. Everywhere else the agents wrote 32 methods of v2's kind.
 
 ### Where it got slower
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/distribution-dark.svg">
-  <img alt="Distribution of per-benchmark ratios of time per operation" src="figures/distribution.svg">
+  <img alt="Three histograms of every benchmark's ratio after the migration divided by before: time, bytes and allocations per operation" src="figures/distribution.svg">
 </picture>
 
-Per benchmark the median ratio is 0.86, and the middle 80% run from 0.62 to
-1.02. The slower benchmarks cluster where the code keeps v1's bytes or
+The median benchmark takes 0.86 of its previous time, and the middle 80%
+of benchmarks range from 0.62 to 1.02. The slower benchmarks cluster where the code keeps v1's bytes or
 behavior and pays for it: sorted map keys in a file that is stored and
 compared (a cache file, 1.36 times the time), the v1-style methods above,
 and a `jsontext.Decoder` built for each small body. One service builds that
@@ -402,24 +422,25 @@ err := json.UnmarshalDecode(dec, &req)
 // then check that dec has nothing left
 
 // Faster, and the same check: Unmarshal refuses text after the value.
-err := json.Unmarshal(body, &req)
+err = json.Unmarshal(body, &req)
 ```
 
-Where a pin sits on a benchmarked path, its price is now measured, and the
-next change to it can be weighed against that.
+Each of these slowdowns is the measured cost of keeping v1's bytes. We can
+now decide, pin by pin, whether it is worth paying.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/memory-dark.svg">
-  <img alt="Geometric mean change in bytes and allocations per operation" src="figures/memory.svg">
+  <img alt="For each repository, bytes and allocations per operation after the migration divided by before, in two panels" src="figures/memory.svg">
 </picture>
 
-Memory moved less than time. Against Go 1.27's default, the move saved 6%
-of the bytes and 3% of the allocations per operation (geometric means 0.944
-and 0.970, intervals 0.918 to 0.969 and 0.954 to 0.987); most of the
-allocation savings had already come with the toolchain, which alone brought
-allocations to 0.61 of the classic engine's. The API platform and the git
-host saved the most bytes. The command-line tool is the outlier: 0.60 of
-the bytes in 1.36 times as many allocations.
+Memory moved less than time. Against Go 1.27's default, switching to the v2
+API saved 6% of the bytes and 3% of the allocations per operation
+(geometric means of the ratios 0.944 and 0.970, intervals 0.918 to 0.969
+and 0.954 to 0.987). Most of the allocation savings had already come with
+the toolchain, which alone brought allocations to 0.61 of the classic
+engine's. The API platform and the git host saved the most bytes. The
+command-line tool is the outlier: 0.59 of the bytes in 1.36 times as many
+allocations.
 
 ## If you are planning your migration
 
@@ -446,10 +467,11 @@ the bytes in 1.36 times as many allocations.
 
 ## Looking back
 
-For us the move was worth it. The speed came mostly from Go 1.27 itself,
-and the API change added a measurable third on top. What it bought besides
-speed is JSON behavior that is written down: every place where our bytes
-must match v1's now says so at the call site, with a test, instead of
+For us the migration was worth it. The speed came mostly from Go 1.27
+itself. The API change supplied the remaining third of the gain, a further
+17% off the time. What it bought besides speed is JSON behavior that is
+written down: every place where our bytes must match v1's now says so at
+the call site, with a test, instead of
 depending on a default nobody chose. The work was rarely the new API. It
 was the policy, the libraries' order, and the tests in nine repositories
 that had depended on v1's sorted maps without saying so. The v1-style
@@ -463,7 +485,7 @@ to Changkun at `changkun at latere dot ai`, or find Changkun on the
 
 ## The repositories
 
-| Repository | Lines of Go | Files on v1 | Migration commit |
+| Repository | Lines of Go before | Files importing `encoding/json` before | Migration commit |
 |---|---:|---:|---|
 | API platform (private) | 276,829 | 334 | private |
 | agent runtime ([topos](https://github.com/latere-ai/topos)) | 204,682 | 261 | [ebc9718](https://github.com/latere-ai/topos/commit/ebc9718ea2c3c701617a3cdba26fa43df83630e5) |
@@ -502,8 +524,9 @@ published.
 
 ### How to read the numbers
 
-- A ratio is after / before: 0.70 means the after side takes 70% of the
-  time, 30% less.
+- A ratio is the later build's value divided by the earlier build's. We
+  compare `classic` to `base`, `base` to `after`, and `classic` to
+  `after`. A time ratio of 0.70 means 70% of the time, 30% less.
 - Each benchmark's ratio is the median of its 10 per-round ratios. A
   benchmark counts as faster or slower only if an exact sign test over the
   10 rounds says so at the 5% level (at least 9 of 10 rounds in the same
@@ -517,7 +540,10 @@ published.
 
 The scripts in [scripts/](scripts) run against checkouts of the
 repositories (`ROOT` names the directory that holds them); 21 of the 29 are
-public. The raw results for all 29 are in [data/](data).
+public. The raw results for all 29 are in [data/](data). The scripts are
+zsh scripts for macOS. `scripts/land.sh` is published as a record of what
+ran: it needs input files that are not in `data/`, so you cannot run it as
+is.
 
 1. `scripts/final-shas.sh` finds each repository's migration commit and its
    parent ([data/shas-before.txt](data/shas-before.txt),
@@ -526,12 +552,17 @@ public. The raw results for all 29 are in [data/](data).
    `after` export clean trees of both.
 3. `scripts/bench-paired.sh out 10 100ms base=trees/before
    classic=trees/before:nojsonv2 after=trees/after` builds and runs.
-4. `go run ./tools/analyze -paired -pairs classic:base,base:after,classic:after
-   -out stats.json base=out/base classic=out/classic after=out/after`
-   computes the statistics, and `go run ./tools/figures -stats stats.json
-   -census data/census-pre.tsv -timeline data/timeline.tsv
-   -names data/names.tsv` draws the figures.
-5. `scripts/flake.sh trees/after data/shas-after.txt flake` reruns every
+4. `go -C tools/analyze run . -paired -pairs classic:base,base:after,classic:after
+   -out ../../stats.json base=../../out/base classic=../../out/classic
+   after=../../out/after` computes the statistics (each tool is its own Go
+   module, so `go -C` runs it from its directory; the paths resolve from
+   there; point the arguments at `data/final/base` and so on to recompute
+   our published statistics).
+5. `uv run figures/render.py` draws the figures from `data/` with
+   matplotlib and seaborn ([uv](https://docs.astral.sh/uv/) installs the
+   pinned versions). It also measures every drawn label against every
+   line, dot, bar and other label, and fails if any two touch.
+6. `scripts/flake.sh trees/after data/shas-after.txt flake` reruns every
    test package the migration changed three times
    ([data/flake/](data/flake)).
 

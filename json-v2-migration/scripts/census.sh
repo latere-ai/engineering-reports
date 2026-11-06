@@ -1,5 +1,6 @@
 #!/bin/zsh
-# census.sh SHAFILE : per "repo sha" line, measure the repo at that commit:
+# census.sh SHAFILE : build the repository size table (the "census" in the
+# data files). Per "repo sha" line, measure the repo at that commit:
 # Go modules, Go files, Go lines, files importing encoding/json (v1),
 # files importing encoding/json/v2 or jsontext, and json.X call sites.
 # Prints TSV with a header.

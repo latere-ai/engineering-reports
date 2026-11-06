@@ -1,3 +1,9 @@
+// Command rawprobe prints how v1 and v2 treat a raw JSON value in a struct
+// field tagged omitempty or omitzero, for these inputs: nil, empty (non-nil,
+// zero length), null, {}, [], "" and a value with surrounding spaces. Its
+// output (output.txt) fixed the tag rules for raw values.
+//
+// Run it with the toolchain under test: go run .
 package main
 
 import (

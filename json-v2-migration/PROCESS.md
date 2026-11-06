@@ -7,7 +7,8 @@ order, what failed and how it was fixed. Times are UTC, from the evening of
 A few words recur:
 
 - **The coordinator** is the Claude Code session that ran the migration: it
-  surveyed the code, wrote the tools and briefs, started the agents, read
+  surveyed the code, wrote the tools and the written tasks for the agents,
+  started them, read
   their reports, and committed and pushed. An engineer made the decisions
   that needed a person.
 - **The checks** are each repository's full CI suite: lint, license
@@ -26,8 +27,9 @@ directory name; [data/names.tsv](data/names.tsv) maps one to the other.
 The aim was a codebase with no `encoding/json` import left, and a
 measurement of what removing it changed.
 
-The survey found 29 repositories with Go code, 39 Go modules (not counting
-test fixtures), 7,361 Go files with 1.94 million lines (tests included),
+The survey found 29 repositories with Go code, 39 Go modules (48 `go.mod`
+files counting those inside test fixtures, which
+[data/census-pre.tsv](data/census-pre.tsv) includes), 7,361 Go files with 1.94 million lines (tests included),
 and 2,327 files importing `encoding/json`, all counted before any benchmark
 was added. Every repository pins `toolchain go1.27.3`.
 
@@ -79,10 +81,10 @@ no longer escaped outside HTML; map keys are unsorted in API responses;
 field names match case-sensitively for our own clients; error text
 changes.
 
-## 1. Benchmarks for the status quo (17:21 to 19:00)
+## 1. Benchmarks before the migration (17:21 to 19:00)
 
 The coordinator started one Claude Sonnet agent per repository (23 agents;
-small repositories shared one) with a single brief: write `BenchmarkJSON...`
+small repositories shared one) with a single written task: write `BenchmarkJSON...`
 benchmarks for the JSON hot paths, called through the functions the service
 uses, at realistic sizes, and change nothing else. They returned 100
 benchmark files and 350 benchmark functions (762 results with
@@ -90,8 +92,9 @@ sub-benchmarks), each with a note on the production path it stands for.
 The batch took 7.2 minutes, 569 tool calls and 2.85 million tokens.
 
 Each repository then passed its full checks before the benchmarks were
-committed on their own, so the commit that adds them is the "before" tree
-of every comparison. Getting them merged took longer than writing them:
+committed on their own. That commit is the "before" tree of the baseline
+measurement in section 2. The final comparison uses the parent of each
+repository's migration commit instead ([METHOD.md](METHOD.md)). Getting them merged took longer than writing them:
 
 | Problem | Where | Fix |
 |---|---|---|
@@ -102,20 +105,19 @@ of every comparison. Getting them merged took longer than writing them:
 | kind's `load docker-image` shells out to a `docker` binary | the model gateway | a `docker` wrapper over Podman that saves images under the name a Kubernetes node resolves |
 | an install test that adds an `/etc/hosts` line with `sudo` | the model gateway | it needs a password, so it ran in CI instead; every other suite passed locally |
 | other work changing the same checkout | the sandbox host | ran the checks in a clean, detached checkout of `origin/main` |
-| a test that scans every file for company host names, which the local run of changed packages only never reached | the model gateway | CI caught it, and the test's example issuer became `login.example.com`. Since then every push also runs each module's whole `go test ./...` |
+| a test that scans every file for company host names, which the local run, limited to changed packages, never reached | the model gateway | CI caught it, and the test's example issuer became `login.example.com`. Since then every push also runs each module's whole `go test ./...` |
 
 The checks ran 45 times for 29 repositories; 17 runs failed, for the
 reasons above. None failed because a benchmark measured the wrong thing:
 the fixes were style, fixtures and the machine.
 
-## 2. Measuring the status quo (19:04 to 19:42)
+## 2. Measuring before the migration (19:04 to 19:42)
 
 [METHOD.md](METHOD.md) has the method. Two builds came from clean exports
 of the benchmark commits: `base` (the Go 1.27 default) and `classic`
 (`GOEXPERIMENT=nojsonv2`), measured in 2 rounds of 5 runs at
-`-benchtime 100ms`, alternating per module. A first pass ran every
-benchmark once under both builds: 30 modules, 762 results each, no
-failures.
+`-benchtime 100ms`, alternating per module. Both builds ran every
+benchmark: 30 modules, 762 results each, no failures.
 
 The run took 38 minutes. Before any code changed, its result was already
 the first finding: on Go 1.27 our unchanged code is much faster than on
@@ -126,6 +128,10 @@ the old engine.
 | time per operation | 0.720 | 0.699 to 0.742 | 405 | 61 | 296 |
 | bytes per operation | 0.873 | 0.847 to 0.896 | 542 | 191 | 29 |
 | allocations per operation | 0.607 | 0.576 to 0.639 | 589 | 132 | 41 |
+
+Ratios are the later build's value over the earlier build's, so 0.720
+means 72% of the time. The geometric mean is taken over the ratios of all
+762 benchmarks.
 
 By repository the time ratio ran from 0.48 (the command-line tool, whose
 benchmarks mostly decode API answers) to about 1.0 (the company website,
@@ -148,14 +154,16 @@ noise").
 Before any agent started, [tools/jsontags](tools/jsontags) rewrote the
 struct tags of every module so that each field encodes under v2 exactly as
 it did under v1 (the table is in the tool's doc comment and in the post).
-The first pass covered 29 modules in about 3 minutes.
+The first pass covered 29 modules in about 3 minutes, a second pass 6
+more, and the four repositories that started late ran it when their work
+began.
 
 ### The agents
 
 The repositories were split into work units: one per small or medium
 repository and several per large one, with no two units owning the same
 directory. Each unit went to a migrating agent and a reviewing agent
-(Claude Sonnet), with [GUIDE.md](GUIDE.md) as the brief. Three
+(Claude Sonnet), with [GUIDE.md](GUIDE.md) as their instructions. Three
 repositories had a release of other work going out that day; their units
 started once each release was out.
 
@@ -169,11 +177,12 @@ started once each release was out.
 
 What the agents reported, summed:
 
-- 2,406 files moved off `encoding/json`.
+- 2,406 files moved off `encoding/json`, more than the survey's 2,327
+  because the benchmark files written after the survey count too.
 - Call sites: 3,138 `Unmarshal`, 1,789 `Marshal`, 2,125 raw values, 465
   one-shot request decodes, 304 response encodes.
-- 496 pins, each with a test; 197 accepted changes, each named; 176 new
-  tests.
+- 496 pins, each covered by a test, new or existing; 197 accepted
+  changes, each named; 176 new tests in all.
 - Reviewers: 136 findings, 107 fixed by the reviewers and 1 by the
   coordinator. The largest class was lenient input made strict by accident
   (a decode of foreign data that now refused duplicate names or invalid
@@ -196,7 +205,7 @@ repositories:
 3. **Dependency order.** A migrated module that encodes a struct from an
    unmigrated library applies v2's rules to the library's v1-era tags.
    Agents had written shadow marshalers to compensate in four places. Those
-   were removed, and the libraries went first instead (step 4).
+   were removed, and the libraries went first instead (section 4).
 4. **The SDK's Go floor.** The public SDK supported Go 1.26 and 1.27; v2
    needs 1.27. The floor moved to 1.27, marked as breaking in its
    changelog.
@@ -209,19 +218,23 @@ migration commit. Each repository merged as one commit,
 `json: move to encoding/json/v2`, pushed only after its full checks and the
 whole `go test ./...` of every module passed ([scripts/land.sh](scripts/land.sh)).
 
-This ran in three rounds plus stragglers:
+This ran in three rounds:
 
-| Round | When | Repositories pushed | Needed another fix first |
+| Round | When | Repositories pushed | Check runs (did not pass) |
 |---|---|---|---|
-| 1, three at a time | 20:43 to 21:47 | the public SDK, the dependency dashboard, the prepaid credit library, the agent sessions interface, engineer onboarding, the shared library, the CI check runner, the command-line tool, the file storage service | 13 runs |
-| 2, one at a time | 22:03 to 00:10 | the company website, the identity provider, the code for a book, the git host, the document parsing service, the LLM inference engine, the app hosting service, the encrypted messaging server, the app hosting API types, the adversarial code review engine | 8 runs |
-| 3, one at a time | 00:10 to 02:10 | the model gateway, the sandbox host, the agent runtime, the reproducibility auditor, the agent evaluation service, the chat web app, the credential broker, the agent oversight service, the Mac and iPhone app core, the API platform | 5 runs |
+| 1, three at a time | 20:43 to 21:47 | the public SDK, the dependency dashboard, the prepaid credit library, the agent sessions interface, engineer onboarding, the shared library, the CI check runner, the command-line tool, the file storage service | 27 (17) |
+| 2, one at a time | 22:03 to 00:10 | the company website, the identity provider, the code for a book, the git host, the document parsing service, the LLM inference engine, the app hosting service, the encrypted messaging server, the app hosting API types, the adversarial code review engine | 23 (12) |
+| 3, one at a time | 00:10 to 02:10 | the model gateway, the sandbox host, the agent runtime, the reproducibility auditor, the agent evaluation service, the chat web app, the credential broker, the agent oversight service, the Mac and iPhone app core, the API platform | 12 (2) |
 
-The logs keep 67 check runs for the migration commits and their
-follow-ups (a later run of the same repository in the same round
-overwrote some): 35 passed, 31 failed and one was stopped. The model
-gateway's release ran the checks three more times, and two of those lost a
-host port to another kind cluster. By cause:
+A round's runs include checks of repositories pushed in a later round.
+The logs keep 71 check runs for the migration commits and their
+follow-ups: 62 in the rounds and 9 afterwards, of which 2 did not pass.
+Of the 71, 38 passed, 32 failed and one was stopped. A later run of the
+same repository in the same round overwrote some logs, so the true number
+of runs is a little higher. The model
+gateway's release ran the checks three more times. Two of those runs failed
+because another kind cluster on the same machine held a host port that the
+gateway's install test needs. By cause:
 
 | Cause | Repositories | Fix |
 |---|---|---|
@@ -249,7 +262,7 @@ its release back by two runs.
 
 ## 5. The ban (02:15)
 
-Version v0.70.0 of the check runner adds `encoding/json` to the `depguard`
+Version v0.70.0 of the check runner (ci-gate, `lateregate`) adds `encoding/json` to the `depguard`
 deny list in the lint configuration every repository shares, with
 `encoding/json/v2` and `encoding/json/jsontext` allowed by name (depguard
 denies by prefix). A count over every repository's `main` at release time
@@ -277,7 +290,7 @@ commit with `-count=3`, and in the migrated tree as separate processes
 | identity provider, `internal/handler` | a fixed organization id inserted into one database per process | fails the same way |
 | document parsing service, `internal/convert` | a test leaves a 2^62 address-space limit on its own process | fails the same way |
 | API platform, `internal/sessions` | queries count rows an earlier repeat left in the shared database | fails the same way |
-| app hosting service, `internal/api` | a delivery name grows by one byte per call and passes its 128-byte limit by the third repeat; one run also leaves about 3,670 sockets in TIME_WAIT, so a run right after another runs out of local ports | fails the same way; the same socket count |
+| app hosting service, `internal/api` | a delivery name grows by one byte per call and passes its 128-byte limit by the third repeat. One run also leaves about 3,670 sockets in TIME_WAIT, so a run right after another runs out of local ports | fails the same way; the same socket count |
 | sandbox host, `cmd/cellad` | three repeats of a long package pass Go's 10-minute default test timeout | not needed: three separate runs pass |
 
 All five pass as separate runs in the migrated tree, the app hosting

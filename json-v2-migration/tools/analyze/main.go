@@ -3,7 +3,9 @@
 // plus per-module and overall geometric means.
 //
 // Usage: analyze -out stats.json -pairs base:after,classic:base [-paired] NAME=DIR...
-// Each DIR holds one <module>.txt per module, as written by bench.sh.
+// Each pair is FROM:TO, and a ratio is the TO value divided by the FROM value.
+// Each DIR holds one <module>.txt per module, as written by bench.sh or
+// bench-paired.sh.
 //
 // With -paired, the i-th result of one variant is taken to have run next to
 // the i-th result of another, as bench-paired.sh writes them: each

@@ -1,6 +1,10 @@
 #!/bin/zsh
-# land.sh TAG REPO... : commit and push each repository's encoding/json/v2
-# migration once its checks pass. For each repository it stages exactly the
+# land.sh TAG REPO... : check, commit and push each repository's
+# encoding/json/v2 migration. ("Land" here means push to main once the checks
+# pass; the "gate" in the log words and variables is the full CI check suite.)
+# Published as a record of what ran, not as a runnable tool: it needs
+# data/files/REPO.txt, data/hold.txt and data/own-commits.txt, which are not
+# in the data directory. For each repository it stages exactly the
 # files listed in files/REPO.txt, runs the repository's full CI checks
 # locally with lateregate (the check runner CI uses,
 # github.com/latere-ai/ci-gate) and every module's whole go test ./..., then

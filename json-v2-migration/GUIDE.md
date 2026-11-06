@@ -1,8 +1,8 @@
 # Moving Go code from encoding/json to encoding/json/v2: the rules
 
 These are the rules our migrating and reviewing agents followed, updated
-with what the migration taught us. They are written as a brief you can hand
-to an agent, and they work as a checklist for a person. Every fact in them
+with what the migration taught us. They are written as the instructions we
+gave each agent, and they work as a checklist for a person. Every fact in them
 was checked on Go 1.27.3 with small probe programs ([tools/probe](tools/probe),
 [tools/rawprobe](tools/rawprobe)); where they disagree with what you
 remember of the v2 proposal, trust the probes.
@@ -24,8 +24,8 @@ or let go.
 ## The wire policy
 
 Decide this before changing any code; every later rule depends on it. Ours,
-which the rest of this guide assumes, keeps v2's defaults and pins the
-fields:
+which the rest of this guide assumes, keeps v2's defaults except for the
+behaviors in the first list, which we pin.
 
 Kept identical (pin it wherever v2 would differ):
 
@@ -63,7 +63,7 @@ If your policy differs, change this section and follow the rest with yours.
    `format:nano`, `format:emitnull`, `format:array`, `format:base64`).
 3. `time.Duration` has no v2 representation: marshaling or unmarshaling one
    (a field, a slice element, a map value, or a value inside `any`) is a run
-   time error. See "Durations".
+   time error. See the "Durations" paragraph in Step 3.
 4. v1's `omitempty` omits false, 0, a nil pointer, a nil interface, and an
    empty string, slice, map or array, and never omits a struct value. v2's
    `omitempty` omits a field whose encoded JSON is `null`, `""`, `{}` or `[]`.
@@ -100,8 +100,8 @@ If your policy differs, change this section and follow the rest with yours.
 
 ## Step 1: fix omitempty with the tag tool, before anything else
 
-Build the tool once (it is its own module), then run it from each module's
-root:
+The tag tool is `jsontags` ([tools/jsontags](tools/jsontags)). Build it once
+(it is its own module), then run it from each module's root:
 
     (cd tools/jsontags && go build -o "$HOME/bin/jsontags" .)
     jsontags -w -report jsontags-report.json ./...
@@ -158,9 +158,9 @@ Don't change by hand a tag the tool has already decided.
   already refuses text after the value; a `jsontext.Decoder` built only to
   check that costs about 1.7 times the time on a small body.
 - Empty bodies: code that treated `io.EOF` from `Decode` as "empty body"
-  must keep doing so. Check `errors.Is(err, io.ErrUnexpectedEOF)` only if
-  you know the input was empty; better, read the body and test
-  `len(bytes.TrimSpace(b)) == 0` first.
+  must keep doing so. `UnmarshalRead` returns `io.ErrUnexpectedEOF` on
+  empty input, so read the body first and test
+  `len(bytes.TrimSpace(b)) == 0`.
 - `dec.DisallowUnknownFields()` becomes the option
   `json.RejectUnknownMembers(true)`.
 - One-shot encodes:
@@ -172,7 +172,7 @@ Don't change by hand a tag the tool has already decided.
   - `enc.SetIndent(p, i)` becomes `jsontext.WithIndentPrefix(p),
     jsontext.WithIndent(i)` on the encoder. Delete
     `enc.SetEscapeHTML(false)`: not escaping is v2's default. A v1 encoder
-    without `SetEscapeHTML(false)` escaped HTML; see "Where the bytes go".
+    without `SetEscapeHTML(false)` escaped HTML; see "Step 3: where the bytes go".
 - Streams (several values on one reader or writer: NDJSON, SSE data lines
   read in a loop, websockets, JSON-RPC):
   - `dec := json.NewDecoder(r)` becomes `dec := jsontext.NewDecoder(r,
@@ -199,7 +199,7 @@ Don't change by hand a tag the tool has already decided.
 - `json.Marshaler` and `json.Unmarshaler` exist in v2 with the same
   methods, so existing `MarshalJSON` and `UnmarshalJSON` methods keep
   working once their bodies call v2. Prefer converting them to
-  `MarshalJSONTo` and `UnmarshalJSONFrom` (see "Durations" for the shape):
+  `MarshalJSONTo` and `UnmarshalJSONFrom` (see the "Durations" paragraph in Step 3 for the shape):
   call-site options reach those (fact 8), and they write into the caller's
   encoder instead of returning bytes it must validate and copy. One of our
   message types took 1.9 times as long with a v1-style method and 1.26
@@ -342,11 +342,46 @@ report it instead of importing v1.
 
 When an agent does this work, add:
 
-- Leave version control to whoever coordinates the work: no `git add`,
+- Leave version control to the person or session directing the agents,
+  who will commit: no `git add`,
   commit, push, branch or stash.
 - Touch only the repository, or the directory, you were given.
 - Report every pin, every accepted change and every open question, with
   its file and line.
+
+## The reviewer's checklist
+
+A second agent read each migration's whole diff, looking for these 11 kinds
+of mistake, and fixed or reported what it found. The list works as well for
+a person reviewing a v2 migration.
+
+1. An `encoding/json` import left in place, or a `//nolint:depguard` hiding
+   one.
+2. A `time.Duration` that reaches `Marshal` or `Unmarshal` without a pin
+   (fact 3), or any `format:` tag (fact 2).
+3. Output that another system reads, or that is stored, written without
+   `json.Deterministic(true)`, or without `json.FormatNilSliceAsNull(true)`
+   and `json.FormatNilMapAsNull(true)` where the receiver expects `null`
+   for a nil slice or map (Step 3).
+4. Input from outside the repository decoded without the leniency v1 had
+   for invalid UTF-8, duplicate names and case-insensitive names (facts 9,
+   10 and 13), or a v1-style `UnmarshalJSON` method that drops the options
+   its caller passed (fact 8).
+5. `json.UnmarshalRead` on a stream that stays open, which waits for EOF
+   (fact 6); a decode loop that no longer stops on `io.EOF` (fact 7); or a
+   rewrite of a v1 `Token` and `More` loop that checks the wrong token
+   kinds.
+6. A trailing newline lost where something reads line by line: command
+   output, NDJSON, JSON-RPC over stdio, files people read (fact 5).
+7. Empty-body handling that relied on v1's `Decode` returning `io.EOF` for
+   an empty body (fact 6).
+8. `json.Number` replaced by `float64` where the exact digits mattered.
+9. A field whose omission changed in a way the tag tool did not cover
+   (fact 4 and Step 1), or a change reported as accepted that the wire
+   policy says to pin.
+10. A test weakened until it passed, or a pin with no byte-exact test.
+11. Error handling that checks for the wrong v2 error type, or an error
+    message that lost the name of the field that failed.
 
 ## Learned in CI
 
@@ -355,13 +390,14 @@ one comes from a check run that failed.
 
 - **Map keys are unsorted.** v1 sorted the keys of a Go map; v2 does not.
   Every test that compares a body built from a map byte for byte, and every
-  test that decodes a map and marshals it again, fails at random. A
-  three-key map comes out in v1's order about one run in three, so one green
-  run proves nothing: rerun such packages several times, as separate
-  processes. A `-count=3` failure is worth checking against the code from
-  before the change, since a test that leaves a fixed database key, a
-  package-level counter or a process limit behind fails `-count=3` with no
-  JSON in it. The fixes, by rule: a response or stored body with a fixed set
+  test that decodes a map and marshals it again, fails at random. A map
+  with a few keys often comes out in v1's order by chance, so such a test
+  passes some runs and fails others, and one green run proves nothing.
+  Rerun such packages several times, as separate processes.
+  A `-count=3` failure needs a check against the code from before the
+  change. A test that leaves a fixed database key, a package-level counter
+  or a process limit behind fails `-count=3` with no JSON in it. The
+  fixes, by rule: a response or stored body with a fixed set
   of members becomes a struct whose fields are declared in sorted key order
   (its bytes then equal v1's); an error body, which a test compares to prove
   two refusals are indistinguishable, is written with
@@ -372,7 +408,7 @@ one comes from a check run that failed.
   Kubernetes API server still encodes with v1's rules, and a JSON Patch
   `test` operation compares its value with the server's encoding byte for
   byte. A guarded patch of an annotation holding `a > b`, sent as
-  `"a > b"`, fails against the stored `"a > b"` on every attempt.
+  `"a > b"`, fails against the stored `"a \u003e b"` on every attempt.
   Toward a server that compares bytes (Kubernetes, prompt caches), pass
   `jsontext.EscapeForHTML(true), jsontext.EscapeForJS(true)` as well.
 - **Libraries first.** A migrated module that encodes a struct from an
@@ -387,7 +423,7 @@ one comes from a check run that failed.
 - **Linters that only know v1.** `errchkjson` and `gosec` do not recognize
   v2 calls, so a `//nolint:errchkjson` or `//nolint:gosec` on a line that
   now calls v2 is unused and fails `nolintlint`: remove it. `errorlint`
-  flags `err == io.EOF` after `jsontext.Decoder.ReadToken` or `ReadValue`;
+  flags `err == io.EOF` and `err != io.EOF` after `jsontext.Decoder.ReadToken` or `ReadValue`;
   write `errors.Is(err, io.EOF)`. `unconvert` flags `jsontext.Value(x)` when
   `x` already has that type.
 - **The go directive.** v2 needs `go 1.27` in `go.mod`. Raising it turns on
@@ -395,6 +431,6 @@ one comes from a check run that failed.
   change touches, and a library that supported older Go releases drops
   them: say so in its changelog.
 - **Error text.** Go 1.27.3 words a type mismatch "unable to unmarshal";
-  v1 said "cannot unmarshal". Tests that match error text change.
+  v1 said "cannot unmarshal". Tests that match error text must change.
 - **License headers.** If your checks require a license notice in every
   file, a new test file needs one too.

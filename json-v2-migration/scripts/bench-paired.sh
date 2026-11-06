@@ -1,5 +1,8 @@
 #!/bin/zsh
 # bench-paired.sh OUTDIR ROUNDS BENCHTIME VARIANT...
+# zsh on macOS (it uses sysctl and sw_vers). ROOT must name a directory of
+# checkouts: module roots are found there, even when the variants build from
+# exported trees elsewhere.
 # A VARIANT is NAME=TREEROOT[:GOEXPERIMENT]. Builds each benchmark package's
 # test binary once per variant, then runs ROUNDS rounds. In each round, for
 # each package, every variant runs once (-test.count 1), one right after the

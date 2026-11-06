@@ -1,5 +1,7 @@
 #!/bin/zsh
 # bench.sh OUTDIR ROUNDS COUNT BENCHTIME VARIANT...
+# zsh on macOS (it uses sysctl and sw_vers). ROOT must name a directory of
+# checkouts: module roots are found there.
 # A VARIANT is NAME=TREEROOT[:GOEXPERIMENT]. For each round, for each module,
 # for each variant: run the BenchmarkJSON benchmarks of that module's
 # benchmark packages and append to OUTDIR/NAME/<module>.txt. Alternating
