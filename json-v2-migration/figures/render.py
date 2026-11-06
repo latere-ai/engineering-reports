@@ -216,13 +216,15 @@ def ratio_axis(ax, lo: float, hi: float, th: Theme, *, which: str = "x") -> None
     axis.set_ticklabels([times(t) for t in ticks])
     (ax.set_xlim if which == "x" else ax.set_ylim)(lo, hi)
     ax.grid(axis=which, color=th.grid, lw=0.7, zorder=0)
-    (ax.axvline if which == "x" else ax.axhline)(1, color=th.muted, lw=0.9, ls=(0, (4, 3)), zorder=1)
+    (ax.axvline if which == "x" else ax.axhline)(1, color=th.muted, lw=0.9, ls=(0, (4, 3)), zorder=1, gid="reference")
 
 
-def span(values) -> tuple[float, float]:
-    """A padded log range that holds every value and 1."""
+def span(values, *, room: float = 1.12, room_hi: float = 1.12) -> tuple[float, float]:
+    """A padded log range that holds every value and 1; room and room_hi are
+    the factors left below the smallest and above the largest value, more
+    where a value label sits there."""
     v = np.asarray([x for x in values if x > 0 and np.isfinite(x)] + [1.0])
-    return float(v.min()) / 1.12, float(v.max()) * 1.12
+    return float(v.min()) / room, float(v.max()) * room_hi
 
 
 def order(m: dict[str, dict]) -> list[str]:
@@ -256,6 +258,49 @@ def row_axis(ax, keys: list[str], ys: np.ndarray, data: Data, th: Theme, *, labe
             ax.get_yticklabels()[-1].set_fontweight("bold")
 
 
+def counts(ax, keys: list[str], ys: np.ndarray, ns: list[int], th: Theme) -> None:
+    """The number of benchmarks between a repository's name and the plot,
+    where the eye passes anyway."""
+    ax.tick_params(axis="y", pad=40)
+    tr = blended_transform_factory(ax.transAxes, ax.transData)
+    ax.text(-0.015, ys[0] - 1.2, "Benchmarks", transform=tr, ha="right", va="bottom", fontsize=8.5, color=th.muted)
+    for k, y, n in zip(keys, ys, ns):
+        ax.text(-0.015, y, f"{n}", transform=tr, ha="right", va="center", fontsize=9, color=th.muted,
+                fontweight="bold" if k == ALL else "normal")
+
+
+def side(own: float, others) -> str:
+    """Where a value's label goes: beyond its mark when the mark is the
+    row's leftmost or rightmost, above it when it lies between the others."""
+    if own <= min(others):
+        return "left"
+    if own >= max(others):
+        return "right"
+    return "above"
+
+
+def value(ax, x: float, y: float, v: float, where: str, th: Theme, *, strong: bool = True) -> None:
+    """A value written beside its own mark, so the eye reads it in place. Its
+    opaque ground breaks a gridline or the line at 1 under it, never a mark."""
+    dx = {"left": -6, "right": 6, "above": 0}[where]
+    tr = offset_copy(ax.transData, fig=ax.figure, x=dx, y=6 if where == "above" else 0, units="points")
+    ax.text(x, y, f"{v:.2f}×", transform=tr, fontsize=8, zorder=4,
+            ha={"left": "right", "right": "left", "above": "center"}[where],
+            va="bottom" if where == "above" else "center",
+            fontweight="bold" if strong else "normal", color=th.fg if strong else th.muted,
+            bbox={"boxstyle": "square,pad=0.08", "facecolor": th.bg, "edgecolor": "none"})
+
+
+def interval_values(ax, g, lo, hi, ys, th: Theme) -> None:
+    """Each row's ratio beside its interval, on the side away from the line
+    at 1, so the label never sits on the row's own line."""
+    for v, a, b, y in zip(g, lo, hi, ys):
+        if v < 1:
+            value(ax, a, y, v, "left", th)
+        else:
+            value(ax, b, y, v, "right", th)
+
+
 def directions(ax, th: Theme, less: str, more: str) -> None:
     """Which way is better, written over the line at 1."""
     tr = blended_transform_factory(ax.transData, ax.transAxes)
@@ -285,8 +330,8 @@ def engines(data: Data, th: Theme) -> plt.Figure:
     a = np.array([after[k]["Geomean"] for k in keys])
     one = np.ones_like(b)
 
-    fig, ax = plt.subplots(figsize=(7.8, 10.6))
-    fig.subplots_adjust(left=0.30, right=0.96, top=0.835, bottom=0.13)
+    fig, ax = plt.subplots(figsize=(7.8, 11.6))
+    fig.subplots_adjust(left=0.36, right=0.96, top=0.845, bottom=0.12)
     ax.hlines(ys, np.minimum(a, b), np.maximum(a, b), color=th.muted, lw=1.1, alpha=0.6, zorder=2)
     ax.hlines(ys, np.maximum(a, b), one, color=th.muted, lw=0.8, alpha=0.3, zorder=2)
     ax.scatter(one, ys, s=34, facecolors=th.bg, edgecolors=th.muted, linewidths=1.2, zorder=3,
@@ -295,8 +340,13 @@ def engines(data: Data, th: Theme) -> plt.Figure:
                label="Go 1.27's default build: the v1 API on the new engine, our code unchanged")
     ax.scatter(a, ys, s=34, color=th.strong, edgecolors=th.bg, linewidths=0.8, zorder=3,
                label="Go 1.27's default build after the migration to the v2 API")
-    ratio_axis(ax, *span([*a, *b]), th)
+    ratio_axis(ax, *span([*a, *b], room=1.5), th)
     row_axis(ax, keys, ys, data, th)
+    counts(ax, keys, ys, [after[k]["N"] for k in keys], th)
+    for k, y, bv, av in zip(keys, ys, b, a):
+        value(ax, av, y, av, side(av, (bv, 1.0)), th)
+        if k == ALL:
+            value(ax, bv, y, bv, side(bv, (av, 1.0)), th, strong=False)
     directions(ax, th, "faster", "slower")
     frame(ax, th)
     ax.set_xlabel("Time per operation ÷ time on the classic engine (log scale)")
@@ -331,18 +381,12 @@ def per_repo(data: Data, th: Theme) -> plt.Figure:
     fig, ax = plt.subplots(figsize=(7.8, 9.8))
     fig.subplots_adjust(left=0.36, right=0.96, top=0.89, bottom=0.13)
     ratio_dots(ax, g, ys, th, lo=lo, hi=hi)
-    ratio_axis(ax, *span([*lo, *hi]), th)
+    ratio_axis(ax, *span([*lo, *hi], room=1.3), th)
     row_axis(ax, keys, ys, data, th)
+    counts(ax, keys, ys, [m[k]["N"] for k in keys], th)
+    interval_values(ax, g, lo, hi, ys, th)
     directions(ax, th, "faster", "slower")
     frame(ax, th)
-    # The number of benchmarks sits between a repository's name and the
-    # plot, where the eye passes anyway.
-    ax.tick_params(axis="y", pad=40)
-    tr = blended_transform_factory(ax.transAxes, ax.transData)
-    ax.text(-0.015, -1.2, "Benchmarks", transform=tr, ha="right", va="bottom", fontsize=8.5, color=th.muted)
-    for k, y in zip(keys, ys):
-        ax.text(-0.015, y, f"{m[k]['N']}", transform=tr, ha="right", va="center", fontsize=9, color=th.muted,
-                fontweight="bold" if k == ALL else "normal")
     ax.set_xlabel("Time per operation after the migration ÷ time before (log scale)")
     ax.set_ylabel("Repository")
     header(fig, "What the migration to the v2 API changed, by repository",
@@ -368,15 +412,19 @@ def memory(data: Data, th: Theme) -> plt.Figure:
     ys = rows(keys)
     panels = [(by, "Bytes allocated per operation"), (al, "Allocations per operation")]
     vals = [v for m, _ in panels for k in keys for v in (m[k]["GeoLo"], m[k]["GeoHi"])]
-    lo, hi = span(vals)
+    lo, hi = span(vals, room=1.45, room_hi=1.45)
 
-    fig, axes = plt.subplots(1, 2, figsize=(9.6, 9.8), sharey=True)
-    fig.subplots_adjust(left=0.245, right=0.975, top=0.885, bottom=0.13, wspace=0.06)
+    fig, axes = plt.subplots(1, 2, figsize=(10.4, 9.8), sharey=True)
+    fig.subplots_adjust(left=0.27, right=0.975, top=0.885, bottom=0.13, wspace=0.06)
     for ax, (m, title) in zip(axes, panels):
         g = np.array([m[k]["Geomean"] for k in keys])
-        ratio_dots(ax, g, ys, th, lo=[m[k]["GeoLo"] for k in keys], hi=[m[k]["GeoHi"] for k in keys])
+        glo, ghi = [m[k]["GeoLo"] for k in keys], [m[k]["GeoHi"] for k in keys]
+        ratio_dots(ax, g, ys, th, lo=glo, hi=ghi)
         ratio_axis(ax, lo, hi, th)
         row_axis(ax, keys, ys, data, th, label=ax is axes[0])
+        interval_values(ax, g, glo, ghi, ys, th)
+        if ax is axes[0]:
+            counts(ax, keys, ys, [m[k]["N"] for k in keys], th)
         frame(ax, th)
         ax.set_title(title, fontsize=11, fontweight="bold", color=th.fg, pad=20)
         directions(ax, th, "less", "more")
@@ -548,14 +596,18 @@ def overlaps(fig: plt.Figure) -> list[str]:
         if t.get_visible() and t.get_text().strip() and t.figure is fig:
             bb = t.get_window_extent(r)
             if bb.width > 2 and bb.height > 2:
+                patch = t.get_bbox_patch()
+                masked = patch is not None and patch.get_facecolor()[3] == 1
                 texts.append((t.get_text().replace("\n", " ")[:40], Bbox.from_extents(bb.x0 + 1, bb.y0 + 1,
-                                                                                   bb.x1 - 1, bb.y1 - 1)))
+                                                                                   bb.x1 - 1, bb.y1 - 1), masked))
     marks = []  # (kind, path in display space or None, box, clip box)
     for ax in fig.axes:
         clip = ax.get_window_extent(r)
-        for ln in [*ax.lines, *ax.get_xgridlines(), *ax.get_ygridlines()]:
+        grid = [*ax.get_xgridlines(), *ax.get_ygridlines()]
+        for ln in [*ax.lines, *grid]:
             if ln.get_visible() and len(ln.get_xydata()):
-                marks.append(("line", ln.get_transform().transform_path(ln.get_path()), None, clip))
+                kind = "grid" if ln in grid or ln.get_gid() == "reference" else "line"
+                marks.append((kind, ln.get_transform().transform_path(ln.get_path()), None, clip))
         for c in ax.collections:
             if isinstance(c, LineCollection):
                 for path in c.get_paths():
@@ -572,8 +624,10 @@ def overlaps(fig: plt.Figure) -> list[str]:
             if sp.get_visible():
                 marks.append(("frame", sp.get_transform().transform_path(sp.get_path()), None, None))
     found = []
-    for name, tb in texts:
+    for name, tb, masked in texts:
         for kind, path, box, clip in marks:
+            if kind == "grid" and masked:
+                continue
             if path is not None:
                 area = tb if clip is None else Bbox.intersection(tb, clip)
                 if area is not None and area.width > 0 and area.height > 0 and path.intersects_bbox(area, filled=False):
@@ -582,8 +636,8 @@ def overlaps(fig: plt.Figure) -> list[str]:
             elif box.overlaps(tb):
                 found.append(f"text {name!r} covers a {kind}")
                 break
-    for i, (a, ab) in enumerate(texts):
-        for b, bb in texts[i + 1:]:
+    for i, (a, ab, _) in enumerate(texts):
+        for b, bb, _ in texts[i + 1:]:
             if ab.overlaps(bb):
                 found.append(f"text {a!r} overlaps text {b!r}")
     return found
