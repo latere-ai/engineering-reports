@@ -204,8 +204,9 @@ Don't change by hand a tag the tool has already decided.
   `MarshalJSONTo` and `UnmarshalJSONFrom` (see the "Durations" paragraph in Step 3 for the shape):
   call-site options reach those (fact 8), and they write into the caller's
   encoder instead of returning bytes it must validate and copy. One of our
-  message types took 1.9 times as long with a v1-style method and 1.26
-  times with `MarshalJSONTo`.
+  message types took 1.9 times as long to encode with a v1-style method,
+  and 1.26 times as long with `MarshalJSONTo` in a scratch copy of the code
+  (the shipped code still has the v1-style method).
 - `json.Number` and `dec.UseNumber()` exist only in v1. Use the value's
   real type (`int64`, `uint64`, `float64`, `string`) when the schema is
   known. Keep the raw digits as a `jsontext.Value`, parsed with `strconv`,
@@ -355,15 +356,14 @@ report it instead of importing v1.
   the options the production path now uses, but keep every benchmark
   function name, every `b.Run` name, every input and every loop body
   otherwise unchanged. Never add, remove, rename or reorder a benchmark.
-
-When an agent does this work, add:
-
-- Leave version control to the person or session directing the agents,
-  who will commit: no `git add`,
-  commit, push, branch or stash.
-- Touch only the repository, or the directory, you were given.
-- Report every pin, every accepted change and every open question, with
-  its file and line.
+- Work only in the repository or directory you were given. When several
+  people or agents migrate parts of one codebase at once, leave version
+  control (`git add`, commit, push, branch, stash) to the one person or
+  session that coordinates the work and commits it, so that the parts do
+  not collide.
+- Report every pin, every accepted change and every open question with its
+  file and line, so that the reviewer can check each one against the wire
+  policy.
 
 ## The reviewer's checklist
 
