@@ -494,7 +494,14 @@ func moduleOrder(m map[string]agg) []string {
 			keys = append(keys, k)
 		}
 	}
-	sort.Slice(keys, func(i, j int) bool { return m[keys[i]].Geomean < m[keys[j]].Geomean })
+	// Equal geomeans (modules that allocate the same before and after) fall
+	// back to the key, so the same data draws the same figure every run.
+	sort.Slice(keys, func(i, j int) bool {
+		if gi, gj := m[keys[i]].Geomean, m[keys[j]].Geomean; gi != gj {
+			return gi < gj
+		}
+		return keys[i] < keys[j]
+	})
 	if _, ok := m["ALL"]; ok {
 		keys = append(keys, "ALL")
 	}
@@ -522,7 +529,7 @@ func perRepo(t theme, st stats) string {
 		vals = append(vals, []pt{{a.Geomean, a.GeoLo, a.GeoHi}})
 	}
 	all := m["ALL"]
-	return dotRows(t, "Time per operation after the move, by module",
+	return dotRows(t, "Time per operation after the move, by repository and module",
 		fmt.Sprintf("Geometric mean of after/before over each module's benchmarks; overall %s, %d benchmarks", pct(all.Geomean), all.N),
 		"left of 1× is faster; whiskers: 95% bootstrap interval across the module's benchmarks; (n) benchmarks",
 		[]string{"after / before"}, labels, vals)

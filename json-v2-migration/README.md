@@ -108,8 +108,9 @@ wrote down one policy, and held every change to it:
 | `null` for a nil list sent to a service we don't own | case-sensitive names for our own clients |
 | lenient input from anything we don't produce: duplicate names, invalid UTF-8, any letter case | new error text |
 
-"Kept" means options at the call site. Each package names its option sets
-once, and a test fails if a pin is lost:
+"Kept" means an option at the call site that holds v1's behavior; we call
+each one a pin. Each package names its option sets once, and a test fails
+if a pin is lost:
 
 ```go
 // foreignJSON reads what another system wrote, as leniently as v1 did.
@@ -335,7 +336,7 @@ from 1.27, so its floor moved to Go 1.27, released as a breaking change.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/per-repo-dark.svg">
-  <img alt="Geometric mean change in time per operation for each repository after the move" src="figures/per-repo.svg">
+  <img alt="Geometric mean change in time per operation for each repository after the move; the agent sessions interface has two modules, so it has two rows" src="figures/per-repo.svg">
 </picture>
 
 25 of the 29 repositories got faster, with the whole 95% interval of their
