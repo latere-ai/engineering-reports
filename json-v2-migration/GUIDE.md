@@ -61,9 +61,11 @@ If your policy differs, change this section and follow the rest with yours.
    on Go 1.27. A field carrying `format:...` makes `Marshal` and `Unmarshal`
    of the whole struct fail at run time. Never write `format:` tags (no
    `format:nano`, `format:emitnull`, `format:array`, `format:base64`).
-3. `time.Duration` has no v2 representation: marshaling or unmarshaling one
-   (a field, a slice element, a map value, or a value inside `any`) is a run
-   time error. See the "Durations" paragraph in Step 3.
+3. `time.Duration` has no default v2 representation: marshaling or
+   unmarshaling one (a field, a slice element, a map value, or a value
+   inside `any`) is a run time error unless the call passes
+   `FormatDurationAsNano(true)` from package `encoding/json`. See the
+   "Durations" paragraph in Step 3.
 4. v1's `omitempty` omits false, 0, a nil pointer, a nil interface, and an
    empty string, slice, map or array, and never omits a struct value. v2's
    `omitempty` omits a field whose encoded JSON is `null`, `""`, `{}` or `[]`.
@@ -295,6 +297,20 @@ tags:
   or `d.Nanoseconds()`), or pass
   `json.WithMarshalers(json.MarshalToFunc(func(enc *jsontext.Encoder, d time.Duration) error { return enc.WriteToken(jsontext.Int(int64(d))) }))`
   and the matching `json.WithUnmarshalers(json.UnmarshalFromFunc(...))`.
+- A per-call option keeps nanoseconds for everything one call reaches:
+  `FormatDurationAsNano(true)`, from package `encoding/json`, makes v2's
+  `Marshal` and `Unmarshal` write and read every `time.Duration` as integer
+  nanoseconds, in fields, slice elements, map values and `any` alike:
+
+      import jsonv1 "encoding/json"
+
+      b, err := json.Marshal(v, jsonv1.FormatDurationAsNano(true))
+
+  Every call that can meet a duration has to pass it, and like any
+  call-site option it does not reach the inner call of a v1-style
+  `MarshalJSON` or `UnmarshalJSON` method (fact 8). It also brings back an
+  `encoding/json` import, which our rules forbid (see Rules), so our
+  repositories use the methods and conversions above instead.
 - Look beyond the tool's report: untagged structs that get marshaled
   (configuration dumps, `--json` output), and literals such as
   `map[string]any{"elapsed": time.Since(t)}`.
