@@ -1,0 +1,80 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   28749	      4012 ns/op	 127.61 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2113	     57236 ns/op	 178.81 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     313	    388844 ns/op	 158.06 MB/s	  483255 B/op	    5825 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   35134	      3348 ns/op	 152.91 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2116	     59141 ns/op	 173.04 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     334	    364720 ns/op	 168.52 MB/s	  483270 B/op	    5825 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   34250	      3312 ns/op	 154.60 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2006	     57529 ns/op	 177.89 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     325	    365040 ns/op	 168.37 MB/s	  482489 B/op	    5824 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   35396	      3287 ns/op	 155.78 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2143	     57491 ns/op	 178.01 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     331	    362578 ns/op	 169.51 MB/s	  482508 B/op	    5824 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   36730	      3167 ns/op	 161.69 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2181	     56549 ns/op	 180.97 MB/s	   64315 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     310	    366013 ns/op	 167.92 MB/s	  482971 B/op	    5825 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   36346	      3242 ns/op	 157.91 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2194	     56987 ns/op	 179.58 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     331	    361020 ns/op	 170.24 MB/s	  483250 B/op	    5824 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   35664	      3277 ns/op	 156.26 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2223	     56865 ns/op	 179.97 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     332	    359473 ns/op	 170.98 MB/s	  483005 B/op	    5824 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   35664	      3308 ns/op	 154.76 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2154	     57336 ns/op	 178.49 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     328	    362837 ns/op	 169.39 MB/s	  483249 B/op	    5825 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   36238	      3256 ns/op	 157.22 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2192	     55593 ns/op	 184.09 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     339	    351061 ns/op	 175.07 MB/s	  483499 B/op	    5825 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/apps/manifest
+cpu: Apple M5 Pro
+BenchmarkJSONDetectPackageJSONUnmarshal/small-18         	   36204	      3325 ns/op	 153.98 MB/s	    2992 B/op	      78 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/medium-18        	    2091	     58583 ns/op	 174.69 MB/s	   64312 B/op	    1003 allocs/op
+BenchmarkJSONDetectPackageJSONUnmarshal/large-18         	     326	    371107 ns/op	 165.62 MB/s	  483248 B/op	    5825 allocs/op
+PASS

@@ -1,0 +1,660 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	   97648	      1123 ns/op	 844.19 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   19424	      6318 ns/op	1628.52 MB/s	   11319 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1064	    111786 ns/op	1776.15 MB/s	  209662 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1399	     86764 ns/op	   6.59 MB/s	   20352 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      75	   1627831 ns/op	   6.09 MB/s	  360761 B/op	   12661 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  137036	       808.1 ns/op	 568.03 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11083 ns/op	 811.88 MB/s	   11012 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     505	    225852 ns/op	 780.49 MB/s	  211855 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   46082	      2550 ns/op	 179.62 MB/s	    7412 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4198	     30228 ns/op	 297.63 MB/s	   61242 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     220	    537289 ns/op	 328.08 MB/s	  962930 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   74136	      1618 ns/op	 136.58 MB/s	    6410 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   13492	      7850 ns/op	 142.16 MB/s	    8352 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3784	     32799 ns/op	 339.50 MB/s	   49892 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     249	    474453 ns/op	 420.90 MB/s	  893504 B/op	   11053 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9204	     11505 ns/op	  97.00 MB/s	   10718 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1480	     80967 ns/op	 137.53 MB/s	   86496 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      92	   1272623 ns/op	 156.92 MB/s	 1455344 B/op	   19415 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   51932	      2327 ns/op	 298.61 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   22068	      5436 ns/op	1544.21 MB/s	   11644 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   77493	      1519 ns/op	 457.50 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19602	      6119 ns/op	1371.85 MB/s	    9724 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     556	    216522 ns/op	 178.31 MB/s	  297223 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     856	    139669 ns/op	 276.43 MB/s	  232043 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   16604	      6412 ns/op	 165.15 MB/s	    7960 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    5000	     24328 ns/op	 439.09 MB/s	   42668 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     362	    342980 ns/op	 560.75 MB/s	  771046 B/op	    7260 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   19537	      6136 ns/op	 172.59 MB/s	    6370 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3210	     37828 ns/op	 282.39 MB/s	   49003 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     213	    555962 ns/op	 345.93 MB/s	  853884 B/op	    2587 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   39096	      3075 ns/op	 276.11 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19315	      6208 ns/op	1377.00 MB/s	   13029 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61560	      1918 ns/op	 442.72 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18114	      6746 ns/op	1267.32 MB/s	    9217 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     267	    423990 ns/op	 131.49 MB/s	  506526 B/op	   11172 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     550	    216907 ns/op	 257.02 MB/s	  298808 B/op	    2417 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    7154	     15981 ns/op	  56.88 MB/s	   69013 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    2754	     38332 ns/op	 356.62 MB/s	  116696 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     223	    530356 ns/op	 517.37 MB/s	  995524 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6807	     17192 ns/op	  20.88 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  127891	       911.5 ns/op	6739.18 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  125894	       942.0 ns/op	1006.38 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18960	      6328 ns/op	1625.95 MB/s	   11317 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1050	    114143 ns/op	1739.48 MB/s	  209721 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1351	     89111 ns/op	   6.42 MB/s	   20298 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      75	   1660351 ns/op	   5.97 MB/s	  361445 B/op	   12658 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  161548	       705.3 ns/op	 650.78 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11360 ns/op	 792.10 MB/s	   11008 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     548	    217118 ns/op	 811.89 MB/s	  208235 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   43008	      2659 ns/op	 172.27 MB/s	    7412 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4120	     30388 ns/op	 296.07 MB/s	   61244 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     223	    542414 ns/op	 324.98 MB/s	  962910 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   69489	      1802 ns/op	 122.62 MB/s	    6411 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   18903	      6299 ns/op	 177.18 MB/s	    8352 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3745	     33088 ns/op	 336.53 MB/s	   49870 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     249	    482188 ns/op	 414.15 MB/s	  867923 B/op	   11052 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9890	     12038 ns/op	  92.70 MB/s	   10720 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1518	     80719 ns/op	 137.95 MB/s	   86494 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      90	   1226733 ns/op	 162.79 MB/s	 1455106 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   50646	      2353 ns/op	 295.38 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21862	      5490 ns/op	1529.13 MB/s	   11642 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   75345	      1650 ns/op	 421.26 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   17542	      6746 ns/op	1244.51 MB/s	    9723 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     496	    250869 ns/op	 153.90 MB/s	  297260 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     687	    161031 ns/op	 239.76 MB/s	  232095 B/op	    2130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   23230	      5081 ns/op	 208.42 MB/s	    7958 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4773	     24811 ns/op	 430.54 MB/s	   42644 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     352	    335467 ns/op	 573.31 MB/s	  716729 B/op	    7258 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   19028	      6357 ns/op	 166.60 MB/s	    6370 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3078	     38674 ns/op	 276.20 MB/s	   48990 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     205	    562358 ns/op	 342.00 MB/s	  853399 B/op	    2585 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   38385	      3120 ns/op	 272.08 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19183	      6260 ns/op	1365.60 MB/s	   13029 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   62072	      1915 ns/op	 443.39 MB/s	    1337 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18301	      6549 ns/op	1305.39 MB/s	    9218 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     295	    404475 ns/op	 137.83 MB/s	  506452 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     554	    216236 ns/op	 257.82 MB/s	  298711 B/op	    2417 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    7484	     14239 ns/op	  63.84 MB/s	   69014 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    3033	     38849 ns/op	 351.88 MB/s	  116713 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     220	    540167 ns/op	 507.97 MB/s	  995679 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6475	     18289 ns/op	  19.63 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  129889	       918.9 ns/op	6685.23 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  115116	       945.2 ns/op	1003.01 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   19041	      6306 ns/op	1631.70 MB/s	   11312 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1080	    113651 ns/op	1747.00 MB/s	  211292 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1375	     89884 ns/op	   6.36 MB/s	   20331 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      72	   1646153 ns/op	   6.02 MB/s	  360112 B/op	   12657 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  161064	       681.4 ns/op	 673.60 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11316 ns/op	 795.17 MB/s	   11016 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     558	    214416 ns/op	 822.12 MB/s	  209865 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   46266	      2578 ns/op	 177.64 MB/s	    7412 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4154	     29662 ns/op	 303.32 MB/s	   61242 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     226	    527151 ns/op	 334.39 MB/s	  962838 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   75427	      1583 ns/op	 139.60 MB/s	    6410 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   18769	      6314 ns/op	 176.75 MB/s	    8352 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3781	     33109 ns/op	 336.31 MB/s	   49957 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     252	    489823 ns/op	 407.69 MB/s	  938060 B/op	   11055 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	   10167	     11813 ns/op	  94.47 MB/s	   10720 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1490	     81619 ns/op	 136.43 MB/s	   86497 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      88	   1215262 ns/op	 164.33 MB/s	 1455184 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   47631	      2475 ns/op	 280.83 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21921	      5490 ns/op	1529.02 MB/s	   11644 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   77392	      1541 ns/op	 450.93 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19597	      6133 ns/op	1368.82 MB/s	    9725 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     523	    222392 ns/op	 173.60 MB/s	  297244 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     822	    141090 ns/op	 273.64 MB/s	  232003 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   23373	      5063 ns/op	 209.18 MB/s	    7959 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4692	     24760 ns/op	 431.42 MB/s	   42679 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     345	    337247 ns/op	 570.28 MB/s	  729974 B/op	    7258 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   14695	      7002 ns/op	 151.24 MB/s	    6372 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3118	     37978 ns/op	 281.27 MB/s	   49002 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     219	    539940 ns/op	 356.20 MB/s	  853497 B/op	    2585 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   38709	      3036 ns/op	 279.65 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19162	      6245 ns/op	1369.02 MB/s	   13022 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61860	      1910 ns/op	 444.59 MB/s	    1337 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18489	      6494 ns/op	1316.52 MB/s	    9219 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     291	    410556 ns/op	 135.79 MB/s	  506429 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     552	    217085 ns/op	 256.81 MB/s	  298664 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    8012	     13102 ns/op	  69.38 MB/s	   69029 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    3058	     39075 ns/op	 349.84 MB/s	  116707 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     222	    538044 ns/op	 509.98 MB/s	  995653 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6687	     17838 ns/op	  20.13 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  125888	       929.3 ns/op	6610.03 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  123670	       933.6 ns/op	1015.42 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18740	      6389 ns/op	1610.40 MB/s	   11312 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1059	    113889 ns/op	1743.36 MB/s	  208831 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1310	     91097 ns/op	   6.28 MB/s	   20260 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      75	   1661778 ns/op	   5.97 MB/s	  360556 B/op	   12659 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  161612	       701.5 ns/op	 654.31 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11404 ns/op	 788.99 MB/s	   11009 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     553	    218967 ns/op	 805.03 MB/s	  213180 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   40603	      2631 ns/op	 174.10 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4011	     30514 ns/op	 294.85 MB/s	   61238 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     212	    553067 ns/op	 318.72 MB/s	  962767 B/op	    3958 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   64534	      1646 ns/op	 134.27 MB/s	    6412 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   19039	      6402 ns/op	 174.32 MB/s	    8352 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3753	     33272 ns/op	 334.67 MB/s	   49818 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     249	    480913 ns/op	 415.25 MB/s	  933792 B/op	   11055 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    8677	     12710 ns/op	  87.80 MB/s	   10719 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1437	     81438 ns/op	 136.73 MB/s	   86483 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      91	   1233639 ns/op	 161.88 MB/s	 1455273 B/op	   19415 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   51738	      2338 ns/op	 297.31 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21861	      5462 ns/op	1537.02 MB/s	   11644 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   76892	      1593 ns/op	 436.15 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   17866	      6724 ns/op	1248.58 MB/s	    9722 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     512	    224611 ns/op	 171.89 MB/s	  297221 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     804	    144323 ns/op	 267.51 MB/s	  232011 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   21183	      5377 ns/op	 196.94 MB/s	    7959 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4789	     24513 ns/op	 435.76 MB/s	   42653 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     352	    337168 ns/op	 570.42 MB/s	  747828 B/op	    7259 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   16822	      6357 ns/op	 166.60 MB/s	    6370 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3213	     37781 ns/op	 282.73 MB/s	   49001 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     211	    552847 ns/op	 347.88 MB/s	  853761 B/op	    2586 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   39150	      3064 ns/op	 277.05 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19059	      6375 ns/op	1340.98 MB/s	   13030 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61566	      1920 ns/op	 442.14 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18336	      6551 ns/op	1304.99 MB/s	    9219 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     294	    404562 ns/op	 137.80 MB/s	  506471 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     552	    216793 ns/op	 257.15 MB/s	  298732 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    7759	     13563 ns/op	  67.02 MB/s	   69024 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    2877	     39859 ns/op	 342.96 MB/s	  116708 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     223	    544653 ns/op	 503.79 MB/s	  995720 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    7022	     17117 ns/op	  20.97 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  126877	       928.6 ns/op	6615.36 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  121726	       929.5 ns/op	1019.87 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   19167	      6268 ns/op	1641.52 MB/s	   11312 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1064	    112149 ns/op	1770.40 MB/s	  209667 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1329	     88674 ns/op	   6.45 MB/s	   20243 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      76	   1643667 ns/op	   6.03 MB/s	  360472 B/op	   12659 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  165585	       676.1 ns/op	 678.91 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11311 ns/op	 795.50 MB/s	   11008 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     550	    216792 ns/op	 813.11 MB/s	  209895 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   43616	      2556 ns/op	 179.18 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4206	     29787 ns/op	 302.04 MB/s	   61244 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     226	    529004 ns/op	 333.22 MB/s	  962885 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   75232	      1635 ns/op	 135.19 MB/s	    6411 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   18879	      6355 ns/op	 175.62 MB/s	    8353 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3750	     33512 ns/op	 332.27 MB/s	   49857 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     247	    489410 ns/op	 408.04 MB/s	  943188 B/op	   11055 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9127	     11977 ns/op	  93.18 MB/s	   10721 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1506	     80510 ns/op	 138.31 MB/s	   86482 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      91	   1218887 ns/op	 163.84 MB/s	 1455323 B/op	   19415 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   50640	      2347 ns/op	 296.06 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21728	      5522 ns/op	1520.31 MB/s	   11641 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   78487	      1530 ns/op	 454.35 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19364	      6164 ns/op	1361.85 MB/s	    9723 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     549	    223608 ns/op	 172.66 MB/s	  297247 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     844	    142430 ns/op	 271.07 MB/s	  231970 B/op	    2128 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   23200	      5115 ns/op	 207.04 MB/s	    7959 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    5008	     24849 ns/op	 429.88 MB/s	   42676 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     362	    348302 ns/op	 552.18 MB/s	  735772 B/op	    7258 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   19209	      6225 ns/op	 170.11 MB/s	    6371 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3206	     38067 ns/op	 280.61 MB/s	   48991 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     219	    548019 ns/op	 350.95 MB/s	  853699 B/op	    2586 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   38769	      3073 ns/op	 276.29 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19306	      6348 ns/op	1346.65 MB/s	   13019 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61874	      1935 ns/op	 438.71 MB/s	    1337 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18337	      6589 ns/op	1297.43 MB/s	    9219 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     296	    403579 ns/op	 138.14 MB/s	  506444 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     548	    228395 ns/op	 244.09 MB/s	  298678 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    8066	     13308 ns/op	  68.30 MB/s	   69024 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    2888	     39277 ns/op	 348.04 MB/s	  116700 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     220	    538180 ns/op	 509.85 MB/s	  995681 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6806	     17244 ns/op	  20.82 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  128049	       923.6 ns/op	6651.38 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  124515	       915.8 ns/op	1035.17 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18898	      6321 ns/op	1627.73 MB/s	   11314 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1076	    112084 ns/op	1771.43 MB/s	  207924 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1356	     88922 ns/op	   6.43 MB/s	   20324 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      72	   1647520 ns/op	   6.02 MB/s	  360398 B/op	   12660 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  155091	       697.2 ns/op	 658.37 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11499 ns/op	 782.50 MB/s	   11012 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     548	    218890 ns/op	 805.31 MB/s	  213223 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   42847	      2608 ns/op	 175.61 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4159	     30135 ns/op	 298.56 MB/s	   61238 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     225	    530562 ns/op	 332.24 MB/s	  962901 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   75007	      1663 ns/op	 132.91 MB/s	    6411 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   19011	      6280 ns/op	 177.71 MB/s	    8351 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3759	     33204 ns/op	 335.36 MB/s	   49896 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     247	    487617 ns/op	 409.54 MB/s	  902617 B/op	   11053 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	   10249	     11694 ns/op	  95.44 MB/s	   10717 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1504	     79643 ns/op	 139.81 MB/s	   86503 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      93	   1210805 ns/op	 164.93 MB/s	 1455083 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   51433	      2335 ns/op	 297.61 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21952	      5485 ns/op	1530.43 MB/s	   11639 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   77785	      1524 ns/op	 456.05 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19567	      6146 ns/op	1365.92 MB/s	    9724 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     541	    222660 ns/op	 173.39 MB/s	  297214 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     849	    140890 ns/op	 274.03 MB/s	  232030 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   22956	      5131 ns/op	 206.38 MB/s	    7959 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4920	     24734 ns/op	 431.87 MB/s	   42625 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     357	    339409 ns/op	 566.65 MB/s	  712367 B/op	    7258 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   18920	      6322 ns/op	 167.52 MB/s	    6370 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3067	     38540 ns/op	 277.17 MB/s	   48999 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     217	    548341 ns/op	 350.74 MB/s	  853636 B/op	    2586 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   39159	      3061 ns/op	 277.38 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19058	      6322 ns/op	1352.24 MB/s	   13024 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   62019	      1930 ns/op	 439.97 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18367	      6530 ns/op	1309.11 MB/s	    9217 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     301	    416734 ns/op	 133.78 MB/s	  506460 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     537	    220412 ns/op	 252.93 MB/s	  298744 B/op	    2417 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    8104	     13704 ns/op	  66.33 MB/s	   69015 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    3066	     38715 ns/op	 353.09 MB/s	  116692 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     222	    538446 ns/op	 509.60 MB/s	  995728 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6004	     19851 ns/op	  18.08 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  123092	       965.8 ns/op	6360.27 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  120975	       919.0 ns/op	1031.51 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18811	      6375 ns/op	1613.89 MB/s	   11312 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1041	    115079 ns/op	1725.32 MB/s	  210636 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1330	     90537 ns/op	   6.32 MB/s	   20323 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      74	   1645918 ns/op	   6.02 MB/s	  360566 B/op	   12658 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  150397	       688.3 ns/op	 666.84 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11349 ns/op	 792.88 MB/s	   11012 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     547	    219348 ns/op	 803.63 MB/s	  214909 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   42144	      2592 ns/op	 176.67 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    3913	     30146 ns/op	 298.45 MB/s	   61245 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     223	    535929 ns/op	 328.91 MB/s	  962883 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   74004	      1641 ns/op	 134.64 MB/s	    6410 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   18961	      6259 ns/op	 178.30 MB/s	    8351 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3655	     33069 ns/op	 336.72 MB/s	   49827 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     242	    482694 ns/op	 413.72 MB/s	  903305 B/op	   11053 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9176	     12363 ns/op	  90.27 MB/s	   10721 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1362	     85247 ns/op	 130.62 MB/s	   86497 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      85	   1297162 ns/op	 153.95 MB/s	 1454983 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   51642	      2346 ns/op	 296.20 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21682	      5542 ns/op	1514.88 MB/s	   11639 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   76978	      1558 ns/op	 446.20 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   18094	      6769 ns/op	1240.23 MB/s	    9723 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     535	    220862 ns/op	 174.81 MB/s	  297200 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     828	    145396 ns/op	 265.54 MB/s	  232074 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   23304	      5080 ns/op	 208.47 MB/s	    7959 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    5030	     24560 ns/op	 434.93 MB/s	   42620 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     345	    345089 ns/op	 557.32 MB/s	  735266 B/op	    7258 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   16057	      6288 ns/op	 168.40 MB/s	    6369 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3183	     38597 ns/op	 276.76 MB/s	   49000 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     220	    542168 ns/op	 354.74 MB/s	  853699 B/op	    2586 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   39066	      3138 ns/op	 270.51 MB/s	    4424 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   18410	      6413 ns/op	1333.14 MB/s	   13024 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61370	      2003 ns/op	 423.84 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   17718	      6752 ns/op	1266.08 MB/s	    9220 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     279	    427134 ns/op	 130.52 MB/s	  506573 B/op	   11172 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     508	    229656 ns/op	 242.75 MB/s	  298630 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    7784	     13552 ns/op	  67.07 MB/s	   69011 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    3092	     40087 ns/op	 341.01 MB/s	  116689 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     214	    552986 ns/op	 496.20 MB/s	  995987 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6067	     18959 ns/op	  18.94 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  127540	       931.4 ns/op	6595.58 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  124297	       931.0 ns/op	1018.27 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18964	      6330 ns/op	1625.33 MB/s	   11322 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1065	    112258 ns/op	1768.69 MB/s	  206241 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1362	     87761 ns/op	   6.52 MB/s	   20323 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      75	   1642929 ns/op	   6.03 MB/s	  362084 B/op	   12661 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  166932	       676.1 ns/op	 678.90 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11312 ns/op	 795.47 MB/s	   11012 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     536	    219115 ns/op	 804.49 MB/s	  211633 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   43166	      2579 ns/op	 177.61 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4130	     30136 ns/op	 298.55 MB/s	   61259 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     223	    560069 ns/op	 314.74 MB/s	  962784 B/op	    3958 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   72382	      1652 ns/op	 133.78 MB/s	    6410 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   19272	      6198 ns/op	 180.06 MB/s	    8352 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3810	     32681 ns/op	 340.72 MB/s	   49840 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     255	    471305 ns/op	 423.71 MB/s	  910054 B/op	   11054 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9274	     11928 ns/op	  93.56 MB/s	   10722 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1509	     79701 ns/op	 139.71 MB/s	   86488 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      90	   1203024 ns/op	 166.00 MB/s	 1454990 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   52014	      2312 ns/op	 300.57 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   19934	      5870 ns/op	1430.21 MB/s	   11652 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   76870	      1547 ns/op	 449.17 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19462	      6290 ns/op	1334.64 MB/s	    9724 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     549	    216819 ns/op	 178.07 MB/s	  297204 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     837	    141632 ns/op	 272.59 MB/s	  232080 B/op	    2130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   23530	      5042 ns/op	 210.03 MB/s	    7959 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4545	     24576 ns/op	 434.64 MB/s	   42733 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     364	    331388 ns/op	 580.37 MB/s	  702351 B/op	    7257 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   16454	      6355 ns/op	 166.65 MB/s	    6370 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3118	     40213 ns/op	 265.64 MB/s	   49000 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     220	    541972 ns/op	 354.86 MB/s	  853390 B/op	    2585 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   38792	      3052 ns/op	 278.17 MB/s	    4425 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19299	      6240 ns/op	1369.99 MB/s	   13031 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61916	      1936 ns/op	 438.50 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18264	      6563 ns/op	1302.70 MB/s	    9219 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     300	    400746 ns/op	 139.11 MB/s	  506485 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     552	    215710 ns/op	 258.44 MB/s	  298661 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    7998	     13707 ns/op	  66.32 MB/s	   69008 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    3100	     38750 ns/op	 352.77 MB/s	  116692 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     223	    541475 ns/op	 506.75 MB/s	  995846 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6763	     17709 ns/op	  20.27 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  125079	       931.4 ns/op	6595.55 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  119894	       970.6 ns/op	 976.73 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18789	      6376 ns/op	1613.72 MB/s	   11309 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1030	    113289 ns/op	1752.58 MB/s	  208037 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1378	     87978 ns/op	   6.50 MB/s	   20237 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      76	   1653648 ns/op	   5.99 MB/s	  359984 B/op	   12659 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  165477	       683.0 ns/op	 671.99 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11325 ns/op	 794.51 MB/s	   11016 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     549	    222092 ns/op	 793.70 MB/s	  214883 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   44824	      2600 ns/op	 176.14 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4228	     30133 ns/op	 298.58 MB/s	   61249 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     222	    536411 ns/op	 328.62 MB/s	  962825 B/op	    3959 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   74530	      1628 ns/op	 135.74 MB/s	    6411 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   18778	      6319 ns/op	 176.60 MB/s	    8352 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3706	     33846 ns/op	 328.99 MB/s	   49913 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     250	    471589 ns/op	 423.46 MB/s	  896330 B/op	   11053 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9261	     12018 ns/op	  92.86 MB/s	   10719 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1504	     80448 ns/op	 138.41 MB/s	   86508 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      91	   1213850 ns/op	 164.52 MB/s	 1455138 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   51604	      2443 ns/op	 284.47 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21502	      5583 ns/op	1503.61 MB/s	   11641 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   77528	      1530 ns/op	 454.34 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19435	      6152 ns/op	1364.66 MB/s	    9722 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     543	    222761 ns/op	 173.32 MB/s	  297226 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     842	    141250 ns/op	 273.33 MB/s	  232050 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   23125	      5109 ns/op	 207.28 MB/s	    7960 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4923	     24655 ns/op	 433.26 MB/s	   42597 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     358	    356691 ns/op	 539.20 MB/s	  760405 B/op	    7259 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   18621	      6356 ns/op	 166.62 MB/s	    6370 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3082	     37878 ns/op	 282.01 MB/s	   48999 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     220	    540459 ns/op	 355.86 MB/s	  853393 B/op	    2585 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   37858	      3095 ns/op	 274.29 MB/s	    4423 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   19276	      6198 ns/op	1379.27 MB/s	   13023 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   61886	      1922 ns/op	 441.84 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   18338	      6534 ns/op	1308.37 MB/s	    9217 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     307	    397892 ns/op	 140.11 MB/s	  506446 B/op	   11171 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     550	    228614 ns/op	 243.86 MB/s	  298662 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    8754	     13560 ns/op	  67.03 MB/s	   69011 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    2952	     39213 ns/op	 348.61 MB/s	  116703 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     222	    538991 ns/op	 509.08 MB/s	  995653 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6817	     17444 ns/op	  20.58 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  128149	       928.0 ns/op	6619.45 MB/s	    1282 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/audit
+cpu: Apple M5 Pro
+BenchmarkJSONStdoutEmitEncode/small-18 	  120264	       924.0 ns/op	1025.93 MB/s	    1441 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/medium-18         	   18793	      6357 ns/op	1618.41 MB/s	   11314 B/op	       3 allocs/op
+BenchmarkJSONStdoutEmitEncode/large-18          	    1051	    113701 ns/op	1746.23 MB/s	  210584 B/op	       3 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/small-18       	    1332	     87510 ns/op	   6.54 MB/s	   20293 B/op	     718 allocs/op
+BenchmarkJSONRedactJSONRoundTrip/medium-18      	      78	   1632901 ns/op	   6.07 MB/s	  362919 B/op	   12662 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/httpjson
+cpu: Apple M5 Pro
+BenchmarkJSONWriteEncode/small-18           	  162720	       684.5 ns/op	 670.57 MB/s	     657 B/op	       8 allocs/op
+BenchmarkJSONWriteEncode/medium-18          	   10000	     11802 ns/op	 762.42 MB/s	   11012 B/op	      92 allocs/op
+BenchmarkJSONWriteEncode/large-18           	     547	    219958 ns/op	 801.40 MB/s	  213238 B/op	    1724 allocs/op
+BenchmarkJSONDecodeBodyDecode/small-18      	   41540	      2599 ns/op	 176.19 MB/s	    7411 B/op	      31 allocs/op
+BenchmarkJSONDecodeBodyDecode/medium-18     	    4092	     30959 ns/op	 290.61 MB/s	   61253 B/op	     232 allocs/op
+BenchmarkJSONDecodeBodyDecode/large-18      	     224	    534454 ns/op	 329.82 MB/s	  962756 B/op	    3958 allocs/op
+BenchmarkJSONDecodeOptionalBodyDecode-18    	   74937	      1599 ns/op	 138.19 MB/s	    6411 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONMessagesRequestEncode/small-18         	   18903	      6269 ns/op	 178.01 MB/s	    8351 B/op	     175 allocs/op
+BenchmarkJSONMessagesRequestEncode/medium-18        	    3733	     33003 ns/op	 337.40 MB/s	   49873 B/op	     868 allocs/op
+BenchmarkJSONMessagesRequestEncode/large-18         	     254	    471725 ns/op	 423.34 MB/s	  910921 B/op	   11054 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18         	    9320	     11947 ns/op	  93.41 MB/s	   10723 B/op	     247 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18        	    1344	     85412 ns/op	 130.37 MB/s	   86495 B/op	    1438 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18         	      87	   1249626 ns/op	 159.81 MB/s	 1455096 B/op	   19414 allocs/op
+BenchmarkJSONMessagesResponseEncode/small-18        	   51272	      2342 ns/op	 296.77 MB/s	    2853 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseEncode/medium-18       	   21883	      5484 ns/op	1530.73 MB/s	   11651 B/op	      60 allocs/op
+BenchmarkJSONMessagesResponseDecode/small-18        	   78028	      1538 ns/op	 451.94 MB/s	    1836 B/op	      13 allocs/op
+BenchmarkJSONMessagesResponseDecode/medium-18       	   19537	      6131 ns/op	1369.25 MB/s	    9722 B/op	      13 allocs/op
+BenchmarkJSONMessagesStreamEncode-18                	     550	    218989 ns/op	 176.30 MB/s	  297204 B/op	    5602 allocs/op
+BenchmarkJSONMessagesStreamDecode-18                	     854	    141387 ns/op	 273.07 MB/s	  232049 B/op	    2129 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/llmdialect/openaichat
+cpu: Apple M5 Pro
+BenchmarkJSONChatRequestEncode/small-18         	   22675	      5404 ns/op	 195.96 MB/s	    7960 B/op	     139 allocs/op
+BenchmarkJSONChatRequestEncode/medium-18        	    4516	     24814 ns/op	 430.47 MB/s	   42744 B/op	     603 allocs/op
+BenchmarkJSONChatRequestEncode/large-18         	     350	    341209 ns/op	 563.66 MB/s	  743573 B/op	    7259 allocs/op
+BenchmarkJSONChatRequestDecode/small-18         	   16508	      6408 ns/op	 165.27 MB/s	    6371 B/op	      55 allocs/op
+BenchmarkJSONChatRequestDecode/medium-18        	    3092	     39437 ns/op	 270.86 MB/s	   49008 B/op	     227 allocs/op
+BenchmarkJSONChatRequestDecode/large-18         	     207	    574886 ns/op	 334.55 MB/s	  853387 B/op	    2585 allocs/op
+BenchmarkJSONChatResponseEncode/small-18        	   38688	      3067 ns/op	 276.86 MB/s	    4425 B/op	      74 allocs/op
+BenchmarkJSONChatResponseEncode/medium-18       	   18693	      6317 ns/op	1353.33 MB/s	   13022 B/op	      74 allocs/op
+BenchmarkJSONChatResponseDecode/small-18        	   60907	      1955 ns/op	 434.32 MB/s	    1338 B/op	      15 allocs/op
+BenchmarkJSONChatResponseDecode/medium-18       	   16544	      7249 ns/op	1179.37 MB/s	    9217 B/op	      15 allocs/op
+BenchmarkJSONChatStreamEncode-18                	     300	    397619 ns/op	 140.21 MB/s	  506527 B/op	   11172 allocs/op
+BenchmarkJSONChatStreamDecode-18                	     542	    218990 ns/op	 254.57 MB/s	  298660 B/op	    2416 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pkg/ndjson
+cpu: Apple M5 Pro
+BenchmarkJSONReadFileDecode/small-18      	    7981	     13330 ns/op	  68.19 MB/s	   69033 B/op	      18 allocs/op
+BenchmarkJSONReadFileDecode/medium-18     	    3015	     39368 ns/op	 347.24 MB/s	  116672 B/op	     162 allocs/op
+BenchmarkJSONReadFileDecode/large-18      	     222	    543387 ns/op	 504.96 MB/s	  996002 B/op	    3017 allocs/op
+BenchmarkJSONAppendFileEncode-18          	    6356	     18719 ns/op	  19.18 MB/s	     824 B/op	       6 allocs/op
+BenchmarkJSONPreferResultLineDecode-18    	  129369	       926.8 ns/op	6628.06 MB/s	    1282 B/op	       4 allocs/op
+PASS

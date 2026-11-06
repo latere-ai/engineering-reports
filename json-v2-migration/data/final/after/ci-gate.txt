@@ -1,0 +1,270 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   31069	      3738 ns/op	 271.29 MB/s	    5223 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3609	     34192 ns/op	 345.34 MB/s	   55908 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     176	    684572 ns/op	 338.23 MB/s	 1087807 B/op	    9853 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   52327	      2178 ns/op	 281.97 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6094	     20311 ns/op	 571.90 MB/s	   12583 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1234	     98938 ns/op	 585.59 MB/s	   46157 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   41613	      2753 ns/op	 278.23 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4230	     29034 ns/op	 666.67 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     342	    348770 ns/op	 766.06 MB/s	  547373 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   52057	      2298 ns/op	 247.19 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2431	     49085 ns/op	 405.95 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     181	    658606 ns/op	 449.18 MB/s	  951420 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   36832	      3162 ns/op	 320.72 MB/s	    5222 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3490	     34234 ns/op	 344.92 MB/s	   55889 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     176	    674125 ns/op	 343.47 MB/s	 1087957 B/op	    9854 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   57277	      1835 ns/op	 334.64 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6084	     20282 ns/op	 572.74 MB/s	   12577 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1248	     97061 ns/op	 596.91 MB/s	   46160 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   48984	      2422 ns/op	 316.27 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4102	     30094 ns/op	 643.19 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     337	    358465 ns/op	 745.34 MB/s	  547371 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   50804	      2370 ns/op	 239.69 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2356	     50182 ns/op	 397.07 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     180	    661400 ns/op	 447.28 MB/s	  951421 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   36303	      3261 ns/op	 310.95 MB/s	    5222 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3591	     35027 ns/op	 337.12 MB/s	   55887 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     178	    673559 ns/op	 343.76 MB/s	 1087770 B/op	    9850 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   58372	      1862 ns/op	 329.75 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    5997	     20697 ns/op	 561.23 MB/s	   12590 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1136	    101181 ns/op	 572.61 MB/s	   46145 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   49245	      2341 ns/op	 327.19 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4309	     29021 ns/op	 666.98 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     349	    344338 ns/op	 775.92 MB/s	  547357 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   48580	      2280 ns/op	 249.14 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2398	     49094 ns/op	 405.87 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     181	    656502 ns/op	 450.62 MB/s	  951421 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   36781	      3211 ns/op	 315.82 MB/s	    5223 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3440	     35624 ns/op	 331.46 MB/s	   55902 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     178	    674005 ns/op	 343.53 MB/s	 1088004 B/op	    9853 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   60650	      1812 ns/op	 338.92 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    5974	     20369 ns/op	 570.29 MB/s	   12571 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1249	     97569 ns/op	 593.81 MB/s	   46145 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   49665	      2397 ns/op	 319.53 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4011	     29413 ns/op	 658.07 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     340	    360625 ns/op	 740.88 MB/s	  547370 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   53488	      2256 ns/op	 251.81 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2409	     50212 ns/op	 396.84 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     178	    665460 ns/op	 444.55 MB/s	  951421 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   36631	      3205 ns/op	 316.33 MB/s	    5223 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3465	     36039 ns/op	 327.65 MB/s	   55898 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     172	    683779 ns/op	 338.62 MB/s	 1087739 B/op	    9850 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   58951	      1884 ns/op	 325.87 MB/s	    2438 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6038	     21039 ns/op	 552.13 MB/s	   12579 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1122	    103161 ns/op	 561.62 MB/s	   46158 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   50335	      2312 ns/op	 331.33 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4210	     29142 ns/op	 664.20 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     346	    347523 ns/op	 768.81 MB/s	  547372 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   51532	      2266 ns/op	 250.68 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2451	     48874 ns/op	 407.71 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     181	    667456 ns/op	 443.22 MB/s	  951422 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   37078	      3233 ns/op	 313.63 MB/s	    5222 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3534	     34592 ns/op	 341.35 MB/s	   55883 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     176	    704731 ns/op	 328.56 MB/s	 1088496 B/op	    9860 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   59016	      1850 ns/op	 331.81 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6025	     20718 ns/op	 560.68 MB/s	   12581 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1213	     99817 ns/op	 580.43 MB/s	   46158 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   42704	      2477 ns/op	 309.24 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4186	     29635 ns/op	 653.15 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     346	    347871 ns/op	 768.04 MB/s	  547357 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   50613	      2273 ns/op	 249.92 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2407	     50120 ns/op	 397.57 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     177	    670827 ns/op	 440.99 MB/s	  951421 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   37084	      3172 ns/op	 319.68 MB/s	    5223 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3628	     34549 ns/op	 341.78 MB/s	   55892 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     176	    673652 ns/op	 343.71 MB/s	 1087880 B/op	    9852 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   61522	      1816 ns/op	 338.19 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6070	     20737 ns/op	 560.16 MB/s	   12584 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1222	     99089 ns/op	 584.69 MB/s	   46146 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   49477	      2317 ns/op	 330.67 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4290	     28777 ns/op	 672.62 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     343	    348241 ns/op	 767.23 MB/s	  547356 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   51770	      2311 ns/op	 245.74 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2426	     49252 ns/op	 404.57 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     175	    670657 ns/op	 441.10 MB/s	  951453 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   36943	      3169 ns/op	 320.02 MB/s	    5223 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3661	     33957 ns/op	 347.73 MB/s	   55894 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     180	    665212 ns/op	 348.07 MB/s	 1088031 B/op	    9854 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   56922	      1877 ns/op	 327.11 MB/s	    2436 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6205	     20226 ns/op	 574.30 MB/s	   12585 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1232	     98269 ns/op	 589.57 MB/s	   46146 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   49597	      2305 ns/op	 332.31 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4296	     30608 ns/op	 632.37 MB/s	   59562 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     348	    346045 ns/op	 772.10 MB/s	  547356 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   47779	      2311 ns/op	 245.82 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2413	     49038 ns/op	 406.34 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     180	    662861 ns/op	 446.29 MB/s	  951422 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   36757	      3166 ns/op	 320.28 MB/s	    5222 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3667	     34215 ns/op	 345.12 MB/s	   55896 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     180	    664340 ns/op	 348.53 MB/s	 1087847 B/op	    9852 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   58344	      1845 ns/op	 332.73 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6164	     21239 ns/op	 546.93 MB/s	   12580 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1188	     98581 ns/op	 587.71 MB/s	   46146 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   49938	      2379 ns/op	 322.05 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4270	     28896 ns/op	 669.86 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     340	    347837 ns/op	 768.12 MB/s	  547356 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   53550	      2286 ns/op	 248.44 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2356	     49212 ns/op	 404.90 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     170	    683605 ns/op	 432.75 MB/s	  951422 B/op	    9087 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/e2e
+cpu: Apple M5 Pro
+BenchmarkJSONTestEventStreamDecode/small-18         	   37369	      3159 ns/op	 321.03 MB/s	    5225 B/op	      48 allocs/op
+BenchmarkJSONTestEventStreamDecode/medium-18        	    3530	     34385 ns/op	 343.41 MB/s	   55875 B/op	     500 allocs/op
+BenchmarkJSONTestEventStreamDecode/large-18         	     178	    671862 ns/op	 344.63 MB/s	 1087965 B/op	    9854 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/greencut
+cpu: Apple M5 Pro
+BenchmarkJSONWorkflowRunsPageDecode/small-18         	   60018	      1833 ns/op	 335.01 MB/s	    2437 B/op	      24 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/medium-18        	    6110	     20500 ns/op	 566.64 MB/s	   12578 B/op	      69 allocs/op
+BenchmarkJSONWorkflowRunsPageDecode/large-18         	    1239	     97866 ns/op	 592.01 MB/s	   46146 B/op	     231 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/ci-gate/internal/scope
+cpu: Apple M5 Pro
+BenchmarkJSONGoListPackagesDecode/small-18         	   48636	      2501 ns/op	 306.33 MB/s	    8280 B/op	      51 allocs/op
+BenchmarkJSONGoListPackagesDecode/medium-18        	    4215	     28783 ns/op	 672.49 MB/s	   59560 B/op	     469 allocs/op
+BenchmarkJSONGoListPackagesDecode/large-18         	     348	    344963 ns/op	 774.52 MB/s	  547356 B/op	    6979 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/small-18        	   49032	      2294 ns/op	 247.58 MB/s	    8744 B/op	      54 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/medium-18       	    2386	     50011 ns/op	 398.43 MB/s	  103856 B/op	     801 allocs/op
+BenchmarkJSONGoListBaseTestsDecode/large-18        	     182	    654481 ns/op	 452.01 MB/s	  951425 B/op	    9087 allocs/op
+PASS

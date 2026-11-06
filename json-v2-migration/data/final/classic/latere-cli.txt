@@ -1,0 +1,350 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   50616	      2279 ns/op	 259.30 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   11212	     10658 ns/op	  55.45 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   36292	      2779 ns/op	 210.54 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2594	     47402 ns/op	 245.83 MB/s	   46702 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     127	    948584 ns/op	 246.15 MB/s	 1192069 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28749	      4183 ns/op	 230.71 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2461	     51887 ns/op	 256.27 MB/s	   64539 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      97	   1163573 ns/op	 265.99 MB/s	 1569713 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  137413	       881.2 ns/op	 138.45 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  249720	       491.0 ns/op	 344.18 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  195550	       625.2 ns/op	 225.52 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   48445	      2472 ns/op	  80.09 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   14506	      8181 ns/op	 127.74 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	    1039	    119959 ns/op	 138.43 MB/s	   52884 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      52	   2424323 ns/op	 135.22 MB/s	 1106909 B/op	    1257 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   34532	      3948 ns/op	  32.17 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10000	     12444 ns/op	  30.86 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2606	     48788 ns/op	 196.09 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18188	      6615 ns/op	 289.05 MB/s	    6835 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   66828	      1802 ns/op	 172.59 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   55977	      2060 ns/op	 286.88 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10905	     10974 ns/op	  53.86 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45225	      2550 ns/op	 229.44 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2536	     48218 ns/op	 241.67 MB/s	   46702 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     121	    977254 ns/op	 238.93 MB/s	 1192293 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28527	      4173 ns/op	 231.27 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2469	     52167 ns/op	 254.89 MB/s	   64538 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	     102	   1165288 ns/op	 265.60 MB/s	 1569687 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  127540	       876.5 ns/op	 139.19 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  246163	       497.8 ns/op	 339.49 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  200752	       606.9 ns/op	 232.31 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   46160	      2547 ns/op	  77.73 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   12043	      8708 ns/op	 120.00 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	     922	    123685 ns/op	 134.26 MB/s	   52808 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      51	   2450063 ns/op	 133.80 MB/s	 1108345 B/op	    1257 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   34452	      3456 ns/op	  36.75 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10744	     11070 ns/op	  34.69 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2535	     49346 ns/op	 193.88 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   17575	      6735 ns/op	 283.90 MB/s	    6834 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   66312	      1834 ns/op	 169.57 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   58572	      1974 ns/op	 299.38 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10000	     10827 ns/op	  54.58 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   44502	      2619 ns/op	 223.37 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2498	     50741 ns/op	 229.65 MB/s	   46729 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     124	    963800 ns/op	 242.26 MB/s	 1187931 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28399	      4195 ns/op	 230.05 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2353	     52977 ns/op	 251.00 MB/s	   64536 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      87	   1182942 ns/op	 261.63 MB/s	 1569691 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  128569	       938.4 ns/op	 130.01 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  232660	       486.9 ns/op	 347.13 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  203307	       586.0 ns/op	 240.63 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   52366	      2325 ns/op	  85.16 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   14732	      8044 ns/op	 129.91 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	    1058	    115002 ns/op	 144.40 MB/s	   52713 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      52	   2253798 ns/op	 145.45 MB/s	 1119145 B/op	    1257 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35509	      3370 ns/op	  37.69 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10000	     11510 ns/op	  33.36 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2427	     49295 ns/op	 194.08 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18590	      6437 ns/op	 297.01 MB/s	    6836 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   65062	      1843 ns/op	 168.72 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   58174	      1975 ns/op	 299.25 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	    9550	     10755 ns/op	  54.95 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45387	      2523 ns/op	 231.87 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2562	     48434 ns/op	 240.60 MB/s	   46713 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     123	    962556 ns/op	 242.58 MB/s	 1192195 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28809	      4150 ns/op	 232.54 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2416	     51106 ns/op	 260.18 MB/s	   64538 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      92	   1168273 ns/op	 264.92 MB/s	 1569724 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  130912	       902.2 ns/op	 135.22 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  225360	       510.1 ns/op	 331.31 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  188124	       615.7 ns/op	 229.01 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   49902	      2437 ns/op	  81.23 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   14444	      8277 ns/op	 126.25 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	    1035	    118584 ns/op	 140.04 MB/s	   52867 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      52	   2305921 ns/op	 142.17 MB/s	 1094304 B/op	    1256 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35178	      3386 ns/op	  37.51 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   11005	     10819 ns/op	  35.49 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2640	     48105 ns/op	 198.88 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18549	      6364 ns/op	 300.43 MB/s	    6834 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   66571	      1807 ns/op	 172.09 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   57195	      2013 ns/op	 293.64 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10000	     10854 ns/op	  54.45 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45236	      2575 ns/op	 227.17 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2546	     47312 ns/op	 246.30 MB/s	   46727 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     123	    967080 ns/op	 241.44 MB/s	 1200717 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28820	      4138 ns/op	 233.22 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2454	     50984 ns/op	 260.81 MB/s	   64551 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      93	   1142419 ns/op	 270.91 MB/s	 1569690 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  133195	       907.7 ns/op	 134.40 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  239026	       514.4 ns/op	 328.56 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  200502	       592.5 ns/op	 237.99 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   51650	      2380 ns/op	  83.21 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   14072	      8542 ns/op	 122.34 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	     902	    125088 ns/op	 132.75 MB/s	   52774 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      54	   2437434 ns/op	 134.50 MB/s	 1103898 B/op	    1257 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35500	      3368 ns/op	  37.70 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10754	     11025 ns/op	  34.83 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2600	     48109 ns/op	 198.86 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18871	      6367 ns/op	 300.32 MB/s	    6833 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   65848	      1813 ns/op	 171.57 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   58404	      2017 ns/op	 292.96 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10000	     11155 ns/op	  52.98 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45355	      2542 ns/op	 230.14 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2460	     48108 ns/op	 242.22 MB/s	   46702 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     127	    940811 ns/op	 248.18 MB/s	 1187946 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   29132	      4134 ns/op	 233.41 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2402	     51953 ns/op	 255.94 MB/s	   64537 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      96	   1180516 ns/op	 262.17 MB/s	 1569723 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  133304	       890.9 ns/op	 136.94 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  250128	       495.1 ns/op	 341.36 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  195960	       606.9 ns/op	 232.34 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   51872	      2348 ns/op	  84.34 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   13984	      8184 ns/op	 127.70 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	    1023	    118575 ns/op	 140.05 MB/s	   52966 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      50	   2309168 ns/op	 141.97 MB/s	 1109673 B/op	    1257 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35659	      3353 ns/op	  37.87 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10915	     11026 ns/op	  34.83 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2592	     49222 ns/op	 194.36 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18330	      6467 ns/op	 295.67 MB/s	    6834 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   66402	      1826 ns/op	 170.30 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   59313	      2002 ns/op	 295.21 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10000	     11292 ns/op	  52.34 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45074	      2593 ns/op	 225.61 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2550	     48040 ns/op	 242.57 MB/s	   46701 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     127	    942304 ns/op	 247.79 MB/s	 1187942 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   29269	      4112 ns/op	 234.70 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2362	     51385 ns/op	 258.77 MB/s	   64537 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      97	   1163177 ns/op	 266.08 MB/s	 1569683 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  133542	       888.4 ns/op	 137.32 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  235848	       565.7 ns/op	 298.75 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  186351	       640.1 ns/op	 220.27 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   46762	      2612 ns/op	  75.81 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   13203	      9064 ns/op	 115.29 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	     861	    136235 ns/op	 121.89 MB/s	   52831 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      44	   2628233 ns/op	 124.73 MB/s	 1126953 B/op	    1258 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35186	      3323 ns/op	  38.21 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10000	     11019 ns/op	  34.85 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2546	     49520 ns/op	 193.19 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18765	      6385 ns/op	 299.44 MB/s	    6834 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   66579	      1806 ns/op	 172.17 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   57338	      2040 ns/op	 289.68 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10917	     10954 ns/op	  53.95 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45352	      2553 ns/op	 229.14 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2211	     52052 ns/op	 223.87 MB/s	   46752 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     121	    992360 ns/op	 235.29 MB/s	 1196666 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28095	      4222 ns/op	 228.56 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2330	     53350 ns/op	 249.24 MB/s	   64540 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      90	   1171970 ns/op	 264.08 MB/s	 1569667 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  132295	       896.1 ns/op	 136.15 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  235684	       490.8 ns/op	 344.33 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  197518	       603.1 ns/op	 233.79 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   50037	      2434 ns/op	  81.35 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   13976	      8455 ns/op	 123.59 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	     958	    124051 ns/op	 133.86 MB/s	   52918 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      51	   2458110 ns/op	 133.37 MB/s	 1088664 B/op	    1256 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   33458	      3463 ns/op	  36.67 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10000	     11210 ns/op	  34.25 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2376	     49866 ns/op	 191.85 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18174	      6530 ns/op	 292.82 MB/s	    6832 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   65589	      1873 ns/op	 166.04 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   60070	      1956 ns/op	 302.08 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	    9873	     10721 ns/op	  55.12 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   45976	      2534 ns/op	 230.81 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2428	     49546 ns/op	 235.20 MB/s	   46743 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     123	    971540 ns/op	 240.33 MB/s	 1192196 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   27752	      4291 ns/op	 224.91 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2254	     53788 ns/op	 247.21 MB/s	   64538 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      85	   1206938 ns/op	 256.43 MB/s	 1569672 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  125458	       947.3 ns/op	 128.78 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  239684	       491.8 ns/op	 343.63 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  195304	       608.0 ns/op	 231.90 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   48468	      2497 ns/op	  79.30 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   14098	      8413 ns/op	 124.21 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	     963	    125168 ns/op	 132.67 MB/s	   52777 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      43	   2416596 ns/op	 135.66 MB/s	 1083388 B/op	    1256 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35996	      3334 ns/op	  38.09 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10000	     11571 ns/op	  33.19 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2313	     53761 ns/op	 177.95 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   16753	      7106 ns/op	 269.08 MB/s	    6832 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   59956	      1951 ns/op	 159.38 MB/s	    1138 B/op	      16 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAuthTokenSaveMarshal-18      	   59227	      2016 ns/op	 293.11 MB/s	    1940 B/op	       5 allocs/op
+BenchmarkJSONAuthTokenLoadUnmarshal-18    	   10000	     10774 ns/op	  54.85 MB/s	    1864 B/op	      14 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/commands
+cpu: Apple M5 Pro
+BenchmarkJSONEvalsListEncode/small-18        	   44226	      2659 ns/op	 219.99 MB/s	    1938 B/op	       9 allocs/op
+BenchmarkJSONEvalsListEncode/medium-18       	    2262	     48760 ns/op	 238.99 MB/s	   46706 B/op	      17 allocs/op
+BenchmarkJSONEvalsListEncode/large-18        	     126	    956082 ns/op	 244.22 MB/s	 1196267 B/op	      29 allocs/op
+BenchmarkJSONSessionLogEncode/small-18       	   28827	      4248 ns/op	 227.18 MB/s	    3645 B/op	      18 allocs/op
+BenchmarkJSONSessionLogEncode/medium-18      	    2403	     52968 ns/op	 251.04 MB/s	   64536 B/op	      50 allocs/op
+BenchmarkJSONSessionLogEncode/large-18       	      88	   1162768 ns/op	 266.17 MB/s	 1569672 B/op	     637 allocs/op
+BenchmarkJSONToolInputSummaryUnmarshal-18    	  128074	       921.6 ns/op	 132.38 MB/s	    1112 B/op	      21 allocs/op
+BenchmarkJSONEvalsWatchFrameMarshal-18       	  247305	       486.5 ns/op	 347.36 MB/s	     437 B/op	       5 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/flat-18  	  171561	       627.3 ns/op	 224.78 MB/s	     552 B/op	      11 allocs/op
+BenchmarkJSONPlatformErrorUnmarshal/nested-18         	   49256	      2410 ns/op	  82.17 MB/s	    1744 B/op	      37 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/small-18       	   14697	      8125 ns/op	 128.61 MB/s	    4137 B/op	      38 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/medium-18      	    1024	    121994 ns/op	 136.12 MB/s	   52928 B/op	     104 allocs/op
+BenchmarkJSONMemoryListFilterRoundTrip/large-18       	      52	   2331884 ns/op	 140.58 MB/s	 1112869 B/op	    1257 allocs/op
+BenchmarkJSONMemorySettingsDecode-18                  	   35791	      3333 ns/op	  38.10 MB/s	    5288 B/op	     130 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/latere-cli/internal/modelkey
+cpu: Apple M5 Pro
+BenchmarkJSONKeyFileGetUnmarshal/small-18  	   10000	     11065 ns/op	  34.70 MB/s	    1976 B/op	      24 allocs/op
+BenchmarkJSONKeyFileGetUnmarshal/medium-18 	    2544	     48538 ns/op	 197.10 MB/s	   21408 B/op	     269 allocs/op
+BenchmarkJSONKeyFilePutMarshal-18          	   18178	      6478 ns/op	 295.16 MB/s	    6833 B/op	      23 allocs/op
+BenchmarkJSONKeychainRecordRoundTrip-18    	   58114	      1872 ns/op	 166.15 MB/s	    1138 B/op	      16 allocs/op
+PASS

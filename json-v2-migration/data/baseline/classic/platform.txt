@@ -1,0 +1,356 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    4592	     22963 ns/op	  29.00 MB/s	   15190 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    6169	     21647 ns/op	  30.77 MB/s	   15188 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    6858	     22658 ns/op	  29.39 MB/s	   15189 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    5341	     22177 ns/op	  30.03 MB/s	   15191 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    5642	     21528 ns/op	  30.94 MB/s	   15187 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     438	    293070 ns/op	  38.07 MB/s	  152967 B/op	    2345 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     397	    296981 ns/op	  37.57 MB/s	  152301 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     411	    287912 ns/op	  38.75 MB/s	  152053 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     400	    287969 ns/op	  38.74 MB/s	  152281 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     396	    290216 ns/op	  38.44 MB/s	  152370 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     100	   1394872 ns/op	  38.85 MB/s	  741137 B/op	   11163 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     100	   1340834 ns/op	  40.42 MB/s	  729291 B/op	   11161 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	      90	   1441607 ns/op	  37.59 MB/s	  725357 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	      81	   1447681 ns/op	  37.44 MB/s	  733112 B/op	   11161 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	      92	   1419052 ns/op	  38.19 MB/s	  727582 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   16345	      7338 ns/op	  90.76 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   16866	      7034 ns/op	  94.68 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   16822	      7109 ns/op	  93.68 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   16560	      7359 ns/op	  90.50 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   16002	      7411 ns/op	  89.87 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	     954	    118858 ns/op	  93.87 MB/s	   57975 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1057	    122124 ns/op	  91.36 MB/s	   57890 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	     985	    121337 ns/op	  91.95 MB/s	   58116 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	     912	    123663 ns/op	  90.22 MB/s	   57983 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1045	    121424 ns/op	  91.88 MB/s	   57980 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      55	   2295186 ns/op	  93.93 MB/s	 1176546 B/op	   12837 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      46	   2300998 ns/op	  93.70 MB/s	 1268912 B/op	   12841 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      52	   2347296 ns/op	  91.85 MB/s	 1272701 B/op	   12841 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      45	   2366281 ns/op	  91.11 MB/s	 1251593 B/op	   12840 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      46	   2446583 ns/op	  88.12 MB/s	 1161922 B/op	   12837 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   25425	      4804 ns/op	  69.94 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   24718	      4839 ns/op	  69.44 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   25623	      4805 ns/op	  69.92 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   24783	      4997 ns/op	  67.25 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   24106	      5063 ns/op	  66.37 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     961	    130230 ns/op	  83.14 MB/s	   69223 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     925	    132452 ns/op	  81.74 MB/s	   69634 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     843	    134117 ns/op	  80.73 MB/s	   69522 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     909	    138187 ns/op	  78.35 MB/s	   69542 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     924	    132547 ns/op	  81.68 MB/s	   69458 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      43	   2564875 ns/op	  83.93 MB/s	 1522976 B/op	   25642 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      46	   2686580 ns/op	  80.13 MB/s	 1521658 B/op	   25642 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      42	   2647722 ns/op	  81.30 MB/s	 1577580 B/op	   25644 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      60	   2550893 ns/op	  84.39 MB/s	 1520003 B/op	   25641 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      46	   2561485 ns/op	  84.04 MB/s	 1487168 B/op	   25639 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  306882	       388.2 ns/op	 396.73 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  325412	       387.6 ns/op	 397.33 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  354500	       392.4 ns/op	 392.47 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  334400	       382.5 ns/op	 402.64 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  328567	       390.3 ns/op	 394.54 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	  916147	       132.2 ns/op	 151.33 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	  942284	       133.1 ns/op	 150.22 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       130.9 ns/op	 152.81 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       128.5 ns/op	 155.64 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	  798181	       133.7 ns/op	 149.60 MB/s	      64 B/op	       3 allocs/op
+PASS
+ok  	github.com/latere-ai/platform/internal/authz	7.249s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   16052	      7418 ns/op	  86.95 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   16860	      7201 ns/op	  89.57 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   16489	      7259 ns/op	  88.85 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   16166	      7444 ns/op	  86.64 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   16724	      7249 ns/op	  88.98 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1480	     81831 ns/op	 150.68 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1585	     80123 ns/op	 153.89 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1366	     80571 ns/op	 153.03 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1542	     83571 ns/op	 147.54 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1410	     81394 ns/op	 151.49 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1374682 ns/op	 149.15 MB/s	  881048 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	      99	   1239636 ns/op	 165.40 MB/s	  881047 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1229712 ns/op	 166.73 MB/s	  881043 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1268171 ns/op	 161.67 MB/s	  881044 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	      93	   1227790 ns/op	 166.99 MB/s	  881047 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   21266	      5746 ns/op	  77.79 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   22089	      5533 ns/op	  80.79 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   21361	      5670 ns/op	  78.84 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   21358	      5671 ns/op	  78.83 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   22203	      5432 ns/op	  82.28 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2002	     63744 ns/op	 131.31 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    1886	     64187 ns/op	 130.40 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2282	     64806 ns/op	 129.15 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2052	     67353 ns/op	 124.27 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    1639	     66849 ns/op	 125.21 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     100	   1023479 ns/op	 136.72 MB/s	  821213 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     100	   1016922 ns/op	 137.60 MB/s	  821214 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     120	    996486 ns/op	 140.42 MB/s	  821214 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     100	   1001557 ns/op	 139.71 MB/s	  821218 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     121	    996702 ns/op	 140.39 MB/s	  821214 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    3870	     35216 ns/op	 136.42 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    4004	     36588 ns/op	 131.30 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    4231	     38997 ns/op	 123.19 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    4191	     43299 ns/op	 110.95 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    3750	     37561 ns/op	 127.90 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   58504	      1992 ns/op	  59.24 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   63114	      1989 ns/op	  59.32 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   59145	      2035 ns/op	  57.98 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   59200	      2060 ns/op	  57.28 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   60895	      1967 ns/op	  59.99 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   43466	      2761 ns/op	  22.82 MB/s	    3364 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   41886	      3275 ns/op	  19.24 MB/s	    3363 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   39267	      2898 ns/op	  21.74 MB/s	    3363 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   45937	      2654 ns/op	  23.73 MB/s	    3363 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   46011	      2721 ns/op	  23.15 MB/s	    3364 B/op	      39 allocs/op
+PASS
+ok  	github.com/latere-ai/platform/internal/memory	6.073s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	    7156	     14898 ns/op	  65.85 MB/s	    8316 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	    7994	     14128 ns/op	  69.44 MB/s	    8359 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	    9567	     13958 ns/op	  70.28 MB/s	    8351 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	    8881	     14380 ns/op	  68.22 MB/s	    8346 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	    8028	     14280 ns/op	  68.70 MB/s	    8349 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1011	    114827 ns/op	  84.06 MB/s	   69548 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1074	    113391 ns/op	  85.12 MB/s	   69608 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1054	    115505 ns/op	  83.56 MB/s	   69774 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1093	    109502 ns/op	  88.14 MB/s	   69749 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1159	    112551 ns/op	  85.76 MB/s	   69589 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      49	   2061223 ns/op	  93.47 MB/s	 1200813 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      55	   2038247 ns/op	  94.52 MB/s	 1200009 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      51	   2116667 ns/op	  91.02 MB/s	 1202227 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      58	   2011067 ns/op	  95.80 MB/s	 1200285 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      58	   2022430 ns/op	  95.26 MB/s	 1201020 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   20817	      5657 ns/op	  98.98 MB/s	    5262 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   22071	      5508 ns/op	 101.66 MB/s	    5247 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   21471	      5655 ns/op	  99.04 MB/s	    5261 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   21309	      5593 ns/op	 100.13 MB/s	    5246 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   21832	      5777 ns/op	  96.94 MB/s	    5285 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	    8803	     14125 ns/op	  39.65 MB/s	    8064 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	   10000	     13493 ns/op	  41.50 MB/s	    8086 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	    9309	     13725 ns/op	  40.80 MB/s	    8079 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	    9684	     13107 ns/op	  42.73 MB/s	    8072 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	    9222	     13226 ns/op	  42.34 MB/s	    8057 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    1743	     67229 ns/op	  83.16 MB/s	   42967 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    1762	     71005 ns/op	  78.74 MB/s	   42500 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    1674	     70492 ns/op	  79.31 MB/s	   42570 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    1875	     71959 ns/op	  77.70 MB/s	   42588 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2127	     64414 ns/op	  86.80 MB/s	   42509 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	    8869	     15011 ns/op	  37.31 MB/s	    9616 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	    8680	     14897 ns/op	  37.59 MB/s	    9563 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	    9829	     14633 ns/op	  38.27 MB/s	    9643 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	    8337	     14210 ns/op	  39.41 MB/s	    9631 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   10000	     14661 ns/op	  38.20 MB/s	    9576 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	     978	    117016 ns/op	  38.02 MB/s	   76352 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1111	    114863 ns/op	  38.73 MB/s	   76786 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1082	    116277 ns/op	  38.26 MB/s	   76489 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	     908	    123752 ns/op	  35.95 MB/s	   76934 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	     993	    120148 ns/op	  37.03 MB/s	   76748 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      50	   2965164 ns/op	  28.10 MB/s	 1429005 B/op	   37624 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      45	   2846956 ns/op	  29.27 MB/s	 1432331 B/op	   37627 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      49	   2377349 ns/op	  35.05 MB/s	 1438175 B/op	   37628 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      56	   2369824 ns/op	  35.16 MB/s	 1437630 B/op	   37627 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      55	   2521623 ns/op	  33.05 MB/s	 1435691 B/op	   37627 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   18960	      6180 ns/op	  95.31 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   19215	      6153 ns/op	  95.72 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   20347	      5982 ns/op	  98.46 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   19642	      6136 ns/op	  95.99 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   19941	      6086 ns/op	  96.77 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    3392	     30681 ns/op	 146.18 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    4200	     31003 ns/op	 144.66 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    4346	     30151 ns/op	 148.75 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    4132	     30279 ns/op	 148.12 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    4430	     30618 ns/op	 146.48 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     249	    476912 ns/op	 175.10 MB/s	  308074 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     252	    463184 ns/op	 180.29 MB/s	  308074 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     267	    458501 ns/op	 182.13 MB/s	  308074 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     255	    468433 ns/op	 178.27 MB/s	  308075 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     267	    441941 ns/op	 188.96 MB/s	  308072 B/op	     220 allocs/op
+PASS
+ok  	github.com/latere-ai/platform/internal/pricing	7.965s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    7077	     15873 ns/op	  41.96 MB/s	   15192 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    7996	     16020 ns/op	  41.57 MB/s	   15188 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    8918	     16871 ns/op	  39.48 MB/s	   15188 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    9108	     16871 ns/op	  39.48 MB/s	   15188 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    8938	     17009 ns/op	  39.16 MB/s	   15186 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     529	    230829 ns/op	  48.33 MB/s	  152548 B/op	    2345 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     553	    214757 ns/op	  51.95 MB/s	  152562 B/op	    2345 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     547	    219135 ns/op	  50.91 MB/s	  152244 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     558	    235843 ns/op	  47.31 MB/s	  152865 B/op	    2345 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     454	    248572 ns/op	  44.88 MB/s	  152498 B/op	    2345 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     100	   1035253 ns/op	  52.35 MB/s	  734628 B/op	   11162 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     120	    999866 ns/op	  54.20 MB/s	  736333 B/op	   11162 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     121	    978080 ns/op	  55.41 MB/s	  738206 B/op	   11162 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     122	    970964 ns/op	  55.82 MB/s	  740043 B/op	   11163 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     126	    956595 ns/op	  56.66 MB/s	  738845 B/op	   11163 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   23668	      5094 ns/op	 130.74 MB/s	    3691 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   22976	      5385 ns/op	 123.68 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   21898	      5573 ns/op	 119.51 MB/s	    3691 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   21956	      5600 ns/op	 118.93 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   21742	      5543 ns/op	 120.16 MB/s	    3691 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1179	     95266 ns/op	 117.11 MB/s	   58035 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1296	     97888 ns/op	 113.98 MB/s	   57881 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1203	    101183 ns/op	 110.27 MB/s	   58136 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1194	     97220 ns/op	 114.76 MB/s	   58204 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1249	    103644 ns/op	 107.65 MB/s	   58279 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      50	   2184312 ns/op	  98.70 MB/s	 1159598 B/op	   12837 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      55	   2146369 ns/op	 100.45 MB/s	 1217483 B/op	   12840 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      52	   2174494 ns/op	  99.15 MB/s	 1287059 B/op	   12842 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      55	   2112880 ns/op	 102.04 MB/s	 1309401 B/op	   12842 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      55	   2123064 ns/op	 101.55 MB/s	 1316393 B/op	   12843 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   27993	      4175 ns/op	  80.48 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   29061	      4302 ns/op	  78.09 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   27344	      4523 ns/op	  74.28 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   26120	      4764 ns/op	  70.53 MB/s	    2349 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   24921	      4850 ns/op	  69.28 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     984	    134992 ns/op	  80.20 MB/s	   69519 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1002	    127661 ns/op	  84.81 MB/s	   69438 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	     934	    126784 ns/op	  85.40 MB/s	   69633 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1026	    117187 ns/op	  92.39 MB/s	   69489 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1088	    113826 ns/op	  95.12 MB/s	   69573 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      51	   2287940 ns/op	  94.09 MB/s	 1574806 B/op	   25645 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      51	   2260834 ns/op	  95.22 MB/s	 1554120 B/op	   25643 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      56	   2125312 ns/op	 101.29 MB/s	 1580691 B/op	   25645 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      52	   2194369 ns/op	  98.10 MB/s	 1600217 B/op	   25646 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      57	   2056118 ns/op	 104.70 MB/s	 1557852 B/op	   25643 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  427058	       298.6 ns/op	 515.79 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  419732	       299.9 ns/op	 513.51 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  443083	       312.4 ns/op	 492.93 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  377665	       338.7 ns/op	 454.70 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  384501	       331.8 ns/op	 464.19 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       106.2 ns/op	 188.26 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       106.3 ns/op	 188.19 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       103.1 ns/op	 193.91 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       101.3 ns/op	 197.47 MB/s	      64 B/op	       3 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1000000	       105.8 ns/op	 189.04 MB/s	      64 B/op	       3 allocs/op
+PASS
+ok  	github.com/latere-ai/platform/internal/authz	7.085s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   21680	      5539 ns/op	 116.45 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   21487	      5466 ns/op	 118.00 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   20696	      5948 ns/op	 108.44 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   19795	      6037 ns/op	 106.84 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/small-18    	   19527	      6284 ns/op	 102.64 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1648	     71665 ns/op	 172.05 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1668	     72598 ns/op	 169.84 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1714	     70516 ns/op	 174.85 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1620	     73522 ns/op	 167.70 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    1569	     73691 ns/op	 167.32 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1156505 ns/op	 177.28 MB/s	  881047 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1138124 ns/op	 180.15 MB/s	  881044 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1194871 ns/op	 171.59 MB/s	  881043 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1193400 ns/op	 171.80 MB/s	  881043 B/op	    2065 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     100	   1179470 ns/op	 173.83 MB/s	  881043 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   23221	      5796 ns/op	  77.12 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   23228	      5202 ns/op	  85.92 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   21238	      5483 ns/op	  81.52 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   22524	      5303 ns/op	  84.29 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   23835	      4959 ns/op	  90.14 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2007	     58204 ns/op	 143.81 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2287	     57346 ns/op	 145.96 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2113	     57448 ns/op	 145.70 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2119	     58721 ns/op	 142.54 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2131	     57570 ns/op	 145.39 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     136	    872534 ns/op	 160.37 MB/s	  821212 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     138	    862986 ns/op	 162.15 MB/s	  821214 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     134	    886887 ns/op	 157.78 MB/s	  821211 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     128	    923217 ns/op	 151.57 MB/s	  821212 B/op	    1060 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     130	    919171 ns/op	 152.23 MB/s	  821214 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    3985	     33303 ns/op	 144.25 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    4328	     33032 ns/op	 145.44 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    3805	     34570 ns/op	 138.96 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    4234	     32250 ns/op	 148.96 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    4467	     33560 ns/op	 143.15 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   68628	      1801 ns/op	  65.51 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   63494	      1914 ns/op	  61.64 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   56577	      1949 ns/op	  60.55 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   63348	      1844 ns/op	  63.98 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	   46578	      2823 ns/op	  41.81 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   45045	      2599 ns/op	  24.24 MB/s	    3364 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   48543	      2783 ns/op	  22.64 MB/s	    3364 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   47635	      2515 ns/op	  25.05 MB/s	    3363 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   47816	      2584 ns/op	  24.38 MB/s	    3363 B/op	      39 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   47562	      2575 ns/op	  24.46 MB/s	    3363 B/op	      39 allocs/op
+PASS
+ok  	github.com/latere-ai/platform/internal/memory	5.911s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	    8632	     13756 ns/op	  71.31 MB/s	    8312 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	    9662	     13539 ns/op	  72.46 MB/s	    8323 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	    9495	     13184 ns/op	  74.41 MB/s	    8321 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	   10000	     12398 ns/op	  79.13 MB/s	    8342 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/small-18     	   10000	     12819 ns/op	  76.53 MB/s	    8305 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1238	    102117 ns/op	  94.52 MB/s	   69767 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1282	    101400 ns/op	  95.19 MB/s	   70001 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1196	     98877 ns/op	  97.62 MB/s	   69921 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1267	    111958 ns/op	  86.21 MB/s	   69231 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1114	    115858 ns/op	  83.31 MB/s	   69255 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      61	   2041568 ns/op	  94.37 MB/s	 1202405 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      58	   2019205 ns/op	  95.41 MB/s	 1202832 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      63	   1979333 ns/op	  97.34 MB/s	 1196419 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      54	   2011919 ns/op	  95.76 MB/s	 1201031 B/op	   17263 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      57	   1956565 ns/op	  98.47 MB/s	 1201293 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   24290	      4928 ns/op	 113.64 MB/s	    5249 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   24644	      5206 ns/op	 107.58 MB/s	    5255 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   22802	      5133 ns/op	 109.10 MB/s	    5245 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   24375	      5019 ns/op	 111.57 MB/s	    5286 B/op	      93 allocs/op
+BenchmarkJSONModelMarshal-18             	   25544	      4787 ns/op	 116.99 MB/s	    5248 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   10000	     12604 ns/op	  44.43 MB/s	    8068 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	   10000	     11497 ns/op	  48.71 MB/s	    8076 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	   10000	     11104 ns/op	  50.43 MB/s	    8107 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	   10000	     12061 ns/op	  46.43 MB/s	    8113 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/small-18       	   10000	     11322 ns/op	  49.46 MB/s	    8123 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2108	     61739 ns/op	  90.56 MB/s	   42856 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2154	     57013 ns/op	  98.07 MB/s	   42813 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2276	     53720 ns/op	 104.08 MB/s	   42578 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2528	     52754 ns/op	 105.98 MB/s	   42628 B/op	     236 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2524	     52367 ns/op	 106.76 MB/s	   42690 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   10000	     11180 ns/op	  50.09 MB/s	    9639 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   10000	     10862 ns/op	  51.56 MB/s	    9605 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   10000	     10508 ns/op	  53.29 MB/s	    9646 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   10000	     10555 ns/op	  53.06 MB/s	    9601 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   12045	      9970 ns/op	  56.17 MB/s	    9610 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1500	     81982 ns/op	  54.27 MB/s	   76919 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1521	     81856 ns/op	  54.35 MB/s	   76862 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1399	     90020 ns/op	  49.42 MB/s	   77009 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1269	     99275 ns/op	  44.81 MB/s	   76386 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1324	     89645 ns/op	  49.63 MB/s	   76614 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      80	   1705264 ns/op	  48.87 MB/s	 1442713 B/op	   37630 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      63	   1681049 ns/op	  49.57 MB/s	 1437991 B/op	   37628 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      66	   1680504 ns/op	  49.59 MB/s	 1438928 B/op	   37629 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      69	   1756362 ns/op	  47.45 MB/s	 1440038 B/op	   37629 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      69	   1772108 ns/op	  47.02 MB/s	 1436033 B/op	   37627 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   25866	      4605 ns/op	 127.90 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   24592	      5132 ns/op	 114.77 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   21271	      5651 ns/op	 104.24 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   21938	      5279 ns/op	 111.57 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   23482	      6391 ns/op	  92.16 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    3541	     32967 ns/op	 136.05 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    4570	     28936 ns/op	 155.00 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    4442	     28287 ns/op	 158.55 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    5014	     28354 ns/op	 158.18 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    5061	     29447 ns/op	 152.31 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     153	    740776 ns/op	 112.73 MB/s	  308084 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     236	    494790 ns/op	 168.78 MB/s	  308073 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     254	    477560 ns/op	 174.87 MB/s	  308075 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     256	    468712 ns/op	 178.17 MB/s	  308074 B/op	     220 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     249	    473052 ns/op	 176.53 MB/s	  308072 B/op	     220 allocs/op
+PASS
+ok  	github.com/latere-ai/platform/internal/pricing	7.872s

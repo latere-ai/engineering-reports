@@ -1,0 +1,780 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   75268	      1517 ns/op	  71.87 MB/s	    5973 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   39226	      3053 ns/op	 196.22 MB/s	    8435 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5240	     23080 ns/op	 433.15 MB/s	   59506 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     320	    373204 ns/op	 508.37 MB/s	  917820 B/op	     112 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   92667	      1295 ns/op	 474.74 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9507	     14091 ns/op	 855.21 MB/s	   25749 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     432	    283047 ns/op	 829.33 MB/s	  595827 B/op	      23 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   78704	      1493 ns/op	 527.04 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7227	     17570 ns/op	 821.54 MB/s	   34162 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     336	    351080 ns/op	 824.04 MB/s	  812679 B/op	      25 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  158115	       761.6 ns/op	 580.33 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12343	      9650 ns/op	 919.40 MB/s	   19971 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     558	    210849 ns/op	 905.82 MB/s	  485944 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  171253	       705.1 ns/op	 526.16 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12004	      9926 ns/op	 869.75 MB/s	   19977 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     642	    183983 ns/op	 931.75 MB/s	  375446 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	   92486	      1231 ns/op	 321.74 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6273	     20131 ns/op	 415.47 MB/s	   22206 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     273	    436852 ns/op	 418.14 MB/s	  460191 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   24847	      4056 ns/op	 159.28 MB/s	    3629 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3555	     33729 ns/op	 243.86 MB/s	   37697 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     162	    728687 ns/op	 238.80 MB/s	 1019952 B/op	      40 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   59866	      2007 ns/op	 321.94 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6967	     18640 ns/op	 441.27 MB/s	   27279 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     327	    361011 ns/op	 482.00 MB/s	  614741 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   32758	      3665 ns/op	 108.06 MB/s	    3737 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1627	     75240 ns/op	 147.87 MB/s	   93760 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      70	   1567392 ns/op	 141.65 MB/s	 2573493 B/op	    3095 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   21943	      4652 ns/op	 126.61 MB/s	    7057 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    4999	     23440 ns/op	 544.80 MB/s	   71841 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     259	    462400 ns/op	 537.10 MB/s	 2403814 B/op	     427 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   44596	      2639 ns/op	 232.67 MB/s	    4560 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3770	     32296 ns/op	 373.11 MB/s	   50939 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     201	    594354 ns/op	 394.95 MB/s	  895081 B/op	    3016 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   81963	      1380 ns/op	 102.17 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   15918	      6856 ns/op	 146.15 MB/s	    3791 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2774	     44107 ns/op	 199.72 MB/s	   52137 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     163	    730712 ns/op	 224.81 MB/s	  892896 B/op	    3856 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  114228	      1047 ns/op	 957.44 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   14972	      8009 ns/op	1099.84 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     855	    140647 ns/op	1167.99 MB/s	  174070 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  198906	       585.4 ns/op	 700.40 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15138	      7970 ns/op	1072.96 MB/s	   19586 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     692	    170708 ns/op	1052.51 MB/s	  411406 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   47282	      2642 ns/op	 155.19 MB/s	    2723 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    1968	     58760 ns/op	 145.54 MB/s	   48596 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      81	   1288872 ns/op	 139.40 MB/s	  892754 B/op	    2655 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34905	      3447 ns/op	  93.69 MB/s	    3123 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   83742	      1424 ns/op	  76.53 MB/s	    5974 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   36848	      3171 ns/op	 188.93 MB/s	    8439 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5176	     23969 ns/op	 417.08 MB/s	   59499 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     309	    386632 ns/op	 490.71 MB/s	  917908 B/op	     112 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   91185	      1329 ns/op	 462.74 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9559	     14267 ns/op	 844.66 MB/s	   25850 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     429	    281312 ns/op	 834.45 MB/s	  563381 B/op	      22 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   79712	      1495 ns/op	 526.25 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7179	     17163 ns/op	 840.98 MB/s	   34038 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     345	    347553 ns/op	 832.40 MB/s	  771136 B/op	      24 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  146461	       782.6 ns/op	 564.77 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12774	      9408 ns/op	 943.00 MB/s	   19980 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     595	    209176 ns/op	 913.07 MB/s	  497095 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  168558	       735.4 ns/op	 504.52 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   10000	     10223 ns/op	 844.46 MB/s	   19989 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     631	    186627 ns/op	 918.54 MB/s	  384701 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  111907	      1052 ns/op	 376.29 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6478	     20546 ns/op	 407.09 MB/s	   22205 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     274	    435309 ns/op	 419.62 MB/s	  460190 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   34884	      3310 ns/op	 195.15 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3652	     33653 ns/op	 244.41 MB/s	   37734 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     159	    760192 ns/op	 228.90 MB/s	 1070054 B/op	      41 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   57174	      2047 ns/op	 315.62 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6559	     18141 ns/op	 453.38 MB/s	   27277 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     327	    365432 ns/op	 476.17 MB/s	  615048 B/op	      27 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   31837	      3732 ns/op	 106.12 MB/s	    3738 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1584	     76635 ns/op	 145.18 MB/s	   93601 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      69	   1630323 ns/op	 136.19 MB/s	 2602918 B/op	    3096 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30897	      3768 ns/op	 156.30 MB/s	    7058 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5184	     23809 ns/op	 536.34 MB/s	   71871 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     260	    470615 ns/op	 527.72 MB/s	 2323044 B/op	     425 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   38755	      2868 ns/op	 214.07 MB/s	    4561 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3406	     33953 ns/op	 354.90 MB/s	   50943 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     190	    621189 ns/op	 377.89 MB/s	  895030 B/op	    3015 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   89007	      1202 ns/op	 117.31 MB/s	    1655 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   20216	      5877 ns/op	 170.49 MB/s	    3789 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2815	     45178 ns/op	 194.99 MB/s	   52109 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     164	    739923 ns/op	 222.02 MB/s	  893014 B/op	    3857 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  107229	      1100 ns/op	 910.80 MB/s	    1122 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   15302	      7841 ns/op	1123.47 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     874	    136517 ns/op	1203.32 MB/s	  174056 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  212600	       585.4 ns/op	 700.41 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15194	      7917 ns/op	1080.17 MB/s	   19595 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     708	    167723 ns/op	1071.24 MB/s	  408968 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   46126	      2576 ns/op	 159.15 MB/s	    2722 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2145	     56651 ns/op	 150.96 MB/s	   48572 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      85	   1298010 ns/op	 138.42 MB/s	  892911 B/op	    2655 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   33981	      3498 ns/op	  92.34 MB/s	    3122 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   84157	      1402 ns/op	  77.72 MB/s	    5972 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   38324	      3147 ns/op	 190.37 MB/s	    8436 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5145	     23762 ns/op	 420.71 MB/s	   59511 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     319	    376757 ns/op	 503.57 MB/s	  917703 B/op	     112 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   91024	      1299 ns/op	 473.34 MB/s	    2366 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9234	     14285 ns/op	 843.61 MB/s	   25772 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     447	    271369 ns/op	 865.02 MB/s	  519939 B/op	      21 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   80403	      1577 ns/op	 499.14 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    6392	     17162 ns/op	 841.04 MB/s	   34053 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     349	    343381 ns/op	 842.52 MB/s	  760258 B/op	      23 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  152853	       776.2 ns/op	 569.41 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   13081	      9215 ns/op	 962.81 MB/s	   19979 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     572	    209815 ns/op	 910.29 MB/s	  520312 B/op	      15 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  166455	       714.0 ns/op	 519.64 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12680	      9455 ns/op	 913.03 MB/s	   19994 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     642	    185392 ns/op	 924.66 MB/s	  380792 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  113166	      1041 ns/op	 380.23 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6416	     19863 ns/op	 421.09 MB/s	   22206 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     280	    435107 ns/op	 419.81 MB/s	  460208 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   33998	      3398 ns/op	 190.11 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3670	     34181 ns/op	 240.63 MB/s	   37760 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     165	    724963 ns/op	 240.02 MB/s	  993850 B/op	      39 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   59665	      2028 ns/op	 318.52 MB/s	    2347 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6607	     18162 ns/op	 452.86 MB/s	   27282 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     316	    377401 ns/op	 461.07 MB/s	  614742 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   31791	      3733 ns/op	 106.08 MB/s	    3737 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1588	     75777 ns/op	 146.83 MB/s	   93727 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      67	   1581473 ns/op	 140.39 MB/s	 2503193 B/op	    3093 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30220	      3917 ns/op	 150.38 MB/s	    7058 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5248	     23612 ns/op	 540.83 MB/s	   71756 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     246	    474072 ns/op	 523.87 MB/s	 2401874 B/op	     426 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   38127	      2815 ns/op	 218.09 MB/s	    4561 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3600	     34110 ns/op	 353.27 MB/s	   50939 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     184	    635636 ns/op	 369.30 MB/s	  895032 B/op	    3015 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   88735	      1280 ns/op	 110.14 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   20299	      5867 ns/op	 170.80 MB/s	    3789 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2444	     46472 ns/op	 189.55 MB/s	   52121 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     162	    735162 ns/op	 223.45 MB/s	  893411 B/op	    3858 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  115501	      1040 ns/op	 963.43 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   15223	      7900 ns/op	1114.99 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     854	    138541 ns/op	1185.74 MB/s	  174062 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  209256	       577.9 ns/op	 709.44 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15082	      7917 ns/op	1080.19 MB/s	   19574 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     732	    165013 ns/op	1088.84 MB/s	  399962 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   43407	      2589 ns/op	 158.34 MB/s	    2723 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2169	     55940 ns/op	 152.88 MB/s	   48603 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      86	   1287116 ns/op	 139.59 MB/s	  891505 B/op	    2653 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34945	      3460 ns/op	  93.35 MB/s	    3125 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   83746	      1415 ns/op	  77.01 MB/s	    5971 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   38792	      3106 ns/op	 192.86 MB/s	    8439 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5026	     23744 ns/op	 421.04 MB/s	   59505 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     309	    392546 ns/op	 483.32 MB/s	  917776 B/op	     112 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   90880	      1322 ns/op	 465.12 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9000	     14807 ns/op	 813.89 MB/s	   25773 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     400	    289980 ns/op	 809.51 MB/s	  590474 B/op	      23 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   78204	      1531 ns/op	 514.04 MB/s	    2879 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7102	     17949 ns/op	 804.17 MB/s	   34066 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     328	    349373 ns/op	 828.07 MB/s	  672229 B/op	      21 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  154243	       770.8 ns/op	 573.40 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12907	      9328 ns/op	 951.15 MB/s	   20009 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     601	    205981 ns/op	 927.23 MB/s	  480921 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  165751	       709.1 ns/op	 523.16 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12445	      9598 ns/op	 899.47 MB/s	   19987 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     614	    185970 ns/op	 921.79 MB/s	  383533 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  109826	      1049 ns/op	 377.35 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6430	     20392 ns/op	 410.15 MB/s	   22206 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     279	    441559 ns/op	 413.68 MB/s	  460229 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   33771	      3356 ns/op	 192.48 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3571	     33540 ns/op	 245.23 MB/s	   37694 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     157	    748222 ns/op	 232.56 MB/s	 1003982 B/op	      39 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   58374	      2013 ns/op	 320.95 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6578	     17947 ns/op	 458.28 MB/s	   27280 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     332	    358926 ns/op	 484.80 MB/s	  614723 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   31930	      3762 ns/op	 105.26 MB/s	    3737 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1582	     76099 ns/op	 146.21 MB/s	   93523 B/op	     197 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      69	   1602307 ns/op	 138.57 MB/s	 2810033 B/op	    3102 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30544	      3978 ns/op	 148.07 MB/s	    7058 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    4923	     23755 ns/op	 537.58 MB/s	   71892 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     254	    467480 ns/op	 531.26 MB/s	 2424412 B/op	     427 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   44832	      2759 ns/op	 222.56 MB/s	    4560 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3715	     34868 ns/op	 345.59 MB/s	   50948 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     189	    622423 ns/op	 377.14 MB/s	  895583 B/op	    3021 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   89050	      1180 ns/op	 119.49 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   19846	      5906 ns/op	 169.65 MB/s	    3791 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2838	     44272 ns/op	 198.97 MB/s	   52131 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     164	    725348 ns/op	 226.48 MB/s	  892297 B/op	    3855 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  115531	      1041 ns/op	 962.29 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   14779	      8024 ns/op	1097.79 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     876	    136751 ns/op	1201.27 MB/s	  174068 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  210705	       577.0 ns/op	 710.62 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15294	      7856 ns/op	1088.66 MB/s	   19571 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     723	    163958 ns/op	1095.84 MB/s	  406728 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   46923	      2558 ns/op	 160.27 MB/s	    2723 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2143	     56064 ns/op	 152.54 MB/s	   48618 B/op	     108 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      86	   1299826 ns/op	 138.23 MB/s	  892588 B/op	    2655 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34304	      3450 ns/op	  93.63 MB/s	    3122 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   87154	      1366 ns/op	  79.79 MB/s	    5972 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   38502	      3191 ns/op	 187.74 MB/s	    8436 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5276	     23285 ns/op	 429.33 MB/s	   59500 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     314	    380986 ns/op	 497.98 MB/s	  917488 B/op	     111 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   93391	      1317 ns/op	 466.84 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9548	     14269 ns/op	 844.57 MB/s	   25773 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     439	    278085 ns/op	 844.13 MB/s	  547865 B/op	      22 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   80788	      1525 ns/op	 516.11 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7198	     16996 ns/op	 849.24 MB/s	   34046 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     340	    351144 ns/op	 823.89 MB/s	  855424 B/op	      26 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  152600	       763.4 ns/op	 579.00 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12867	      9508 ns/op	 933.14 MB/s	   19969 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     532	    210785 ns/op	 906.10 MB/s	  451040 B/op	      13 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  170198	       711.0 ns/op	 521.82 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12570	      9551 ns/op	 903.93 MB/s	   20009 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     651	    183717 ns/op	 933.09 MB/s	  369725 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  106582	      1075 ns/op	 368.52 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6374	     20041 ns/op	 417.34 MB/s	   22206 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     274	    437637 ns/op	 417.39 MB/s	  460189 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   31578	      3550 ns/op	 181.96 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3686	     33329 ns/op	 246.79 MB/s	   37749 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     156	    747738 ns/op	 232.71 MB/s	 1016938 B/op	      40 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   58753	      2070 ns/op	 312.11 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6289	     18219 ns/op	 451.46 MB/s	   27278 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     333	    358849 ns/op	 484.91 MB/s	  614936 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   31971	      3702 ns/op	 106.97 MB/s	    3738 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1620	     81009 ns/op	 137.34 MB/s	   93724 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      79	   1658738 ns/op	 133.85 MB/s	 2676709 B/op	    3099 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30708	      3754 ns/op	 156.89 MB/s	    7057 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5214	     23579 ns/op	 541.58 MB/s	   71927 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     252	    481116 ns/op	 516.20 MB/s	 2412648 B/op	     427 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   43838	      2760 ns/op	 222.47 MB/s	    4563 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3694	     32929 ns/op	 365.94 MB/s	   50944 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     196	    608684 ns/op	 385.65 MB/s	  895081 B/op	    3016 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   90500	      1199 ns/op	 117.64 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   20166	      5947 ns/op	 168.48 MB/s	    3790 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2686	     44056 ns/op	 199.95 MB/s	   52135 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     163	    733175 ns/op	 224.06 MB/s	  892822 B/op	    3856 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  116605	      1048 ns/op	 955.84 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   14619	      8092 ns/op	1088.65 MB/s	    9857 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     865	    139342 ns/op	1178.93 MB/s	  174080 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  208051	       578.5 ns/op	 708.72 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   14994	      8117 ns/op	1053.56 MB/s	   19575 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     645	    173216 ns/op	1037.27 MB/s	  400906 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   46842	      2567 ns/op	 159.74 MB/s	    2725 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2170	     55890 ns/op	 153.01 MB/s	   48614 B/op	     108 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      85	   1306986 ns/op	 137.47 MB/s	  891916 B/op	    2654 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34269	      3449 ns/op	  93.64 MB/s	    3122 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   72949	      1442 ns/op	  75.59 MB/s	    5973 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   38832	      3049 ns/op	 196.46 MB/s	    8435 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5256	     23387 ns/op	 427.46 MB/s	   59499 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     308	    382038 ns/op	 496.61 MB/s	  917688 B/op	     111 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   92593	      1304 ns/op	 471.58 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9103	     14312 ns/op	 842.01 MB/s	   25746 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     414	    281916 ns/op	 832.66 MB/s	  497423 B/op	      20 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   79028	      1500 ns/op	 524.68 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7071	     17580 ns/op	 821.03 MB/s	   34067 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     342	    349512 ns/op	 827.74 MB/s	  790735 B/op	      24 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  152892	       771.9 ns/op	 572.60 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12926	      9350 ns/op	 948.92 MB/s	   19966 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     562	    213893 ns/op	 892.93 MB/s	  506349 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  166792	       712.3 ns/op	 520.82 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12609	      9512 ns/op	 907.54 MB/s	   19992 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     650	    190371 ns/op	 900.48 MB/s	  389913 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  108789	      1056 ns/op	 374.91 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6270	     21065 ns/op	 397.05 MB/s	   22203 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     272	    439864 ns/op	 415.27 MB/s	  460182 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   34998	      3315 ns/op	 194.85 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3676	     33168 ns/op	 247.98 MB/s	   37712 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     164	    727647 ns/op	 239.14 MB/s	 1044966 B/op	      41 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   58783	      2013 ns/op	 320.94 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6700	     17962 ns/op	 457.91 MB/s	   27275 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     332	    360888 ns/op	 482.17 MB/s	  614933 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   32498	      3704 ns/op	 106.91 MB/s	    3737 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1551	     75426 ns/op	 147.51 MB/s	   93576 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      82	   1563831 ns/op	 141.98 MB/s	 2570253 B/op	    3095 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30576	      3794 ns/op	 155.24 MB/s	    7057 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5197	     23342 ns/op	 547.08 MB/s	   71873 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     261	    474416 ns/op	 523.49 MB/s	 2343049 B/op	     426 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   43707	      2770 ns/op	 221.64 MB/s	    4562 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3693	     33220 ns/op	 362.73 MB/s	   50940 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     183	    642670 ns/op	 365.26 MB/s	  895120 B/op	    3016 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   99697	      1227 ns/op	 114.93 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   20332	      5935 ns/op	 168.83 MB/s	    3788 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2761	     44932 ns/op	 196.05 MB/s	   52100 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     163	    730729 ns/op	 224.81 MB/s	  892770 B/op	    3856 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  114718	      1064 ns/op	 942.09 MB/s	    1122 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   15136	      7907 ns/op	1114.13 MB/s	    9860 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     859	    139198 ns/op	1180.15 MB/s	  174064 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  208104	       576.1 ns/op	 711.74 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   14846	      8007 ns/op	1068.10 MB/s	   19584 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     729	    170182 ns/op	1055.77 MB/s	  388898 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   44850	      2594 ns/op	 158.05 MB/s	    2722 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2122	     57150 ns/op	 149.64 MB/s	   48592 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      82	   1304262 ns/op	 137.76 MB/s	  892684 B/op	    2655 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34035	      3467 ns/op	  93.18 MB/s	    3124 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   87112	      1365 ns/op	  79.87 MB/s	    5973 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   39016	      3302 ns/op	 181.42 MB/s	    8436 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5241	     23535 ns/op	 424.78 MB/s	   59485 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     316	    378603 ns/op	 501.12 MB/s	  917862 B/op	     112 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   85724	      1380 ns/op	 445.67 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    8535	     14652 ns/op	 822.49 MB/s	   25816 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     406	    282858 ns/op	 829.89 MB/s	  550642 B/op	      22 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   78409	      1549 ns/op	 507.94 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7248	     17126 ns/op	 842.80 MB/s	   34081 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     354	    340628 ns/op	 849.33 MB/s	  705606 B/op	      22 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  149266	       774.2 ns/op	 570.92 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12974	      9252 ns/op	 958.95 MB/s	   19993 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     573	    206604 ns/op	 924.43 MB/s	  480395 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  166477	       723.2 ns/op	 512.97 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12597	      9505 ns/op	 908.24 MB/s	   19970 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     655	    187457 ns/op	 914.48 MB/s	  381162 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  103383	      1048 ns/op	 378.03 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6384	     20588 ns/op	 406.26 MB/s	   22204 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     261	    447424 ns/op	 408.26 MB/s	  460191 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   34618	      3422 ns/op	 188.78 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3639	     33981 ns/op	 242.05 MB/s	   37756 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     165	    722441 ns/op	 240.86 MB/s	  982804 B/op	      39 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   59024	      2032 ns/op	 317.93 MB/s	    2349 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    6352	     18059 ns/op	 455.45 MB/s	   27273 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     319	    374628 ns/op	 464.48 MB/s	  614934 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   32119	      3707 ns/op	 106.81 MB/s	    3737 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1585	     77389 ns/op	 143.77 MB/s	   93790 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      88	   1643192 ns/op	 135.12 MB/s	 2541914 B/op	    3095 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30432	      3842 ns/op	 153.31 MB/s	    7057 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5047	     23749 ns/op	 537.71 MB/s	   71870 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     256	    463298 ns/op	 536.06 MB/s	 2420238 B/op	     427 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   43744	      2757 ns/op	 222.70 MB/s	    4561 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3673	     33175 ns/op	 363.22 MB/s	   50943 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     194	    612628 ns/op	 383.17 MB/s	  895077 B/op	    3016 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   89877	      1202 ns/op	 117.27 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   20258	      5861 ns/op	 170.97 MB/s	    3790 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2659	     44068 ns/op	 199.90 MB/s	   52125 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     160	    743800 ns/op	 220.86 MB/s	  892480 B/op	    3855 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  111529	      1069 ns/op	 937.60 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   14769	      8068 ns/op	1091.85 MB/s	    9860 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     858	    138556 ns/op	1185.61 MB/s	  174073 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  210169	       578.6 ns/op	 708.63 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   14454	      8504 ns/op	1005.65 MB/s	   19595 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     667	    177429 ns/op	1012.64 MB/s	  452859 B/op	      10 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   43051	      2675 ns/op	 153.26 MB/s	    2723 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2179	     56612 ns/op	 151.06 MB/s	   48544 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      84	   1309228 ns/op	 137.24 MB/s	  891685 B/op	    2654 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   33868	      3479 ns/op	  92.85 MB/s	    3124 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   79753	      1470 ns/op	  74.14 MB/s	    5972 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   37345	      3236 ns/op	 185.08 MB/s	    8437 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5254	     23630 ns/op	 423.06 MB/s	   59511 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     314	    382651 ns/op	 495.82 MB/s	  917753 B/op	     112 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   90733	      1320 ns/op	 465.74 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9246	     15112 ns/op	 797.44 MB/s	   25776 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     409	    294593 ns/op	 796.83 MB/s	  622937 B/op	      24 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   79027	      1499 ns/op	 524.85 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7188	     17088 ns/op	 844.68 MB/s	   34110 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     339	    350286 ns/op	 825.91 MB/s	  792491 B/op	      24 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  149638	       774.1 ns/op	 571.02 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12768	      9473 ns/op	 936.55 MB/s	   19980 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     577	    208553 ns/op	 915.79 MB/s	  492428 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  163592	       715.2 ns/op	 518.76 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12612	      9547 ns/op	 904.22 MB/s	   19989 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     660	    184311 ns/op	 930.09 MB/s	  374607 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  105793	      1073 ns/op	 369.16 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6421	     20270 ns/op	 412.64 MB/s	   22207 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     276	    434886 ns/op	 420.03 MB/s	  460187 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   34449	      3409 ns/op	 189.49 MB/s	    3629 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3598	     33529 ns/op	 245.31 MB/s	   37681 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     163	    728949 ns/op	 238.71 MB/s	 1079986 B/op	      42 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   59055	      2056 ns/op	 314.22 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    7099	     18185 ns/op	 452.30 MB/s	   27280 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     327	    365748 ns/op	 475.76 MB/s	  614874 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   32498	      3703 ns/op	 106.94 MB/s	    3736 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1587	     75946 ns/op	 146.50 MB/s	   93610 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      88	   1562093 ns/op	 142.13 MB/s	 2433175 B/op	    3091 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30865	      3773 ns/op	 156.11 MB/s	    7056 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5041	     23947 ns/op	 533.27 MB/s	   71904 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     253	    474660 ns/op	 523.22 MB/s	 2393376 B/op	     426 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   44611	      2727 ns/op	 225.19 MB/s	    4561 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3702	     34433 ns/op	 349.96 MB/s	   50943 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     187	    624980 ns/op	 375.60 MB/s	  895236 B/op	    3017 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   99038	      1206 ns/op	 116.92 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   19814	      6003 ns/op	 166.93 MB/s	    3790 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2508	     45861 ns/op	 192.08 MB/s	   52120 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     163	    727331 ns/op	 225.86 MB/s	  893171 B/op	    3857 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  114063	      1060 ns/op	 944.98 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   14467	      8205 ns/op	1073.58 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     848	    142347 ns/op	1154.04 MB/s	  174061 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  204382	       577.5 ns/op	 709.96 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15243	      7882 ns/op	1085.04 MB/s	   19574 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     693	    163738 ns/op	1097.32 MB/s	  387683 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   46628	      2631 ns/op	 155.86 MB/s	    2722 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2082	     55697 ns/op	 153.55 MB/s	   48574 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      84	   1288726 ns/op	 139.42 MB/s	  891429 B/op	    2653 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34405	      3447 ns/op	  93.71 MB/s	    3124 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   82700	      1438 ns/op	  75.78 MB/s	    5974 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   38781	      3034 ns/op	 197.44 MB/s	    8435 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    4983	     23178 ns/op	 431.32 MB/s	   59504 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     312	    379513 ns/op	 499.92 MB/s	  917664 B/op	     111 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   92224	      1312 ns/op	 468.79 MB/s	    2365 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9302	     14366 ns/op	 838.84 MB/s	   25766 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     430	    271779 ns/op	 863.72 MB/s	  510551 B/op	      20 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   78855	      1502 ns/op	 523.92 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7008	     18219 ns/op	 792.25 MB/s	   34069 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     343	    343832 ns/op	 841.41 MB/s	  745215 B/op	      23 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  156082	       766.5 ns/op	 576.68 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12652	      9445 ns/op	 939.32 MB/s	   19981 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     537	    213982 ns/op	 892.56 MB/s	  520035 B/op	      15 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  160990	       714.6 ns/op	 519.17 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12690	      9472 ns/op	 911.42 MB/s	   19986 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     644	    183997 ns/op	 931.67 MB/s	  377476 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  108034	      1053 ns/op	 376.13 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6481	     20434 ns/op	 409.32 MB/s	   22204 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     277	    433650 ns/op	 421.22 MB/s	  460184 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   34516	      3429 ns/op	 188.37 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3454	     33168 ns/op	 247.98 MB/s	   37676 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     163	    727391 ns/op	 239.22 MB/s	  990670 B/op	      39 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   58694	      2114 ns/op	 305.52 MB/s	    2349 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    7034	     18217 ns/op	 451.50 MB/s	   27280 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     326	    368817 ns/op	 471.80 MB/s	  614863 B/op	      26 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   29320	      3894 ns/op	 101.70 MB/s	    3738 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1581	     77862 ns/op	 142.89 MB/s	   93842 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      74	   1617646 ns/op	 137.25 MB/s	 2690868 B/op	    3099 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   29450	      3826 ns/op	 153.94 MB/s	    7059 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5179	     24485 ns/op	 521.55 MB/s	   71793 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     249	    482786 ns/op	 514.42 MB/s	 2315607 B/op	     425 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   44128	      2759 ns/op	 222.54 MB/s	    4561 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3730	     33281 ns/op	 362.07 MB/s	   50941 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     194	    614481 ns/op	 382.01 MB/s	  895741 B/op	    3022 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   90852	      1233 ns/op	 114.34 MB/s	    1655 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   18346	      6324 ns/op	 158.46 MB/s	    3791 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2548	     48072 ns/op	 183.24 MB/s	   52136 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     162	    734149 ns/op	 223.76 MB/s	  892271 B/op	    3855 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  112293	      1064 ns/op	 941.50 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   15034	      7937 ns/op	1109.91 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     862	    138405 ns/op	1186.91 MB/s	  174069 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  207495	       601.5 ns/op	 681.62 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15054	      7963 ns/op	1073.90 MB/s	   19579 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     708	    164422 ns/op	1092.75 MB/s	  393556 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   46828	      2560 ns/op	 160.15 MB/s	    2722 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2115	     57029 ns/op	 149.96 MB/s	   48594 B/op	     107 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      85	   1311989 ns/op	 136.95 MB/s	  892692 B/op	    2655 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   34915	      3425 ns/op	  94.31 MB/s	    3121 B/op	      27 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCreateRequestDecode-18     	   87296	      1365 ns/op	  79.83 MB/s	    5975 B/op	      19 allocs/op
+BenchmarkJSONCommitsRequestDecode/small-18         	   37873	      3147 ns/op	 190.34 MB/s	    8436 B/op	      31 allocs/op
+BenchmarkJSONCommitsRequestDecode/medium-18        	    5151	     23827 ns/op	 419.56 MB/s	   59492 B/op	      47 allocs/op
+BenchmarkJSONCommitsRequestDecode/large-18         	     300	    396169 ns/op	 478.90 MB/s	  917671 B/op	     111 allocs/op
+BenchmarkJSONCommitsPageEncode/small-18            	   88886	      1315 ns/op	 467.71 MB/s	    2366 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/medium-18           	    9410	     14419 ns/op	 835.78 MB/s	   25786 B/op	      19 allocs/op
+BenchmarkJSONCommitsPageEncode/large-18            	     396	    290883 ns/op	 806.99 MB/s	  567567 B/op	      22 allocs/op
+BenchmarkJSONTreePageEncode/small-18               	   78446	      1504 ns/op	 523.21 MB/s	    2878 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/medium-18              	    7207	     17141 ns/op	 842.05 MB/s	   34064 B/op	      19 allocs/op
+BenchmarkJSONTreePageEncode/large-18               	     349	    342877 ns/op	 843.75 MB/s	  755807 B/op	      23 allocs/op
+BenchmarkJSONRefsListEncode/small-18               	  149632	       822.4 ns/op	 537.47 MB/s	    1866 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/medium-18              	   12768	      9420 ns/op	 941.85 MB/s	   19972 B/op	      11 allocs/op
+BenchmarkJSONRefsListEncode/large-18               	     572	    211707 ns/op	 902.15 MB/s	  491695 B/op	      14 allocs/op
+BenchmarkJSONRepositoryListEncode/small-18         	  167384	       719.0 ns/op	 516.00 MB/s	    1746 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/medium-18        	   12650	      9508 ns/op	 907.93 MB/s	   19978 B/op	      11 allocs/op
+BenchmarkJSONRepositoryListEncode/large-18         	     630	    187883 ns/op	 912.40 MB/s	  394603 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/auth
+cpu: Apple M5 Pro
+BenchmarkJSONDirectoryUnmarshal/small-18         	  108238	      1063 ns/op	 372.45 MB/s	     680 B/op	      13 allocs/op
+BenchmarkJSONDirectoryUnmarshal/medium-18        	    6423	     20253 ns/op	 412.98 MB/s	   22203 B/op	     210 allocs/op
+BenchmarkJSONDirectoryUnmarshal/large-18         	     279	    430696 ns/op	 424.11 MB/s	  460190 B/op	    4436 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/events
+cpu: Apple M5 Pro
+BenchmarkJSONPushEventMarshal/small-18         	   34634	      3447 ns/op	 187.42 MB/s	    3630 B/op	      16 allocs/op
+BenchmarkJSONPushEventMarshal/medium-18        	    3193	     34176 ns/op	 240.67 MB/s	   37684 B/op	      23 allocs/op
+BenchmarkJSONPushEventMarshal/large-18         	     166	    717753 ns/op	 242.43 MB/s	  981649 B/op	      38 allocs/op
+BenchmarkJSONPushEventUnmarshal/small-18       	   58846	      2067 ns/op	 312.57 MB/s	    2348 B/op	       9 allocs/op
+BenchmarkJSONPushEventUnmarshal/medium-18      	    7011	     18199 ns/op	 451.96 MB/s	   27276 B/op	      16 allocs/op
+BenchmarkJSONPushEventUnmarshal/large-18       	     328	    361184 ns/op	 481.77 MB/s	  614937 B/op	      27 allocs/op
+BenchmarkJSONCursorRoundTrip/small-18          	   32341	      3716 ns/op	 106.56 MB/s	    3738 B/op	      33 allocs/op
+BenchmarkJSONCursorRoundTrip/medium-18         	    1597	     75749 ns/op	 146.88 MB/s	   94146 B/op	     198 allocs/op
+BenchmarkJSONCursorRoundTrip/large-18          	      74	   1583374 ns/op	 140.22 MB/s	 2513066 B/op	    3093 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/origoclient
+cpu: Apple M5 Pro
+BenchmarkJSONCommitRequestMarshal/small-18         	   30969	      3736 ns/op	 157.65 MB/s	    7057 B/op	      75 allocs/op
+BenchmarkJSONCommitRequestMarshal/medium-18        	    5199	     23471 ns/op	 544.08 MB/s	   71767 B/op	     126 allocs/op
+BenchmarkJSONCommitRequestMarshal/large-18         	     256	    464965 ns/op	 534.13 MB/s	 2419863 B/op	     426 allocs/op
+BenchmarkJSONCommitPageUnmarshal/small-18          	   42870	      2771 ns/op	 221.56 MB/s	    4560 B/op	      36 allocs/op
+BenchmarkJSONCommitPageUnmarshal/medium-18         	    3783	     32867 ns/op	 366.63 MB/s	   50940 B/op	     178 allocs/op
+BenchmarkJSONCommitPageUnmarshal/large-18          	     196	    618653 ns/op	 379.44 MB/s	  895043 B/op	    3015 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/placement
+cpu: Apple M5 Pro
+BenchmarkJSONGossipDatagramRoundTrip-18    	   89425	      1181 ns/op	 119.36 MB/s	    1654 B/op	      23 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/origo/internal/wal
+cpu: Apple M5 Pro
+BenchmarkJSONIndexUnmarshal/small-18  	   19490	      6192 ns/op	 161.83 MB/s	    3789 B/op	      30 allocs/op
+BenchmarkJSONIndexUnmarshal/medium-18 	    2658	     44873 ns/op	 196.31 MB/s	   52117 B/op	     168 allocs/op
+BenchmarkJSONIndexUnmarshal/large-18  	     162	    734444 ns/op	 223.67 MB/s	  893017 B/op	    3857 allocs/op
+BenchmarkJSONIndexMarshal/small-18    	  115872	      1046 ns/op	 957.98 MB/s	    1121 B/op	       7 allocs/op
+BenchmarkJSONIndexMarshal/medium-18   	   15033	      7938 ns/op	1109.76 MB/s	    9858 B/op	      24 allocs/op
+BenchmarkJSONIndexMarshal/large-18    	     856	    138878 ns/op	1182.87 MB/s	  174068 B/op	     104 allocs/op
+BenchmarkJSONEntryHeadMarshal/small-18         	  213069	       579.7 ns/op	 707.25 MB/s	    1153 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/medium-18        	   15123	      7934 ns/op	1077.84 MB/s	   19591 B/op	       7 allocs/op
+BenchmarkJSONEntryHeadMarshal/large-18         	     723	    167360 ns/op	1073.57 MB/s	  411778 B/op	       8 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/small-18       	   43370	      2647 ns/op	 154.89 MB/s	    2723 B/op	      21 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/medium-18      	    2085	     55673 ns/op	 153.61 MB/s	   48605 B/op	     108 allocs/op
+BenchmarkJSONEntryHeadUnmarshal/large-18       	      84	   1313360 ns/op	 136.80 MB/s	  892053 B/op	    2654 allocs/op
+BenchmarkJSONMetaRoundTrip-18                  	   35004	      3430 ns/op	  94.18 MB/s	    3122 B/op	      27 allocs/op
+PASS

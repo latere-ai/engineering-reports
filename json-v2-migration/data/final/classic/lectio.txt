@@ -1,0 +1,630 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   14229	      7983 ns/op	  78.67 MB/s	   12536 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     999	    123086 ns/op	  98.60 MB/s	  230572 B/op	    3817 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      48	   2520207 ns/op	  96.09 MB/s	 4514225 B/op	   77681 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   31820	      3790 ns/op	 165.72 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1724	     67430 ns/op	 179.98 MB/s	  113391 B/op	    1958 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      90	   1429417 ns/op	 169.42 MB/s	 2173166 B/op	   39837 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3138	     38494 ns/op	  51.75 MB/s	   44490 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      87	   1240224 ns/op	   7.17 MB/s	 1538502 B/op	   34996 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	   84969	      1193 ns/op	 573.16 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    5740	     21105 ns/op	 595.08 MB/s	   20727 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     284	    419081 ns/op	 607.70 MB/s	  418546 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  303068	       396.9 ns/op	1146.43 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21122	      5633 ns/op	1378.31 MB/s	    8258 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1083	    111815 ns/op	1406.14 MB/s	  162776 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  136663	       873.3 ns/op	 635.53 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10488 ns/op	 849.95 MB/s	   19708 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     585	    199559 ns/op	 910.54 MB/s	  380472 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   98359	      1236 ns/op	 253.16 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5424	     22795 ns/op	 263.52 MB/s	   27299 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1021	    110904 ns/op	 270.71 MB/s	  121195 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   66805	      1794 ns/op	  47.93 MB/s	    7142 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14358	      8338 ns/op	 146.80 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   27067	      4252 ns/op	 201.54 MB/s	    1891 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3404	     35677 ns/op	 236.03 MB/s	   18273 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     134	    898719 ns/op	 234.25 MB/s	  486850 B/op	      60 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   19394	      6232 ns/op	 137.52 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2330	     48546 ns/op	 173.46 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	     100	   1188962 ns/op	 177.07 MB/s	  248354 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  127610	       951.2 ns/op	 649.72 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	   10000	     12089 ns/op	 587.80 MB/s	    8348 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     522	    232847 ns/op	 636.03 MB/s	  156063 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   35972	      3405 ns/op	 181.50 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3718	     34450 ns/op	 206.27 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     168	    709240 ns/op	 208.81 MB/s	  319976 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    4928	     22311 ns/op	 190.89 MB/s	   30686 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     964	    122276 ns/op	 178.48 MB/s	  197330 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     202	    596586 ns/op	 390.12 MB/s	 1967389 B/op	    1280 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     10632 ns/op	  62.27 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     968	    123768 ns/op	  68.01 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     355	    342134 ns/op	  67.55 MB/s	  347913 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    4000	     30758 ns/op	 138.04 MB/s	   47326 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     690	    171862 ns/op	 133.84 MB/s	  230757 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      79	   1298520 ns/op	 211.15 MB/s	 3000119 B/op	    8868 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16204	      7275 ns/op	  86.33 MB/s	   12535 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     968	    125860 ns/op	  96.42 MB/s	  230581 B/op	    3818 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      45	   2666671 ns/op	  90.82 MB/s	 4518030 B/op	   77713 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   29187	      4012 ns/op	 156.53 MB/s	    6351 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1743	     68977 ns/op	 175.94 MB/s	  113383 B/op	    1957 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      86	   1442105 ns/op	 167.93 MB/s	 2175577 B/op	   39913 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3085	     38795 ns/op	  51.35 MB/s	   44488 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      91	   1241024 ns/op	   7.17 MB/s	 1538869 B/op	   34997 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	   99820	      1159 ns/op	 590.19 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6259	     20890 ns/op	 601.20 MB/s	   20727 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     282	    419191 ns/op	 607.54 MB/s	  418538 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  284025	       403.2 ns/op	1128.34 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21066	      5669 ns/op	1369.59 MB/s	    8269 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1075	    111618 ns/op	1408.62 MB/s	  162542 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  131661	       884.5 ns/op	 627.49 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10535 ns/op	 846.14 MB/s	   19705 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     586	    202591 ns/op	 896.92 MB/s	  405531 B/op	       8 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   96454	      1274 ns/op	 245.71 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5509	     23793 ns/op	 252.47 MB/s	   27297 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1119	    112913 ns/op	 265.89 MB/s	  121197 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   63775	      1847 ns/op	  46.57 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14398	      8328 ns/op	 146.97 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   32074	      3577 ns/op	 239.58 MB/s	    1891 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3296	     35880 ns/op	 234.70 MB/s	   18209 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     126	    944006 ns/op	 223.02 MB/s	  469812 B/op	      60 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   18223	      6540 ns/op	 131.04 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2492	     53545 ns/op	 157.27 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	      86	   1292566 ns/op	 162.88 MB/s	  248352 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  125772	       961.4 ns/op	 642.80 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	    9434	     12643 ns/op	 562.07 MB/s	    8350 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     487	    244118 ns/op	 606.66 MB/s	  159290 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   35736	      3349 ns/op	 184.52 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3399	     35208 ns/op	 201.83 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     164	    724648 ns/op	 204.37 MB/s	  319979 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6363	     18541 ns/op	 229.71 MB/s	   30664 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     978	    122440 ns/op	 178.24 MB/s	  197445 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     188	    627944 ns/op	 370.63 MB/s	 1948583 B/op	    1278 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     11223 ns/op	  58.98 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     927	    128143 ns/op	  65.68 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     348	    344665 ns/op	  67.05 MB/s	  347913 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3752	     32817 ns/op	 129.38 MB/s	   47396 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     672	    177142 ns/op	 129.85 MB/s	  231014 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      93	   1314971 ns/op	 208.50 MB/s	 2863860 B/op	    8863 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16832	      7073 ns/op	  88.79 MB/s	   12536 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     996	    121270 ns/op	 100.07 MB/s	  230609 B/op	    3819 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      48	   2493903 ns/op	  97.11 MB/s	 4514074 B/op	   77606 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   26458	      3817 ns/op	 164.51 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1848	     66676 ns/op	 182.01 MB/s	  113371 B/op	    1957 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      85	   1407961 ns/op	 172.00 MB/s	 2168754 B/op	   39700 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3108	     37894 ns/op	  52.57 MB/s	   44483 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      90	   1223269 ns/op	   7.27 MB/s	 1538126 B/op	   34996 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  104360	      1114 ns/op	 613.74 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6212	     20890 ns/op	 601.19 MB/s	   20728 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     288	    417049 ns/op	 610.66 MB/s	  418527 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  298940	       405.9 ns/op	1120.92 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21417	      5629 ns/op	1379.40 MB/s	    8262 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1078	    111105 ns/op	1415.12 MB/s	  162537 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  139800	       879.0 ns/op	 631.40 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10875 ns/op	 819.71 MB/s	   19678 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     562	    204693 ns/op	 887.70 MB/s	  393655 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   96169	      1279 ns/op	 244.80 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5268	     23137 ns/op	 259.63 MB/s	   27298 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	     920	    111461 ns/op	 269.36 MB/s	  121204 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   65540	      1795 ns/op	  47.90 MB/s	    7142 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14287	      8330 ns/op	 146.94 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   35355	      3350 ns/op	 255.80 MB/s	    1892 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3696	     34428 ns/op	 244.60 MB/s	   18266 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     134	    898776 ns/op	 234.24 MB/s	  471551 B/op	      60 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   20218	      6042 ns/op	 141.83 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2676	     47985 ns/op	 175.49 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	     100	   1155798 ns/op	 182.15 MB/s	  248352 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  129224	       935.3 ns/op	 660.74 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	   10000	     12192 ns/op	 582.84 MB/s	    8348 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     505	    234165 ns/op	 632.45 MB/s	  159165 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   37692	      3166 ns/op	 195.17 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3476	     34052 ns/op	 208.68 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     169	    701653 ns/op	 211.07 MB/s	  319978 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6084	     19188 ns/op	 221.96 MB/s	   30647 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     976	    122328 ns/op	 178.41 MB/s	  196940 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     193	    615048 ns/op	 378.41 MB/s	 1989172 B/op	    1281 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     11113 ns/op	  59.57 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     970	    133460 ns/op	  63.07 MB/s	  129102 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     344	    348472 ns/op	  66.32 MB/s	  347913 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3859	     31037 ns/op	 136.81 MB/s	   47273 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     699	    175929 ns/op	 130.75 MB/s	  231211 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      87	   1308011 ns/op	 209.61 MB/s	 2993929 B/op	    8869 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16262	      7291 ns/op	  86.14 MB/s	   12535 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     962	    123484 ns/op	  98.28 MB/s	  230561 B/op	    3817 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      48	   2600183 ns/op	  93.14 MB/s	 4512780 B/op	   77568 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   31083	      3861 ns/op	 162.63 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1776	     67958 ns/op	 178.58 MB/s	  113404 B/op	    1958 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      88	   1422384 ns/op	 170.26 MB/s	 2169758 B/op	   39731 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3014	     41270 ns/op	  48.27 MB/s	   44489 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      81	   1263962 ns/op	   7.04 MB/s	 1538782 B/op	   34997 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  107008	      1135 ns/op	 602.42 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6166	     20989 ns/op	 598.37 MB/s	   20729 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     284	    421118 ns/op	 604.76 MB/s	  418539 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  303176	       402.3 ns/op	1130.98 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   20767	      5723 ns/op	1356.56 MB/s	    8261 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1062	    112984 ns/op	1391.59 MB/s	  162337 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  133398	       928.7 ns/op	 597.62 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	    9500	     10899 ns/op	 817.90 MB/s	   19706 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     554	    207684 ns/op	 874.92 MB/s	  394820 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   96044	      1316 ns/op	 237.78 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5116	     24780 ns/op	 242.41 MB/s	   27299 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1054	    112728 ns/op	 266.33 MB/s	  121200 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   63804	      1861 ns/op	  46.21 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14103	      8501 ns/op	 143.99 MB/s	   14723 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   32672	      3554 ns/op	 241.13 MB/s	    1892 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3188	     36602 ns/op	 230.07 MB/s	   18245 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     133	    904760 ns/op	 232.69 MB/s	  487387 B/op	      60 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   19386	      6294 ns/op	 136.16 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2509	     51062 ns/op	 164.92 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	      98	   1225250 ns/op	 171.82 MB/s	  248353 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  129500	       927.6 ns/op	 666.26 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	    9849	     12301 ns/op	 577.70 MB/s	    8350 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     512	    234427 ns/op	 631.74 MB/s	  159130 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   36145	      3286 ns/op	 188.04 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3651	     35053 ns/op	 202.72 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     166	    709366 ns/op	 208.77 MB/s	  319978 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6206	     18944 ns/op	 224.82 MB/s	   30682 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     981	    123409 ns/op	 176.84 MB/s	  197754 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     189	    648089 ns/op	 359.11 MB/s	 1960340 B/op	    1280 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     11032 ns/op	  60.01 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     918	    126551 ns/op	  66.51 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     352	    340065 ns/op	  67.96 MB/s	  347913 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3866	     32335 ns/op	 131.31 MB/s	   47325 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     664	    177348 ns/op	 129.70 MB/s	  231493 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      86	   1286332 ns/op	 213.15 MB/s	 2920564 B/op	    8865 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   15735	      7768 ns/op	  80.84 MB/s	   12535 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     934	    126867 ns/op	  95.66 MB/s	  230520 B/op	    3816 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      45	   2555191 ns/op	  94.78 MB/s	 4509079 B/op	   77433 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   25188	      4050 ns/op	 155.07 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1742	     70228 ns/op	 172.81 MB/s	  113390 B/op	    1958 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      84	   1433918 ns/op	 168.89 MB/s	 2174130 B/op	   39868 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3060	     38963 ns/op	  51.13 MB/s	   44488 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      87	   1305571 ns/op	   6.81 MB/s	 1538152 B/op	   34996 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  107329	      1110 ns/op	 616.22 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    5940	     20960 ns/op	 599.19 MB/s	   20729 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     286	    414340 ns/op	 614.65 MB/s	  418534 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  300189	       400.8 ns/op	1135.11 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21310	      5609 ns/op	1384.21 MB/s	    8256 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1060	    111702 ns/op	1407.56 MB/s	  162381 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  136130	       891.1 ns/op	 622.85 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10653 ns/op	 836.75 MB/s	   19682 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     586	    222463 ns/op	 816.80 MB/s	  384066 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   79162	      1304 ns/op	 240.07 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5254	     22744 ns/op	 264.12 MB/s	   27297 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1093	    109779 ns/op	 273.49 MB/s	  121196 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   66434	      1798 ns/op	  47.84 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14496	      8257 ns/op	 148.23 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   34216	      3406 ns/op	 251.62 MB/s	    1891 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3698	     34046 ns/op	 247.34 MB/s	   18274 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     135	    888780 ns/op	 236.87 MB/s	  455865 B/op	      59 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   19538	      6109 ns/op	 140.29 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2661	     49210 ns/op	 171.12 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	      98	   1180427 ns/op	 178.35 MB/s	  248352 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  125581	       944.6 ns/op	 654.23 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	    9835	     12310 ns/op	 577.23 MB/s	    8352 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     513	    236688 ns/op	 625.71 MB/s	  159123 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   37696	      3202 ns/op	 193.01 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3552	     34416 ns/op	 206.48 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     168	    712981 ns/op	 207.72 MB/s	  319981 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6514	     18241 ns/op	 233.48 MB/s	   30683 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     922	    124868 ns/op	 174.78 MB/s	  197815 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     184	    642421 ns/op	 362.28 MB/s	 2001492 B/op	    1281 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     10986 ns/op	  60.26 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     963	    127773 ns/op	  65.87 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     344	    344938 ns/op	  67.00 MB/s	  347914 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3910	     31484 ns/op	 134.86 MB/s	   47329 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     703	    170283 ns/op	 135.08 MB/s	  231631 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	     100	   1256667 ns/op	 218.18 MB/s	 2825272 B/op	    8862 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16773	      7256 ns/op	  86.55 MB/s	   12535 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     957	    123799 ns/op	  98.03 MB/s	  230517 B/op	    3816 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      46	   2517650 ns/op	  96.19 MB/s	 4516805 B/op	   77793 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   26970	      4118 ns/op	 152.49 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1592	     68991 ns/op	 175.91 MB/s	  113425 B/op	    1959 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      84	   1424915 ns/op	 169.96 MB/s	 2173494 B/op	   39846 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3026	     38427 ns/op	  51.84 MB/s	   44487 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      88	   1249199 ns/op	   7.12 MB/s	 1538288 B/op	   34996 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  102540	      1127 ns/op	 606.93 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6332	     20886 ns/op	 601.31 MB/s	   20728 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     286	    417023 ns/op	 610.70 MB/s	  418523 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  297609	       401.9 ns/op	1132.03 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21442	      5623 ns/op	1380.76 MB/s	    8286 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1089	    111282 ns/op	1412.87 MB/s	  162327 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  138369	       873.0 ns/op	 635.76 MB/s	    1811 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10479 ns/op	 850.69 MB/s	   19691 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     588	    200033 ns/op	 908.39 MB/s	  389373 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   95716	      1262 ns/op	 248.01 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5274	     22671 ns/op	 264.97 MB/s	   27297 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1100	    111273 ns/op	 269.81 MB/s	  121206 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   64384	      1785 ns/op	  48.17 MB/s	    7142 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   13908	      8589 ns/op	 142.51 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   33070	      3489 ns/op	 245.65 MB/s	    1892 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3208	     35851 ns/op	 234.89 MB/s	   18261 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     138	    863942 ns/op	 243.68 MB/s	  466618 B/op	      59 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   19665	      6110 ns/op	 140.27 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2661	     48046 ns/op	 175.27 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	      97	   1215662 ns/op	 173.18 MB/s	  248352 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  133176	       935.0 ns/op	 660.94 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	   10000	     12237 ns/op	 580.68 MB/s	    8348 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     514	    235284 ns/op	 629.44 MB/s	  157065 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   37843	      3278 ns/op	 188.55 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3301	     35915 ns/op	 197.86 MB/s	   17161 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     170	    698368 ns/op	 212.06 MB/s	  319977 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6526	     18272 ns/op	 233.09 MB/s	   30683 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     991	    124034 ns/op	 175.95 MB/s	  197645 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     200	    598864 ns/op	 388.63 MB/s	 1993076 B/op	    1281 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     10942 ns/op	  60.50 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     873	    129325 ns/op	  65.08 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     350	    341302 ns/op	  67.71 MB/s	  347913 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3686	     31110 ns/op	 136.48 MB/s	   47321 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     696	    173129 ns/op	 132.86 MB/s	  230578 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      91	   1261806 ns/op	 217.29 MB/s	 2897971 B/op	    8865 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16198	      7308 ns/op	  85.94 MB/s	   12536 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     975	    125336 ns/op	  96.83 MB/s	  230548 B/op	    3816 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      46	   2569803 ns/op	  94.24 MB/s	 4511628 B/op	   77520 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   26107	      3878 ns/op	 161.95 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1803	     67256 ns/op	 180.44 MB/s	  113400 B/op	    1958 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      85	   1430341 ns/op	 169.31 MB/s	 2166729 B/op	   39636 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3056	     38320 ns/op	  51.98 MB/s	   44469 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      87	   1230972 ns/op	   7.22 MB/s	 1537916 B/op	   34996 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  100942	      1126 ns/op	 607.72 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    5996	     20704 ns/op	 606.59 MB/s	   20728 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     276	    426816 ns/op	 596.69 MB/s	  418540 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  301179	       400.9 ns/op	1135.01 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21309	      5634 ns/op	1378.06 MB/s	    8269 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1051	    114177 ns/op	1377.04 MB/s	  162384 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  138496	       872.9 ns/op	 635.83 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10663 ns/op	 835.94 MB/s	   19675 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     574	    202979 ns/op	 895.20 MB/s	  391494 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   96102	      1253 ns/op	 249.71 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5324	     22626 ns/op	 265.50 MB/s	   27297 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1090	    108430 ns/op	 276.89 MB/s	  121199 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   64544	      1792 ns/op	  47.99 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14433	      8326 ns/op	 147.01 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   34231	      3418 ns/op	 250.73 MB/s	    1891 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3388	     35202 ns/op	 239.22 MB/s	   18205 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     136	    883756 ns/op	 238.22 MB/s	  463338 B/op	      59 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   19993	      6040 ns/op	 141.88 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2408	     48048 ns/op	 175.26 MB/s	   10914 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	     100	   1161390 ns/op	 181.27 MB/s	  248353 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  130454	       920.3 ns/op	 671.51 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	    9800	     12421 ns/op	 572.10 MB/s	    8348 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     480	    246352 ns/op	 601.16 MB/s	  158237 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   37382	      3185 ns/op	 194.05 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3598	     33947 ns/op	 209.32 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     168	    718250 ns/op	 206.19 MB/s	  319977 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6304	     18585 ns/op	 229.17 MB/s	   30676 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     975	    123082 ns/op	 177.31 MB/s	  198445 B/op	     530 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     199	    604753 ns/op	 384.85 MB/s	 1999889 B/op	    1282 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     10993 ns/op	  60.22 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     978	    125483 ns/op	  67.08 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     350	    338828 ns/op	  68.21 MB/s	  347914 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3952	     30856 ns/op	 137.61 MB/s	   47295 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     687	    181842 ns/op	 126.49 MB/s	  231083 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      87	   1282871 ns/op	 213.72 MB/s	 2873202 B/op	    8864 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16824	      7139 ns/op	  87.97 MB/s	   12536 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     976	    124352 ns/op	  97.59 MB/s	  230588 B/op	    3818 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      45	   2568683 ns/op	  94.28 MB/s	 4511697 B/op	   77553 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   25971	      3964 ns/op	 158.42 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1707	     68750 ns/op	 176.52 MB/s	  113448 B/op	    1959 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      80	   1400398 ns/op	 172.93 MB/s	 2170267 B/op	   39747 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3144	     39581 ns/op	  50.33 MB/s	   44481 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      84	   1262547 ns/op	   7.04 MB/s	 1538117 B/op	   34996 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  104757	      1117 ns/op	 612.08 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6288	     20903 ns/op	 600.83 MB/s	   20727 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     277	    434796 ns/op	 585.73 MB/s	  418542 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  296790	       401.4 ns/op	1133.56 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   20634	      5740 ns/op	1352.67 MB/s	    8255 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1069	    112131 ns/op	1402.17 MB/s	  162210 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  135619	       877.1 ns/op	 632.79 MB/s	    1811 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10658 ns/op	 836.40 MB/s	   19682 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     588	    203014 ns/op	 895.05 MB/s	  395626 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   97549	      1263 ns/op	 247.89 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5338	     23064 ns/op	 260.45 MB/s	   27297 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1112	    112032 ns/op	 267.98 MB/s	  121198 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   64978	      1869 ns/op	  46.01 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14107	      8483 ns/op	 144.30 MB/s	   14723 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   34585	      3360 ns/op	 255.08 MB/s	    1892 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3464	     34297 ns/op	 245.53 MB/s	   18274 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     136	    866551 ns/op	 242.95 MB/s	  455709 B/op	      59 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   20314	      5873 ns/op	 145.91 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2658	     47101 ns/op	 178.78 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	     100	   1119610 ns/op	 188.04 MB/s	  248352 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  130017	       915.1 ns/op	 675.33 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	   10000	     12206 ns/op	 582.18 MB/s	    8350 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     504	    243516 ns/op	 608.16 MB/s	  162305 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   38634	      3072 ns/op	 201.20 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3741	     33882 ns/op	 209.73 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     174	    687637 ns/op	 215.37 MB/s	  319981 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6471	     18492 ns/op	 230.31 MB/s	   30683 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     950	    123863 ns/op	 176.19 MB/s	  197455 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     190	    626857 ns/op	 371.28 MB/s	 1988367 B/op	    1281 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     11159 ns/op	  59.32 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     940	    138773 ns/op	  60.65 MB/s	  129102 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     327	    354836 ns/op	  65.13 MB/s	  347913 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3925	     31707 ns/op	 133.92 MB/s	   47295 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     679	    180960 ns/op	 127.11 MB/s	  231162 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      93	   1300887 ns/op	 210.76 MB/s	 2925807 B/op	    8866 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16447	      7358 ns/op	  85.35 MB/s	   12536 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     958	    124946 ns/op	  97.13 MB/s	  230567 B/op	    3817 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      46	   2601528 ns/op	  93.09 MB/s	 4511803 B/op	   77637 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   25694	      3984 ns/op	 157.63 MB/s	    6351 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1785	     69792 ns/op	 173.89 MB/s	  113363 B/op	    1957 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      82	   1393048 ns/op	 173.85 MB/s	 2171876 B/op	   39798 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3110	     38536 ns/op	  51.69 MB/s	   44488 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      88	   1241615 ns/op	   7.16 MB/s	 1538702 B/op	   34997 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  102369	      1130 ns/op	 605.20 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6273	     20860 ns/op	 602.05 MB/s	   20728 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     288	    421503 ns/op	 604.21 MB/s	  418534 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  291890	       404.9 ns/op	1123.67 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   20623	      5750 ns/op	1350.37 MB/s	    8263 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1070	    112262 ns/op	1400.54 MB/s	  162422 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  134479	       884.5 ns/op	 627.45 MB/s	    1810 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10639 ns/op	 837.88 MB/s	   19682 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     562	    209063 ns/op	 869.15 MB/s	  395511 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   96634	      1298 ns/op	 241.19 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5306	     22580 ns/op	 266.03 MB/s	   27295 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1098	    108556 ns/op	 276.57 MB/s	  121206 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   62702	      1823 ns/op	  47.17 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   13934	      8595 ns/op	 142.42 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   35523	      3357 ns/op	 255.28 MB/s	    1891 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    3404	     34651 ns/op	 243.02 MB/s	   18275 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     129	    934905 ns/op	 225.19 MB/s	  481091 B/op	      60 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   18610	      6402 ns/op	 133.86 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2670	     47947 ns/op	 175.63 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	      93	   1163799 ns/op	 180.90 MB/s	  248353 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  124045	       939.8 ns/op	 657.61 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	    9904	     12333 ns/op	 576.17 MB/s	    8348 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     508	    238345 ns/op	 621.36 MB/s	  158113 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   36841	      3255 ns/op	 189.84 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3721	     34713 ns/op	 204.70 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     170	    702333 ns/op	 210.86 MB/s	  319980 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    6375	     18614 ns/op	 228.80 MB/s	   30670 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     946	    125419 ns/op	 174.01 MB/s	  197457 B/op	     529 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     183	    638200 ns/op	 364.68 MB/s	 1965645 B/op	    1280 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	    9255	     11279 ns/op	  58.69 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     949	    132050 ns/op	  63.74 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     310	    362806 ns/op	  63.70 MB/s	  347914 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3847	     32454 ns/op	 130.83 MB/s	   47269 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     674	    181510 ns/op	 126.73 MB/s	  231133 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      97	   1297549 ns/op	 211.30 MB/s	 2894227 B/op	    8864 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONExtractionReplyCheck/small-18         	   16723	      7135 ns/op	  88.02 MB/s	   12536 B/op	     223 allocs/op
+BenchmarkJSONExtractionReplyCheck/medium-18        	     967	    124786 ns/op	  97.25 MB/s	  230559 B/op	    3817 allocs/op
+BenchmarkJSONExtractionReplyCheck/large-18         	      48	   2533235 ns/op	  95.60 MB/s	 4514996 B/op	   77531 allocs/op
+BenchmarkJSONExtractionReplyDecode/small-18        	   30198	      3902 ns/op	 160.94 MB/s	    6352 B/op	     113 allocs/op
+BenchmarkJSONExtractionReplyDecode/medium-18       	    1759	     69385 ns/op	 174.91 MB/s	  113400 B/op	    1958 allocs/op
+BenchmarkJSONExtractionReplyDecode/large-18        	      85	   1430983 ns/op	 169.24 MB/s	 2171476 B/op	   39785 allocs/op
+BenchmarkJSONExtractionWindowsMerge/small-18       	    3033	     39093 ns/op	  50.96 MB/s	   44485 B/op	    1049 allocs/op
+BenchmarkJSONExtractionWindowsMerge/medium-18      	      91	   1315785 ns/op	   6.76 MB/s	 1538652 B/op	   34997 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONBlockListMarshal/small-18      	  104068	      1128 ns/op	 606.20 MB/s	    1137 B/op	       6 allocs/op
+BenchmarkJSONBlockListMarshal/medium-18     	    6294	     21226 ns/op	 591.69 MB/s	   20728 B/op	     110 allocs/op
+BenchmarkJSONBlockListMarshal/large-18      	     285	    416560 ns/op	 611.38 MB/s	  418552 B/op	    2200 allocs/op
+BenchmarkJSONChunkListMarshal/small-18      	  303253	       396.5 ns/op	1147.50 MB/s	     560 B/op	       2 allocs/op
+BenchmarkJSONChunkListMarshal/medium-18     	   21376	      5601 ns/op	1386.22 MB/s	    8258 B/op	       4 allocs/op
+BenchmarkJSONChunkListMarshal/large-18      	    1036	    114611 ns/op	1371.83 MB/s	  162349 B/op	      50 allocs/op
+BenchmarkJSONDocumentIndexEncode/small-18   	  137222	       882.3 ns/op	 629.00 MB/s	    1811 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/medium-18  	   10000	     10646 ns/op	 837.29 MB/s	   19678 B/op	       7 allocs/op
+BenchmarkJSONDocumentIndexEncode/large-18   	     589	    205128 ns/op	 885.82 MB/s	  388466 B/op	       7 allocs/op
+BenchmarkJSONParseEventStreamEncode/small-18         	   85767	      1339 ns/op	 233.83 MB/s	    1644 B/op	      27 allocs/op
+BenchmarkJSONParseEventStreamEncode/medium-18        	    5132	     23410 ns/op	 256.60 MB/s	   27296 B/op	     436 allocs/op
+BenchmarkJSONParseEventStreamEncode/large-18         	    1106	    110454 ns/op	 271.82 MB/s	  121202 B/op	    2428 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/small-18       	   63091	      1864 ns/op	  46.15 MB/s	    7143 B/op	      31 allocs/op
+BenchmarkJSONSubmitParseRequestDecode/medium-18      	   14248	      8409 ns/op	 145.55 MB/s	   14722 B/op	     103 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/internal/tasks
+cpu: Apple M5 Pro
+BenchmarkJSONWorkerRequestMarshal/small-18         	   33092	      3616 ns/op	 236.99 MB/s	    1892 B/op	       4 allocs/op
+BenchmarkJSONWorkerRequestMarshal/medium-18        	    2946	     35953 ns/op	 234.22 MB/s	   18250 B/op	       6 allocs/op
+BenchmarkJSONWorkerRequestMarshal/large-18         	     140	    856600 ns/op	 245.77 MB/s	  462504 B/op	      59 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/small-18       	   20515	      5860 ns/op	 146.23 MB/s	    2056 B/op	      34 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/medium-18      	    2608	     46853 ns/op	 179.73 MB/s	   10912 B/op	      53 allocs/op
+BenchmarkJSONWorkerRequestUnmarshal/large-18       	     100	   1127263 ns/op	 186.76 MB/s	  248352 B/op	     503 allocs/op
+BenchmarkJSONLeaseReplyMarshal/small-18            	  129350	       916.5 ns/op	 674.32 MB/s	     785 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/medium-18           	   10000	     12268 ns/op	 579.25 MB/s	    8348 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyMarshal/large-18            	     512	    235402 ns/op	 629.12 MB/s	  157070 B/op	       3 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/small-18          	   39147	      3055 ns/op	 202.30 MB/s	    1360 B/op	      32 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/medium-18         	    3663	     33595 ns/op	 211.52 MB/s	   17160 B/op	     198 allocs/op
+BenchmarkJSONLeaseReplyUnmarshal/large-18          	     171	    695160 ns/op	 213.04 MB/s	  319982 B/op	    4162 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/lectio/reader/chat
+cpu: Apple M5 Pro
+BenchmarkJSONPageReadRoundTrip/small-18  	    5851	     20380 ns/op	 208.98 MB/s	   30669 B/op	     141 allocs/op
+BenchmarkJSONPageReadRoundTrip/medium-18 	     918	    127337 ns/op	 171.39 MB/s	  198261 B/op	     530 allocs/op
+BenchmarkJSONPageReadRoundTrip/large-18  	     187	    623427 ns/op	 373.32 MB/s	 1989592 B/op	    1281 allocs/op
+BenchmarkJSONPageReplyFencedDecode/small-18         	   10000	     11093 ns/op	  59.68 MB/s	    9864 B/op	      82 allocs/op
+BenchmarkJSONPageReplyFencedDecode/medium-18        	     798	    132641 ns/op	  63.46 MB/s	  129096 B/op	     467 allocs/op
+BenchmarkJSONPageReplyFencedDecode/large-18         	     336	    353884 ns/op	  65.31 MB/s	  347914 B/op	    1173 allocs/op
+BenchmarkJSONExtractRoundTrip/small-18              	    3864	     32936 ns/op	 128.92 MB/s	   47338 B/op	     451 allocs/op
+BenchmarkJSONExtractRoundTrip/medium-18             	     673	    182270 ns/op	 126.20 MB/s	  230523 B/op	    1670 allocs/op
+BenchmarkJSONExtractRoundTrip/large-18              	      93	   1313360 ns/op	 208.76 MB/s	 2877641 B/op	    8864 allocs/op
+PASS

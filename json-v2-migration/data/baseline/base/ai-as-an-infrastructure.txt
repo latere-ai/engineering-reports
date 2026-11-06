@@ -1,0 +1,72 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/ai-as-an-infrastructure/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCommentListEncode/small-18   	   31144	      3983 ns/op	 488.83 MB/s	    3989 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   31450	      4116 ns/op	 473.04 MB/s	    3989 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   32557	      3911 ns/op	 497.76 MB/s	    3989 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   29766	      4156 ns/op	 468.43 MB/s	    3989 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   26096	      4423 ns/op	 440.20 MB/s	    3990 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    5880	     22343 ns/op	 663.65 MB/s	   18399 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    5550	     22443 ns/op	 660.68 MB/s	   18403 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    5877	     21915 ns/op	 676.63 MB/s	   18399 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    6253	     21466 ns/op	 690.76 MB/s	   18375 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    5630	     20862 ns/op	 710.78 MB/s	   18356 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     469	    262378 ns/op	 706.42 MB/s	  200228 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     457	    268913 ns/op	 689.25 MB/s	  194507 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     457	    255340 ns/op	 725.89 MB/s	  198487 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     517	    233356 ns/op	 794.27 MB/s	  206365 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     469	    253882 ns/op	 730.06 MB/s	  200227 B/op	      20 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   18243	      6081 ns/op	  85.01 MB/s	   10554 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   19450	      5772 ns/op	  89.57 MB/s	   10561 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   22424	      5685 ns/op	  90.95 MB/s	   10558 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   22718	      5530 ns/op	  93.49 MB/s	   10558 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   21751	      5509 ns/op	  93.84 MB/s	   10557 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    7458	     18510 ns/op	 233.66 MB/s	   33701 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    5750	     18811 ns/op	 229.91 MB/s	   33670 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    8431	     17961 ns/op	 240.80 MB/s	   33685 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    6123	     17517 ns/op	 246.90 MB/s	   33678 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    6417	     17407 ns/op	 248.46 MB/s	   33683 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    4633	     33130 ns/op	 294.75 MB/s	   60887 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    4455	     32107 ns/op	 304.13 MB/s	   60778 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    3799	     31494 ns/op	 310.06 MB/s	   60904 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    4449	     33247 ns/op	 293.71 MB/s	   60883 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    3330	     30642 ns/op	 318.68 MB/s	   60797 B/op	      41 allocs/op
+PASS
+ok  	github.com/latere-ai/ai-as-an-infrastructure/internal/api	3.942s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/ai-as-an-infrastructure/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONCommentListEncode/small-18   	   36652	      3197 ns/op	 608.97 MB/s	    3991 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   36228	      3392 ns/op	 573.99 MB/s	    3990 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   35700	      3421 ns/op	 569.10 MB/s	    3990 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   40088	      3009 ns/op	 647.10 MB/s	    3989 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/small-18   	   40730	      2899 ns/op	 671.71 MB/s	    3990 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    6736	     17181 ns/op	 863.06 MB/s	   18343 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    7892	     17248 ns/op	 859.70 MB/s	   18342 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    7393	     17082 ns/op	 868.02 MB/s	   18377 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    7444	     17291 ns/op	 857.55 MB/s	   18368 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/medium-18  	    7981	     17537 ns/op	 845.53 MB/s	   18398 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     585	    205389 ns/op	 902.42 MB/s	  196750 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     582	    206449 ns/op	 897.79 MB/s	  198342 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     572	    197863 ns/op	 936.75 MB/s	  193703 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     620	    197068 ns/op	 940.53 MB/s	  200796 B/op	      20 allocs/op
+BenchmarkJSONCommentListEncode/large-18   	     621	    214434 ns/op	 864.36 MB/s	  196386 B/op	      20 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   28708	      4425 ns/op	 116.82 MB/s	   10559 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   24537	      4886 ns/op	 105.82 MB/s	   10558 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   26672	      4697 ns/op	 110.08 MB/s	   10562 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   25705	      4322 ns/op	 119.62 MB/s	   10557 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/small-18         	   28716	      4094 ns/op	 126.27 MB/s	   10561 B/op	      37 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	   10000	     12675 ns/op	 341.23 MB/s	   33683 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    8672	     13067 ns/op	 330.99 MB/s	   33689 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    9366	     14631 ns/op	 295.60 MB/s	   33703 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    8335	     14542 ns/op	 297.41 MB/s	   33694 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/medium-18        	    7322	     14074 ns/op	 307.30 MB/s	   33700 B/op	      40 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    4864	     26007 ns/op	 375.47 MB/s	   60905 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    5355	     26506 ns/op	 368.41 MB/s	   60941 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    5344	     25611 ns/op	 381.28 MB/s	   60825 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    5152	     25219 ns/op	 387.21 MB/s	   60876 B/op	      41 allocs/op
+BenchmarkJSONCommentCreateRoundTrip/large-18         	    5326	     24974 ns/op	 391.01 MB/s	   60868 B/op	      41 allocs/op
+PASS
+ok  	github.com/latere-ai/ai-as-an-infrastructure/internal/api	4.038s

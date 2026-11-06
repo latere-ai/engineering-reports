@@ -1,0 +1,520 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    5079	     21413 ns/op	  86.21 MB/s	   71012 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    3926	     30686 ns/op	 350.81 MB/s	   85503 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     374	    318006 ns/op	 644.52 MB/s	  401515 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   42321	      2959 ns/op	 694.12 MB/s	    4179 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   12681	      9397 ns/op	 445.47 MB/s	   16423 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   11983	      8851 ns/op	 276.59 MB/s	   66748 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6579	     17879 ns/op	 609.26 MB/s	   66953 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     452	    264011 ns/op	 777.77 MB/s	   72146 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  123723	       970.6 ns/op	 794.37 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   17455	      6878 ns/op	1526.55 MB/s	   10360 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	     969	    123572 ns/op	1659.43 MB/s	  205120 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   14347	      8361 ns/op	 247.10 MB/s	   10005 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   70837	      1697 ns/op	 220.44 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   21019	      5695 ns/op	 395.63 MB/s	   13371 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10340 ns/op	 442.54 MB/s	   26442 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  299686	       406.8 ns/op	 339.20 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  161212	       744.6 ns/op	 179.96 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   21199	      5660 ns/op	 344.01 MB/s	   14290 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   20970	      5401 ns/op	 209.77 MB/s	   68149 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    7274	     15557 ns/op	 666.63 MB/s	   88769 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     541	    226113 ns/op	 907.22 MB/s	  519803 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    4916	     23664 ns/op	  16.90 MB/s	    2210 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	     985	    104851 ns/op	  97.66 MB/s	   12336 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4196	     27751 ns/op	2437.29 MB/s	   73922 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    7764	     14248 ns/op	  90.26 MB/s	   67585 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2025	     58989 ns/op	 545.90 MB/s	   93123 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     127	    941772 ns/op	 684.31 MB/s	  543520 B/op	    2780 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1612	     66592 ns/op	1107.16 MB/s	  300178 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  102826	      1074 ns/op	 828.74 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   25890	      4806 ns/op	1500.57 MB/s	    8199 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  100498	      1178 ns/op	 520.59 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    4492	     22669 ns/op	   7.06 MB/s	     906 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6888	     17268 ns/op	 106.91 MB/s	   71029 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    3924	     29824 ns/op	 360.96 MB/s	   85503 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     387	    309019 ns/op	 663.26 MB/s	  401611 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   41314	      2815 ns/op	 729.67 MB/s	    4180 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   12999	      9163 ns/op	 456.85 MB/s	   16423 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15868	      7486 ns/op	 327.03 MB/s	   66744 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6888	     17288 ns/op	 630.10 MB/s	   66951 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     465	    258008 ns/op	 795.86 MB/s	   72172 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  128335	       938.0 ns/op	 821.98 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   18175	      6589 ns/op	1593.34 MB/s	   10360 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	    1015	    119928 ns/op	1709.86 MB/s	  205119 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   14190	      8373 ns/op	 246.74 MB/s	   10008 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   74298	      1623 ns/op	 230.44 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   21115	      5940 ns/op	 379.31 MB/s	   13371 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10034 ns/op	 456.03 MB/s	   26445 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  316395	       395.8 ns/op	 348.67 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  160311	       716.9 ns/op	 186.91 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   21052	      5713 ns/op	 340.78 MB/s	   14291 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   23014	      5254 ns/op	 215.67 MB/s	   68151 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    7207	     15435 ns/op	 671.91 MB/s	   88767 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     553	    211239 ns/op	 971.10 MB/s	  519784 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5360	     22819 ns/op	  17.53 MB/s	    2208 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2779	     53306 ns/op	 192.10 MB/s	   12244 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4335	     26821 ns/op	2521.79 MB/s	   73921 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8583	     14467 ns/op	  88.89 MB/s	   67601 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2133	     57201 ns/op	 562.97 MB/s	   93166 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     129	    924840 ns/op	 696.83 MB/s	  543530 B/op	    2780 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1497	     69919 ns/op	1054.48 MB/s	  300181 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  137582	       845.6 ns/op	1052.56 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   27056	      4528 ns/op	1592.64 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  106600	      1123 ns/op	 545.98 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    6118	     19421 ns/op	   8.24 MB/s	     905 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    7022	     16934 ns/op	 109.01 MB/s	   71031 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4084	     29817 ns/op	 361.03 MB/s	   85493 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     384	    310022 ns/op	 661.11 MB/s	  401523 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   41458	      2895 ns/op	 709.57 MB/s	    4179 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13059	      9185 ns/op	 455.72 MB/s	   16422 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15876	      7471 ns/op	 327.66 MB/s	   66749 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6789	     17452 ns/op	 624.18 MB/s	   66959 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     433	    268511 ns/op	 764.73 MB/s	   72138 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  123997	       969.5 ns/op	 795.27 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   17914	      6668 ns/op	1574.65 MB/s	   10360 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	    1014	    118825 ns/op	1725.72 MB/s	  205114 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   14798	      8159 ns/op	 253.23 MB/s	   10004 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   70206	      1658 ns/op	 225.58 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   21141	      5649 ns/op	 398.82 MB/s	   13371 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10280 ns/op	 445.13 MB/s	   26443 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  306852	       410.0 ns/op	 336.55 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  163701	       740.5 ns/op	 180.97 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   20526	      5823 ns/op	 334.39 MB/s	   14288 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   24486	      4883 ns/op	 232.03 MB/s	   68151 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    8378	     14074 ns/op	 736.89 MB/s	   88768 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     571	    211985 ns/op	 967.68 MB/s	  519789 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5074	     23507 ns/op	  17.02 MB/s	    2209 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2920	     52249 ns/op	 195.99 MB/s	   12241 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4362	     27936 ns/op	2421.14 MB/s	   74238 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    7497	     14303 ns/op	  89.91 MB/s	   67604 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2038	     58854 ns/op	 547.15 MB/s	   93121 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     126	    940585 ns/op	 685.17 MB/s	  543604 B/op	    2782 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1776	     67464 ns/op	1092.85 MB/s	  300082 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  137518	       858.4 ns/op	1036.84 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26730	      4499 ns/op	1603.07 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  105660	      1137 ns/op	 539.12 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    4879	     22908 ns/op	   6.98 MB/s	     906 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6993	     17024 ns/op	 108.44 MB/s	   71017 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4119	     29532 ns/op	 364.52 MB/s	   85500 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     396	    314268 ns/op	 652.18 MB/s	  401609 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   42135	      2827 ns/op	 726.60 MB/s	    4180 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13365	      8929 ns/op	 468.79 MB/s	   16424 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15800	      7522 ns/op	 325.43 MB/s	   66750 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6751	     17601 ns/op	 618.89 MB/s	   66958 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     441	    266516 ns/op	 770.46 MB/s	   72123 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  126082	       995.0 ns/op	 774.88 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   14652	      8155 ns/op	1287.36 MB/s	   10362 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	     810	    146115 ns/op	1403.41 MB/s	  205118 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   13402	      8859 ns/op	 233.22 MB/s	   10005 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   72141	      1667 ns/op	 224.38 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   19518	      6128 ns/op	 367.65 MB/s	   13373 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     11043 ns/op	 414.39 MB/s	   26443 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  292120	       411.8 ns/op	 335.12 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  157576	       744.3 ns/op	 180.03 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   21492	      5570 ns/op	 349.54 MB/s	   14291 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   23571	      5166 ns/op	 219.33 MB/s	   68151 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    7512	     15802 ns/op	 656.30 MB/s	   88767 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     528	    224426 ns/op	 914.04 MB/s	  519786 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5278	     22950 ns/op	  17.43 MB/s	    2208 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2836	     58720 ns/op	 174.39 MB/s	   12263 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4434	     27087 ns/op	2497.03 MB/s	   74076 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8781	     14734 ns/op	  87.28 MB/s	   67581 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2116	     60636 ns/op	 531.07 MB/s	   93142 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     132	    902589 ns/op	 714.01 MB/s	  543654 B/op	    2782 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1814	     63446 ns/op	1162.06 MB/s	  300096 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  134244	       863.4 ns/op	1030.76 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26596	      4511 ns/op	1598.59 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  106114	      1154 ns/op	 531.05 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    5920	     20024 ns/op	   7.99 MB/s	     905 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6976	     17320 ns/op	 106.58 MB/s	   71025 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4030	     30246 ns/op	 355.92 MB/s	   85513 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     391	    311889 ns/op	 657.16 MB/s	  401575 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   43453	      2772 ns/op	 740.97 MB/s	    4180 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13531	      8879 ns/op	 471.46 MB/s	   16422 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   16086	      7418 ns/op	 330.02 MB/s	   66746 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6822	     17277 ns/op	 630.48 MB/s	   66953 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     460	    259989 ns/op	 789.80 MB/s	   72131 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  126324	       942.6 ns/op	 817.94 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   18144	      6643 ns/op	1580.42 MB/s	   10361 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	    1015	    119060 ns/op	1722.31 MB/s	  205103 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   15051	      7894 ns/op	 261.73 MB/s	   10008 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   66909	      1709 ns/op	 218.85 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   21643	      5526 ns/op	 407.69 MB/s	   13371 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   12362	      9706 ns/op	 471.46 MB/s	   26446 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  303330	       397.3 ns/op	 347.36 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  164983	       727.0 ns/op	 184.32 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   21610	      5593 ns/op	 348.13 MB/s	   14289 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   24447	      4915 ns/op	 230.52 MB/s	   68151 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    8312	     14594 ns/op	 710.61 MB/s	   88767 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     547	    214423 ns/op	 956.68 MB/s	  519795 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5348	     22367 ns/op	  17.88 MB/s	    2208 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2907	     51274 ns/op	 199.71 MB/s	   12242 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4306	     26986 ns/op	2506.41 MB/s	   74002 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8318	     14250 ns/op	  90.24 MB/s	   67588 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2084	     58129 ns/op	 553.97 MB/s	   93120 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     128	    930701 ns/op	 692.45 MB/s	  543678 B/op	    2782 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1857	     67933 ns/op	1085.30 MB/s	  300114 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  135774	       856.9 ns/op	1038.67 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26403	      4520 ns/op	1595.41 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  103540	      1167 ns/op	 525.41 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    6270	     19064 ns/op	   8.39 MB/s	     906 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6931	     17212 ns/op	 107.25 MB/s	   71021 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4141	     30029 ns/op	 358.48 MB/s	   85502 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     393	    318398 ns/op	 643.72 MB/s	  401572 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   42277	      2772 ns/op	 740.94 MB/s	    4179 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13574	      8825 ns/op	 474.34 MB/s	   16423 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15758	      7580 ns/op	 322.94 MB/s	   66750 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6789	     18112 ns/op	 601.41 MB/s	   66949 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     428	    275191 ns/op	 746.17 MB/s	   72140 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  113322	      1005 ns/op	 766.79 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   14896	      8036 ns/op	1306.55 MB/s	   10361 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	     854	    136244 ns/op	1505.09 MB/s	  205114 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   13382	      8864 ns/op	 233.09 MB/s	   10004 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   70095	      1678 ns/op	 222.85 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   19489	      6096 ns/op	 369.57 MB/s	   13372 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     11175 ns/op	 409.49 MB/s	   26443 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  299961	       404.0 ns/op	 341.61 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  160999	       724.2 ns/op	 185.04 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   20578	      5805 ns/op	 335.39 MB/s	   14290 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   23503	      5130 ns/op	 220.88 MB/s	   68150 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    8106	     15267 ns/op	 679.31 MB/s	   88767 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     560	    213715 ns/op	 959.85 MB/s	  519784 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    3660	     46035 ns/op	   8.69 MB/s	    2211 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2270	     55577 ns/op	 184.25 MB/s	   12231 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4200	     28461 ns/op	2376.55 MB/s	   73963 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    7382	     15386 ns/op	  83.58 MB/s	   67585 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2090	     57671 ns/op	 558.37 MB/s	   93146 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     127	    936534 ns/op	 688.13 MB/s	  543540 B/op	    2781 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1849	     66371 ns/op	1110.85 MB/s	  300093 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  134952	       862.8 ns/op	1031.56 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26071	      4580 ns/op	1574.67 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  104545	      1153 ns/op	 531.81 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    5977	     20218 ns/op	   7.91 MB/s	     905 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    7092	     16856 ns/op	 109.52 MB/s	   71032 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4084	     29463 ns/op	 365.38 MB/s	   85512 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     394	    302881 ns/op	 676.70 MB/s	  401598 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   43809	      2742 ns/op	 748.98 MB/s	    4179 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13288	      8965 ns/op	 466.90 MB/s	   16424 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15235	      7868 ns/op	 311.13 MB/s	   66747 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6322	     17432 ns/op	 624.90 MB/s	   66964 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     458	    261661 ns/op	 784.75 MB/s	   72144 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  126489	       951.5 ns/op	 810.30 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   18092	      6628 ns/op	1583.98 MB/s	   10361 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	    1020	    119366 ns/op	1717.90 MB/s	  205095 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   14145	      8463 ns/op	 244.13 MB/s	   10005 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   72549	      1674 ns/op	 223.45 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   21075	      5707 ns/op	 394.80 MB/s	   13372 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10241 ns/op	 446.84 MB/s	   26445 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  296518	       412.1 ns/op	 334.86 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  159660	       733.4 ns/op	 182.71 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   19321	      6412 ns/op	 303.63 MB/s	   14294 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   23604	      4964 ns/op	 228.25 MB/s	   68150 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    8322	     14078 ns/op	 736.68 MB/s	   88767 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     566	    218684 ns/op	 938.04 MB/s	  519790 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5348	     22607 ns/op	  17.69 MB/s	    2208 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2809	     59334 ns/op	 172.58 MB/s	   12244 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4394	     27285 ns/op	2478.95 MB/s	   73921 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8163	     14040 ns/op	  91.60 MB/s	   67590 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2116	     57563 ns/op	 559.42 MB/s	   93150 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     130	    914138 ns/op	 704.99 MB/s	  543646 B/op	    2782 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1786	     63661 ns/op	1158.14 MB/s	  300105 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  136128	       871.5 ns/op	1021.18 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26616	      4517 ns/op	1596.76 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  102862	      1172 ns/op	 522.96 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    5827	     20203 ns/op	   7.92 MB/s	     905 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6855	     17442 ns/op	 105.83 MB/s	   71018 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4059	     29603 ns/op	 363.64 MB/s	   85503 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     390	    306100 ns/op	 669.58 MB/s	  401551 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   43902	      2734 ns/op	 751.37 MB/s	    4180 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   12810	      9368 ns/op	 446.82 MB/s	   16424 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   13734	      8538 ns/op	 286.73 MB/s	   66753 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6249	     17826 ns/op	 611.06 MB/s	   66961 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     440	    269207 ns/op	 762.75 MB/s	   72149 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  123166	       969.1 ns/op	 795.58 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   16514	      7292 ns/op	1439.89 MB/s	   10360 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	     925	    128906 ns/op	1590.76 MB/s	  205125 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   15013	      7856 ns/op	 262.97 MB/s	   10003 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   73124	      1666 ns/op	 224.53 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   20472	      5801 ns/op	 388.39 MB/s	   13371 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10435 ns/op	 438.54 MB/s	   26440 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  301176	       404.2 ns/op	 341.38 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  162529	       729.4 ns/op	 183.70 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   21981	      5467 ns/op	 356.17 MB/s	   14291 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   24578	      5032 ns/op	 225.15 MB/s	   68150 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    7609	     15560 ns/op	 666.51 MB/s	   88767 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     544	    221393 ns/op	 926.56 MB/s	  519784 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5210	     23029 ns/op	  17.37 MB/s	    2208 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2937	     54125 ns/op	 189.19 MB/s	   12241 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4293	     27542 ns/op	2455.84 MB/s	   74044 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8364	     14185 ns/op	  90.66 MB/s	   67590 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2094	     59091 ns/op	 544.96 MB/s	   93135 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     127	    947389 ns/op	 680.25 MB/s	  543851 B/op	    2784 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1693	     67535 ns/op	1091.70 MB/s	  300159 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  132468	       878.3 ns/op	1013.30 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26272	      4726 ns/op	1526.18 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  100778	      1182 ns/op	 518.63 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    6014	     19878 ns/op	   8.05 MB/s	     905 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6900	     17133 ns/op	 107.75 MB/s	   71025 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    4024	     29575 ns/op	 363.99 MB/s	   85504 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     392	    306211 ns/op	 669.34 MB/s	  401498 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   43650	      2758 ns/op	 744.66 MB/s	    4179 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13594	      8844 ns/op	 473.31 MB/s	   16423 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15373	      7965 ns/op	 307.33 MB/s	   66759 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6640	     18900 ns/op	 576.35 MB/s	   66961 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     446	    274653 ns/op	 747.63 MB/s	   72160 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  120187	      1021 ns/op	 755.13 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   16864	      7086 ns/op	1481.64 MB/s	   10361 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	     962	    129484 ns/op	1583.66 MB/s	  205122 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   14406	      8163 ns/op	 253.10 MB/s	   10006 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   72048	      1669 ns/op	 224.08 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   20901	      5720 ns/op	 393.87 MB/s	   13372 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10270 ns/op	 445.56 MB/s	   26443 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  296299	       409.0 ns/op	 337.39 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  162769	       742.7 ns/op	 180.43 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   21488	      5579 ns/op	 348.97 MB/s	   14291 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   24265	      4947 ns/op	 229.05 MB/s	   68151 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    8223	     14116 ns/op	 734.70 MB/s	   88766 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     561	    213689 ns/op	 959.96 MB/s	  519780 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5373	     22357 ns/op	  17.89 MB/s	    2208 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2928	     53001 ns/op	 193.20 MB/s	   12281 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4432	     26989 ns/op	2506.17 MB/s	   73959 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8586	     13998 ns/op	  91.87 MB/s	   67599 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2119	     57066 ns/op	 564.30 MB/s	   93128 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     132	    904754 ns/op	 712.30 MB/s	  543657 B/op	    2782 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1894	     62864 ns/op	1172.81 MB/s	  300134 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  133832	       851.6 ns/op	1045.12 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26866	      4460 ns/op	1617.08 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  106436	      1136 ns/op	 539.77 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    6061	     19532 ns/op	   8.19 MB/s	     905 B/op	       7 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/input
+cpu: Apple M5 Pro
+BenchmarkJSONReadTranscriptDecode/small-18   	    6846	     17299 ns/op	 106.71 MB/s	   71025 B/op	      45 allocs/op
+BenchmarkJSONReadTranscriptDecode/medium-18  	    3909	     29820 ns/op	 361.00 MB/s	   85502 B/op	     162 allocs/op
+BenchmarkJSONReadTranscriptDecode/large-18   	     393	    309571 ns/op	 662.08 MB/s	  401571 B/op	    2718 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/stringContent-18         	   39141	      2865 ns/op	 716.82 MB/s	    4179 B/op	       4 allocs/op
+BenchmarkJSONExtractFirstUserUnmarshal/partsContent-18          	   13542	      8858 ns/op	 472.56 MB/s	   16421 B/op	      13 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/agent
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeStreamResultDecode/small-18     	   15061	      7889 ns/op	 310.32 MB/s	   66743 B/op	       8 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/medium-18    	    6236	     17369 ns/op	 627.17 MB/s	   66956 B/op	      22 allocs/op
+BenchmarkJSONClaudeStreamResultDecode/large-18     	     465	    258840 ns/op	 793.31 MB/s	   72143 B/op	     344 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result512B-18   	  126842	       961.1 ns/op	 802.20 MB/s	     624 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result10240B-18 	   17005	      6940 ns/op	1512.85 MB/s	   10361 B/op	       2 allocs/op
+BenchmarkJSONClaudeResultUnmarshal/result204800B-18         	    1005	    119377 ns/op	1717.75 MB/s	  205099 B/op	       2 allocs/op
+BenchmarkJSONDecodeJSONLineSanitizeUnmarshal-18             	   14642	      8063 ns/op	 256.23 MB/s	   10006 B/op	      21 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/toolUse-18             	   70962	      1672 ns/op	 223.63 MB/s	     994 B/op	      18 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/text-18                	   21518	      5633 ns/op	 400.00 MB/s	   13373 B/op	       9 allocs/op
+BenchmarkJSONClaudeStreamEventFormat/thinking-18            	   10000	     10081 ns/op	 453.94 MB/s	   26444 B/op	       9 allocs/op
+BenchmarkJSONCodexStreamEventFormat/command-18              	  294945	       410.3 ns/op	 336.32 MB/s	     224 B/op	       2 allocs/op
+BenchmarkJSONCodexStreamEventFormat/toolCall-18             	  163340	       734.9 ns/op	 182.34 MB/s	     713 B/op	      12 allocs/op
+BenchmarkJSONCodexStreamEventFormat/agentMessage-18         	   20546	      5796 ns/op	 335.89 MB/s	   14293 B/op	      16 allocs/op
+BenchmarkJSONStreamJSONDecode/small-18                      	   23829	      5098 ns/op	 222.25 MB/s	   68151 B/op	      11 allocs/op
+BenchmarkJSONStreamJSONDecode/medium-18                     	    7692	     14963 ns/op	 693.12 MB/s	   88766 B/op	      51 allocs/op
+BenchmarkJSONStreamJSONDecode/large-18                      	     558	    212612 ns/op	 964.83 MB/s	  519788 B/op	     891 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/ledger
+cpu: Apple M5 Pro
+BenchmarkJSONLedgerAppend/small-18          	    5365	     22662 ns/op	  17.65 MB/s	    2207 B/op	       9 allocs/op
+BenchmarkJSONLedgerAppend/medium-18         	    2002	     51633 ns/op	 198.32 MB/s	   12292 B/op	       9 allocs/op
+BenchmarkJSONLedgerSpillDocMarshal-18       	    4219	     27884 ns/op	2425.66 MB/s	   73923 B/op	       3 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records1-18         	    8527	     14022 ns/op	  91.71 MB/s	   67582 B/op	      14 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records25-18        	    2042	     57244 ns/op	 562.54 MB/s	   93126 B/op	     168 allocs/op
+BenchmarkJSONLedgerAggregateUnmarshal/records500-18       	     123	    957933 ns/op	 672.76 MB/s	  543689 B/op	    2783 allocs/op
+BenchmarkJSONLedgerLoadBodyUnmarshal-18                   	    1854	     63325 ns/op	1164.27 MB/s	  300097 B/op	      12 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/agon/internal/state
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStartFileMarshal/files3-18    	  130772	       860.8 ns/op	1033.93 MB/s	     896 B/op	       1 allocs/op
+BenchmarkJSONSessionStartFileMarshal/files150-18  	   26694	      4487 ns/op	1607.20 MB/s	    8198 B/op	       1 allocs/op
+BenchmarkJSONSessionEndFileMarshal-18             	  105775	      1139 ns/op	 538.00 MB/s	     793 B/op	      14 allocs/op
+BenchmarkJSONSessionAppendTranscriptMarshal-18    	    5973	     19889 ns/op	   8.04 MB/s	     905 B/op	       7 allocs/op
+PASS

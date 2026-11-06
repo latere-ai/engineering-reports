@@ -1,0 +1,180 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  450915	       234.3 ns/op	 354.29 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  278718	       433.6 ns/op	1093.27 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   67158	      1816 ns/op	 425.09 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    9118	     14165 ns/op	 741.26 MB/s	   21973 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     445	    269301 ns/op	 761.45 MB/s	  426783 B/op	       3 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  151188	       786.0 ns/op	 647.55 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   16572	      7251 ns/op	1253.55 MB/s	   20624 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     915	    131147 ns/op	1381.28 MB/s	  459551 B/op	      15 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40324	      2956 ns/op	 158.64 MB/s	    3529 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   46382	      2588 ns/op	 268.92 MB/s	    2153 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6512	     17779 ns/op	 586.30 MB/s	   22856 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   80389	      1447 ns/op	 421.60 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    6978	     14525 ns/op	 711.73 MB/s	   43901 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  516878	       202.2 ns/op	 410.40 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  267595	       438.2 ns/op	1081.70 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   56490	      1821 ns/op	 423.84 MB/s	    1699 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    8611	     14193 ns/op	 739.82 MB/s	   21973 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     462	    262640 ns/op	 780.76 MB/s	  426917 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  146625	       811.2 ns/op	 627.43 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   16399	      7319 ns/op	1241.92 MB/s	   20636 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     877	    134944 ns/op	1342.41 MB/s	  440894 B/op	      14 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40310	      2961 ns/op	 158.41 MB/s	    3529 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   46512	      2652 ns/op	 262.45 MB/s	    2152 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6547	     19030 ns/op	 547.76 MB/s	   22878 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   82020	      1460 ns/op	 417.85 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8487	     14495 ns/op	 713.23 MB/s	   43904 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  531884	       207.5 ns/op	 400.08 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  275289	       436.2 ns/op	1086.78 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   63247	      1846 ns/op	 418.11 MB/s	    1699 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    9075	     16086 ns/op	 652.75 MB/s	   21979 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     402	    304608 ns/op	 673.19 MB/s	  426775 B/op	       3 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  146422	       816.1 ns/op	 623.70 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   14995	      8054 ns/op	1128.49 MB/s	   20614 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     885	    133172 ns/op	1360.27 MB/s	  441431 B/op	      14 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   39938	      2982 ns/op	 157.29 MB/s	    3529 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   45442	      2640 ns/op	 263.66 MB/s	    2152 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    5774	     19143 ns/op	 544.52 MB/s	   22847 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   78979	      1512 ns/op	 403.37 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8568	     14639 ns/op	 706.17 MB/s	   43894 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  538810	       202.5 ns/op	 409.97 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  282340	       441.0 ns/op	1074.85 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   68142	      1758 ns/op	 439.02 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    8816	     14709 ns/op	 713.84 MB/s	   21973 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     447	    272881 ns/op	 751.46 MB/s	  426882 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  137164	       855.6 ns/op	 594.88 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   15588	      7537 ns/op	1205.87 MB/s	   20609 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     918	    133243 ns/op	1359.55 MB/s	  443480 B/op	      15 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40899	      2897 ns/op	 161.88 MB/s	    3528 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   46381	      2597 ns/op	 267.99 MB/s	    2151 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6823	     17806 ns/op	 585.43 MB/s	   22872 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   78831	      1515 ns/op	 402.70 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8497	     15366 ns/op	 672.77 MB/s	   43899 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  616318	       204.3 ns/op	 406.19 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  258247	       442.6 ns/op	1070.94 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   68596	      1743 ns/op	 443.02 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    8952	     13963 ns/op	 752.00 MB/s	   21979 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     460	    258722 ns/op	 792.59 MB/s	  427083 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  147048	       809.7 ns/op	 628.59 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   15150	      7754 ns/op	1172.11 MB/s	   20618 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     860	    136159 ns/op	1330.43 MB/s	  442991 B/op	      15 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40004	      2934 ns/op	 159.87 MB/s	    3528 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   46567	      2568 ns/op	 271.01 MB/s	    2151 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6710	     18016 ns/op	 578.58 MB/s	   22857 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   82380	      1453 ns/op	 419.89 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8530	     14912 ns/op	 693.27 MB/s	   43909 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  530972	       208.2 ns/op	 398.60 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  274167	       448.4 ns/op	1057.08 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   65224	      1749 ns/op	 441.32 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    9079	     13957 ns/op	 752.29 MB/s	   21978 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     471	    258531 ns/op	 793.17 MB/s	  427179 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  138622	       801.6 ns/op	 634.95 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   15295	      7648 ns/op	1188.41 MB/s	   20610 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     885	    132597 ns/op	1366.17 MB/s	  446569 B/op	      15 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40124	      2950 ns/op	 158.96 MB/s	    3528 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   45969	      2615 ns/op	 266.14 MB/s	    2151 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6522	     18047 ns/op	 577.59 MB/s	   22860 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   77055	      1456 ns/op	 419.05 MB/s	    3316 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8553	     14413 ns/op	 717.29 MB/s	   43908 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  544309	       200.9 ns/op	 413.10 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  284230	       433.8 ns/op	1092.75 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   67242	      1754 ns/op	 440.15 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    8677	     14335 ns/op	 732.47 MB/s	   21972 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     468	    262707 ns/op	 780.57 MB/s	  426924 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  145478	       829.7 ns/op	 613.47 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   16630	      7242 ns/op	1254.97 MB/s	   20596 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     888	    134929 ns/op	1342.56 MB/s	  442278 B/op	      15 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40471	      3003 ns/op	 156.19 MB/s	    3528 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   45709	      2576 ns/op	 270.18 MB/s	    2151 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6816	     18085 ns/op	 576.38 MB/s	   22872 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   78751	      1509 ns/op	 404.23 MB/s	    3316 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8148	     15883 ns/op	 650.87 MB/s	   43899 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  482840	       219.3 ns/op	 378.50 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  229286	       469.7 ns/op	1009.12 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   64125	      1872 ns/op	 412.40 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    7767	     14982 ns/op	 700.85 MB/s	   21982 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     446	    275641 ns/op	 743.94 MB/s	  427138 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  140774	       834.8 ns/op	 609.69 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   15446	      7696 ns/op	1181.00 MB/s	   20629 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     858	    137229 ns/op	1320.06 MB/s	  431443 B/op	      14 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   38686	      2995 ns/op	 156.58 MB/s	    3528 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   46539	      2565 ns/op	 271.40 MB/s	    2151 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6439	     17932 ns/op	 581.31 MB/s	   22869 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   81816	      1462 ns/op	 417.32 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    7927	     14467 ns/op	 714.57 MB/s	   43903 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  627969	       203.6 ns/op	 407.61 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  288946	       435.4 ns/op	1088.73 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   62664	      1875 ns/op	 411.68 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    7118	     16189 ns/op	 648.60 MB/s	   21978 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     400	    297368 ns/op	 689.58 MB/s	  426924 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  145935	       853.2 ns/op	 596.61 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   15924	      7523 ns/op	1208.13 MB/s	   20607 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     888	    140710 ns/op	1287.40 MB/s	  441243 B/op	      14 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   39170	      3030 ns/op	 154.78 MB/s	    3529 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   44694	      2713 ns/op	 256.53 MB/s	    2153 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    5365	     20377 ns/op	 511.57 MB/s	   22893 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   76742	      1517 ns/op	 402.14 MB/s	    3316 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    7342	     15160 ns/op	 681.91 MB/s	   43892 B/op	      21 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/faber/internal/sessions
+cpu: Apple M5 Pro
+BenchmarkJSONStreamDeltaFrameMarshal/token-18         	  547632	       206.4 ns/op	 402.18 MB/s	     184 B/op	       3 allocs/op
+BenchmarkJSONStreamDeltaFrameMarshal/chunk-18         	  279345	       441.2 ns/op	1074.36 MB/s	     987 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/small-18             	   66686	      1717 ns/op	 449.66 MB/s	    1700 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/medium-18            	    8834	     13979 ns/op	 751.11 MB/s	   21974 B/op	       3 allocs/op
+BenchmarkJSONAgentEventUnmarshal/large-18             	     457	    261430 ns/op	 784.38 MB/s	  426859 B/op	       4 allocs/op
+BenchmarkJSONSessionPageEncode/small-18               	  133254	       825.6 ns/op	 616.50 MB/s	    2092 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/medium-18              	   14930	      7821 ns/op	1162.11 MB/s	   20622 B/op	      13 allocs/op
+BenchmarkJSONSessionPageEncode/large-18               	     919	    130413 ns/op	1389.05 MB/s	  430546 B/op	      14 allocs/op
+BenchmarkJSONPreferencesPatchUnmarshal-18             	   40242	      2918 ns/op	 160.72 MB/s	    3528 B/op	      42 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/small-18        	   46597	      2565 ns/op	 271.34 MB/s	    2152 B/op	      24 allocs/op
+BenchmarkJSONStepExplanationRoundTrip/medium-18       	    6673	     17895 ns/op	 582.50 MB/s	   22850 B/op	      24 allocs/op
+BenchmarkJSONEventPayloadDecode/small-18              	   79432	      1441 ns/op	 423.21 MB/s	    3317 B/op	      17 allocs/op
+BenchmarkJSONEventPayloadDecode/medium-18             	    8194	     14429 ns/op	 716.48 MB/s	   43903 B/op	      21 allocs/op
+PASS

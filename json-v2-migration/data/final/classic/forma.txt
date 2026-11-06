@@ -1,0 +1,510 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   37987	      3038 ns/op	 654.27 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    3003	     38773 ns/op	 419.31 MB/s	  244594 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      61	   1962855 ns/op	  96.55 MB/s	25426956 B/op	    3104 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     754	    146327 ns/op	   1.92 MB/s	  837650 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     272	    443346 ns/op	   2.11 MB/s	 3084904 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	    8643	     12340 ns/op	  56.81 MB/s	    9255 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1186	    101845 ns/op	  95.54 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      58	   1943777 ns/op	  97.97 MB/s	 1627609 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    7617	     14908 ns/op	  53.53 MB/s	   11904 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     770	    154797 ns/op	  62.71 MB/s	  111619 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      37	   3134355 ns/op	  59.97 MB/s	 2102705 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    8163	     15669 ns/op	  37.40 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   13838	      8829 ns/op	  62.18 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    6888	     17177 ns/op	  36.21 MB/s	   93706 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8353	     15130 ns/op	  31.39 MB/s	   92208 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    7832	     15763 ns/op	  46.19 MB/s	   94277 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    8066	     15881 ns/op	  31.04 MB/s	   91708 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1170974 ns/op	   9.04 MB/s	 9538488 B/op	    1870 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1049076 ns/op	   9.95 MB/s	 9559708 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1040804 ns/op	  10.27 MB/s	 9541736 B/op	    1885 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1429771 ns/op	   7.31 MB/s	 9546674 B/op	    1839 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    5931	     19031 ns/op	  77.66 MB/s	   91238 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6759	     18574 ns/op	  63.53 MB/s	   89612 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5034	     23047 ns/op	 116.72 MB/s	  100002 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    8247	     15207 ns/op	  69.31 MB/s	   85196 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1669	     72761 ns/op	 142.34 MB/s	  222132 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2264	     52433 ns/op	 128.72 MB/s	  170252 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1920	     66456 ns/op	 180.31 MB/s	  188604 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1651	     66749 ns/op	 150.19 MB/s	  199829 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      55	   1990372 ns/op	 165.20 MB/s	 4710933 B/op	   58053 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      98	   1247372 ns/op	 165.47 MB/s	 2979633 B/op	   34276 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      84	   1527526 ns/op	 227.56 MB/s	 3345513 B/op	   42665 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      64	   1796358 ns/op	 184.70 MB/s	 4106107 B/op	   52873 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  208861	       590.4 ns/op	 293.03 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  233942	       530.1 ns/op	 301.83 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  124593	       930.5 ns/op	 109.61 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   41355	      2775 ns/op	 716.49 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    3019	     40167 ns/op	 404.76 MB/s	  244576 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      57	   2316025 ns/op	  81.83 MB/s	25427284 B/op	    3106 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     955	    114722 ns/op	   2.45 MB/s	  837616 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     289	    416482 ns/op	   2.24 MB/s	 3084963 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   11902	     10060 ns/op	  69.68 MB/s	    9253 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1180	    104588 ns/op	  93.03 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      64	   1958423 ns/op	  97.24 MB/s	 1627693 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    7082	     16556 ns/op	  48.20 MB/s	   11905 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     753	    149018 ns/op	  65.14 MB/s	  111621 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      42	   2681702 ns/op	  70.09 MB/s	 2102498 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    9446	     12699 ns/op	  46.14 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   18054	      6592 ns/op	  83.29 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    7628	     15661 ns/op	  39.72 MB/s	   93716 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8217	     15789 ns/op	  30.08 MB/s	   92207 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    8455	     15368 ns/op	  47.37 MB/s	   94282 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    8696	     14861 ns/op	  33.17 MB/s	   91719 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     111	   1071270 ns/op	   9.88 MB/s	 9538493 B/op	    1870 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1066348 ns/op	   9.79 MB/s	 9559829 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1060403 ns/op	  10.08 MB/s	 9541900 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	      98	   1065492 ns/op	   9.81 MB/s	 9546721 B/op	    1838 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    6079	     18899 ns/op	  78.21 MB/s	   91241 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6064	     19267 ns/op	  61.25 MB/s	   89610 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5030	     24426 ns/op	 110.13 MB/s	  100008 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    8300	     17078 ns/op	  61.72 MB/s	   85198 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1566	     73071 ns/op	 141.74 MB/s	  222112 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2168	     54140 ns/op	 124.66 MB/s	  170256 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1888	     63958 ns/op	 187.36 MB/s	  188579 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1838	     64243 ns/op	 156.05 MB/s	  199810 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      57	   1944404 ns/op	 169.11 MB/s	 4711000 B/op	   58054 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      94	   1260970 ns/op	 163.68 MB/s	 2979202 B/op	   34273 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      82	   1509393 ns/op	 230.29 MB/s	 3343825 B/op	   42665 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      70	   1777810 ns/op	 186.62 MB/s	 4105908 B/op	   52872 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  211798	       676.8 ns/op	 255.61 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  180150	       593.4 ns/op	 269.63 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  124995	       938.0 ns/op	 108.74 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   41542	      2644 ns/op	 751.95 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    3156	     38149 ns/op	 426.17 MB/s	  244586 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      58	   2016775 ns/op	  93.97 MB/s	25427619 B/op	    3107 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     934	    125810 ns/op	   2.23 MB/s	  837649 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     255	    471510 ns/op	   1.98 MB/s	 3084898 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   11616	     10520 ns/op	  66.63 MB/s	    9254 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1066	    105215 ns/op	  92.48 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      58	   1929359 ns/op	  98.70 MB/s	 1627608 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    7863	     15483 ns/op	  51.54 MB/s	   11904 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     747	    158865 ns/op	  61.10 MB/s	  111618 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      39	   3000817 ns/op	  62.64 MB/s	 2102442 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    8863	     14110 ns/op	  41.53 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   16287	      7353 ns/op	  74.67 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    7597	     15591 ns/op	  39.89 MB/s	   93719 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8629	     15203 ns/op	  31.24 MB/s	   92211 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    8335	     15637 ns/op	  46.56 MB/s	   94285 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    9009	     14316 ns/op	  34.44 MB/s	   91717 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1083546 ns/op	   9.77 MB/s	 9538477 B/op	    1869 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1062937 ns/op	   9.82 MB/s	 9559900 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1075918 ns/op	   9.94 MB/s	 9541875 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     112	   1059312 ns/op	   9.87 MB/s	 9546750 B/op	    1839 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    5902	     19204 ns/op	  76.96 MB/s	   91244 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6582	     20115 ns/op	  58.66 MB/s	   89616 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5319	     22902 ns/op	 117.46 MB/s	  100004 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    8018	     14839 ns/op	  71.03 MB/s	   85194 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1680	     70666 ns/op	 146.56 MB/s	  222130 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2374	     51965 ns/op	 129.88 MB/s	  170253 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1924	     63662 ns/op	 188.23 MB/s	  188617 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1886	     63146 ns/op	 158.76 MB/s	  199819 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      60	   1926476 ns/op	 170.68 MB/s	 4711458 B/op	   58056 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      97	   1244832 ns/op	 165.81 MB/s	 2979732 B/op	   34277 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      84	   1500836 ns/op	 231.60 MB/s	 3346105 B/op	   42668 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      64	   1772915 ns/op	 187.14 MB/s	 4106207 B/op	   52873 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  205438	       589.7 ns/op	 293.37 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  234745	       530.1 ns/op	 301.84 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  124726	       934.0 ns/op	 109.20 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   43491	      2725 ns/op	 729.48 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    2696	     42491 ns/op	 382.62 MB/s	  244594 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      60	   2033677 ns/op	  93.19 MB/s	25427449 B/op	    3108 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     950	    115851 ns/op	   2.43 MB/s	  837655 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     272	    423466 ns/op	   2.21 MB/s	 3084946 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   12376	     10125 ns/op	  69.23 MB/s	    9253 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1214	     94363 ns/op	 103.11 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      57	   1897260 ns/op	 100.37 MB/s	 1627613 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    8155	     15975 ns/op	  49.95 MB/s	   11904 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     759	    159746 ns/op	  60.77 MB/s	  111613 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      37	   2992591 ns/op	  62.81 MB/s	 2102393 B/op	   21951 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    8055	     14524 ns/op	  40.35 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   17066	      7003 ns/op	  78.40 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    7599	     15710 ns/op	  39.59 MB/s	   93711 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8733	     17398 ns/op	  27.30 MB/s	   92204 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    7520	     18005 ns/op	  40.43 MB/s	   94277 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    9825	     14651 ns/op	  33.65 MB/s	   91719 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1047354 ns/op	  10.11 MB/s	 9538403 B/op	    1870 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1041058 ns/op	  10.03 MB/s	 9559881 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1037353 ns/op	  10.31 MB/s	 9541854 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1050988 ns/op	   9.95 MB/s	 9546668 B/op	    1838 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    6030	     18629 ns/op	  79.34 MB/s	   91242 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6841	     19342 ns/op	  61.01 MB/s	   89618 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5023	     23297 ns/op	 115.46 MB/s	  100009 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    8137	     15170 ns/op	  69.48 MB/s	   85203 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1669	     71533 ns/op	 144.79 MB/s	  222126 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2299	     53985 ns/op	 125.02 MB/s	  170272 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1885	     63475 ns/op	 188.78 MB/s	  188589 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1777	     64853 ns/op	 154.58 MB/s	  199835 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      60	   1959674 ns/op	 167.79 MB/s	 4711193 B/op	   58054 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      92	   1275873 ns/op	 161.77 MB/s	 2979584 B/op	   34276 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      80	   1510461 ns/op	 230.13 MB/s	 3345620 B/op	   42666 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      63	   1774030 ns/op	 187.02 MB/s	 4105819 B/op	   52871 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  208872	       585.0 ns/op	 295.73 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  236518	       525.5 ns/op	 304.47 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  120998	       951.9 ns/op	 107.15 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   43191	      2646 ns/op	 751.30 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    2995	     40177 ns/op	 404.66 MB/s	  244574 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      56	   2262775 ns/op	  83.75 MB/s	25427413 B/op	    3099 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     938	    122609 ns/op	   2.29 MB/s	  837640 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     296	    404259 ns/op	   2.31 MB/s	 3084793 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   10788	     10749 ns/op	  65.21 MB/s	    9254 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1130	    103004 ns/op	  94.46 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      56	   1904842 ns/op	  99.97 MB/s	 1627614 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    7174	     15361 ns/op	  51.95 MB/s	   11904 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     790	    153997 ns/op	  63.03 MB/s	  111612 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      42	   2881214 ns/op	  65.24 MB/s	 2102429 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    8824	     13846 ns/op	  42.32 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   16879	      7078 ns/op	  77.56 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    6342	     15850 ns/op	  39.24 MB/s	   93713 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    7448	     16122 ns/op	  29.46 MB/s	   92214 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    7708	     15335 ns/op	  47.47 MB/s	   94280 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    8766	     13946 ns/op	  35.35 MB/s	   91719 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1012396 ns/op	  10.46 MB/s	 9538428 B/op	    1869 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1064510 ns/op	   9.80 MB/s	 9559838 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1052245 ns/op	  10.16 MB/s	 9541868 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1054980 ns/op	   9.91 MB/s	 9546608 B/op	    1838 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    5938	     18388 ns/op	  80.38 MB/s	   91235 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    7034	     20270 ns/op	  58.22 MB/s	   89614 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5371	     23157 ns/op	 116.17 MB/s	   99994 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    7947	     15037 ns/op	  70.09 MB/s	   85191 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1652	     72679 ns/op	 142.50 MB/s	  222132 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2286	     53083 ns/op	 127.14 MB/s	  170258 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1806	     64739 ns/op	 185.10 MB/s	  188639 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1818	     64342 ns/op	 155.81 MB/s	  199823 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      55	   1959715 ns/op	 167.79 MB/s	 4711461 B/op	   58056 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      88	   1257055 ns/op	 164.19 MB/s	 2979601 B/op	   34276 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      80	   1540586 ns/op	 225.63 MB/s	 3343841 B/op	   42665 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      64	   1815442 ns/op	 182.75 MB/s	 4106046 B/op	   52872 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  209653	       580.8 ns/op	 297.87 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  236688	       530.4 ns/op	 301.67 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  128301	       933.6 ns/op	 109.26 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   40970	      2869 ns/op	 693.00 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    2868	     42190 ns/op	 385.35 MB/s	  244575 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      62	   1965632 ns/op	  96.42 MB/s	25427551 B/op	    3109 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     984	    116423 ns/op	   2.41 MB/s	  837631 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     280	    429451 ns/op	   2.18 MB/s	 3085012 B/op	   17421 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   12219	      9654 ns/op	  72.61 MB/s	    9253 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1352	     90691 ns/op	 107.29 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      64	   1716115 ns/op	 110.96 MB/s	 1627615 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    8398	     13813 ns/op	  57.77 MB/s	   11903 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     883	    140468 ns/op	  69.10 MB/s	  111623 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      45	   2614147 ns/op	  71.90 MB/s	 2102524 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    9165	     12957 ns/op	  45.23 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   17997	      6626 ns/op	  82.85 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    6604	     17196 ns/op	  36.17 MB/s	   93712 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    7995	     15493 ns/op	  30.66 MB/s	   92209 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    6964	     15400 ns/op	  47.27 MB/s	   94279 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    8934	     14351 ns/op	  34.35 MB/s	   91717 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1071226 ns/op	   9.88 MB/s	 9538467 B/op	    1870 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1076106 ns/op	   9.70 MB/s	 9559737 B/op	    1876 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1066032 ns/op	  10.03 MB/s	 9541793 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     110	   1096215 ns/op	   9.54 MB/s	 9546704 B/op	    1839 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    6518	     18285 ns/op	  80.83 MB/s	   91233 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6882	     19485 ns/op	  60.56 MB/s	   89613 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    4791	     24469 ns/op	 109.93 MB/s	  100003 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    7852	     16285 ns/op	  64.72 MB/s	   85194 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1593	     80272 ns/op	 129.02 MB/s	  222138 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2190	     57168 ns/op	 118.06 MB/s	  170260 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1741	     70055 ns/op	 171.05 MB/s	  188610 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1812	     65468 ns/op	 153.13 MB/s	  199820 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      56	   2031175 ns/op	 161.88 MB/s	 4711420 B/op	   58056 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      85	   1341276 ns/op	 153.88 MB/s	 2979555 B/op	   34275 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      79	   1517703 ns/op	 229.03 MB/s	 3346506 B/op	   42667 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      62	   1826069 ns/op	 181.69 MB/s	 4105703 B/op	   52870 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  202752	       600.8 ns/op	 287.97 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  219006	       535.6 ns/op	 298.72 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  127821	       948.6 ns/op	 107.52 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   42258	      2717 ns/op	 731.72 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    3126	     41387 ns/op	 392.83 MB/s	  244579 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      57	   2046361 ns/op	  92.61 MB/s	25427760 B/op	    3107 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     963	    115726 ns/op	   2.43 MB/s	  837651 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     294	    416589 ns/op	   2.24 MB/s	 3084807 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   11070	     10764 ns/op	  65.13 MB/s	    9255 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1086	    108371 ns/op	  89.78 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      55	   2091901 ns/op	  91.03 MB/s	 1627613 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    7521	     15466 ns/op	  51.60 MB/s	   11903 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     745	    166286 ns/op	  58.38 MB/s	  111621 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      36	   3112475 ns/op	  60.39 MB/s	 2102576 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    8119	     14606 ns/op	  40.12 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   16791	      7084 ns/op	  77.50 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    7708	     15154 ns/op	  41.05 MB/s	   93706 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8578	     16885 ns/op	  28.13 MB/s	   92208 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    7479	     16210 ns/op	  44.91 MB/s	   94281 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    9940	     13885 ns/op	  35.51 MB/s	   91723 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1053276 ns/op	  10.05 MB/s	 9538435 B/op	    1870 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1051669 ns/op	   9.92 MB/s	 9559797 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1060897 ns/op	  10.08 MB/s	 9541756 B/op	    1885 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1064104 ns/op	   9.83 MB/s	 9546674 B/op	    1839 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    6318	     19481 ns/op	  75.87 MB/s	   91239 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6176	     18082 ns/op	  65.26 MB/s	   89612 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5433	     23181 ns/op	 116.04 MB/s	   99999 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    8858	     14946 ns/op	  70.52 MB/s	   85195 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1702	     71689 ns/op	 144.47 MB/s	  222114 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2270	     52545 ns/op	 128.44 MB/s	  170246 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1861	     63495 ns/op	 188.72 MB/s	  188585 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1880	     63389 ns/op	 158.15 MB/s	  199813 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      60	   1977576 ns/op	 166.27 MB/s	 4711387 B/op	   58056 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      97	   1276155 ns/op	 161.74 MB/s	 2979844 B/op	   34277 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      72	   1580204 ns/op	 219.97 MB/s	 3346198 B/op	   42667 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      63	   1765301 ns/op	 187.94 MB/s	 4105362 B/op	   52869 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  201796	       588.2 ns/op	 294.12 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  237303	       526.7 ns/op	 303.77 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  128852	       927.2 ns/op	 110.01 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   40245	      2901 ns/op	 685.39 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    2944	     41222 ns/op	 394.40 MB/s	  244597 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      60	   2045714 ns/op	  92.64 MB/s	25426417 B/op	    3105 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     878	    122265 ns/op	   2.30 MB/s	  837643 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     270	    455092 ns/op	   2.05 MB/s	 3085001 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   12156	     10020 ns/op	  69.96 MB/s	    9253 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1284	     97647 ns/op	  99.64 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      61	   1837047 ns/op	 103.66 MB/s	 1627609 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    8409	     14302 ns/op	  55.80 MB/s	   11903 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     813	    145367 ns/op	  66.78 MB/s	  111619 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      43	   2726252 ns/op	  68.95 MB/s	 2102559 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    8434	     13010 ns/op	  45.04 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   17598	      6802 ns/op	  80.71 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    7737	     15534 ns/op	  40.04 MB/s	   93705 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8358	     15784 ns/op	  30.09 MB/s	   92209 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    7929	     15297 ns/op	  47.59 MB/s	   94278 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    9337	     14520 ns/op	  33.95 MB/s	   91713 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1086383 ns/op	   9.74 MB/s	 9538457 B/op	    1870 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1023715 ns/op	  10.20 MB/s	 9559806 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	      97	   1031058 ns/op	  10.37 MB/s	 9541826 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1019909 ns/op	  10.25 MB/s	 9546730 B/op	    1839 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    6669	     18872 ns/op	  78.32 MB/s	   91231 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6266	     19180 ns/op	  61.52 MB/s	   89618 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5251	     22832 ns/op	 117.81 MB/s	   99993 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    7748	     16621 ns/op	  63.41 MB/s	   85191 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1561	     73363 ns/op	 141.17 MB/s	  222142 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2304	     65263 ns/op	 103.41 MB/s	  170251 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1814	     66271 ns/op	 180.82 MB/s	  188615 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1840	     64551 ns/op	 155.30 MB/s	  199814 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      57	   1991140 ns/op	 165.14 MB/s	 4711796 B/op	   58056 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      91	   1258470 ns/op	 164.01 MB/s	 2979579 B/op	   34276 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      81	   1526156 ns/op	 227.76 MB/s	 3344915 B/op	   42665 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      62	   1788486 ns/op	 185.51 MB/s	 4105649 B/op	   52871 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  202719	       616.6 ns/op	 280.58 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  222961	       523.4 ns/op	 305.70 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  129405	       948.1 ns/op	 107.59 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   40830	      2749 ns/op	 723.25 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    3114	     39582 ns/op	 410.75 MB/s	  244573 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      55	   2104019 ns/op	  90.07 MB/s	25427736 B/op	    3106 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     928	    115926 ns/op	   2.42 MB/s	  837684 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     289	    430921 ns/op	   2.17 MB/s	 3084838 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   12027	      9836 ns/op	  71.27 MB/s	    9254 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1257	     94876 ns/op	 102.55 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      64	   1790992 ns/op	 106.33 MB/s	 1627611 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    8059	     14153 ns/op	  56.38 MB/s	   11904 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     871	    140821 ns/op	  68.93 MB/s	  111619 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      43	   2673733 ns/op	  70.30 MB/s	 2102337 B/op	   21951 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    9853	     12846 ns/op	  45.62 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   18080	      6600 ns/op	  83.18 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    7639	     15443 ns/op	  40.28 MB/s	   93717 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    8126	     15208 ns/op	  31.23 MB/s	   92206 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    8214	     16028 ns/op	  45.42 MB/s	   94288 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    9199	     13829 ns/op	  35.65 MB/s	   91715 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1006169 ns/op	  10.52 MB/s	 9538392 B/op	    1869 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1006024 ns/op	  10.37 MB/s	 9559867 B/op	    1877 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1044955 ns/op	  10.23 MB/s	 9541812 B/op	    1886 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1037949 ns/op	  10.07 MB/s	 9546663 B/op	    1838 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    5914	     19752 ns/op	  74.83 MB/s	   91236 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6312	     18531 ns/op	  63.68 MB/s	   89611 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5236	     23762 ns/op	 113.20 MB/s	   99996 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    7852	     15685 ns/op	  67.20 MB/s	   85204 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1690	     71838 ns/op	 144.17 MB/s	  222133 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2293	     52194 ns/op	 129.31 MB/s	  170254 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1741	     64019 ns/op	 187.18 MB/s	  188589 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1978	     62635 ns/op	 160.05 MB/s	  199816 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      61	   1936262 ns/op	 169.82 MB/s	 4711547 B/op	   58055 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      98	   1238176 ns/op	 166.70 MB/s	 2979825 B/op	   34277 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      81	   1497569 ns/op	 232.11 MB/s	 3343140 B/op	   42665 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      64	   1775135 ns/op	 186.90 MB/s	 4106224 B/op	   52874 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  205472	       592.3 ns/op	 292.09 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  232951	       521.2 ns/op	 307.01 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  128394	       922.9 ns/op	 110.52 MB/s	    2322 B/op	      31 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/chat
+cpu: Apple M5 Pro
+BenchmarkJSONQwen3RenderToolsEncode/small-18         	   42090	      2669 ns/op	 744.91 MB/s	    8885 B/op	      48 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/medium-18        	    3056	     39074 ns/op	 416.08 MB/s	  244569 B/op	     277 allocs/op
+BenchmarkJSONQwen3RenderToolsEncode/large-18         	      60	   1944834 ns/op	  97.45 MB/s	25427396 B/op	    3107 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/internal/grammar
+cpu: Apple M5 Pro
+BenchmarkJSONSchemaCompileDecode/small-18         	     891	    119776 ns/op	   2.35 MB/s	  837662 B/op	    5126 allocs/op
+BenchmarkJSONSchemaCompileDecode/medium-18        	     277	    433531 ns/op	   2.16 MB/s	 3084851 B/op	   17420 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/forma/server
+cpu: Apple M5 Pro
+BenchmarkJSONChatCompletionsRequestDecode/small-18         	   11971	     10129 ns/op	  69.21 MB/s	    9253 B/op	     112 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/medium-18        	    1234	     99938 ns/op	  97.36 MB/s	   87880 B/op	     322 allocs/op
+BenchmarkJSONChatCompletionsRequestDecode/large-18         	      57	   2011617 ns/op	  94.66 MB/s	 1627712 B/op	    4238 allocs/op
+BenchmarkJSONMessagesRequestDecode/small-18                	    7964	     14646 ns/op	  54.49 MB/s	   11903 B/op	     191 allocs/op
+BenchmarkJSONMessagesRequestDecode/medium-18               	     812	    147469 ns/op	  65.82 MB/s	  111618 B/op	    1217 allocs/op
+BenchmarkJSONMessagesRequestDecode/large-18                	      42	   2794608 ns/op	  67.26 MB/s	 2102460 B/op	   21952 allocs/op
+BenchmarkJSONResponsesRequestDecode-18                     	    9202	     13528 ns/op	  43.32 MB/s	    9635 B/op	     115 allocs/op
+BenchmarkJSONCompletionsRequestDecode-18                   	   17151	      7027 ns/op	  78.13 MB/s	    6416 B/op	      82 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-chat-18         	    6991	     16216 ns/op	  38.36 MB/s	   93704 B/op	     193 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/anthropic-18           	    7431	     16174 ns/op	  29.37 MB/s	   92207 B/op	     198 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-responses-18    	    8006	     16291 ns/op	  44.69 MB/s	   94272 B/op	     203 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/small/openai-completions-18  	    8143	     14817 ns/op	  33.27 MB/s	   91719 B/op	     163 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-chat-18        	     100	   1089575 ns/op	   9.72 MB/s	 9538391 B/op	    1869 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/anthropic-18          	     100	   1091551 ns/op	   9.56 MB/s	 9559713 B/op	    1876 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-responses-18   	     100	   1098703 ns/op	   9.73 MB/s	 9541694 B/op	    1885 allocs/op
+BenchmarkJSONNonStreamingResponseRoundTrip/medium/openai-completions-18 	     100	   1099035 ns/op	   9.51 MB/s	 9546722 B/op	    1839 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-chat-18               	    5614	     18983 ns/op	  77.86 MB/s	   91240 B/op	     348 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/anthropic-18                 	    6334	     18794 ns/op	  62.78 MB/s	   89611 B/op	     322 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-responses-18          	    5062	     22986 ns/op	 117.03 MB/s	  100011 B/op	     461 allocs/op
+BenchmarkJSONStreamingResponseEncode/small/openai-completions-18        	    8313	     16530 ns/op	  63.76 MB/s	   85199 B/op	     257 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-chat-18              	    1654	     71165 ns/op	 145.53 MB/s	  222148 B/op	    1919 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/anthropic-18                	    2221	     52213 ns/op	 129.26 MB/s	  170252 B/op	    1248 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-responses-18         	    1844	     64043 ns/op	 187.11 MB/s	  188609 B/op	    1575 allocs/op
+BenchmarkJSONStreamingResponseEncode/medium/openai-completions-18       	    1912	     64321 ns/op	 155.86 MB/s	  199834 B/op	    1690 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-chat-18               	      56	   1980540 ns/op	 166.02 MB/s	 4711549 B/op	   58056 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/anthropic-18                 	      97	   1235390 ns/op	 167.07 MB/s	 2979722 B/op	   34277 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-responses-18          	      85	   1500337 ns/op	 231.68 MB/s	 3343089 B/op	   42664 allocs/op
+BenchmarkJSONStreamingResponseEncode/large/openai-completions-18        	      64	   1771199 ns/op	 187.32 MB/s	 4105829 B/op	   52871 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/openai-chat-18                         	  197956	       615.9 ns/op	 280.90 MB/s	    1265 B/op	      20 allocs/op
+BenchmarkJSONAPIErrorBodyMarshal/anthropic-messages-18                  	  221662	       520.8 ns/op	 307.23 MB/s	    1153 B/op	      17 allocs/op
+BenchmarkJSONModelsListEncode-18                                        	  129336	       923.9 ns/op	 110.40 MB/s	    2322 B/op	      31 allocs/op
+PASS

@@ -1,0 +1,12 @@
+base->after B/op       n= 762 geomean=0.944 [0.918, 0.969] improved=300 regressed=121 nochange=341 p10=0.704 p50=1.000 p90=1.011
+base->after B/s        n= 761 geomean=1.196 [1.177, 1.217] improved=500 regressed=81 nochange=180 p10=0.979 p50=1.162 p90=1.616
+base->after allocs/op  n= 762 geomean=0.970 [0.954, 0.987] improved=267 regressed=117 nochange=378 p10=0.754 p50=1.000 p90=1.089
+base->after sec/op     n= 762 geomean=0.831 [0.817, 0.845] improved=505 regressed=76 nochange=181 p10=0.615 p50=0.859 p90=1.018
+classic->after B/op       n= 762 geomean=0.824 [0.790, 0.856] improved=568 regressed=174 nochange=20 p10=0.542 p50=0.912 p90=1.137
+classic->after B/s        n= 761 geomean=1.706 [1.640, 1.777] improved=573 regressed=136 nochange=52 p10=0.865 p50=1.658 p90=3.702
+classic->after allocs/op  n= 762 geomean=0.590 [0.560, 0.620] improved=595 regressed=124 nochange=43 p10=0.295 p50=0.655 p90=1.091
+classic->after sec/op     n= 762 geomean=0.583 [0.560, 0.608] improved=577 regressed=135 nochange=50 p10=0.263 p50=0.598 p90=1.155
+classic->base B/op       n= 762 geomean=0.873 [0.847, 0.897] improved=542 regressed=198 nochange=22 p10=0.662 p50=0.945 p90=1.077
+classic->base B/s        n= 761 geomean=1.426 [1.387, 1.466] improved=563 regressed=144 nochange=54 p10=0.861 p50=1.419 p90=2.320
+classic->base allocs/op  n= 762 geomean=0.608 [0.576, 0.640] improved=591 regressed=132 nochange=39 p10=0.304 p50=0.688 p90=1.143
+classic->base sec/op     n= 762 geomean=0.702 [0.682, 0.722] improved=563 regressed=145 nochange=54 p10=0.431 p50=0.705 p90=1.162

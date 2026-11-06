@@ -1,0 +1,260 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   25065	      4000 ns/op	  52.24 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   26901	      4471 ns/op	  71.57 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4110	     27807 ns/op	  93.79 MB/s	   41256 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11829 ns/op	 216.93 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   57333	      2121 ns/op	1209.62 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  143620	       786.3 ns/op	1304.89 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   28677	      4336 ns/op	 236.62 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   34039	      3519 ns/op	 121.63 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   61383	      1974 ns/op	 953.92 MB/s	    5486 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  127436	       931.2 ns/op	 295.32 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   53996	      2189 ns/op	 435.38 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3492	     35612 ns/op	 529.34 MB/s	   45219 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     168	    704484 ns/op	 534.88 MB/s	  915454 B/op	    2416 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1630	     75717 ns/op	 248.95 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41458	      2912 ns/op	 149.04 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   14488	      8254 ns/op	  50.04 MB/s	   16543 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   35527	      3258 ns/op	  64.15 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   27421	      4321 ns/op	  74.05 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4524	     27270 ns/op	  95.64 MB/s	   41246 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11490 ns/op	 223.32 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   58184	      2070 ns/op	1239.64 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  156373	       687.6 ns/op	1492.19 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   29444	      4060 ns/op	 252.73 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   35001	      3311 ns/op	 129.25 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   60448	      1989 ns/op	 946.91 MB/s	    5486 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  128662	       924.0 ns/op	 297.61 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   56217	      2111 ns/op	 451.54 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3622	     34054 ns/op	 553.57 MB/s	   45191 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     176	    676344 ns/op	 557.13 MB/s	  931391 B/op	    2416 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1682	     73836 ns/op	 255.30 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   39266	      3017 ns/op	 143.83 MB/s	    3582 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   14023	      8418 ns/op	  49.06 MB/s	   16541 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   36496	      3201 ns/op	  65.29 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   28134	      4287 ns/op	  74.64 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4488	     27057 ns/op	  96.39 MB/s	   41245 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11274 ns/op	 227.60 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   55226	      2172 ns/op	1181.19 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  151456	       712.1 ns/op	1440.83 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   28705	      4081 ns/op	 251.40 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   34005	      3373 ns/op	 126.89 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   60615	      1988 ns/op	 947.03 MB/s	    5484 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  129109	       934.8 ns/op	 294.17 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   56808	      2148 ns/op	 443.63 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3586	     35319 ns/op	 533.73 MB/s	   45267 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     171	    691765 ns/op	 544.71 MB/s	  963880 B/op	    2417 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1706	     72322 ns/op	 260.64 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41186	      2912 ns/op	 149.06 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   11713	      8595 ns/op	  48.05 MB/s	   16539 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   35917	      3242 ns/op	  64.48 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   27730	      4479 ns/op	  71.45 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    3868	     28549 ns/op	  91.35 MB/s	   41258 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11378 ns/op	 225.53 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   57350	      2090 ns/op	1227.92 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  164358	       711.1 ns/op	1442.76 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   28233	      4203 ns/op	 244.13 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   33777	      3427 ns/op	 124.90 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   59770	      2019 ns/op	 932.83 MB/s	    5484 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  129300	       934.9 ns/op	 294.14 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   53898	      2212 ns/op	 430.91 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3474	     35659 ns/op	 528.64 MB/s	   45181 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     168	    711910 ns/op	 529.30 MB/s	  946708 B/op	    2417 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1616	     75459 ns/op	 249.81 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41550	      2889 ns/op	 150.21 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   12976	      8550 ns/op	  48.30 MB/s	   16542 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   35192	      3307 ns/op	  63.20 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   25166	      4594 ns/op	  69.65 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4108	     28838 ns/op	  90.43 MB/s	   41234 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	    9709	     12284 ns/op	 208.90 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   56713	      2117 ns/op	1212.01 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  167782	       671.8 ns/op	1527.22 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   26806	      4318 ns/op	 237.62 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   33438	      3388 ns/op	 126.31 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   60361	      1940 ns/op	 970.51 MB/s	    5484 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  131272	       922.7 ns/op	 298.02 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   55198	      2179 ns/op	 437.26 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3387	     35687 ns/op	 528.24 MB/s	   45281 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     169	    703236 ns/op	 535.82 MB/s	  940051 B/op	    2416 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1573	     74999 ns/op	 251.34 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41715	      2999 ns/op	 144.70 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   13724	      8762 ns/op	  47.14 MB/s	   16541 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   36237	      3232 ns/op	  64.67 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   27865	      4534 ns/op	  70.58 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4136	     28620 ns/op	  91.12 MB/s	   41253 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     12064 ns/op	 212.69 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   54717	      2131 ns/op	1203.98 MB/s	    2715 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  168195	       674.9 ns/op	1520.16 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   27642	      4263 ns/op	 240.66 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   34312	      3332 ns/op	 128.46 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   60808	      1974 ns/op	 953.95 MB/s	    5485 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  133234	       922.6 ns/op	 298.07 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   52754	      2233 ns/op	 426.76 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3219	     37359 ns/op	 504.59 MB/s	   45232 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     166	    708640 ns/op	 531.74 MB/s	  928638 B/op	    2416 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1564	     77186 ns/op	 244.22 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41544	      2875 ns/op	 150.93 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   14334	      8294 ns/op	  49.80 MB/s	   16541 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   36720	      3219 ns/op	  64.93 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   27828	      4332 ns/op	  73.86 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4524	     27116 ns/op	  96.18 MB/s	   41245 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11592 ns/op	 221.36 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   57777	      2118 ns/op	1211.64 MB/s	    2715 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  165609	       715.9 ns/op	1433.07 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   27235	      4338 ns/op	 236.49 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   33704	      3540 ns/op	 120.89 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   63285	      1937 ns/op	 971.98 MB/s	    5484 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  127243	       995.3 ns/op	 276.30 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   52582	      2271 ns/op	 419.57 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3430	     36718 ns/op	 513.40 MB/s	   45238 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     165	    723380 ns/op	 520.90 MB/s	  922644 B/op	    2416 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1539	     78388 ns/op	 240.47 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   40980	      2917 ns/op	 148.79 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   13908	      8523 ns/op	  48.46 MB/s	   16543 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   36319	      3168 ns/op	  65.98 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   27397	      4306 ns/op	  74.32 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4473	     26830 ns/op	  97.20 MB/s	   41244 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11926 ns/op	 215.16 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   55114	      2176 ns/op	1179.34 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  164098	       691.8 ns/op	1483.11 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   29131	      4098 ns/op	 250.40 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   34909	      3364 ns/op	 127.23 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   60961	      2059 ns/op	 914.42 MB/s	    5484 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  124051	       925.5 ns/op	 297.14 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   55354	      2168 ns/op	 439.61 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3541	     34580 ns/op	 545.14 MB/s	   45307 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     172	    690270 ns/op	 545.89 MB/s	  969397 B/op	    2417 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1602	     73130 ns/op	 257.76 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41682	      2898 ns/op	 149.75 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   13134	      8496 ns/op	  48.61 MB/s	   16538 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   35689	      3248 ns/op	  64.35 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   28296	      4243 ns/op	  75.42 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4542	     26744 ns/op	  97.52 MB/s	   41246 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	   10000	     11281 ns/op	 227.45 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   56445	      2126 ns/op	1206.77 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  161533	       705.4 ns/op	1454.42 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   28449	      4221 ns/op	 243.07 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   33296	      3465 ns/op	 123.52 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   61700	      1982 ns/op	 950.08 MB/s	    5485 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  131760	       919.0 ns/op	 299.23 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   55939	      2190 ns/op	 435.14 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3534	     35724 ns/op	 527.68 MB/s	   45195 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     168	    708559 ns/op	 531.80 MB/s	  940526 B/op	    2416 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1584	     76263 ns/op	 247.17 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   41374	      2974 ns/op	 145.94 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   14065	      8486 ns/op	  48.67 MB/s	   16545 B/op	      87 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/grants
+cpu: Apple M5 Pro
+BenchmarkJSONGrantListDecode/small-18 	   36480	      3203 ns/op	  65.24 MB/s	   10331 B/op	      46 allocs/op
+BenchmarkJSONGrantListDecode/medium-18         	   28065	      4303 ns/op	  74.36 MB/s	   10844 B/op	      54 allocs/op
+BenchmarkJSONGrantListDecode/large-18          	    4516	     28870 ns/op	  90.34 MB/s	   41252 B/op	     318 allocs/op
+BenchmarkJSONGrantListUnmarshal-18             	    9336	     12736 ns/op	 201.48 MB/s	    6232 B/op	     132 allocs/op
+BenchmarkJSONGrantListMarshal-18               	   55236	      2156 ns/op	1190.38 MB/s	    2714 B/op	       2 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/auth/internal/jsonbench
+cpu: Apple M5 Pro
+BenchmarkJSONDiscoveryDocumentMarshal-18      	  166225	       672.7 ns/op	1525.15 MB/s	    1153 B/op	       1 allocs/op
+BenchmarkJSONDiscoveryDocumentUnmarshal-18    	   28219	      4225 ns/op	 242.83 MB/s	    1496 B/op	      43 allocs/op
+BenchmarkJSONJWKSHandlerEncode-18             	   34195	      3411 ns/op	 125.47 MB/s	    4860 B/op	      39 allocs/op
+BenchmarkJSONTokenResponseWrite-18            	   59811	      1986 ns/op	 948.29 MB/s	    5484 B/op	      23 allocs/op
+BenchmarkJSONUserinfoResponseWrite-18         	  126981	       935.1 ns/op	 294.07 MB/s	    2034 B/op	      25 allocs/op
+BenchmarkJSONKeyListResponseWrite/small-18    	   54278	      2174 ns/op	 438.28 MB/s	    3368 B/op	      19 allocs/op
+BenchmarkJSONKeyListResponseWrite/medium-18   	    3535	     35085 ns/op	 537.30 MB/s	   45289 B/op	     133 allocs/op
+BenchmarkJSONKeyListResponseWrite/large-18    	     170	    705343 ns/op	 534.22 MB/s	  970534 B/op	    2417 allocs/op
+BenchmarkJSONKeyListUnmarshal-18              	    1642	     74514 ns/op	 252.97 MB/s	   38160 B/op	     336 allocs/op
+BenchmarkJSONPlatformEventBody-18             	   40636	      2915 ns/op	 148.91 MB/s	    3581 B/op	      82 allocs/op
+BenchmarkJSONFlowStateRoundTrip-18            	   13912	      8490 ns/op	  48.64 MB/s	   16540 B/op	      87 allocs/op
+PASS

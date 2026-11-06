@@ -1,0 +1,248 @@
+start 2026-11-05T19:04:08Z
+Apple M5 Pro
+18
+68719476736
+ProductName:		macOS ProductVersion:		26.6 BuildVersion:		25G72 
+rounds=2 count/round=5 benchtime=100ms
+variants: base=./trees/base classic=./trees/base:nojsonv2
+2026-11-05T19:04:08Z round=1 module=agon variant=base load={ 10.64 7.97 6.01 }
+2026-11-05T19:04:29Z exit=0 module=agon variant=base
+2026-11-05T19:04:29Z round=1 module=agon variant=classic load={ 9.11 7.83 6.01 }
+2026-11-05T19:04:51Z exit=0 module=agon variant=classic
+2026-11-05T19:04:51Z round=1 module=ai-as-an-infrastructure variant=base load={ 10.77 8.28 6.22 }
+2026-11-05T19:04:55Z exit=0 module=ai-as-an-infrastructure variant=base
+2026-11-05T19:04:55Z round=1 module=ai-as-an-infrastructure variant=classic load={ 10.95 8.35 6.26 }
+2026-11-05T19:05:00Z exit=0 module=ai-as-an-infrastructure variant=classic
+2026-11-05T19:05:00Z round=1 module=apps variant=base load={ 10.79 8.36 6.27 }
+2026-11-05T19:05:02Z exit=0 module=apps variant=base
+2026-11-05T19:05:03Z round=1 module=apps variant=classic load={ 10.79 8.36 6.27 }
+2026-11-05T19:05:05Z exit=0 module=apps variant=classic
+2026-11-05T19:05:05Z round=1 module=arca variant=base load={ 12.73 8.81 6.44 }
+2026-11-05T19:05:20Z exit=0 module=arca variant=base
+2026-11-05T19:05:20Z round=1 module=arca variant=classic load={ 12.28 8.90 6.51 }
+2026-11-05T19:05:35Z exit=0 module=arca variant=classic
+2026-11-05T19:05:35Z round=1 module=auth variant=base load={ 10.14 8.59 6.44 }
+2026-11-05T19:05:46Z exit=0 module=auth variant=base
+2026-11-05T19:05:46Z round=1 module=auth variant=classic load={ 9.53 8.51 6.44 }
+2026-11-05T19:05:57Z exit=0 module=auth variant=classic
+2026-11-05T19:05:57Z round=1 module=cella variant=base load={ 8.75 8.37 6.42 }
+2026-11-05T19:06:17Z exit=0 module=cella variant=base
+2026-11-05T19:06:17Z round=1 module=cella variant=classic load={ 7.18 8.04 6.34 }
+2026-11-05T19:06:36Z exit=0 module=cella variant=classic
+2026-11-05T19:06:36Z round=1 module=census variant=base load={ 6.41 7.81 6.30 }
+2026-11-05T19:06:51Z exit=0 module=census variant=base
+2026-11-05T19:06:51Z round=1 module=census variant=classic load={ 6.90 7.85 6.34 }
+2026-11-05T19:07:05Z exit=0 module=census variant=classic
+2026-11-05T19:07:05Z round=1 module=ci-gate variant=base load={ 6.57 7.74 6.33 }
+2026-11-05T19:07:14Z exit=0 module=ci-gate variant=base
+2026-11-05T19:07:14Z round=1 module=ci-gate variant=classic load={ 6.69 7.75 6.34 }
+2026-11-05T19:07:29Z exit=0 module=ci-gate variant=classic
+2026-11-05T19:07:29Z round=1 module=examen variant=base load={ 6.17 7.58 6.30 }
+2026-11-05T19:08:04Z exit=0 module=examen variant=base
+2026-11-05T19:08:04Z round=1 module=examen variant=classic load={ 6.23 7.51 6.34 }
+2026-11-05T19:08:34Z exit=0 module=examen variant=classic
+2026-11-05T19:08:34Z round=1 module=faber variant=base load={ 5.95 7.34 6.31 }
+2026-11-05T19:08:43Z exit=0 module=faber variant=base
+2026-11-05T19:08:43Z round=1 module=faber variant=classic load={ 8.58 7.87 6.51 }
+2026-11-05T19:08:52Z exit=0 module=faber variant=classic
+2026-11-05T19:08:52Z round=1 module=forma variant=base load={ 9.96 8.20 6.64 }
+2026-11-05T19:09:17Z exit=0 module=forma variant=base
+2026-11-05T19:09:17Z round=1 module=forma variant=classic load={ 8.42 7.99 6.61 }
+2026-11-05T19:09:51Z exit=0 module=forma variant=classic
+2026-11-05T19:09:51Z round=1 module=gradus variant=base load={ 10.67 8.67 6.92 }
+2026-11-05T19:10:17Z exit=0 module=gradus variant=base
+2026-11-05T19:10:17Z round=1 module=gradus variant=classic load={ 9.75 8.65 6.96 }
+2026-11-05T19:10:41Z exit=0 module=gradus variant=classic
+2026-11-05T19:10:41Z round=1 module=insula variant=base load={ 8.44 8.42 6.93 }
+2026-11-05T19:11:31Z exit=0 module=insula variant=base
+2026-11-05T19:11:31Z round=1 module=insula variant=classic load={ 19.02 11.35 8.10 }
+2026-11-05T19:12:07Z exit=0 module=insula variant=classic
+2026-11-05T19:12:07Z round=1 module=latere-ai variant=base load={ 18.08 11.94 8.44 }
+2026-11-05T19:12:12Z exit=0 module=latere-ai variant=base
+2026-11-05T19:12:12Z round=1 module=latere-ai variant=classic load={ 17.68 11.96 8.47 }
+2026-11-05T19:12:17Z exit=0 module=latere-ai variant=classic
+2026-11-05T19:12:17Z round=1 module=latere-cli variant=base load={ 17.38 12.00 8.50 }
+2026-11-05T19:12:32Z exit=0 module=latere-cli variant=base
+2026-11-05T19:12:32Z round=1 module=latere-cli variant=classic load={ 15.62 11.87 8.52 }
+2026-11-05T19:12:47Z exit=0 module=latere-cli variant=classic
+2026-11-05T19:12:47Z round=1 module=lectio variant=base load={ 14.27 11.74 8.53 }
+2026-11-05T19:13:17Z exit=0 module=lectio variant=base
+2026-11-05T19:13:17Z round=1 module=lectio variant=classic load={ 14.06 11.96 8.72 }
+2026-11-05T19:13:46Z exit=0 module=lectio variant=classic
+2026-11-05T19:13:46Z round=1 module=limen variant=base load={ 13.28 11.93 8.82 }
+2026-11-05T19:14:12Z exit=0 module=limen variant=base
+2026-11-05T19:14:12Z round=1 module=limen variant=classic load={ 12.33 11.82 8.87 }
+2026-11-05T19:14:36Z exit=0 module=limen variant=classic
+2026-11-05T19:14:36Z round=1 module=lux variant=base load={ 10.39 11.40 8.80 }
+2026-11-05T19:14:58Z exit=0 module=lux variant=base
+2026-11-05T19:14:58Z round=1 module=lux variant=classic load={ 9.64 11.16 8.78 }
+2026-11-05T19:15:20Z exit=0 module=lux variant=classic
+2026-11-05T19:15:20Z round=1 module=managed-agents variant=base load={ 14.61 12.12 9.19 }
+2026-11-05T19:15:25Z exit=0 module=managed-agents variant=base
+2026-11-05T19:15:25Z round=1 module=managed-agents variant=classic load={ 13.92 12.02 9.17 }
+2026-11-05T19:15:29Z exit=0 module=managed-agents variant=classic
+2026-11-05T19:15:29Z round=1 module=managed-agents/latere variant=base load={ 13.12 11.89 9.14 }
+2026-11-05T19:15:42Z exit=0 module=managed-agents/latere variant=base
+2026-11-05T19:15:42Z round=1 module=managed-agents/latere variant=classic load={ 12.18 11.72 9.11 }
+2026-11-05T19:15:49Z exit=0 module=managed-agents/latere variant=classic
+2026-11-05T19:15:49Z round=1 module=onboarding variant=base load={ 11.30 11.55 9.08 }
+2026-11-05T19:15:51Z exit=0 module=onboarding variant=base
+2026-11-05T19:15:51Z round=1 module=onboarding variant=classic load={ 11.30 11.55 9.08 }
+2026-11-05T19:15:54Z exit=0 module=onboarding variant=classic
+2026-11-05T19:15:54Z round=1 module=origo variant=base load={ 11.30 11.55 9.08 }
+2026-11-05T19:16:26Z exit=0 module=origo variant=base
+2026-11-05T19:16:26Z round=1 module=origo variant=classic load={ 11.38 11.56 9.18 }
+2026-11-05T19:17:02Z exit=0 module=origo variant=classic
+2026-11-05T19:17:02Z round=1 module=pay variant=base load={ 12.09 11.68 9.32 }
+2026-11-05T19:17:07Z exit=0 module=pay variant=base
+2026-11-05T19:17:07Z round=1 module=pay variant=classic load={ 12.00 11.67 9.33 }
+2026-11-05T19:17:12Z exit=0 module=pay variant=classic
+2026-11-05T19:17:12Z round=1 module=pkg variant=base load={ 12.00 11.68 9.35 }
+2026-11-05T19:17:41Z exit=0 module=pkg variant=base
+2026-11-05T19:17:41Z round=1 module=pkg variant=classic load={ 16.09 12.69 9.79 }
+2026-11-05T19:18:08Z exit=0 module=pkg variant=classic
+2026-11-05T19:18:08Z round=1 module=platform variant=base load={ 15.95 12.95 9.97 }
+2026-11-05T19:18:31Z exit=0 module=platform variant=base
+2026-11-05T19:18:31Z round=1 module=platform variant=classic load={ 15.49 13.11 10.11 }
+2026-11-05T19:18:53Z exit=0 module=platform variant=classic
+2026-11-05T19:18:53Z round=1 module=pons variant=base load={ 14.88 13.15 10.20 }
+2026-11-05T19:19:05Z exit=0 module=pons variant=base
+2026-11-05T19:19:05Z round=1 module=pons variant=classic load={ 14.39 13.11 10.23 }
+2026-11-05T19:19:16Z exit=0 module=pons variant=classic
+2026-11-05T19:19:16Z round=1 module=replichai variant=base load={ 13.48 12.96 10.21 }
+2026-11-05T19:19:47Z exit=0 module=replichai variant=base
+2026-11-05T19:19:47Z round=1 module=replichai variant=classic load={ 11.00 12.43 10.12 }
+2026-11-05T19:20:18Z exit=0 module=replichai variant=classic
+2026-11-05T19:20:18Z round=1 module=sdk variant=base load={ 9.14 11.83 9.98 }
+2026-11-05T19:20:38Z exit=0 module=sdk variant=base
+2026-11-05T19:20:38Z round=1 module=sdk variant=classic load={ 9.87 11.82 10.02 }
+2026-11-05T19:20:57Z exit=0 module=sdk variant=classic
+2026-11-05T19:20:57Z round=1 module=sermo variant=base load={ 9.65 11.63 9.99 }
+2026-11-05T19:21:07Z exit=0 module=sermo variant=base
+2026-11-05T19:21:07Z round=1 module=sermo variant=classic load={ 10.12 11.66 10.02 }
+2026-11-05T19:21:16Z exit=0 module=sermo variant=classic
+2026-11-05T19:21:16Z round=1 module=topos variant=base load={ 10.09 11.60 10.02 }
+2026-11-05T19:21:58Z exit=0 module=topos variant=base
+2026-11-05T19:21:58Z round=1 module=topos variant=classic load={ 12.24 11.93 10.21 }
+2026-11-05T19:22:49Z exit=0 module=topos variant=classic
+2026-11-05T19:22:49Z round=2 module=agon variant=base load={ 11.74 11.71 10.22 }
+2026-11-05T19:23:12Z exit=0 module=agon variant=base
+2026-11-05T19:23:12Z round=2 module=agon variant=classic load={ 11.75 11.71 10.26 }
+2026-11-05T19:23:34Z exit=0 module=agon variant=classic
+2026-11-05T19:23:34Z round=2 module=ai-as-an-infrastructure variant=base load={ 12.13 11.79 10.32 }
+2026-11-05T19:23:38Z exit=0 module=ai-as-an-infrastructure variant=base
+2026-11-05T19:23:38Z round=2 module=ai-as-an-infrastructure variant=classic load={ 12.28 11.83 10.34 }
+2026-11-05T19:23:43Z exit=0 module=ai-as-an-infrastructure variant=classic
+2026-11-05T19:23:43Z round=2 module=apps variant=base load={ 12.25 11.83 10.35 }
+2026-11-05T19:23:46Z exit=0 module=apps variant=base
+2026-11-05T19:23:46Z round=2 module=apps variant=classic load={ 12.55 11.90 10.38 }
+2026-11-05T19:23:48Z exit=0 module=apps variant=classic
+2026-11-05T19:23:48Z round=2 module=arca variant=base load={ 12.55 11.90 10.38 }
+2026-11-05T19:24:03Z exit=0 module=arca variant=base
+2026-11-05T19:24:03Z round=2 module=arca variant=classic load={ 11.01 11.59 10.30 }
+2026-11-05T19:24:19Z exit=0 module=arca variant=classic
+2026-11-05T19:24:19Z round=2 module=auth variant=base load={ 9.62 11.25 10.20 }
+2026-11-05T19:24:31Z exit=0 module=auth variant=base
+2026-11-05T19:24:31Z round=2 module=auth variant=classic load={ 9.35 11.11 10.17 }
+2026-11-05T19:24:43Z exit=0 module=auth variant=classic
+2026-11-05T19:24:43Z round=2 module=cella variant=base load={ 9.15 11.01 10.14 }
+2026-11-05T19:25:04Z exit=0 module=cella variant=base
+2026-11-05T19:25:04Z round=2 module=cella variant=classic load={ 10.03 11.10 10.20 }
+2026-11-05T19:25:25Z exit=0 module=cella variant=classic
+2026-11-05T19:25:25Z round=2 module=census variant=base load={ 10.79 11.20 10.26 }
+2026-11-05T19:25:43Z exit=0 module=census variant=base
+2026-11-05T19:25:43Z round=2 module=census variant=classic load={ 11.31 11.30 10.31 }
+2026-11-05T19:25:58Z exit=0 module=census variant=classic
+2026-11-05T19:25:58Z round=2 module=ci-gate variant=base load={ 11.09 11.25 10.31 }
+2026-11-05T19:26:07Z exit=0 module=ci-gate variant=base
+2026-11-05T19:26:07Z round=2 module=ci-gate variant=classic load={ 10.56 11.13 10.28 }
+2026-11-05T19:26:16Z exit=0 module=ci-gate variant=classic
+2026-11-05T19:26:16Z round=2 module=examen variant=base load={ 10.02 11.00 10.24 }
+2026-11-05T19:26:47Z exit=0 module=examen variant=base
+2026-11-05T19:26:47Z round=2 module=examen variant=classic load={ 11.28 11.19 10.33 }
+2026-11-05T19:27:17Z exit=0 module=examen variant=classic
+2026-11-05T19:27:17Z round=2 module=faber variant=base load={ 13.58 11.67 10.53 }
+2026-11-05T19:27:26Z exit=0 module=faber variant=base
+2026-11-05T19:27:26Z round=2 module=faber variant=classic load={ 12.96 11.60 10.52 }
+2026-11-05T19:27:36Z exit=0 module=faber variant=classic
+2026-11-05T19:27:36Z round=2 module=forma variant=base load={ 11.90 11.41 10.46 }
+2026-11-05T19:28:00Z exit=0 module=forma variant=base
+2026-11-05T19:28:00Z round=2 module=forma variant=classic load={ 10.48 11.12 10.39 }
+2026-11-05T19:28:24Z exit=0 module=forma variant=classic
+2026-11-05T19:28:24Z round=2 module=gradus variant=base load={ 10.00 10.97 10.35 }
+2026-11-05T19:28:48Z exit=0 module=gradus variant=base
+2026-11-05T19:28:48Z round=2 module=gradus variant=classic load={ 9.35 10.74 10.28 }
+2026-11-05T19:29:11Z exit=0 module=gradus variant=classic
+2026-11-05T19:29:11Z round=2 module=insula variant=base load={ 8.08 10.33 10.15 }
+2026-11-05T19:29:45Z exit=0 module=insula variant=base
+2026-11-05T19:29:45Z round=2 module=insula variant=classic load={ 8.08 10.06 10.05 }
+2026-11-05T19:30:20Z exit=0 module=insula variant=classic
+2026-11-05T19:30:20Z round=2 module=latere-ai variant=base load={ 8.22 9.84 9.97 }
+2026-11-05T19:30:25Z exit=0 module=latere-ai variant=base
+2026-11-05T19:30:25Z round=2 module=latere-ai variant=classic load={ 8.36 9.84 9.97 }
+2026-11-05T19:30:31Z exit=0 module=latere-ai variant=classic
+2026-11-05T19:30:31Z round=2 module=latere-cli variant=base load={ 8.01 9.74 9.93 }
+2026-11-05T19:30:46Z exit=0 module=latere-cli variant=base
+2026-11-05T19:30:46Z round=2 module=latere-cli variant=classic load={ 8.89 9.85 9.97 }
+2026-11-05T19:31:01Z exit=0 module=latere-cli variant=classic
+2026-11-05T19:31:01Z round=2 module=lectio variant=base load={ 8.57 9.73 9.92 }
+2026-11-05T19:31:39Z exit=0 module=lectio variant=base
+2026-11-05T19:31:39Z round=2 module=lectio variant=classic load={ 18.17 11.88 10.69 }
+2026-11-05T19:32:13Z exit=0 module=lectio variant=classic
+2026-11-05T19:32:13Z round=2 module=limen variant=base load={ 17.38 12.32 10.89 }
+2026-11-05T19:32:48Z exit=0 module=limen variant=base
+2026-11-05T19:32:48Z round=2 module=limen variant=classic load={ 19.71 13.35 11.32 }
+2026-11-05T19:33:17Z exit=0 module=limen variant=classic
+2026-11-05T19:33:17Z round=2 module=lux variant=base load={ 24.59 15.50 12.19 }
+2026-11-05T19:33:41Z exit=0 module=lux variant=base
+2026-11-05T19:33:41Z round=2 module=lux variant=classic load={ 20.41 15.26 12.20 }
+2026-11-05T19:34:03Z exit=0 module=lux variant=classic
+2026-11-05T19:34:03Z round=2 module=managed-agents variant=base load={ 19.13 15.32 12.29 }
+2026-11-05T19:34:08Z exit=0 module=managed-agents variant=base
+2026-11-05T19:34:08Z round=2 module=managed-agents variant=classic load={ 18.24 15.20 12.27 }
+2026-11-05T19:34:12Z exit=0 module=managed-agents variant=classic
+2026-11-05T19:34:12Z round=2 module=managed-agents/latere variant=base load={ 17.90 15.18 12.28 }
+2026-11-05T19:34:19Z exit=0 module=managed-agents/latere variant=base
+2026-11-05T19:34:19Z round=2 module=managed-agents/latere variant=classic load={ 15.92 14.85 12.19 }
+2026-11-05T19:34:27Z exit=0 module=managed-agents/latere variant=classic
+2026-11-05T19:34:27Z round=2 module=onboarding variant=base load={ 16.49 14.98 12.25 }
+2026-11-05T19:34:29Z exit=0 module=onboarding variant=base
+2026-11-05T19:34:29Z round=2 module=onboarding variant=classic load={ 16.49 14.98 12.25 }
+2026-11-05T19:34:32Z exit=0 module=onboarding variant=classic
+2026-11-05T19:34:32Z round=2 module=origo variant=base load={ 16.29 14.96 12.26 }
+2026-11-05T19:35:04Z exit=0 module=origo variant=base
+2026-11-05T19:35:04Z round=2 module=origo variant=classic load={ 12.75 14.22 12.09 }
+2026-11-05T19:35:36Z exit=0 module=origo variant=classic
+2026-11-05T19:35:36Z round=2 module=pay variant=base load={ 11.28 13.69 11.98 }
+2026-11-05T19:35:41Z exit=0 module=pay variant=base
+2026-11-05T19:35:41Z round=2 module=pay variant=classic load={ 10.70 13.53 11.93 }
+2026-11-05T19:35:46Z exit=0 module=pay variant=classic
+2026-11-05T19:35:46Z round=2 module=pkg variant=base load={ 11.20 13.59 11.96 }
+2026-11-05T19:36:13Z exit=0 module=pkg variant=base
+2026-11-05T19:36:13Z round=2 module=pkg variant=classic load={ 12.92 13.81 12.09 }
+2026-11-05T19:36:40Z exit=0 module=pkg variant=classic
+2026-11-05T19:36:40Z round=2 module=platform variant=base load={ 11.70 13.41 12.00 }
+2026-11-05T19:37:02Z exit=0 module=platform variant=base
+2026-11-05T19:37:02Z round=2 module=platform variant=classic load={ 10.63 13.06 11.91 }
+2026-11-05T19:37:23Z exit=0 module=platform variant=classic
+2026-11-05T19:37:23Z round=2 module=pons variant=base load={ 10.64 12.90 11.87 }
+2026-11-05T19:37:34Z exit=0 module=pons variant=base
+2026-11-05T19:37:34Z round=2 module=pons variant=classic load={ 11.12 12.89 11.89 }
+2026-11-05T19:37:45Z exit=0 module=pons variant=classic
+2026-11-05T19:37:45Z round=2 module=replichai variant=base load={ 13.36 13.29 12.04 }
+2026-11-05T19:38:27Z exit=0 module=replichai variant=base
+2026-11-05T19:38:27Z round=2 module=replichai variant=classic load={ 15.71 13.93 12.33 }
+2026-11-05T19:39:05Z exit=0 module=replichai variant=classic
+2026-11-05T19:39:05Z round=2 module=sdk variant=base load={ 14.45 13.81 12.36 }
+2026-11-05T19:39:26Z exit=0 module=sdk variant=base
+2026-11-05T19:39:26Z round=2 module=sdk variant=classic load={ 16.44 14.24 12.54 }
+2026-11-05T19:39:49Z exit=0 module=sdk variant=classic
+2026-11-05T19:39:49Z round=2 module=sermo variant=base load={ 20.66 15.41 13.00 }
+2026-11-05T19:40:01Z exit=0 module=sermo variant=base
+2026-11-05T19:40:01Z round=2 module=sermo variant=classic load={ 24.20 16.46 13.42 }
+2026-11-05T19:40:14Z exit=0 module=sermo variant=classic
+2026-11-05T19:40:14Z round=2 module=topos variant=base load={ 25.78 17.05 13.67 }
+2026-11-05T19:41:02Z exit=0 module=topos variant=base
+2026-11-05T19:41:02Z round=2 module=topos variant=classic load={ 26.31 18.53 14.40 }
+2026-11-05T19:41:48Z exit=0 module=topos variant=classic
+end 2026-11-05T19:41:48Z

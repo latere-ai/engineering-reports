@@ -1,0 +1,7 @@
+nil   v1-omitempty={} <nil> | v2-omitempty={} <nil> | v2-omitzero={} <nil> | v2-plain={"v":null} <nil>
+empty v1-omitempty={} <nil> | v2-omitempty={"v" json: cannot marshal from Go jsontext.Value: unexpected EOF within "/v" after offset 5 | v2-omitzero={"v" json: cannot marshal from Go jsontext.Value: unexpected EOF within "/v" after offset 5 | v2-plain={"v" json: cannot marshal from Go jsontext.Value: unexpected EOF within "/v" after offset 5
+null  v1-omitempty={"v":null} <nil> | v2-omitempty={} <nil> | v2-omitzero={"v":null} <nil> | v2-plain={"v":null} <nil>
+obj   v1-omitempty={"v":{}} <nil> | v2-omitempty={} <nil> | v2-omitzero={"v":{}} <nil> | v2-plain={"v":{}} <nil>
+arr   v1-omitempty={"v":[]} <nil> | v2-omitempty={} <nil> | v2-omitzero={"v":[]} <nil> | v2-plain={"v":[]} <nil>
+str   v1-omitempty={"v":""} <nil> | v2-omitempty={} <nil> | v2-omitzero={"v":""} <nil> | v2-plain={"v":""} <nil>
+sp    v1-omitempty={"v":{}} <nil> | v2-omitempty={} <nil> | v2-omitzero={"v":{}} <nil> | v2-plain={"v":{}} <nil>

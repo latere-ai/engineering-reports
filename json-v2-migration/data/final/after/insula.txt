@@ -1,0 +1,770 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   15348	      7476 ns/op	 151.81 MB/s	   16521 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3144	     35829 ns/op	 213.65 MB/s	  105518 B/op	     406 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      32	   3884626 ns/op	  36.38 MB/s	20832530 B/op	   38230 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   29599	      4027 ns/op	  61.59 MB/s	   13445 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3680	     30784 ns/op	 276.70 MB/s	   42021 B/op	     559 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     229	    519706 ns/op	 379.73 MB/s	  498283 B/op	   11647 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  116622	      1046 ns/op	 316.32 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4851	     24343 ns/op	 410.59 MB/s	   28439 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	   99243	      1131 ns/op	 543.86 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7666	     16748 ns/op	 663.43 MB/s	   22835 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     356	    335172 ns/op	 668.72 MB/s	  457339 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   21216	      5668 ns/op	 108.50 MB/s	   68287 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    3715	     29855 ns/op	 372.16 MB/s	  110492 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     242	    489594 ns/op	 457.80 MB/s	 1081180 B/op	    2862 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   23236	      5357 ns/op	 114.81 MB/s	   66632 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4305	     25324 ns/op	 438.76 MB/s	   83685 B/op	      86 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     265	    451772 ns/op	 496.12 MB/s	  597447 B/op	    2834 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   28837	      3503 ns/op	 268.93 MB/s	    5353 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5223	     22238 ns/op	 444.05 MB/s	   41587 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   17342	      6848 ns/op	 163.71 MB/s	   14359 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6510	     20519 ns/op	 489.97 MB/s	   53919 B/op	      82 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   86000	      1298 ns/op	  36.97 MB/s	    3362 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   74583	      1558 ns/op	 151.49 MB/s	    3467 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   44540	      2570 ns/op	 135.78 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   63760	      1896 ns/op	 333.90 MB/s	    1508 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   47692	      2390 ns/op	 323.87 MB/s	    3269 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6271	     19132 ns/op	 493.31 MB/s	   35293 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     316	    379238 ns/op	 495.13 MB/s	  670784 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   43981	      2726 ns/op	 283.90 MB/s	    3750 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5203	     24120 ns/op	 391.30 MB/s	   25634 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     258	    462089 ns/op	 406.35 MB/s	  463656 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   15271	      7810 ns/op	 101.79 MB/s	   72942 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3639	     31690 ns/op	 298.49 MB/s	  123114 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     208	    564660 ns/op	 332.58 MB/s	 1304023 B/op	    5809 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     964	    131280 ns/op	   5.95 MB/s	    6803 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     680	    183581 ns/op	  51.45 MB/s	   61242 B/op	     503 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1113125 ns/op	 168.70 MB/s	 1888066 B/op	    9663 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  118874	       938.0 ns/op	 733.49 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   12153	      9936 ns/op	1056.81 MB/s	   15392 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3264	     35328 ns/op	 990.73 MB/s	   55618 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  121404	      1001 ns/op	 687.45 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8650	     14210 ns/op	 738.97 MB/s	   14829 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2524	     46797 ns/op	 747.94 MB/s	   44487 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   64224	      1807 ns/op	 380.71 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    5062	     25385 ns/op	 413.66 MB/s	   30609 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1468	     81427 ns/op	 429.84 MB/s	  104491 B/op	     543 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  823538	       156.6 ns/op	 619.53 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   15994	      7255 ns/op	 156.18 MB/s	   16525 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3391	     36105 ns/op	 212.08 MB/s	  105677 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      31	   3855266 ns/op	  36.66 MB/s	20832127 B/op	   38227 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   28563	      4104 ns/op	  60.43 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3814	     32285 ns/op	 263.84 MB/s	   42069 B/op	     560 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     217	    550802 ns/op	 358.30 MB/s	  498343 B/op	   11648 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  116757	      1019 ns/op	 324.75 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    5037	     25440 ns/op	 392.89 MB/s	   28256 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  118888	       950.6 ns/op	 646.93 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7872	     16704 ns/op	 665.16 MB/s	   22835 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     354	    338576 ns/op	 661.99 MB/s	  457337 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   20083	      5834 ns/op	 105.41 MB/s	   68285 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    3984	     28182 ns/op	 394.26 MB/s	  110499 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     247	    480067 ns/op	 466.88 MB/s	 1081176 B/op	    2861 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   23070	      5213 ns/op	 117.97 MB/s	   66631 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4276	     25315 ns/op	 438.91 MB/s	   83654 B/op	      85 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     265	    449917 ns/op	 498.17 MB/s	  597345 B/op	    2834 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   36962	      3011 ns/op	 312.90 MB/s	    5353 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5540	     21819 ns/op	 452.58 MB/s	   41594 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   17374	      6847 ns/op	 163.72 MB/s	   14351 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6021	     20197 ns/op	 497.79 MB/s	   53791 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   95406	      1254 ns/op	  38.27 MB/s	    3360 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   77432	      1553 ns/op	 151.98 MB/s	    3463 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   54151	      2125 ns/op	 164.22 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   61986	      1893 ns/op	 334.42 MB/s	    1509 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   55774	      2037 ns/op	 380.06 MB/s	    3270 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6223	     19385 ns/op	 486.88 MB/s	   35294 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     313	    380848 ns/op	 493.04 MB/s	  670785 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   42922	      2773 ns/op	 279.09 MB/s	    3751 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5214	     24301 ns/op	 388.38 MB/s	   25634 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     256	    464687 ns/op	 404.08 MB/s	  463660 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   15272	      7808 ns/op	 101.82 MB/s	   72936 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3699	     33701 ns/op	 280.67 MB/s	  123112 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     208	    561854 ns/op	 334.24 MB/s	 1303918 B/op	    5809 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	    1010	    126436 ns/op	   6.18 MB/s	    6756 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     666	    187655 ns/op	  50.33 MB/s	   60979 B/op	     502 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1117417 ns/op	 168.05 MB/s	 1833807 B/op	    9666 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  142456	       808.9 ns/op	 850.58 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     10094 ns/op	1040.33 MB/s	   15391 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3562	     34263 ns/op	1021.54 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  118281	      1001 ns/op	 687.48 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8718	     14501 ns/op	 724.17 MB/s	   14829 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2415	     47616 ns/op	 735.07 MB/s	   44496 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   64896	      1926 ns/op	 357.29 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    4944	     24788 ns/op	 423.64 MB/s	   30652 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1483	     82518 ns/op	 424.16 MB/s	  103828 B/op	     542 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  823633	       154.8 ns/op	 626.77 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16358	      7233 ns/op	 156.92 MB/s	   16525 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3080	     36637 ns/op	 208.94 MB/s	  105797 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      32	   3949298 ns/op	  35.78 MB/s	20832910 B/op	   38231 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   29305	      4080 ns/op	  60.79 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3799	     30210 ns/op	 281.96 MB/s	   42066 B/op	     560 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     222	    529825 ns/op	 372.48 MB/s	  498461 B/op	   11650 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  116184	      1035 ns/op	 319.80 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4384	     24522 ns/op	 407.59 MB/s	   28232 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  122822	       996.8 ns/op	 616.98 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7102	     17148 ns/op	 647.94 MB/s	   22835 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     352	    337656 ns/op	 663.80 MB/s	  457338 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   21074	      5536 ns/op	 111.08 MB/s	   68297 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    4257	     27347 ns/op	 406.30 MB/s	  110488 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     247	    480702 ns/op	 466.27 MB/s	 1081435 B/op	    2862 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   24589	      4906 ns/op	 125.36 MB/s	   66638 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4698	     24366 ns/op	 456.00 MB/s	   83665 B/op	      85 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     270	    443111 ns/op	 505.82 MB/s	  597314 B/op	    2834 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   36457	      3031 ns/op	 310.74 MB/s	    5354 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    4891	     21944 ns/op	 450.01 MB/s	   41597 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   16693	      7031 ns/op	 159.45 MB/s	   14362 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6420	     20184 ns/op	 498.11 MB/s	   53821 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   91971	      1311 ns/op	  36.62 MB/s	    3362 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   67006	      1727 ns/op	 136.66 MB/s	    3466 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   53856	      2138 ns/op	 163.22 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   62379	      1945 ns/op	 325.41 MB/s	    1509 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   57469	      2037 ns/op	 379.95 MB/s	    3269 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6283	     19082 ns/op	 494.60 MB/s	   35297 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     321	    372688 ns/op	 503.83 MB/s	  670801 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   42824	      2759 ns/op	 280.52 MB/s	    3751 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5044	     24372 ns/op	 387.25 MB/s	   25638 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     248	    473763 ns/op	 396.34 MB/s	  463654 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   14821	      8000 ns/op	  99.37 MB/s	   72939 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3733	     31781 ns/op	 297.63 MB/s	  123116 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     212	    563800 ns/op	 333.08 MB/s	 1304240 B/op	    5811 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     968	    129242 ns/op	   6.04 MB/s	    6812 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     687	    182213 ns/op	  51.84 MB/s	   60982 B/op	     502 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1110385 ns/op	 169.11 MB/s	 1842244 B/op	    9658 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  145246	       793.1 ns/op	 867.46 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     10243 ns/op	1025.23 MB/s	   15392 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3465	     34744 ns/op	1007.40 MB/s	   55615 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  116994	       997.0 ns/op	 690.06 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8826	     14228 ns/op	 738.04 MB/s	   14829 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2606	     46244 ns/op	 756.88 MB/s	   44485 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   65463	      1819 ns/op	 378.24 MB/s	    2330 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    4987	     25012 ns/op	 419.84 MB/s	   30528 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1467	     82288 ns/op	 425.35 MB/s	  104964 B/op	     543 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  826990	       157.8 ns/op	 614.69 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16640	      7084 ns/op	 160.21 MB/s	   16529 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3332	     35490 ns/op	 215.75 MB/s	  105999 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      28	   4020787 ns/op	  35.15 MB/s	20832601 B/op	   38230 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   26124	      4218 ns/op	  58.80 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3709	     30115 ns/op	 282.84 MB/s	   42022 B/op	     559 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     231	    530105 ns/op	 372.28 MB/s	  498307 B/op	   11647 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  118066	      1019 ns/op	 324.92 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4831	     24440 ns/op	 408.96 MB/s	   28183 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  122851	       945.5 ns/op	 650.45 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7660	     17325 ns/op	 641.32 MB/s	   22834 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     352	    336713 ns/op	 665.66 MB/s	  457334 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   21303	      5533 ns/op	 111.15 MB/s	   68293 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    4078	     27435 ns/op	 404.99 MB/s	  110484 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     244	    485344 ns/op	 461.81 MB/s	 1081314 B/op	    2862 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   24576	      5011 ns/op	 122.72 MB/s	   66636 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4339	     24632 ns/op	 451.09 MB/s	   83656 B/op	      85 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     268	    445021 ns/op	 503.65 MB/s	  597553 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   35041	      3082 ns/op	 305.68 MB/s	    5355 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5365	     21734 ns/op	 454.36 MB/s	   41590 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   16927	      6989 ns/op	 160.40 MB/s	   14361 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6813	     19690 ns/op	 510.62 MB/s	   53830 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   90693	      1324 ns/op	  36.25 MB/s	    3363 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   76981	      1571 ns/op	 150.24 MB/s	    3467 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   53540	      2129 ns/op	 163.96 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   63496	      1957 ns/op	 323.42 MB/s	    1508 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   56865	      2030 ns/op	 381.25 MB/s	    3270 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    5522	     19689 ns/op	 479.35 MB/s	   35297 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     318	    376017 ns/op	 499.37 MB/s	  670778 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   42205	      2762 ns/op	 280.27 MB/s	    3751 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5298	     24201 ns/op	 389.98 MB/s	   25641 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     259	    462026 ns/op	 406.41 MB/s	  463649 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   14635	      8141 ns/op	  97.66 MB/s	   72938 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3456	     32577 ns/op	 290.35 MB/s	  123131 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     194	    590438 ns/op	 318.06 MB/s	 1303952 B/op	    5808 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     990	    127286 ns/op	   6.14 MB/s	    6754 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     624	    198307 ns/op	  47.63 MB/s	   60957 B/op	     503 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1136736 ns/op	 165.19 MB/s	 1742418 B/op	    9660 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  144187	       785.3 ns/op	 876.09 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     10214 ns/op	1028.05 MB/s	   15392 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3586	     34754 ns/op	1007.09 MB/s	   55615 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  119479	       996.5 ns/op	 690.42 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8738	     14150 ns/op	 742.14 MB/s	   14829 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2643	     46039 ns/op	 760.25 MB/s	   44487 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   66124	      1818 ns/op	 378.54 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    5042	     25251 ns/op	 415.86 MB/s	   30485 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1386	     85700 ns/op	 408.41 MB/s	  104960 B/op	     543 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  759493	       160.2 ns/op	 605.47 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16473	      7091 ns/op	 159.78 MB/s	   16524 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3302	     35852 ns/op	 213.52 MB/s	  105641 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      28	   3905728 ns/op	  36.18 MB/s	20833162 B/op	   38232 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   27716	      4099 ns/op	  60.51 MB/s	   13445 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3924	     31279 ns/op	 272.33 MB/s	   42019 B/op	     559 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     200	    576775 ns/op	 342.16 MB/s	  498387 B/op	   11649 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  109053	      1036 ns/op	 319.46 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4891	     24165 ns/op	 413.62 MB/s	   28328 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  120175	       968.0 ns/op	 635.32 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7701	     16801 ns/op	 661.31 MB/s	   22835 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     350	    340212 ns/op	 658.81 MB/s	  457327 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   22077	      5462 ns/op	 112.59 MB/s	   68301 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    4059	     28131 ns/op	 394.97 MB/s	  110489 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     241	    486279 ns/op	 460.92 MB/s	 1081184 B/op	    2861 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   24258	      4997 ns/op	 123.06 MB/s	   66631 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4526	     24360 ns/op	 456.12 MB/s	   83675 B/op	      86 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     274	    439803 ns/op	 509.63 MB/s	  597522 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   33874	      3120 ns/op	 301.95 MB/s	    5354 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5383	     22210 ns/op	 444.62 MB/s	   41596 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   16650	      7006 ns/op	 160.01 MB/s	   14360 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6583	     21031 ns/op	 478.06 MB/s	   53816 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   87070	      1296 ns/op	  37.03 MB/s	    3362 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   77757	      1548 ns/op	 152.41 MB/s	    3466 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   54081	      2131 ns/op	 163.76 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   60472	      1925 ns/op	 328.80 MB/s	    1509 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   57200	      2010 ns/op	 385.13 MB/s	    3270 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6208	     19504 ns/op	 483.89 MB/s	   35292 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     318	    378380 ns/op	 496.25 MB/s	  670777 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   43594	      2793 ns/op	 277.11 MB/s	    3750 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5202	     24465 ns/op	 385.77 MB/s	   25638 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     230	    503482 ns/op	 372.95 MB/s	  463682 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   14872	      8090 ns/op	  98.27 MB/s	   72943 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3282	     31908 ns/op	 296.45 MB/s	  123129 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     211	    566540 ns/op	 331.47 MB/s	 1304104 B/op	    5810 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     978	    127583 ns/op	   6.12 MB/s	    6763 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     649	    188202 ns/op	  50.19 MB/s	   61224 B/op	     503 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1096960 ns/op	 171.18 MB/s	 1760024 B/op	    9656 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  146774	       782.1 ns/op	 879.74 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     10036 ns/op	1046.33 MB/s	   15391 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3478	     33959 ns/op	1030.69 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  116875	      1006 ns/op	 683.79 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8742	     14785 ns/op	 710.26 MB/s	   14830 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2661	     45704 ns/op	 765.82 MB/s	   44487 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   65254	      1835 ns/op	 374.93 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    4970	     24823 ns/op	 423.03 MB/s	   30613 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1483	     81516 ns/op	 429.37 MB/s	  103805 B/op	     542 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  828394	       155.7 ns/op	 623.09 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16341	      7595 ns/op	 149.43 MB/s	   16522 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3177	     36722 ns/op	 208.35 MB/s	  105835 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      32	   3975914 ns/op	  35.55 MB/s	20832462 B/op	   38227 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   26738	      4171 ns/op	  59.46 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3828	     30659 ns/op	 277.83 MB/s	   42020 B/op	     559 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     230	    520000 ns/op	 379.52 MB/s	  498196 B/op	   11645 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  116122	      1037 ns/op	 319.19 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    5119	     24094 ns/op	 414.84 MB/s	   28233 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  118566	       951.1 ns/op	 646.61 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7754	     16728 ns/op	 664.21 MB/s	   22834 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     356	    336981 ns/op	 665.13 MB/s	  457338 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   22395	      5370 ns/op	 114.52 MB/s	   68292 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    3942	     27964 ns/op	 397.33 MB/s	  110479 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     240	    489402 ns/op	 457.98 MB/s	 1081376 B/op	    2862 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   24636	      5002 ns/op	 122.96 MB/s	   66635 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4402	     24833 ns/op	 447.43 MB/s	   83651 B/op	      85 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     246	    479968 ns/op	 466.98 MB/s	  597525 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   38092	      2981 ns/op	 316.03 MB/s	    5355 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    4969	     21948 ns/op	 449.93 MB/s	   41585 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   16993	      7019 ns/op	 159.70 MB/s	   14357 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6388	     19807 ns/op	 507.61 MB/s	   53820 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   89672	      1301 ns/op	  36.91 MB/s	    3362 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   75939	      1573 ns/op	 149.99 MB/s	    3466 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   53697	      2126 ns/op	 164.20 MB/s	    1051 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   62788	      1897 ns/op	 333.66 MB/s	    1509 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   57285	      2009 ns/op	 385.34 MB/s	    3269 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6066	     19301 ns/op	 488.99 MB/s	   35296 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     314	    379015 ns/op	 495.42 MB/s	  670777 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   42487	      2792 ns/op	 277.18 MB/s	    3751 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    4984	     25368 ns/op	 372.04 MB/s	   25636 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     249	    474706 ns/op	 395.55 MB/s	  463645 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   15093	      7858 ns/op	 101.17 MB/s	   72945 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3685	     32403 ns/op	 291.92 MB/s	  123130 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     207	    561482 ns/op	 334.46 MB/s	 1304204 B/op	    5812 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     967	    129016 ns/op	   6.05 MB/s	    6806 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     673	    182011 ns/op	  51.89 MB/s	   60946 B/op	     503 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	      84	   1339394 ns/op	 140.20 MB/s	 1731960 B/op	    9657 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  146174	       796.3 ns/op	 864.03 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     11064 ns/op	 949.08 MB/s	   15398 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3471	     34577 ns/op	1012.27 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  117484	      1006 ns/op	 683.91 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8995	     14445 ns/op	 726.96 MB/s	   14829 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2482	     46768 ns/op	 748.39 MB/s	   44487 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   65452	      1837 ns/op	 374.44 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    4977	     25284 ns/op	 415.32 MB/s	   30636 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1466	     84573 ns/op	 413.85 MB/s	  104298 B/op	     543 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  818600	       161.4 ns/op	 600.93 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16688	      7128 ns/op	 159.23 MB/s	   16524 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3288	     35688 ns/op	 214.50 MB/s	  105784 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      30	   4003717 ns/op	  35.30 MB/s	20832376 B/op	   38228 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   26517	      4248 ns/op	  58.38 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3687	     31547 ns/op	 270.01 MB/s	   42067 B/op	     560 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     214	    556675 ns/op	 354.52 MB/s	  498109 B/op	   11643 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  116287	      1024 ns/op	 323.39 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    5017	     23978 ns/op	 416.84 MB/s	   28368 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  117022	       947.7 ns/op	 648.96 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7918	     16610 ns/op	 668.93 MB/s	   22834 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     357	    338986 ns/op	 661.19 MB/s	  457347 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   21328	      5524 ns/op	 111.32 MB/s	   68301 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    4153	     27245 ns/op	 407.82 MB/s	  110497 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     235	    493718 ns/op	 453.97 MB/s	 1081324 B/op	    2862 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   24141	      4953 ns/op	 124.16 MB/s	   66637 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4641	     24722 ns/op	 449.44 MB/s	   83656 B/op	      85 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     267	    444460 ns/op	 504.29 MB/s	  597514 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   38038	      3054 ns/op	 308.45 MB/s	    5354 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5272	     21722 ns/op	 454.60 MB/s	   41594 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   17078	      6978 ns/op	 160.65 MB/s	   14359 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6346	     21188 ns/op	 474.51 MB/s	   53738 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   83960	      1347 ns/op	  35.64 MB/s	    3360 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   74424	      1577 ns/op	 149.63 MB/s	    3464 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   53527	      2121 ns/op	 164.51 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   63799	      1888 ns/op	 335.34 MB/s	    1508 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   55242	      2028 ns/op	 381.58 MB/s	    3270 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6160	     19350 ns/op	 487.75 MB/s	   35291 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     315	    380891 ns/op	 492.98 MB/s	  670791 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   42991	      2748 ns/op	 281.68 MB/s	    3751 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5157	     24190 ns/op	 390.16 MB/s	   25637 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     256	    465109 ns/op	 403.72 MB/s	  463641 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   14883	      8043 ns/op	  98.85 MB/s	   72943 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3540	     32468 ns/op	 291.33 MB/s	  123118 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     214	    559247 ns/op	 335.80 MB/s	 1304004 B/op	    5810 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     956	    130466 ns/op	   5.99 MB/s	    6806 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     640	    190209 ns/op	  49.66 MB/s	   61102 B/op	     502 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1174152 ns/op	 159.93 MB/s	 1888367 B/op	    9666 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  132874	       806.6 ns/op	 852.95 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   12057	      9947 ns/op	1055.71 MB/s	   15396 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3618	     34100 ns/op	1026.41 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  118186	      1002 ns/op	 686.68 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8908	     14152 ns/op	 742.02 MB/s	   14830 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2649	     45636 ns/op	 766.96 MB/s	   44489 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   66092	      1802 ns/op	 381.75 MB/s	    2330 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    5005	     25016 ns/op	 419.78 MB/s	   30623 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1431	     81560 ns/op	 429.14 MB/s	  103817 B/op	     542 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  818972	       158.3 ns/op	 612.60 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16568	      7079 ns/op	 160.34 MB/s	   16523 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3331	     36029 ns/op	 212.47 MB/s	  105876 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      31	   3879512 ns/op	  36.43 MB/s	20833364 B/op	   38230 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   28886	      4050 ns/op	  61.24 MB/s	   13445 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    4003	     30456 ns/op	 279.68 MB/s	   42020 B/op	     559 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     229	    518464 ns/op	 380.64 MB/s	  498505 B/op	   11651 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  118352	      1021 ns/op	 324.32 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4984	     23995 ns/op	 416.54 MB/s	   28386 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  121864	       951.8 ns/op	 646.17 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7825	     16827 ns/op	 660.32 MB/s	   22835 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     351	    339506 ns/op	 660.18 MB/s	  457364 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   21361	      5737 ns/op	 107.20 MB/s	   68295 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    3968	     27884 ns/op	 398.48 MB/s	  110525 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     242	    488662 ns/op	 458.67 MB/s	 1081111 B/op	    2861 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   22099	      5375 ns/op	 114.41 MB/s	   66628 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4398	     25144 ns/op	 441.90 MB/s	   83663 B/op	      85 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     266	    454947 ns/op	 492.66 MB/s	  597610 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   38059	      2984 ns/op	 315.65 MB/s	    5353 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5480	     22229 ns/op	 444.23 MB/s	   41588 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   17317	      6925 ns/op	 161.88 MB/s	   14357 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6537	     19873 ns/op	 505.92 MB/s	   53774 B/op	      81 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   87068	      1304 ns/op	  36.82 MB/s	    3362 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   79044	      1555 ns/op	 151.82 MB/s	    3468 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   52485	      2156 ns/op	 161.86 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   62173	      1898 ns/op	 333.49 MB/s	    1509 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   58056	      2065 ns/op	 374.76 MB/s	    3270 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6084	     19526 ns/op	 483.36 MB/s	   35293 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     308	    383503 ns/op	 489.62 MB/s	  670814 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   41773	      2836 ns/op	 272.89 MB/s	    3750 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5125	     24456 ns/op	 385.92 MB/s	   25635 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     253	    473472 ns/op	 396.58 MB/s	  463657 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   14670	      8061 ns/op	  98.62 MB/s	   72947 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3528	     32464 ns/op	 291.37 MB/s	  123142 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     206	    573102 ns/op	 327.68 MB/s	 1304114 B/op	    5810 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     901	    127492 ns/op	   6.13 MB/s	    6757 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     628	    189816 ns/op	  49.76 MB/s	   60732 B/op	     502 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1122819 ns/op	 167.24 MB/s	 1796480 B/op	    9655 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  143769	       805.1 ns/op	 854.54 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     10223 ns/op	1027.23 MB/s	   15391 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3457	     34533 ns/op	1013.55 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  117703	       998.8 ns/op	 688.82 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8940	     14225 ns/op	 738.22 MB/s	   14829 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2544	     45849 ns/op	 763.39 MB/s	   44487 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   66966	      1839 ns/op	 374.12 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    4923	     24994 ns/op	 420.15 MB/s	   30591 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1488	     82099 ns/op	 426.33 MB/s	  103497 B/op	     542 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  817460	       157.9 ns/op	 614.50 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16611	      7130 ns/op	 159.19 MB/s	   16528 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3298	     35565 ns/op	 215.30 MB/s	  105674 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      31	   4017542 ns/op	  35.18 MB/s	20832444 B/op	   38230 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   29554	      4051 ns/op	  61.21 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3868	     31158 ns/op	 273.38 MB/s	   42071 B/op	     560 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     230	    521821 ns/op	 378.19 MB/s	  498335 B/op	   11648 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  115608	      1030 ns/op	 321.51 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4966	     24138 ns/op	 414.08 MB/s	   28389 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  110119	       981.2 ns/op	 626.77 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7755	     16636 ns/op	 667.90 MB/s	   22834 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     355	    338812 ns/op	 661.53 MB/s	  457336 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   21194	      5697 ns/op	 107.95 MB/s	   68294 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    3867	     27801 ns/op	 399.66 MB/s	  110499 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     246	    486315 ns/op	 460.88 MB/s	 1081427 B/op	    2862 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   24628	      4982 ns/op	 123.45 MB/s	   66627 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4474	     24609 ns/op	 451.51 MB/s	   83676 B/op	      86 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     261	    457157 ns/op	 490.28 MB/s	  597486 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   38128	      3015 ns/op	 312.41 MB/s	    5355 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5356	     22396 ns/op	 440.94 MB/s	   41585 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   16990	      6987 ns/op	 160.45 MB/s	   14361 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6324	     20062 ns/op	 501.15 MB/s	   53947 B/op	      82 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   88336	      1334 ns/op	  35.99 MB/s	    3364 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   77186	      1657 ns/op	 142.47 MB/s	    3467 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   53949	      2144 ns/op	 162.80 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   63355	      1896 ns/op	 333.82 MB/s	    1508 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   57109	      2010 ns/op	 385.05 MB/s	    3270 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6290	     19596 ns/op	 481.62 MB/s	   35294 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     313	    378404 ns/op	 496.22 MB/s	  670780 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   43162	      2796 ns/op	 276.79 MB/s	    3751 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5313	     24325 ns/op	 388.00 MB/s	   25637 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     255	    467931 ns/op	 401.28 MB/s	  463647 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   14518	      8247 ns/op	  96.39 MB/s	   72948 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3650	     31755 ns/op	 297.87 MB/s	  123119 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     214	    558422 ns/op	 336.29 MB/s	 1304008 B/op	    5809 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     972	    130300 ns/op	   5.99 MB/s	    6754 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     636	    188286 ns/op	  50.16 MB/s	   61097 B/op	     502 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	      81	   1274055 ns/op	 147.39 MB/s	 1854436 B/op	    9663 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  141864	       830.3 ns/op	 828.61 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   10000	     10194 ns/op	1030.14 MB/s	   15397 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3547	     33979 ns/op	1030.08 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  118298	       995.3 ns/op	 691.27 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    8877	     14248 ns/op	 737.02 MB/s	   14828 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2642	     45333 ns/op	 772.09 MB/s	   44492 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   66333	      1804 ns/op	 381.34 MB/s	    2330 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    4785	     24744 ns/op	 424.38 MB/s	   30662 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1498	     83438 ns/op	 419.48 MB/s	  103875 B/op	     542 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  754242	       161.3 ns/op	 601.30 MB/s	     208 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/api
+cpu: Apple M5 Pro
+BenchmarkJSONAppListEncode/small-18   	   16597	      7222 ns/op	 156.61 MB/s	   16533 B/op	     107 allocs/op
+BenchmarkJSONAppListEncode/medium-18  	    3358	     35412 ns/op	 216.11 MB/s	  105560 B/op	     407 allocs/op
+BenchmarkJSONAppListEncode/large-18   	      28	   4031442 ns/op	  35.05 MB/s	20832847 B/op	   38230 allocs/op
+BenchmarkJSONVisitsBatchDecode/small-18         	   29708	      3969 ns/op	  62.48 MB/s	   13446 B/op	      64 allocs/op
+BenchmarkJSONVisitsBatchDecode/medium-18        	    3760	     31429 ns/op	 271.02 MB/s	   42073 B/op	     560 allocs/op
+BenchmarkJSONVisitsBatchDecode/large-18         	     232	    513628 ns/op	 384.23 MB/s	  498321 B/op	   11648 allocs/op
+BenchmarkJSONPushEventRoundTrip/small-18        	  117196	      1025 ns/op	 322.93 MB/s	     813 B/op	       7 allocs/op
+BenchmarkJSONPushEventRoundTrip/medium-18       	    4708	     23876 ns/op	 418.61 MB/s	   28226 B/op	     192 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/buildlog
+cpu: Apple M5 Pro
+BenchmarkJSONBuildLogLineMarshal/small-18 	  122230	       960.6 ns/op	 640.25 MB/s	    1281 B/op	      12 allocs/op
+BenchmarkJSONBuildLogLineMarshal/medium-18         	    7711	     16805 ns/op	 661.16 MB/s	   22835 B/op	     210 allocs/op
+BenchmarkJSONBuildLogLineMarshal/large-18          	     343	    353718 ns/op	 633.65 MB/s	  457335 B/op	    4200 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/small-18        	   22312	      5508 ns/op	 111.65 MB/s	   68294 B/op	      18 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/medium-18       	    3974	     28319 ns/op	 392.36 MB/s	  110489 B/op	     103 allocs/op
+BenchmarkJSONBuildLogReadUnmarshal/large-18        	     243	    491176 ns/op	 456.32 MB/s	 1081315 B/op	    2861 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/small-18       	   23472	      5113 ns/op	 120.28 MB/s	   66635 B/op	       9 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/medium-18      	    4347	     25209 ns/op	 440.75 MB/s	   83700 B/op	      86 allocs/op
+BenchmarkJSONBuildLogParseUnmarshal/large-18       	     267	    453359 ns/op	 494.39 MB/s	  597579 B/op	    2835 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/edge
+cpu: Apple M5 Pro
+BenchmarkJSONGalleryPageDecode/small-18    	   36711	      3019 ns/op	 312.01 MB/s	    5355 B/op	      43 allocs/op
+BenchmarkJSONGalleryPageDecode/medium-18   	    5443	     21806 ns/op	 452.85 MB/s	   41587 B/op	     210 allocs/op
+BenchmarkJSONGalleryPageEncode/small-18    	   16892	      7016 ns/op	 159.79 MB/s	   14358 B/op	      81 allocs/op
+BenchmarkJSONGalleryPageEncode/medium-18   	    6337	     19626 ns/op	 512.27 MB/s	   53952 B/op	      82 allocs/op
+BenchmarkJSONGateSessionAccessDecode-18    	   90789	      1309 ns/op	  36.66 MB/s	    3362 B/op	      31 allocs/op
+BenchmarkJSONGateMintPassRoundTrip-18      	   76250	      1560 ns/op	 151.31 MB/s	    3466 B/op	      32 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/limits
+cpu: Apple M5 Pro
+BenchmarkJSONLimitsFromUnmarshal-18      	   53955	      2127 ns/op	 164.06 MB/s	    1050 B/op	      18 allocs/op
+BenchmarkJSONLimitsStoredRoundTrip-18    	   63666	      1907 ns/op	 331.89 MB/s	    1508 B/op	       4 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/routes
+cpu: Apple M5 Pro
+BenchmarkJSONRouteFeedSnapshotEncode/small-18         	   57962	      2025 ns/op	 382.13 MB/s	    3269 B/op	      28 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/medium-18        	    6253	     19293 ns/op	 489.20 MB/s	   35293 B/op	     209 allocs/op
+BenchmarkJSONRouteFeedSnapshotEncode/large-18         	     319	    381517 ns/op	 492.17 MB/s	  670812 B/op	    3919 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/small-18         	   42121	      2779 ns/op	 278.50 MB/s	    3750 B/op	      41 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/medium-18        	    5306	     24370 ns/op	 387.28 MB/s	   25649 B/op	     289 allocs/op
+BenchmarkJSONRouteFeedSnapshotDecode/large-18         	     261	    462281 ns/op	 406.19 MB/s	  463643 B/op	    5491 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/small-18          	   15349	      7989 ns/op	  99.51 MB/s	   72950 B/op	      57 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/medium-18         	    3664	     31387 ns/op	 301.37 MB/s	  123107 B/op	     320 allocs/op
+BenchmarkJSONRouteStreamDeltaDecode/large-18          	     214	    569250 ns/op	 329.90 MB/s	 1303989 B/op	    5809 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/small-18             	     943	    133100 ns/op	   5.87 MB/s	    6810 B/op	      61 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/medium-18            	     624	    199549 ns/op	  47.33 MB/s	   61033 B/op	     503 allocs/op
+BenchmarkJSONRouteCacheRoundTrip/large-18             	     100	   1100599 ns/op	 170.62 MB/s	 1760093 B/op	    9656 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/insula/internal/store
+cpu: Apple M5 Pro
+BenchmarkJSONEnvSnapshotEncode/small-18   	  145935	       785.9 ns/op	 875.42 MB/s	    1161 B/op	       6 allocs/op
+BenchmarkJSONEnvSnapshotEncode/medium-18  	   12130	      9899 ns/op	1060.80 MB/s	   15392 B/op	      34 allocs/op
+BenchmarkJSONEnvSnapshotEncode/large-18   	    3567	     34033 ns/op	1028.43 MB/s	   55616 B/op	     104 allocs/op
+BenchmarkJSONEnvSnapshotDecode/small-18   	  118083	       993.6 ns/op	 692.44 MB/s	    1161 B/op	      13 allocs/op
+BenchmarkJSONEnvSnapshotDecode/medium-18  	    9013	     14095 ns/op	 745.03 MB/s	   14828 B/op	     138 allocs/op
+BenchmarkJSONEnvSnapshotDecode/large-18   	    2685	     45571 ns/op	 768.06 MB/s	   44489 B/op	     438 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/small-18         	   67124	      1792 ns/op	 383.91 MB/s	    2329 B/op	      19 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/medium-18        	    5143	     24566 ns/op	 427.47 MB/s	   30557 B/op	     172 allocs/op
+BenchmarkJSONEnvSnapshotRoundTrip/large-18         	    1502	     81227 ns/op	 430.91 MB/s	  103975 B/op	     542 allocs/op
+BenchmarkJSONTransitionDetailEncode-18             	  812457	       163.4 ns/op	 593.47 MB/s	     208 B/op	       3 allocs/op
+PASS

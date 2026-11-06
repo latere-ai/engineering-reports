@@ -1,0 +1,20 @@
+start 2026-11-06T02:14:37Z
+Apple M5 Pro
+18
+68719476736
+ProductName:		macOS ProductVersion:		26.6 BuildVersion:		25G72 
+go version go1.27.3 darwin/arm64
+rounds=10 count/round=1 benchtime=100ms paired
+variants: base=./before classic=./before:nojsonv2 after=./after
+built 2026-11-06T02:17:44Z
+2026-11-06T02:17:44Z round=1 order=base,classic,after load={ 3.88 3.85 4.47 }
+2026-11-06T02:25:14Z round=2 order=classic,after,base load={ 2.94 2.85 3.67 }
+2026-11-06T02:30:00Z round=3 order=after,base,classic load={ 3.97 3.21 3.56 }
+2026-11-06T02:34:46Z round=4 order=base,classic,after load={ 2.60 3.05 3.40 }
+2026-11-06T02:39:31Z round=5 order=classic,after,base load={ 4.00 3.31 3.39 }
+2026-11-06T02:44:17Z round=6 order=after,base,classic load={ 3.46 3.23 3.31 }
+2026-11-06T02:49:03Z round=7 order=base,classic,after load={ 4.26 3.71 3.48 }
+2026-11-06T02:53:48Z round=8 order=classic,after,base load={ 2.12 2.89 3.17 }
+2026-11-06T02:58:34Z round=9 order=after,base,classic load={ 3.61 3.14 3.19 }
+2026-11-06T03:03:20Z round=10 order=base,classic,after load={ 2.77 2.90 3.06 }
+end 2026-11-06T03:08:05Z

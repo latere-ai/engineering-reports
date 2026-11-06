@@ -1,0 +1,470 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    8192	     13039 ns/op	  51.08 MB/s	   15191 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     718	    166625 ns/op	  66.96 MB/s	  151949 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     148	    807758 ns/op	  67.10 MB/s	  727447 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27860	      4429 ns/op	 150.37 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1514	     76321 ns/op	 146.18 MB/s	   57908 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      82	   1514198 ns/op	 142.38 MB/s	 1216826 B/op	   12839 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   42624	      2797 ns/op	 120.13 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1566	     78978 ns/op	 137.09 MB/s	   69345 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      73	   1591861 ns/op	 135.23 MB/s	 1543367 B/op	   25643 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  512427	       236.1 ns/op	 652.28 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1478547	        80.94 ns/op	 247.11 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   20748	      5028 ns/op	 128.28 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2364	     50814 ns/op	 242.65 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     148	    803135 ns/op	 255.29 MB/s	  881044 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   38384	      3198 ns/op	 139.77 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2756	     42393 ns/op	 197.44 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     189	    641898 ns/op	 217.99 MB/s	  821215 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5835	     21767 ns/op	 220.70 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  116072	      1016 ns/op	 116.19 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   85837	      1379 ns/op	  45.68 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   11348	      9507 ns/op	 103.19 MB/s	    8318 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1888	     65362 ns/op	 147.67 MB/s	   69274 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      90	   1226749 ns/op	 157.05 MB/s	 1196318 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   38737	      3090 ns/op	 181.22 MB/s	    5238 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15458	      7767 ns/op	  72.10 MB/s	    8058 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3078	     44878 ns/op	 124.58 MB/s	   42544 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13320	      9025 ns/op	  62.05 MB/s	    9581 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1693	     71691 ns/op	  62.06 MB/s	   76461 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      82	   1365721 ns/op	  61.02 MB/s	 1436032 B/op	   37628 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   34342	      3478 ns/op	 169.37 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    6716	     19037 ns/op	 235.59 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     370	    324779 ns/op	 257.13 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    9914	     11917 ns/op	  55.89 MB/s	   15192 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     704	    170732 ns/op	  65.35 MB/s	  152078 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     145	    823182 ns/op	  65.84 MB/s	  726221 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27490	      4366 ns/op	 152.53 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1570	     75999 ns/op	 146.80 MB/s	   57741 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      84	   1454330 ns/op	 148.24 MB/s	 1176245 B/op	   12838 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   42414	      2871 ns/op	 117.03 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1519	     80295 ns/op	 134.84 MB/s	   69361 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      66	   1609186 ns/op	 133.77 MB/s	 1534403 B/op	   25642 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  538710	       243.8 ns/op	 631.68 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1491494	        82.94 ns/op	 241.13 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   26532	      4301 ns/op	 149.97 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2342	     51500 ns/op	 239.42 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     148	    801876 ns/op	 255.69 MB/s	  881047 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   35686	      3320 ns/op	 134.62 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3055	     40254 ns/op	 207.93 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     192	    624261 ns/op	 224.15 MB/s	  821212 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    6279	     21425 ns/op	 224.22 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  118606	      1006 ns/op	 117.25 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   87829	      1378 ns/op	  45.72 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14503	      8143 ns/op	 120.48 MB/s	    8326 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1839	     65293 ns/op	 147.83 MB/s	   69182 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      88	   1223237 ns/op	 157.50 MB/s	 1199648 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   35695	      3193 ns/op	 175.40 MB/s	    5256 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   14498	      7880 ns/op	  71.07 MB/s	    8045 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3063	     41622 ns/op	 134.33 MB/s	   42476 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13737	      8709 ns/op	  64.30 MB/s	    9591 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1705	     70629 ns/op	  62.99 MB/s	   76253 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      82	   1337415 ns/op	  62.31 MB/s	 1431720 B/op	   37625 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   35443	      3348 ns/op	 175.91 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7731	     18136 ns/op	 247.30 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     398	    304311 ns/op	 274.42 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    9613	     12048 ns/op	  55.28 MB/s	   15192 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     718	    167697 ns/op	  66.53 MB/s	  151798 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     144	    821456 ns/op	  65.98 MB/s	  727333 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27978	      4314 ns/op	 154.39 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1617	     74678 ns/op	 149.40 MB/s	   57797 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      80	   1445031 ns/op	 149.20 MB/s	 1192326 B/op	   12838 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   38919	      2908 ns/op	 115.56 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1539	     89055 ns/op	 121.58 MB/s	   69597 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      61	   1744833 ns/op	 123.37 MB/s	 1560001 B/op	   25644 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  510818	       243.0 ns/op	 633.86 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1457383	        82.30 ns/op	 243.02 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   27686	      4262 ns/op	 151.34 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2344	     52034 ns/op	 236.96 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     151	    790935 ns/op	 259.22 MB/s	  881046 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   37765	      3128 ns/op	 142.91 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3109	     39273 ns/op	 213.13 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     192	    618882 ns/op	 226.10 MB/s	  821209 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5892	     21643 ns/op	 221.97 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  121648	      1012 ns/op	 116.60 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   88548	      1357 ns/op	  46.43 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14724	      7940 ns/op	 123.56 MB/s	    8334 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1869	     65525 ns/op	 147.30 MB/s	   69408 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      87	   1215574 ns/op	 158.49 MB/s	 1196860 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   35954	      3165 ns/op	 176.92 MB/s	    5227 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15345	      7742 ns/op	  72.33 MB/s	    8062 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3145	     40795 ns/op	 137.05 MB/s	   42472 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13664	      8779 ns/op	  63.79 MB/s	    9601 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1711	     70743 ns/op	  62.89 MB/s	   76759 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      81	   1376466 ns/op	  60.54 MB/s	 1435879 B/op	   37627 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   31309	      3715 ns/op	 158.56 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    6948	     18216 ns/op	 246.21 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     381	    312702 ns/op	 267.06 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	   10015	     11848 ns/op	  56.21 MB/s	   15192 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     706	    168594 ns/op	  66.18 MB/s	  152070 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     147	    813962 ns/op	  66.58 MB/s	  729428 B/op	   11161 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27181	      4580 ns/op	 145.43 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1477	     77061 ns/op	 144.78 MB/s	   57791 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      76	   1514172 ns/op	 142.39 MB/s	 1189536 B/op	   12838 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   41211	      2814 ns/op	 119.38 MB/s	    2349 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1551	     79211 ns/op	 136.68 MB/s	   69371 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      74	   1596244 ns/op	 134.86 MB/s	 1540404 B/op	   25643 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  530151	       242.0 ns/op	 636.39 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1498203	        80.36 ns/op	 248.89 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   27213	      4310 ns/op	 149.65 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2239	     52780 ns/op	 233.61 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     148	    802124 ns/op	 255.61 MB/s	  881080 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   37260	      3363 ns/op	 132.91 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2660	     42101 ns/op	 198.81 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     190	    627212 ns/op	 223.10 MB/s	  821212 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5844	     21668 ns/op	 221.70 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  121872	      1006 ns/op	 117.27 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   86199	      1405 ns/op	  44.85 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14325	      8184 ns/op	 119.86 MB/s	    8313 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1858	     65687 ns/op	 146.94 MB/s	   69414 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      88	   1206910 ns/op	 159.63 MB/s	 1196672 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   34083	      3217 ns/op	 174.10 MB/s	    5240 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15340	      7727 ns/op	  72.47 MB/s	    8030 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3028	     41036 ns/op	 136.25 MB/s	   42357 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   12990	      9230 ns/op	  60.67 MB/s	    9608 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1668	     70092 ns/op	  63.47 MB/s	   76343 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      85	   1314766 ns/op	  63.38 MB/s	 1436556 B/op	   37627 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   34514	      3427 ns/op	 171.86 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7717	     17217 ns/op	 260.49 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     400	    298634 ns/op	 279.64 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    8872	     13227 ns/op	  50.35 MB/s	   15192 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     691	    168817 ns/op	  66.09 MB/s	  151722 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     150	    798159 ns/op	  67.90 MB/s	  731458 B/op	   11161 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27463	      4347 ns/op	 153.23 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1700	     73952 ns/op	 150.87 MB/s	   57861 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      82	   1447907 ns/op	 148.90 MB/s	 1148362 B/op	   12836 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   42706	      2832 ns/op	 118.66 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1482	     79682 ns/op	 135.88 MB/s	   69375 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      70	   1607377 ns/op	 133.92 MB/s	 1545120 B/op	   25643 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  524379	       244.2 ns/op	 630.56 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1472020	        81.60 ns/op	 245.10 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   27859	      4140 ns/op	 155.81 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2342	     51102 ns/op	 241.28 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     154	    776321 ns/op	 264.10 MB/s	  881044 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   38832	      3086 ns/op	 144.86 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3100	     38804 ns/op	 215.70 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     198	    606936 ns/op	 230.55 MB/s	  821209 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    6214	     21055 ns/op	 228.16 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  116913	      1055 ns/op	 111.86 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   81459	      1398 ns/op	  45.07 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14634	      8096 ns/op	 121.17 MB/s	    8288 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1815	     67764 ns/op	 142.44 MB/s	   69386 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      88	   1232612 ns/op	 156.30 MB/s	 1198807 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   35412	      3241 ns/op	 172.79 MB/s	    5246 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   14232	      8224 ns/op	  68.09 MB/s	    8028 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2954	     41576 ns/op	 134.48 MB/s	   42570 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13603	      8833 ns/op	  63.40 MB/s	    9571 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1704	     71091 ns/op	  62.58 MB/s	   76364 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      94	   1411377 ns/op	  59.04 MB/s	 1436351 B/op	   37626 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   32918	      3599 ns/op	 163.66 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7006	     18082 ns/op	 248.04 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     388	    306673 ns/op	 272.31 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    9948	     11791 ns/op	  56.48 MB/s	   15192 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     702	    169653 ns/op	  65.76 MB/s	  151740 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     148	    806712 ns/op	  67.18 MB/s	  728338 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27960	      4293 ns/op	 155.14 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1639	     72442 ns/op	 154.01 MB/s	   57881 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      78	   1420655 ns/op	 151.76 MB/s	 1207680 B/op	   12839 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   43328	      2768 ns/op	 121.37 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1504	     79384 ns/op	 136.39 MB/s	   69547 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      73	   1581175 ns/op	 136.14 MB/s	 1550604 B/op	   25643 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  525969	       254.2 ns/op	 605.89 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1455307	        82.16 ns/op	 243.44 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   24601	      4565 ns/op	 141.30 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2233	     53027 ns/op	 232.52 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     151	    797762 ns/op	 257.01 MB/s	  881045 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   39063	      3099 ns/op	 144.24 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3045	     38586 ns/op	 216.92 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     192	    619243 ns/op	 225.97 MB/s	  821213 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5925	     20953 ns/op	 229.28 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  120430	      1065 ns/op	 110.82 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   87506	      1363 ns/op	  46.22 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14256	      8115 ns/op	 120.89 MB/s	    8335 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1800	     66040 ns/op	 146.15 MB/s	   69665 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      90	   1207425 ns/op	 159.56 MB/s	 1197174 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   36267	      3188 ns/op	 175.66 MB/s	    5257 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15704	      7655 ns/op	  73.15 MB/s	    8047 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3044	     40717 ns/op	 137.31 MB/s	   42425 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13560	      8802 ns/op	  63.62 MB/s	    9571 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1713	     70631 ns/op	  62.99 MB/s	   76715 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      79	   1339246 ns/op	  62.22 MB/s	 1432051 B/op	   37626 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   32196	      3334 ns/op	 176.68 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7363	     16979 ns/op	 264.15 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     398	    307844 ns/op	 271.27 MB/s	  308074 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	   10237	     11991 ns/op	  55.54 MB/s	   15190 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     724	    164371 ns/op	  67.88 MB/s	  152149 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     151	    791471 ns/op	  68.48 MB/s	  730416 B/op	   11161 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   28096	      4277 ns/op	 155.72 MB/s	    3691 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1671	     72195 ns/op	 154.54 MB/s	   57737 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      79	   1447084 ns/op	 148.99 MB/s	 1160546 B/op	   12837 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   42976	      2758 ns/op	 121.83 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1591	     77771 ns/op	 139.22 MB/s	   69338 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      70	   1578746 ns/op	 136.35 MB/s	 1530082 B/op	   25642 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  522108	       241.9 ns/op	 636.64 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1464829	        81.97 ns/op	 243.98 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   27550	      4257 ns/op	 151.52 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2170	     52507 ns/op	 234.83 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     150	    797414 ns/op	 257.12 MB/s	  881043 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   38304	      3155 ns/op	 141.68 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3009	     39528 ns/op	 211.75 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     190	    627383 ns/op	 223.04 MB/s	  821213 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5917	     21390 ns/op	 224.59 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  118677	      1034 ns/op	 114.17 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   88003	      1414 ns/op	  44.56 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14259	      8205 ns/op	 119.55 MB/s	    8311 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1908	     66010 ns/op	 146.22 MB/s	   69283 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      87	   1205287 ns/op	 159.85 MB/s	 1198570 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   36237	      3119 ns/op	 179.55 MB/s	    5233 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15817	      7588 ns/op	  73.80 MB/s	    8035 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    2998	     40456 ns/op	 138.20 MB/s	   42324 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13839	      8656 ns/op	  64.69 MB/s	    9596 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1729	     69818 ns/op	  63.72 MB/s	   76451 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      84	   1333034 ns/op	  62.51 MB/s	 1441198 B/op	   37628 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   31248	      3466 ns/op	 169.93 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7455	     17273 ns/op	 259.66 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     398	    302407 ns/op	 276.15 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	   10072	     11726 ns/op	  56.80 MB/s	   15191 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     738	    164024 ns/op	  68.02 MB/s	  152036 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     151	    792944 ns/op	  68.35 MB/s	  725145 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   28401	      4262 ns/op	 156.27 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1622	     72886 ns/op	 153.07 MB/s	   57981 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      79	   1463555 ns/op	 147.31 MB/s	 1145480 B/op	   12836 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   43448	      2774 ns/op	 121.12 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1544	     77930 ns/op	 138.93 MB/s	   69460 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      75	   1603567 ns/op	 134.24 MB/s	 1551559 B/op	   25643 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  493987	       250.7 ns/op	 614.40 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1456873	        82.20 ns/op	 243.31 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   27236	      4238 ns/op	 152.19 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2187	     51930 ns/op	 237.43 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     150	    799724 ns/op	 256.38 MB/s	  881046 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   38024	      3279 ns/op	 136.33 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    2766	     40171 ns/op	 208.36 MB/s	   51994 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     190	    627512 ns/op	 222.99 MB/s	  821212 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5829	     21850 ns/op	 219.86 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  120985	      1041 ns/op	 113.30 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   88412	      1471 ns/op	  42.82 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14756	      7978 ns/op	 122.96 MB/s	    8333 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1796	     66318 ns/op	 145.54 MB/s	   69212 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      86	   1225477 ns/op	 157.21 MB/s	 1198328 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   36171	      3122 ns/op	 179.35 MB/s	    5243 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15255	      7777 ns/op	  72.00 MB/s	    8067 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3087	     40984 ns/op	 136.42 MB/s	   42381 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13624	      8830 ns/op	  63.42 MB/s	    9608 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1695	     71599 ns/op	  62.14 MB/s	   76324 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      90	   1342729 ns/op	  62.06 MB/s	 1435385 B/op	   37627 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   33416	      3437 ns/op	 171.38 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    6736	     18699 ns/op	 239.86 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     388	    314924 ns/op	 265.17 MB/s	  308072 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    9834	     11953 ns/op	  55.72 MB/s	   15194 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     674	    171800 ns/op	  64.94 MB/s	  152056 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     147	    809620 ns/op	  66.94 MB/s	  733974 B/op	   11162 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   28262	      4311 ns/op	 154.50 MB/s	    3690 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1593	     73251 ns/op	 152.31 MB/s	   57672 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      79	   1443749 ns/op	 149.33 MB/s	 1201175 B/op	   12838 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   36990	      3035 ns/op	 110.69 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1590	     80353 ns/op	 134.74 MB/s	   69359 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      70	   1587026 ns/op	 135.64 MB/s	 1567612 B/op	   25644 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  495022	       242.0 ns/op	 636.46 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1485091	        80.76 ns/op	 247.65 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   28071	      4266 ns/op	 151.18 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2334	     51272 ns/op	 240.48 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     151	    795505 ns/op	 257.74 MB/s	  881045 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   38186	      3173 ns/op	 140.89 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3112	     39593 ns/op	 211.40 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     189	    639074 ns/op	 218.96 MB/s	  821208 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    5788	     21496 ns/op	 223.48 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  119049	      1007 ns/op	 117.18 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   83966	      1420 ns/op	  44.38 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14756	      7960 ns/op	 123.24 MB/s	    8348 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1798	     66511 ns/op	 145.12 MB/s	   69334 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      90	   1232062 ns/op	 156.37 MB/s	 1200095 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   37351	      3158 ns/op	 177.31 MB/s	    5225 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15404	      7836 ns/op	  71.47 MB/s	    8066 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3026	     41864 ns/op	 133.55 MB/s	   42264 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13432	      8937 ns/op	  62.66 MB/s	    9593 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1693	     73789 ns/op	  60.29 MB/s	   76443 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      80	   1413869 ns/op	  58.94 MB/s	 1429682 B/op	   37625 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   29080	      3544 ns/op	 166.20 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7230	     18099 ns/op	 247.80 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     391	    307103 ns/op	 271.92 MB/s	  308073 B/op	     220 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/authz
+cpu: Apple M5 Pro
+BenchmarkJSONAuthorizeRoundTrip/small-18   	    9423	     12398 ns/op	  53.72 MB/s	   15191 B/op	     178 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/medium-18  	     697	    170184 ns/op	  65.56 MB/s	  151992 B/op	    2344 allocs/op
+BenchmarkJSONAuthorizeRoundTrip/large-18   	     142	    831212 ns/op	  65.20 MB/s	  724942 B/op	   11160 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/small-18         	   27750	      4401 ns/op	 151.33 MB/s	    3691 B/op	      45 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/medium-18        	    1524	     77240 ns/op	 144.45 MB/s	   57883 B/op	     669 allocs/op
+BenchmarkJSONAuthorizeRequestMarshal/large-18         	      80	   1462643 ns/op	 147.40 MB/s	 1230461 B/op	   12840 allocs/op
+BenchmarkJSONModelUseDecide/small-18                  	   42037	      2863 ns/op	 117.36 MB/s	    2350 B/op	      49 allocs/op
+BenchmarkJSONModelUseDecide/medium-18                 	    1496	     82203 ns/op	 131.71 MB/s	   69486 B/op	    1303 allocs/op
+BenchmarkJSONModelUseDecide/large-18                  	      67	   1625507 ns/op	 132.43 MB/s	 1531215 B/op	   25642 allocs/op
+BenchmarkJSONPlanLimitsMarshal-18                     	  515408	       245.9 ns/op	 626.37 MB/s	     256 B/op	       5 allocs/op
+BenchmarkJSONCellaLimitsMarshal-18                    	 1453051	        82.98 ns/op	 241.02 MB/s	      64 B/op	       3 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/memory
+cpu: Apple M5 Pro
+BenchmarkJSONStorageListDecode/small-18    	   27804	      4163 ns/op	 154.94 MB/s	    6400 B/op	      56 allocs/op
+BenchmarkJSONStorageListDecode/medium-18   	    2391	     51000 ns/op	 241.76 MB/s	   56016 B/op	     177 allocs/op
+BenchmarkJSONStorageListDecode/large-18    	     154	    786843 ns/op	 260.57 MB/s	  881044 B/op	    2065 allocs/op
+BenchmarkJSONStorageTrashDecode/small-18   	   38233	      3181 ns/op	 140.53 MB/s	    4424 B/op	      47 allocs/op
+BenchmarkJSONStorageTrashDecode/medium-18  	    3087	     40399 ns/op	 207.18 MB/s	   51992 B/op	     112 allocs/op
+BenchmarkJSONStorageTrashDecode/large-18   	     190	    623329 ns/op	 224.49 MB/s	  821213 B/op	    1060 allocs/op
+BenchmarkJSONStorageVersionsDecode-18      	    6010	     21223 ns/op	 226.36 MB/s	   24240 B/op	     104 allocs/op
+BenchmarkJSONStorageRestoreEncode-18       	  117446	      1051 ns/op	 112.29 MB/s	    3011 B/op	      32 allocs/op
+BenchmarkJSONStorageCopyFolderEncode-18    	   86716	      1406 ns/op	  44.79 MB/s	    3363 B/op	      39 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/platform/internal/pricing
+cpu: Apple M5 Pro
+BenchmarkJSONSnapshotDecode/small-18     	   14001	      8156 ns/op	 120.28 MB/s	    8295 B/op	     135 allocs/op
+BenchmarkJSONSnapshotDecode/medium-18    	    1868	     65852 ns/op	 146.57 MB/s	   69448 B/op	     926 allocs/op
+BenchmarkJSONSnapshotDecode/large-18     	      88	   1218614 ns/op	 158.10 MB/s	 1197086 B/op	   17263 allocs/op
+BenchmarkJSONModelMarshal-18             	   36482	      3110 ns/op	 180.07 MB/s	    5228 B/op	      93 allocs/op
+BenchmarkJSONModelReprice/small-18       	   15399	      7718 ns/op	  72.56 MB/s	    8054 B/op	     213 allocs/op
+BenchmarkJSONModelReprice/medium-18      	    3042	     40617 ns/op	 137.65 MB/s	   42307 B/op	     236 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/small-18         	   13749	      8921 ns/op	  62.77 MB/s	    9567 B/op	     253 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/medium-18        	    1479	     72813 ns/op	  61.10 MB/s	   76811 B/op	    2017 allocs/op
+BenchmarkJSONCatalogApplyRoundTrip/large-18         	      92	   1305023 ns/op	  63.85 MB/s	 1436746 B/op	   37627 allocs/op
+BenchmarkJSONCoreModelsDecode/small-18              	   32977	      3390 ns/op	 173.73 MB/s	    5000 B/op	      43 allocs/op
+BenchmarkJSONCoreModelsDecode/medium-18             	    7762	     17430 ns/op	 257.32 MB/s	   19432 B/op	      62 allocs/op
+BenchmarkJSONCoreModelsDecode/large-18              	     408	    302098 ns/op	 276.43 MB/s	  308074 B/op	     220 allocs/op
+PASS

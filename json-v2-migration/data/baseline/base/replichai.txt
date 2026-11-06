@@ -1,0 +1,1452 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   27414	      4446 ns/op	 361.68 MB/s	    5917 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   27631	      4124 ns/op	 389.88 MB/s	    5915 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   29278	      4070 ns/op	 395.06 MB/s	    5916 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   29256	      4139 ns/op	 388.48 MB/s	    5916 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   30133	      4286 ns/op	 375.16 MB/s	    5915 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    3986	     36097 ns/op	 311.33 MB/s	   43706 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    3727	     31579 ns/op	 355.87 MB/s	   43688 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    3931	     31310 ns/op	 358.92 MB/s	   43704 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    3537	     31434 ns/op	 357.51 MB/s	   43713 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    3951	     32189 ns/op	 349.13 MB/s	   43692 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     214	    549744 ns/op	 375.50 MB/s	  802361 B/op	    2238 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     224	    533649 ns/op	 386.83 MB/s	  802714 B/op	    2240 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     222	    539389 ns/op	 382.71 MB/s	  802241 B/op	    2238 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     218	    574344 ns/op	 359.42 MB/s	  802787 B/op	    2241 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     192	    605866 ns/op	 340.72 MB/s	  802001 B/op	    2237 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptResponseEncode/small-18         	   64077	      1937 ns/op	 505.87 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   52830	      2234 ns/op	 438.68 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   52886	      2025 ns/op	 483.84 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   55885	      2077 ns/op	 471.72 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   39219	      3853 ns/op	 254.35 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   12100	      9917 ns/op	 590.41 MB/s	   13372 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     10133 ns/op	 577.80 MB/s	   13371 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     10292 ns/op	 568.89 MB/s	   13389 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     10057 ns/op	 582.17 MB/s	   13376 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     10463 ns/op	 559.57 MB/s	   13384 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/large-18         	     688	    172840 ns/op	 605.17 MB/s	  218005 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     666	    176057 ns/op	 594.11 MB/s	  226689 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     702	    164527 ns/op	 635.75 MB/s	  225301 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     752	    159852 ns/op	 654.34 MB/s	  230063 B/op	      13 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     763	    157380 ns/op	 664.62 MB/s	  221708 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   13144	      9009 ns/op	 108.78 MB/s	   16041 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   13788	      8692 ns/op	 112.74 MB/s	   16051 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   13285	      9228 ns/op	 106.20 MB/s	   16048 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     10942 ns/op	  89.57 MB/s	   16053 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     10600 ns/op	  92.45 MB/s	   16052 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2498	     50858 ns/op	 115.12 MB/s	   70060 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2198	     53083 ns/op	 110.30 MB/s	   70384 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2571	     52904 ns/op	 110.67 MB/s	   70154 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2544	     48134 ns/op	 121.64 MB/s	   69983 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2356	     45097 ns/op	 129.83 MB/s	   70101 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     147	    817068 ns/op	 128.02 MB/s	 1487067 B/op	    2819 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1058941 ns/op	  98.78 MB/s	 1531355 B/op	    2828 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1114384 ns/op	  93.86 MB/s	 1495986 B/op	    2830 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1007543 ns/op	 103.81 MB/s	 1527338 B/op	    2833 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     123	    986636 ns/op	 106.01 MB/s	 1522417 B/op	    2828 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONJobSnapshotMarshal-18                     	   63903	      1837 ns/op	 414.36 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   72154	      1662 ns/op	 457.86 MB/s	    1959 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   75254	      1632 ns/op	 466.24 MB/s	    1959 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   73466	      1648 ns/op	 461.66 MB/s	    1959 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   74218	      1656 ns/op	 459.50 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONSessionListEncode/small-18                	   61832	      1922 ns/op	 397.04 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   61158	      2015 ns/op	 378.70 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   63098	      2103 ns/op	 362.74 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   62110	      1944 ns/op	 392.46 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   66562	      1827 ns/op	 417.52 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/medium-18               	    3000	     47574 ns/op	 320.36 MB/s	   99019 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    3222	     41185 ns/op	 370.06 MB/s	   99309 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    3187	     39916 ns/op	 381.83 MB/s	   99500 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    3075	     38362 ns/op	 397.29 MB/s	   99190 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    3217	     39320 ns/op	 387.61 MB/s	   99213 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/large-18                	     150	    811366 ns/op	 375.66 MB/s	 2201884 B/op	    3252 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	     139	    857826 ns/op	 355.32 MB/s	 2210575 B/op	    3253 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	     147	    807985 ns/op	 377.24 MB/s	 2201266 B/op	    3252 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	     152	    779608 ns/op	 390.97 MB/s	 2192117 B/op	    3252 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	     153	    770840 ns/op	 395.41 MB/s	 2202457 B/op	    3252 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONAddPaperDecode-18                         	   10000	     12501 ns/op	   3.36 MB/s	   10456 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     12134 ns/op	   3.46 MB/s	   10400 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     12094 ns/op	   3.47 MB/s	   10397 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     12258 ns/op	   3.43 MB/s	   10415 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     12162 ns/op	   3.45 MB/s	   10431 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+PASS
+ok  	github.com/latere-ai/replichai/internal/httpapi	8.801s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/job
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStatusMarshal-18     	  153636	       734.8 ns/op	 585.16 MB/s	    1298 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	  163048	       780.4 ns/op	 551.00 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	  166226	       730.4 ns/op	 588.75 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	  150003	       742.3 ns/op	 579.27 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	  167594	       746.4 ns/op	 576.09 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionPhaseAtMarshal-18    	  218248	       585.6 ns/op	 290.30 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  209176	       588.8 ns/op	 288.74 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  199897	       594.2 ns/op	 286.12 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  187648	       599.6 ns/op	 283.53 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  209796	       578.8 ns/op	 293.72 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionRowUnmarshal/small-18         	   37374	      3257 ns/op	 247.49 MB/s	    1916 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   38512	      3139 ns/op	 256.80 MB/s	    1917 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   39546	      3085 ns/op	 261.27 MB/s	    1916 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   38877	      3082 ns/op	 261.49 MB/s	    1916 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   38775	      3084 ns/op	 261.35 MB/s	    1917 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    9243	     13479 ns/op	 218.42 MB/s	   10257 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    9502	     13396 ns/op	 219.77 MB/s	   10258 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    9600	     13479 ns/op	 218.41 MB/s	   10256 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    9720	     14015 ns/op	 210.06 MB/s	   10255 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    9792	     13425 ns/op	 219.29 MB/s	   10257 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+PASS
+ok  	github.com/latere-ai/replichai/internal/job	2.874s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/provider/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventUnmarshal/small-18         	   16270	      7080 ns/op	 185.89 MB/s	    4640 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   18368	      6545 ns/op	 201.07 MB/s	    4636 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   18261	      6591 ns/op	 199.67 MB/s	    4639 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   16826	      6901 ns/op	 190.71 MB/s	    4639 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   17356	      7096 ns/op	 185.47 MB/s	    4637 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1695	     64819 ns/op	 325.00 MB/s	   97632 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1798	     60119 ns/op	 350.40 MB/s	   97656 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    2079	     57548 ns/op	 366.06 MB/s	   97645 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1888	     58130 ns/op	 362.40 MB/s	   97615 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    2022	     59457 ns/op	 354.31 MB/s	   97644 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	     120	   1003633 ns/op	 402.25 MB/s	 1867035 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	     100	   1019594 ns/op	 395.95 MB/s	 1866964 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	     100	   1022219 ns/op	 394.93 MB/s	 1866999 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	     100	   1023752 ns/op	 394.34 MB/s	 1867370 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	      99	   1153046 ns/op	 350.12 MB/s	 1867074 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+PASS
+ok  	github.com/latere-ai/replichai/internal/provider/anthropic	2.031s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/runtimes/local/harness
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    8874	     13459 ns/op	 120.96 MB/s	    9030 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    9187	     13233 ns/op	 123.02 MB/s	    9023 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    9514	     13579 ns/op	 119.89 MB/s	    9021 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    9042	     15018 ns/op	 108.41 MB/s	    9028 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    8335	     13990 ns/op	 116.37 MB/s	    9023 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	    1260	     96197 ns/op	 118.47 MB/s	   63149 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	    1207	     97409 ns/op	 116.99 MB/s	   63176 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	    1356	     98144 ns/op	 116.12 MB/s	   63158 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	    1222	    104642 ns/op	 108.90 MB/s	   63192 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	    1173	     99632 ns/op	 114.38 MB/s	   63182 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      75	   1792121 ns/op	 114.46 MB/s	 1142214 B/op	   13486 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      74	   2013618 ns/op	 101.87 MB/s	 1141939 B/op	   13485 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      63	   1911864 ns/op	 107.29 MB/s	 1141469 B/op	   13483 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      72	   1815344 ns/op	 113.00 MB/s	 1142898 B/op	   13488 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      69	   1803937 ns/op	 113.71 MB/s	 1142381 B/op	   13487 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONCodexStreamDecode/small-18       	   15061	      7768 ns/op	 118.70 MB/s	    6684 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   16776	      7199 ns/op	 128.07 MB/s	    6681 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   17484	      6911 ns/op	 133.41 MB/s	    6679 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   17517	      7728 ns/op	 119.31 MB/s	    6683 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   15217	      7610 ns/op	 121.15 MB/s	    6681 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/medium-18      	    1392	     84539 ns/op	 130.87 MB/s	   80364 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	    1441	     83196 ns/op	 132.99 MB/s	   80347 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	    1396	     91515 ns/op	 120.90 MB/s	   80394 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	    1464	     83316 ns/op	 132.80 MB/s	   80391 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	    1476	     86059 ns/op	 128.56 MB/s	   80338 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/large-18       	      76	   1547368 ns/op	 132.87 MB/s	 1509337 B/op	   23393 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      80	   1640843 ns/op	 125.31 MB/s	 1509477 B/op	   23394 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      79	   1844331 ns/op	 111.48 MB/s	 1509135 B/op	   23392 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      81	   1593612 ns/op	 129.02 MB/s	 1509196 B/op	   23393 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      82	   1579391 ns/op	 130.18 MB/s	 1508833 B/op	   23391 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   28006	      4191 ns/op	 162.00 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   28930	      4110 ns/op	 165.21 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   30049	      3988 ns/op	 170.27 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   29569	      4058 ns/op	 167.34 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   29941	      4043 ns/op	 167.93 MB/s	    3865 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    3080	     41834 ns/op	 240.83 MB/s	   52023 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    3165	     40627 ns/op	 247.99 MB/s	   52021 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    2748	     40874 ns/op	 246.49 MB/s	   52023 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    3142	     41500 ns/op	 242.77 MB/s	   52025 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    2797	     41427 ns/op	 243.20 MB/s	   52012 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	     152	    771471 ns/op	 256.87 MB/s	 1018683 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	     153	    779019 ns/op	 254.38 MB/s	 1018611 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	     153	    785672 ns/op	 252.23 MB/s	 1018858 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	     159	    753947 ns/op	 262.84 MB/s	 1018479 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	     157	    760771 ns/op	 260.48 MB/s	 1018643 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+PASS
+ok  	github.com/latere-ai/replichai/internal/runtimes/local/harness	5.859s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/runtimes/local
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsMarshal/small-18         	    1498	     79346 ns/op	  21.20 MB/s	    7860 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1414	     84279 ns/op	  19.96 MB/s	    7857 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1524	     80136 ns/op	  20.99 MB/s	    7857 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1507	     80070 ns/op	  21.01 MB/s	    7855 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1587	     81892 ns/op	  20.54 MB/s	    7858 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/medium-18        	    1141	    117744 ns/op	 100.15 MB/s	   25545 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	    1076	    157091 ns/op	  75.06 MB/s	   25553 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	    1054	    108451 ns/op	 108.73 MB/s	   25547 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	    1131	    111417 ns/op	 105.84 MB/s	   25542 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	    1128	    117487 ns/op	 100.37 MB/s	   25545 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/large-18         	     196	    591382 ns/op	 347.36 MB/s	  362213 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     200	    586343 ns/op	 350.34 MB/s	  362234 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     195	    608801 ns/op	 337.42 MB/s	  362247 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     199	    597995 ns/op	 343.51 MB/s	  362305 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     202	    588372 ns/op	 349.13 MB/s	  362221 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/small-18       	    1065	    105492 ns/op	  15.94 MB/s	 1055640 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	    1154	    100268 ns/op	  16.77 MB/s	 1055546 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	    1162	    101778 ns/op	  16.53 MB/s	 1055627 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	    1262	    100729 ns/op	  16.70 MB/s	 1055679 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	    1320	    100880 ns/op	  16.67 MB/s	 1055402 B/op	      30 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     951	    121137 ns/op	  97.34 MB/s	 1086724 B/op	     156 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	    1022	    120129 ns/op	  98.16 MB/s	 1086661 B/op	     156 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	    1005	    119911 ns/op	  98.34 MB/s	 1086548 B/op	     155 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     945	    120105 ns/op	  98.18 MB/s	 1086676 B/op	     156 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	    1017	    120651 ns/op	  97.74 MB/s	 1086657 B/op	     156 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/large-18       	     189	    627679 ns/op	 327.27 MB/s	 1690740 B/op	    2637 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	     190	    630809 ns/op	 325.65 MB/s	 1691457 B/op	    2641 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	     188	    632980 ns/op	 324.53 MB/s	 1690649 B/op	    2636 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	     188	    634818 ns/op	 323.59 MB/s	 1690956 B/op	    2638 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	     190	    626646 ns/op	 327.81 MB/s	 1691125 B/op	    2639 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionStatusRoundTrip-18             	    2172	     51182 ns/op	  14.40 MB/s	    4706 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	    2530	     71822 ns/op	  10.26 MB/s	    4692 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	    2271	     53106 ns/op	  13.88 MB/s	    4691 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	    2022	     52413 ns/op	  14.06 MB/s	    4701 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	    2478	     58646 ns/op	  12.57 MB/s	    4700 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+PASS
+ok  	github.com/latere-ai/replichai/internal/runtimes/local	4.759s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/verdict
+cpu: Apple M5 Pro
+BenchmarkJSONVerdictParse/small-18 	    4677	     25287 ns/op	  97.76 MB/s	   19594 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    5241	     25511 ns/op	  96.90 MB/s	   19602 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    4878	     25314 ns/op	  97.65 MB/s	   19607 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    5006	     24908 ns/op	  99.25 MB/s	   19603 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    5161	     25198 ns/op	  98.10 MB/s	   19600 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/medium-18         	     566	    218914 ns/op	  93.20 MB/s	  166150 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     507	    227600 ns/op	  89.64 MB/s	  166206 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     484	    221867 ns/op	  91.96 MB/s	  166214 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     554	    213143 ns/op	  95.72 MB/s	  166252 B/op	    2417 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     540	    218662 ns/op	  93.30 MB/s	  166196 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/large-18          	      27	   4308918 ns/op	  90.39 MB/s	 3177805 B/op	   46215 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	      27	   4179230 ns/op	  93.19 MB/s	 3175753 B/op	   46206 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	      28	   3983229 ns/op	  97.78 MB/s	 3174642 B/op	   46201 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	      28	   4089744 ns/op	  95.23 MB/s	 3176313 B/op	   46208 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	      28	   4031190 ns/op	  96.61 MB/s	 3176802 B/op	   46210 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictValidate/small-18       	    5154	     24085 ns/op	 102.64 MB/s	   19600 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    5266	     24695 ns/op	 100.10 MB/s	   19607 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    5144	     23631 ns/op	 104.61 MB/s	   19601 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    5344	     23957 ns/op	 103.19 MB/s	   19599 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    4827	     24543 ns/op	 100.72 MB/s	   19603 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/medium-18      	     565	    217312 ns/op	  93.88 MB/s	  166326 B/op	    2419 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     553	    210307 ns/op	  97.01 MB/s	  166351 B/op	    2419 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     560	    213213 ns/op	  95.69 MB/s	  166331 B/op	    2419 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     564	    211120 ns/op	  96.64 MB/s	  166324 B/op	    2419 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     583	    206542 ns/op	  98.78 MB/s	  166232 B/op	    2418 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/large-18       	      28	   3980610 ns/op	  97.84 MB/s	 3176994 B/op	   46211 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      27	   4064188 ns/op	  95.83 MB/s	 3177876 B/op	   46218 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      27	   4082410 ns/op	  95.40 MB/s	 3176585 B/op	   46214 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      28	   4040978 ns/op	  96.38 MB/s	 3177470 B/op	   46217 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      28	   4169850 ns/op	  93.40 MB/s	 3175254 B/op	   46206 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/small-18        	   45368	      2617 ns/op	 944.60 MB/s	    3074 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   42102	      2921 ns/op	 846.17 MB/s	    3075 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   33739	      3136 ns/op	 788.37 MB/s	    3074 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   46038	      2637 ns/op	 937.47 MB/s	    3074 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   45816	      2677 ns/op	 923.47 MB/s	    3074 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/medium-18       	    5906	     20891 ns/op	 976.61 MB/s	   20923 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    5874	     22555 ns/op	 904.53 MB/s	   20924 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    4636	     23988 ns/op	 850.52 MB/s	   20898 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    6172	     22674 ns/op	 899.82 MB/s	   20922 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    5648	     20917 ns/op	 975.37 MB/s	   20925 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/large-18        	     310	    391049 ns/op	 995.96 MB/s	  413166 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     294	    400718 ns/op	 971.93 MB/s	  393932 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     298	    401536 ns/op	 969.95 MB/s	  433910 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     303	    402014 ns/op	 968.80 MB/s	  400490 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     306	    416967 ns/op	 934.06 MB/s	  413414 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+PASS
+ok  	github.com/latere-ai/replichai/internal/verdict	5.685s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   18912	      6308 ns/op	 254.92 MB/s	    5917 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   19471	      6576 ns/op	 244.54 MB/s	    5916 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   10000	     10021 ns/op	 160.46 MB/s	    5914 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   18304	      6382 ns/op	 251.95 MB/s	    5917 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/small-18         	   17737	      6835 ns/op	 235.26 MB/s	    5915 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/small-18
+    json_bench_test.go:80: payload_bytes=1608
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    2299	     99628 ns/op	 112.80 MB/s	   43702 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    1311	     84091 ns/op	 133.64 MB/s	   43697 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    2396	     91593 ns/op	 122.69 MB/s	   43692 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    2047	     54565 ns/op	 205.96 MB/s	   43697 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/medium-18        	    3045	     52114 ns/op	 215.64 MB/s	   43703 B/op	     119 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/medium-18
+    json_bench_test.go:80: payload_bytes=11238
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     144	    818952 ns/op	 252.07 MB/s	  802250 B/op	    2238 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     152	    779432 ns/op	 264.85 MB/s	  803583 B/op	    2244 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     146	    813166 ns/op	 253.86 MB/s	  802303 B/op	    2238 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     146	    806991 ns/op	 255.80 MB/s	  802817 B/op	    2240 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptParseUnmarshal/large-18         	     166	    712104 ns/op	 289.89 MB/s	  802465 B/op	    2239 allocs/op
+--- BENCH: BenchmarkJSONTranscriptParseUnmarshal/large-18
+    json_bench_test.go:80: payload_bytes=206430
+BenchmarkJSONTranscriptResponseEncode/small-18         	   54104	      2133 ns/op	 459.47 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   57204	      2022 ns/op	 484.66 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   62767	      2101 ns/op	 466.46 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   52522	      2258 ns/op	 434.10 MB/s	    3093 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/small-18         	   54256	      2188 ns/op	 447.98 MB/s	    3092 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/small-18
+    json_bench_test.go:106: payload_bytes=980
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     10818 ns/op	 541.23 MB/s	   13395 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     10852 ns/op	 539.52 MB/s	   13387 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     11438 ns/op	 511.87 MB/s	   13374 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	    9570	     11303 ns/op	 518.01 MB/s	   13365 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/medium-18        	   10000	     11013 ns/op	 531.65 MB/s	   13405 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/medium-18
+    json_bench_test.go:106: payload_bytes=5855
+BenchmarkJSONTranscriptResponseEncode/large-18         	     645	    184555 ns/op	 566.75 MB/s	  227883 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     642	    201779 ns/op	 518.37 MB/s	  226338 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     637	    185084 ns/op	 565.13 MB/s	  223186 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     639	    187937 ns/op	 556.55 MB/s	  232847 B/op	      13 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptResponseEncode/large-18         	     624	    185580 ns/op	 563.62 MB/s	  220044 B/op	      12 allocs/op
+--- BENCH: BenchmarkJSONTranscriptResponseEncode/large-18
+    json_bench_test.go:106: payload_bytes=104597
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     12197 ns/op	  80.35 MB/s	   16051 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     12492 ns/op	  78.45 MB/s	   16045 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     11437 ns/op	  85.68 MB/s	   16057 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     11849 ns/op	  82.71 MB/s	   16045 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/small-18       	   10000	     11828 ns/op	  82.85 MB/s	   16063 B/op	      53 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/small-18
+    json_bench_test.go:173: payload_bytes=980 request_transcript_bytes=1608
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    1753	     64468 ns/op	  90.82 MB/s	   70105 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    1989	     62702 ns/op	  93.38 MB/s	   70177 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2077	     93769 ns/op	  62.44 MB/s	   69974 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    1812	     61375 ns/op	  95.40 MB/s	   70372 B/op	     179 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/medium-18      	    2094	     59553 ns/op	  98.32 MB/s	   70207 B/op	     178 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/medium-18
+    json_bench_test.go:173: payload_bytes=5855 request_transcript_bytes=11238
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	      96	   1105053 ns/op	  94.65 MB/s	 1511430 B/op	    2830 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1121423 ns/op	  93.27 MB/s	 1505621 B/op	    2828 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1077870 ns/op	  97.04 MB/s	 1511289 B/op	    2830 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1074124 ns/op	  97.38 MB/s	 1510680 B/op	    2827 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONTranscriptHandlerRoundTrip/large-18       	     100	   1036434 ns/op	 100.92 MB/s	 1460749 B/op	    2833 allocs/op
+--- BENCH: BenchmarkJSONTranscriptHandlerRoundTrip/large-18
+    json_bench_test.go:173: payload_bytes=104597 request_transcript_bytes=206430
+BenchmarkJSONJobSnapshotMarshal-18                     	   66537	      1842 ns/op	 413.06 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   67342	      1880 ns/op	 404.75 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   60109	      1941 ns/op	 392.04 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   60345	      2012 ns/op	 378.25 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONJobSnapshotMarshal-18                     	   62974	      2009 ns/op	 378.73 MB/s	    1958 B/op	      11 allocs/op
+--- BENCH: BenchmarkJSONJobSnapshotMarshal-18
+    json_bench_test.go:207: payload_bytes=761
+BenchmarkJSONSessionListEncode/small-18                	   45322	      2627 ns/op	 290.40 MB/s	    2698 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   46947	      2531 ns/op	 301.43 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   50359	      2454 ns/op	 310.88 MB/s	    2698 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   51738	      2437 ns/op	 313.09 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/small-18                	   46702	      2564 ns/op	 297.59 MB/s	    2697 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/small-18
+    json_bench_test.go:231: payload_bytes=763
+BenchmarkJSONSessionListEncode/medium-18               	    2320	     52502 ns/op	 290.29 MB/s	   99243 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    2266	     54598 ns/op	 279.15 MB/s	   99323 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    2062	     55834 ns/op	 272.97 MB/s	   99297 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    2151	     54175 ns/op	 281.33 MB/s	   99547 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/medium-18               	    2361	     53390 ns/op	 285.46 MB/s	   99277 B/op	     186 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/medium-18
+    json_bench_test.go:231: payload_bytes=15241
+BenchmarkJSONSessionListEncode/large-18                	     100	   1197837 ns/op	 254.46 MB/s	 2124822 B/op	    3251 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	     100	   1706546 ns/op	 178.61 MB/s	 2155099 B/op	    3251 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	      84	   1296899 ns/op	 235.02 MB/s	 2195737 B/op	    3252 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	      70	   1891047 ns/op	 161.18 MB/s	 2077678 B/op	    3246 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONSessionListEncode/large-18                	      70	   1851346 ns/op	 164.64 MB/s	 2143649 B/op	    3248 allocs/op
+--- BENCH: BenchmarkJSONSessionListEncode/large-18
+    json_bench_test.go:231: payload_bytes=304801
+BenchmarkJSONAddPaperDecode-18                         	   10000	     30389 ns/op	   1.38 MB/s	   10368 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     37339 ns/op	   1.12 MB/s	   10285 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     28283 ns/op	   1.48 MB/s	   10346 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     26764 ns/op	   1.57 MB/s	   10331 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+BenchmarkJSONAddPaperDecode-18                         	   10000	     21129 ns/op	   1.99 MB/s	   10414 B/op	      50 allocs/op
+--- BENCH: BenchmarkJSONAddPaperDecode-18
+    json_bench_test.go:282: payload_bytes=42 response_bytes=67
+PASS
+ok  	github.com/latere-ai/replichai/internal/httpapi	10.080s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/job
+cpu: Apple M5 Pro
+BenchmarkJSONSessionStatusMarshal-18     	   85689	      1282 ns/op	 335.29 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	  104588	      1276 ns/op	 337.12 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	   80895	      1495 ns/op	 287.63 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	   90117	      1310 ns/op	 328.32 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionStatusMarshal-18     	   88774	      1864 ns/op	 230.66 MB/s	    1297 B/op	       7 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusMarshal-18
+    json_bench_test.go:89: payload_bytes=430
+BenchmarkJSONSessionPhaseAtMarshal-18    	  133002	       868.8 ns/op	 195.67 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  140950	       915.1 ns/op	 185.77 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  152606	      1023 ns/op	 166.24 MB/s	     521 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	  109786	      1094 ns/op	 155.40 MB/s	     521 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionPhaseAtMarshal-18    	   90436	      1650 ns/op	 103.05 MB/s	     520 B/op	      10 allocs/op
+--- BENCH: BenchmarkJSONSessionPhaseAtMarshal-18
+    json_bench_test.go:106: payload_bytes=170
+BenchmarkJSONSessionRowUnmarshal/small-18         	   23863	      5172 ns/op	 155.83 MB/s	    1917 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   23246	      5320 ns/op	 151.51 MB/s	    1916 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   24349	      4940 ns/op	 163.15 MB/s	    1915 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   19358	      5840 ns/op	 138.01 MB/s	    1914 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/small-18         	   23779	      5046 ns/op	 159.72 MB/s	    1917 B/op	      15 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/small-18
+    json_bench_test.go:143: payload_bytes=806
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    5193	     23548 ns/op	 125.02 MB/s	   10256 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    6199	     34675 ns/op	  84.90 MB/s	   10253 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    5211	     28418 ns/op	 103.60 MB/s	   10254 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    4969	     24473 ns/op	 120.29 MB/s	   10249 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+BenchmarkJSONSessionRowUnmarshal/medium-18        	    6561	     21259 ns/op	 138.49 MB/s	   10254 B/op	      42 allocs/op
+--- BENCH: BenchmarkJSONSessionRowUnmarshal/medium-18
+    json_bench_test.go:143: payload_bytes=2944
+PASS
+ok  	github.com/latere-ai/replichai/internal/job	5.351s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/provider/anthropic
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventUnmarshal/small-18         	   13520	      8810 ns/op	 149.38 MB/s	    4640 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   13714	      9011 ns/op	 146.04 MB/s	    4637 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   12357	      9703 ns/op	 135.63 MB/s	    4637 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   12790	      9418 ns/op	 139.74 MB/s	    4638 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/small-18         	   12972	      9404 ns/op	 139.94 MB/s	    4637 B/op	      29 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/small-18
+    json_bench_test.go:38: payload_bytes=1316 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1359	     89336 ns/op	 235.81 MB/s	   97634 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1176	    100700 ns/op	 209.20 MB/s	   97627 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1389	     93923 ns/op	 224.29 MB/s	   97647 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1226	     92883 ns/op	 226.80 MB/s	   97623 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/medium-18        	    1431	     89826 ns/op	 234.52 MB/s	   97653 B/op	      31 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/medium-18
+    json_bench_test.go:38: payload_bytes=21066 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	      67	   1625961 ns/op	 248.29 MB/s	 1867250 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	      74	   1623630 ns/op	 248.65 MB/s	 1867463 B/op	      38 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	      69	   1763518 ns/op	 228.92 MB/s	 1867113 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	      63	   1693252 ns/op	 238.42 MB/s	 1867778 B/op	      39 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+BenchmarkJSONSessionEventUnmarshal/large-18         	      64	   1732958 ns/op	 232.96 MB/s	 1867127 B/op	      37 allocs/op
+--- BENCH: BenchmarkJSONSessionEventUnmarshal/large-18
+    json_bench_test.go:38: payload_bytes=403708 events=4
+PASS
+ok  	github.com/latere-ai/replichai/internal/provider/anthropic	2.770s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/runtimes/local/harness
+cpu: Apple M5 Pro
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    4788	    100451 ns/op	  16.21 MB/s	    9035 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    5919	     26864 ns/op	  60.60 MB/s	    9024 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    4153	     27268 ns/op	  59.70 MB/s	    9029 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    3458	     29879 ns/op	  54.49 MB/s	    9028 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/small-18  	    2442	     42642 ns/op	  38.18 MB/s	    9038 B/op	     102 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=1628 lines=7
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	     688	    222979 ns/op	  51.11 MB/s	   63186 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	     658	    214287 ns/op	  53.18 MB/s	   63232 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	     756	    150718 ns/op	  75.61 MB/s	   63185 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	     748	    144359 ns/op	  78.94 MB/s	   63173 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/medium-18 	     906	    146953 ns/op	  77.55 MB/s	   63170 B/op	     714 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11396 lines=49
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      36	   2871896 ns/op	  71.43 MB/s	 1143392 B/op	   13490 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      39	   2831646 ns/op	  72.44 MB/s	 1143189 B/op	   13489 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      50	   2732428 ns/op	  75.07 MB/s	 1141595 B/op	   13483 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      38	   2759826 ns/op	  74.33 MB/s	 1142322 B/op	   13486 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONClaudeCodeStreamDecode/large-18  	      45	   2720277 ns/op	  75.41 MB/s	 1142095 B/op	   13485 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205128 lines=882
+BenchmarkJSONCodexStreamDecode/small-18       	    9238	     11152 ns/op	  82.68 MB/s	    6683 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   10000	     10730 ns/op	  85.92 MB/s	    6679 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   10000	     11813 ns/op	  78.05 MB/s	    6681 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	    8202	     15645 ns/op	  58.93 MB/s	    6683 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/small-18       	   10000	     11269 ns/op	  81.82 MB/s	    6682 B/op	      97 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/small-18
+    json_bench_test.go:49: payload_bytes=922 lines=9
+BenchmarkJSONCodexStreamDecode/medium-18      	     846	    133001 ns/op	  83.19 MB/s	   80351 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	    1000	    134241 ns/op	  82.42 MB/s	   80375 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	     922	    136568 ns/op	  81.01 MB/s	   80358 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	     944	    136794 ns/op	  80.88 MB/s	   80404 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/medium-18      	     843	    134644 ns/op	  82.17 MB/s	   80362 B/op	    1164 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/medium-18
+    json_bench_test.go:49: payload_bytes=11064 lines=108
+BenchmarkJSONCodexStreamDecode/large-18       	      44	   2584492 ns/op	  79.55 MB/s	 1510627 B/op	   23397 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      62	   2404272 ns/op	  85.52 MB/s	 1509290 B/op	   23393 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      44	   2393442 ns/op	  85.90 MB/s	 1509309 B/op	   23393 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      57	   2237552 ns/op	  91.89 MB/s	 1509598 B/op	   23394 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONCodexStreamDecode/large-18       	      51	   2323736 ns/op	  88.48 MB/s	 1508856 B/op	   23391 allocs/op
+--- BENCH: BenchmarkJSONCodexStreamDecode/large-18
+    json_bench_test.go:49: payload_bytes=205606 lines=2007
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   17406	      6621 ns/op	 102.55 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   19807	      6279 ns/op	 108.14 MB/s	    3863 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   18094	      6626 ns/op	 102.47 MB/s	    3862 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   18384	      6630 ns/op	 102.41 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/small-18         	   17316	      6798 ns/op	  99.88 MB/s	    3864 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/small-18
+    json_bench_test.go:82: payload_bytes=679
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    1723	     67425 ns/op	 149.42 MB/s	   52024 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    1789	     75619 ns/op	 133.23 MB/s	   52031 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    1605	     85237 ns/op	 118.20 MB/s	   52041 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    1926	     68573 ns/op	 146.92 MB/s	   52025 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/medium-18        	    1798	     73670 ns/op	 136.76 MB/s	   52023 B/op	      16 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/medium-18
+    json_bench_test.go:82: payload_bytes=10075
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	      98	   1328730 ns/op	 149.14 MB/s	 1018641 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	      96	   1291337 ns/op	 153.46 MB/s	 1018723 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	      92	   1206702 ns/op	 164.22 MB/s	 1018480 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	     100	   1234740 ns/op	 160.49 MB/s	 1019042 B/op	      19 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+BenchmarkJSONClaudeCodeToolResultDecode/large-18         	      90	   1541069 ns/op	 128.59 MB/s	 1018856 B/op	      18 allocs/op
+--- BENCH: BenchmarkJSONClaudeCodeToolResultDecode/large-18
+    json_bench_test.go:82: payload_bytes=198169
+PASS
+ok  	github.com/latere-ai/replichai/internal/runtimes/local/harness	6.373s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/runtimes/local
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsMarshal/small-18         	     987	    116991 ns/op	  14.38 MB/s	    7865 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1272	    121321 ns/op	  13.86 MB/s	    7858 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1040	    114642 ns/op	  14.67 MB/s	    7857 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1131	    117873 ns/op	  14.27 MB/s	    7863 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/small-18         	    1046	    178368 ns/op	   9.43 MB/s	    7857 B/op	      20 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/small-18
+    json_bench_test.go:97: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsMarshal/medium-18        	     588	    194946 ns/op	  60.49 MB/s	   25541 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	     715	    168092 ns/op	  70.15 MB/s	   25554 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	     754	    170422 ns/op	  69.19 MB/s	   25556 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	     724	    215339 ns/op	  54.76 MB/s	   25552 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/medium-18        	     747	    163980 ns/op	  71.91 MB/s	   25547 B/op	      92 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/medium-18
+    json_bench_test.go:97: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsMarshal/large-18         	     142	   1062881 ns/op	 193.27 MB/s	  362270 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     100	   1078000 ns/op	 190.56 MB/s	  362202 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     136	    863248 ns/op	 237.96 MB/s	  362299 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     133	    936794 ns/op	 219.28 MB/s	  362309 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsMarshal/large-18         	     100	   1052472 ns/op	 195.18 MB/s	  362321 B/op	    1449 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsMarshal/large-18
+    json_bench_test.go:97: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/small-18       	     529	    217951 ns/op	   7.72 MB/s	 1055504 B/op	      30 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	     601	    206631 ns/op	   8.14 MB/s	 1055351 B/op	      30 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	     624	    217302 ns/op	   7.74 MB/s	 1055469 B/op	      30 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	     441	    251461 ns/op	   6.69 MB/s	 1055347 B/op	      30 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/small-18       	     561	    214977 ns/op	   7.82 MB/s	 1055352 B/op	      30 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/small-18
+    json_bench_test.go:126: payload_bytes=1682 events=4
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     504	    258640 ns/op	  45.59 MB/s	 1086814 B/op	     157 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     447	    315826 ns/op	  37.34 MB/s	 1086856 B/op	     157 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     450	    485702 ns/op	  24.28 MB/s	 1086973 B/op	     157 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     100	   1285460 ns/op	   9.17 MB/s	 1086362 B/op	     155 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/medium-18      	     267	    466919 ns/op	  25.25 MB/s	 1086786 B/op	     157 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/medium-18
+    json_bench_test.go:126: payload_bytes=11792 events=28
+BenchmarkJSONSessionEventsUnmarshal/large-18       	      85	   1851800 ns/op	 110.93 MB/s	 1690795 B/op	    2639 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	      81	   1884639 ns/op	 109.00 MB/s	 1690566 B/op	    2637 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	      62	   2019970 ns/op	 101.69 MB/s	 1689653 B/op	    2630 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	      66	   1629939 ns/op	 126.03 MB/s	 1690964 B/op	    2639 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionEventsUnmarshal/large-18       	      72	   1813188 ns/op	 113.29 MB/s	 1691102 B/op	    2640 allocs/op
+--- BENCH: BenchmarkJSONSessionEventsUnmarshal/large-18
+    json_bench_test.go:126: payload_bytes=205420 events=480
+BenchmarkJSONSessionStatusRoundTrip-18             	     802	    192888 ns/op	   3.82 MB/s	    4699 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	     691	    178330 ns/op	   4.13 MB/s	    4704 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	     933	    129411 ns/op	   5.70 MB/s	    4696 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	     926	    136631 ns/op	   5.39 MB/s	    4689 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+BenchmarkJSONSessionStatusRoundTrip-18             	    1004	    121250 ns/op	   6.08 MB/s	    4688 B/op	      22 allocs/op
+--- BENCH: BenchmarkJSONSessionStatusRoundTrip-18
+    json_bench_test.go:167: payload_bytes=737
+PASS
+ok  	github.com/latere-ai/replichai/internal/runtimes/local	5.316s
+goos: darwin
+goarch: arm64
+pkg: github.com/latere-ai/replichai/internal/verdict
+cpu: Apple M5 Pro
+BenchmarkJSONVerdictParse/small-18 	    2646	     43243 ns/op	  57.17 MB/s	   19605 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    2833	     49376 ns/op	  50.07 MB/s	   19605 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    3308	     71298 ns/op	  34.67 MB/s	   19596 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    3253	     88002 ns/op	  28.09 MB/s	   19600 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/small-18 	    1279	     78676 ns/op	  31.42 MB/s	   19610 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/small-18
+    json_bench_test.go:88: payload_bytes=2472
+BenchmarkJSONVerdictParse/medium-18         	     204	    527104 ns/op	  38.71 MB/s	  166212 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     219	    497569 ns/op	  41.00 MB/s	  166320 B/op	    2417 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     175	    677073 ns/op	  30.13 MB/s	  166402 B/op	    2417 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     202	    693872 ns/op	  29.40 MB/s	  166245 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/medium-18         	     219	    669350 ns/op	  30.48 MB/s	  166247 B/op	    2416 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/medium-18
+    json_bench_test.go:88: payload_bytes=20402
+BenchmarkJSONVerdictParse/large-18          	      13	  13013353 ns/op	  29.93 MB/s	 3176340 B/op	   46202 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	      12	  11672684 ns/op	  33.37 MB/s	 3176391 B/op	   46206 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	       4	  25169396 ns/op	  15.47 MB/s	 3175632 B/op	   46203 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	       9	  11869847 ns/op	  32.81 MB/s	 3178592 B/op	   46214 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictParse/large-18          	      14	   9022250 ns/op	  43.17 MB/s	 3176549 B/op	   46200 allocs/op
+--- BENCH: BenchmarkJSONVerdictParse/large-18
+    json_bench_test.go:88: payload_bytes=389470
+BenchmarkJSONVerdictValidate/small-18       	    2438	     44867 ns/op	  55.10 MB/s	   19598 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    2634	     46052 ns/op	  53.68 MB/s	   19599 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    3112	     44686 ns/op	  55.32 MB/s	   19601 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    2896	     43250 ns/op	  57.16 MB/s	   19603 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/small-18       	    2838	     40271 ns/op	  61.38 MB/s	   19608 B/op	     286 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/small-18
+    json_bench_test.go:104: payload_bytes=2472
+BenchmarkJSONVerdictValidate/medium-18      	     346	    380205 ns/op	  53.66 MB/s	  166313 B/op	    2419 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     324	    370497 ns/op	  55.07 MB/s	  166279 B/op	    2418 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     340	    359360 ns/op	  56.77 MB/s	  166378 B/op	    2419 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     318	    373611 ns/op	  54.61 MB/s	  166273 B/op	    2418 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/medium-18      	     343	    358154 ns/op	  56.96 MB/s	  166191 B/op	    2418 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/medium-18
+    json_bench_test.go:104: payload_bytes=20402
+BenchmarkJSONVerdictValidate/large-18       	      16	   6913409 ns/op	  56.34 MB/s	 3177524 B/op	   46217 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      15	   6853600 ns/op	  56.83 MB/s	 3175942 B/op	   46207 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      16	   6803237 ns/op	  57.25 MB/s	 3175689 B/op	   46209 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      16	   6782385 ns/op	  57.42 MB/s	 3175674 B/op	   46209 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictValidate/large-18       	      14	   7332908 ns/op	  53.11 MB/s	 3176895 B/op	   46214 allocs/op
+--- BENCH: BenchmarkJSONVerdictValidate/large-18
+    json_bench_test.go:104: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/small-18        	   28800	      4622 ns/op	 534.82 MB/s	    3075 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   25081	      4410 ns/op	 560.56 MB/s	    3075 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   27410	      4459 ns/op	 554.34 MB/s	    3076 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   26805	      4510 ns/op	 548.16 MB/s	    3074 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/small-18        	   29364	      5362 ns/op	 461.03 MB/s	    3075 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/small-18
+    json_bench_test.go:124: payload_bytes=2472
+BenchmarkJSONVerdictMarshal/medium-18       	    3402	     34367 ns/op	 593.65 MB/s	   20880 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    3867	     32737 ns/op	 623.21 MB/s	   20879 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    4017	     39047 ns/op	 522.50 MB/s	   20923 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    4048	    175440 ns/op	 116.29 MB/s	   20884 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/medium-18       	    3325	     34377 ns/op	 593.48 MB/s	   20880 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/medium-18
+    json_bench_test.go:124: payload_bytes=20402
+BenchmarkJSONVerdictMarshal/large-18        	     100	   1281755 ns/op	 303.86 MB/s	  433780 B/op	       4 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     174	    665187 ns/op	 585.50 MB/s	  405349 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     195	    628350 ns/op	 619.83 MB/s	  404125 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     186	    743169 ns/op	 524.07 MB/s	  447312 B/op	       4 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+BenchmarkJSONVerdictMarshal/large-18        	     190	    625694 ns/op	 622.46 MB/s	  404389 B/op	       3 allocs/op
+--- BENCH: BenchmarkJSONVerdictMarshal/large-18
+    json_bench_test.go:124: payload_bytes=389470
+PASS
+ok  	github.com/latere-ai/replichai/internal/verdict	10.122s

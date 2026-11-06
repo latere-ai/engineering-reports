@@ -1,0 +1,190 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  138904	       819.2 ns/op	 709.26 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   17312	      6792 ns/op	1694.98 MB/s	   26241 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     874	    134363 ns/op	1783.73 MB/s	  537260 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   90346	      1406 ns/op	 500.86 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5804	     20211 ns/op	 658.76 MB/s	   33001 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     289	    412745 ns/op	 645.40 MB/s	  660799 B/op	    3211 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   14118	      8486 ns/op	2257.77 MB/s	   42515 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   78924	      1482 ns/op	 279.26 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4270	     27119 ns/op	 370.48 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     192	    620037 ns/op	 387.14 MB/s	  719955 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   71919	      1665 ns/op	 261.20 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3566	     33237 ns/op	 333.75 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     189	    635050 ns/op	 348.97 MB/s	  738619 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   12538	      9650 ns/op	 350.48 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  149566	       711.4 ns/op	 816.66 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   16906	      7132 ns/op	1614.16 MB/s	   26238 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     909	    135746 ns/op	1765.57 MB/s	  546019 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   84784	      1400 ns/op	 502.82 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5802	     20689 ns/op	 643.52 MB/s	   32990 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     289	    418157 ns/op	 637.05 MB/s	  693658 B/op	    3212 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13675	      8857 ns/op	2163.26 MB/s	   42530 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   77270	      1489 ns/op	 277.96 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4539	     27713 ns/op	 362.53 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     193	    613934 ns/op	 390.99 MB/s	  719955 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   72015	      1687 ns/op	 257.84 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3763	     32421 ns/op	 342.15 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     187	    642886 ns/op	 344.72 MB/s	  738621 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   13359	      9032 ns/op	 374.43 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  170881	       700.4 ns/op	 829.58 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   17906	      6662 ns/op	1727.95 MB/s	   26220 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     883	    135174 ns/op	1773.03 MB/s	  547237 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   86480	      1387 ns/op	 507.44 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5652	     20649 ns/op	 644.77 MB/s	   32992 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     286	    415467 ns/op	 641.17 MB/s	  683148 B/op	    3212 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   14082	      8621 ns/op	2222.46 MB/s	   42515 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   77772	      1518 ns/op	 272.65 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4546	     27358 ns/op	 367.25 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     198	    608413 ns/op	 394.54 MB/s	  719955 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   70461	      1681 ns/op	 258.81 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3696	     32927 ns/op	 336.90 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     189	    631598 ns/op	 350.88 MB/s	  738620 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   13234	      9140 ns/op	 370.01 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  150474	       701.8 ns/op	 827.81 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   17401	      6796 ns/op	1693.99 MB/s	   26226 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     822	    140184 ns/op	1709.66 MB/s	  554296 B/op	     263 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   86818	      1399 ns/op	 503.32 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5557	     20964 ns/op	 635.09 MB/s	   32993 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     289	    416919 ns/op	 638.94 MB/s	  755518 B/op	    3214 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13825	      8655 ns/op	2213.72 MB/s	   42528 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   77491	      1464 ns/op	 282.73 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4400	     27767 ns/op	 361.83 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     192	    627571 ns/op	 382.50 MB/s	  719953 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   70346	      1694 ns/op	 256.76 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3174	     37417 ns/op	 296.47 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     165	    723497 ns/op	 306.31 MB/s	  738623 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   12902	      9360 ns/op	 361.32 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  155762	       697.9 ns/op	 832.49 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   18058	      6651 ns/op	1730.86 MB/s	   26246 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     892	    135707 ns/op	1766.06 MB/s	  544419 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   86134	      1450 ns/op	 485.51 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5378	     20859 ns/op	 638.29 MB/s	   32994 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     280	    430696 ns/op	 618.50 MB/s	  736738 B/op	    3213 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13633	      8844 ns/op	2166.33 MB/s	   42557 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   75002	      1533 ns/op	 269.98 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4038	     28674 ns/op	 350.39 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     184	    649000 ns/op	 369.87 MB/s	  719953 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   69835	      1726 ns/op	 252.05 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3273	     37329 ns/op	 297.17 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     165	    725216 ns/op	 305.58 MB/s	  738623 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   12968	      9240 ns/op	 366.03 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  148794	       700.9 ns/op	 828.93 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   17841	      6826 ns/op	1686.52 MB/s	   26227 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     843	    136022 ns/op	1761.98 MB/s	  537770 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   85442	      1395 ns/op	 504.54 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5790	     20740 ns/op	 641.94 MB/s	   32984 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     286	    422876 ns/op	 629.94 MB/s	  675801 B/op	    3212 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13858	      8649 ns/op	2215.21 MB/s	   42534 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   65608	      1574 ns/op	 262.96 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    3981	     29413 ns/op	 341.58 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     180	    663662 ns/op	 361.69 MB/s	  719955 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   66063	      1801 ns/op	 241.47 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3564	     34766 ns/op	 319.07 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     177	    692045 ns/op	 320.23 MB/s	  738623 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   12432	      9608 ns/op	 352.02 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  147698	       722.8 ns/op	 803.80 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   17943	      6705 ns/op	1716.80 MB/s	   26230 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     894	    134220 ns/op	1785.64 MB/s	  533529 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   85602	      1389 ns/op	 506.66 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5904	     20497 ns/op	 649.56 MB/s	   32983 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     290	    416932 ns/op	 638.92 MB/s	  697035 B/op	    3212 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13923	      8600 ns/op	2227.87 MB/s	   42536 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   70329	      1475 ns/op	 280.60 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4375	     26620 ns/op	 377.42 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     196	    605778 ns/op	 396.26 MB/s	  719955 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   72825	      1683 ns/op	 258.40 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3406	     33521 ns/op	 330.93 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     187	    638168 ns/op	 347.26 MB/s	  738622 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   12405	      9550 ns/op	 354.12 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  157689	       694.9 ns/op	 836.11 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   18016	      6734 ns/op	1709.65 MB/s	   26219 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     888	    137188 ns/op	1747.01 MB/s	  543400 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   83835	      1414 ns/op	 497.75 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5650	     20806 ns/op	 639.90 MB/s	   32998 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     283	    422730 ns/op	 630.16 MB/s	  717122 B/op	    3213 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13845	      8627 ns/op	2220.80 MB/s	   42532 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   79008	      1501 ns/op	 275.74 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4173	     28133 ns/op	 357.12 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     186	    641955 ns/op	 373.92 MB/s	  719957 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   68756	      1707 ns/op	 254.90 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3510	     33640 ns/op	 329.76 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     174	    678494 ns/op	 326.62 MB/s	  738621 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   12896	      9272 ns/op	 364.76 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  156007	       697.5 ns/op	 832.99 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   18025	      6664 ns/op	1727.49 MB/s	   26240 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     878	    141090 ns/op	1698.69 MB/s	  540800 B/op	     262 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   84684	      1440 ns/op	 488.82 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    5318	     21212 ns/op	 627.67 MB/s	   32988 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     284	    419835 ns/op	 634.50 MB/s	  676005 B/op	    3211 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   14095	      8527 ns/op	2246.84 MB/s	   42536 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   68532	      1476 ns/op	 280.46 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4594	     27159 ns/op	 369.93 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     195	    609727 ns/op	 393.69 MB/s	  719956 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   72135	      1669 ns/op	 260.68 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3758	     33080 ns/op	 335.34 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     190	    630604 ns/op	 351.43 MB/s	  738622 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   13149	      9138 ns/op	 370.12 MB/s	    9928 B/op	      17 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/sermo/internal/httpapi
+cpu: Apple M5 Pro
+BenchmarkJSONMessageListEncode/small-18   	  142587	       727.2 ns/op	 798.93 MB/s	    2277 B/op	      11 allocs/op
+BenchmarkJSONMessageListEncode/medium-18  	   18154	      6590 ns/op	1746.80 MB/s	   26205 B/op	      22 allocs/op
+BenchmarkJSONMessageListEncode/large-18   	     876	    136747 ns/op	1752.64 MB/s	  551857 B/op	     263 allocs/op
+BenchmarkJSONConversationListEncode/small-18         	   88311	      1324 ns/op	 531.69 MB/s	    2597 B/op	      18 allocs/op
+BenchmarkJSONConversationListEncode/medium-18        	    6007	     20534 ns/op	 648.40 MB/s	   32971 B/op	     170 allocs/op
+BenchmarkJSONConversationListEncode/large-18         	     264	    433235 ns/op	 614.88 MB/s	  678880 B/op	    3212 allocs/op
+BenchmarkJSONWelcomeListEncode-18                    	   13334	      8968 ns/op	2136.26 MB/s	   42568 B/op	      18 allocs/op
+BenchmarkJSONSendBodyDecode/small-18                 	   80067	      1487 ns/op	 278.34 MB/s	    1936 B/op	      14 allocs/op
+BenchmarkJSONSendBodyDecode/medium-18                	    4568	     26650 ns/op	 377.00 MB/s	   39632 B/op	      20 allocs/op
+BenchmarkJSONSendBodyDecode/large-18                 	     199	    601633 ns/op	 398.99 MB/s	  719958 B/op	      24 allocs/op
+BenchmarkJSONBackupPutDecode/small-18                	   72850	      1650 ns/op	 263.61 MB/s	    2056 B/op	      21 allocs/op
+BenchmarkJSONBackupPutDecode/medium-18               	    3733	     32153 ns/op	 345.00 MB/s	   42936 B/op	      68 allocs/op
+BenchmarkJSONBackupPutDecode/large-18                	     193	    618774 ns/op	 358.15 MB/s	  738621 B/op	     836 allocs/op
+BenchmarkJSONCreateBodyDecode-18                     	   13370	      8926 ns/op	 378.91 MB/s	    9928 B/op	      17 allocs/op
+PASS

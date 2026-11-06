@@ -1,0 +1,160 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  201373	       543.0 ns/op	 338.86 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  113780	      1036 ns/op	 177.59 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    2822	     40329 ns/op	  32.93 MB/s	   20669 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12640	      9483 ns/op	  43.87 MB/s	    5991 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   26923	      4460 ns/op	  47.31 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   28333	      4275 ns/op	  47.49 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  246788	       436.7 ns/op	 421.38 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  115498	      1044 ns/op	 176.31 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    3121	     34925 ns/op	  38.02 MB/s	   20670 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12320	      9685 ns/op	  42.95 MB/s	    5991 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   27742	      4334 ns/op	  48.69 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   28702	      4268 ns/op	  47.57 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  236785	       452.5 ns/op	 406.66 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  117604	      1026 ns/op	 179.33 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    3075	     35106 ns/op	  37.83 MB/s	   20671 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12769	      9372 ns/op	  44.39 MB/s	    5992 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   28230	      4265 ns/op	  49.47 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   29263	      4116 ns/op	  49.32 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  247082	       440.9 ns/op	 417.35 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  111398	      1067 ns/op	 172.49 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    2871	     38364 ns/op	  34.62 MB/s	   20673 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   10000	     10227 ns/op	  40.68 MB/s	    5992 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   26012	      4609 ns/op	  45.78 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   27022	      4419 ns/op	  45.94 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  247758	       443.6 ns/op	 414.78 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  109227	      1046 ns/op	 175.90 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    2748	     37638 ns/op	  35.28 MB/s	   20675 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12140	      9897 ns/op	  42.03 MB/s	    5991 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   26766	      4476 ns/op	  47.14 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   27799	      4327 ns/op	  46.92 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  243478	       443.4 ns/op	 414.96 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  115532	      1020 ns/op	 180.34 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    2696	     38697 ns/op	  34.32 MB/s	   20671 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   10000	     10230 ns/op	  40.66 MB/s	    5992 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   26671	      4593 ns/op	  45.94 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   26622	      4400 ns/op	  46.13 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  244941	       438.3 ns/op	 419.80 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  111259	      1089 ns/op	 168.95 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    3097	     37046 ns/op	  35.85 MB/s	   20674 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12385	      9679 ns/op	  42.98 MB/s	    5991 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   27130	      4397 ns/op	  47.99 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   28380	      4238 ns/op	  47.90 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  245684	       442.1 ns/op	 416.15 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  111422	      1041 ns/op	 176.78 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    2892	     36132 ns/op	  36.75 MB/s	   20671 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12620	      9495 ns/op	  43.81 MB/s	    5991 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   26355	      4460 ns/op	  47.30 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   27318	      4253 ns/op	  47.73 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  250849	       445.1 ns/op	 413.37 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  110018	      1069 ns/op	 172.12 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    2901	     35443 ns/op	  37.47 MB/s	   20669 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12226	      9796 ns/op	  42.47 MB/s	    5992 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   27740	      4311 ns/op	  48.95 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   28712	      4175 ns/op	  48.63 MB/s	    3668 B/op	      78 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/ledger/pgledger
+cpu: Apple M5 Pro
+BenchmarkJSONLabelsMarshal-18      	  249147	       438.3 ns/op	 419.77 MB/s	     624 B/op	      14 allocs/op
+BenchmarkJSONLabelsUnmarshal-18    	  110826	      1070 ns/op	 171.92 MB/s	     928 B/op	      24 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/pay/stripe
+cpu: Apple M5 Pro
+BenchmarkJSONParseWebhook/checkout_session_paid-18         	    3182	     34923 ns/op	  38.03 MB/s	   20673 B/op	     335 allocs/op
+BenchmarkJSONParseWebhook/charge_refunded-18               	   12484	      9624 ns/op	  43.23 MB/s	    5991 B/op	     141 allocs/op
+BenchmarkJSONParseWebhook/dispute_created-18               	   27637	      4343 ns/op	  48.58 MB/s	    3027 B/op	      76 allocs/op
+BenchmarkJSONParseWebhook/payment_failed-18                	   27591	      4248 ns/op	  47.79 MB/s	    3668 B/op	      78 allocs/op
+PASS

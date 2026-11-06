@@ -1,0 +1,53 @@
+toolchain: go1.27.3
+
+json.RawMessage
+  v1: reflects as jsontext.Value
+  v2: jsontext.Value is the same type (an alias), so an API that takes one takes the other
+
+omitempty on a zero struct {i int; b bool; p *string; t time.Time; s struct{}}
+  v1: {"t":"0001-01-01T00:00:00Z","s":{}}
+  v2: {"i":0,"b":false,"t":"0001-01-01T00:00:00Z"}
+
+nil slice and nil map
+  v1: {"Items":null,"M":null}
+  v2: {"Items":[],"M":{}}
+
+time.Duration field
+  v1: {"ttl":1500000000}
+  v2: error: json: cannot marshal from Go time.Duration within "/ttl": no default representation
+
+format:nano tag option (standard library)
+  v1: ignored by v1
+  v2: error: json: cannot marshal from Go main.formatted: Go struct field TTL has unsupported `format` tag option
+
+HTML-significant characters
+  v1: "a\u003cb \u0026\u0026 c\u003ed"
+  v2: "a<b && c>d"
+
+map key order
+  v1: {"a":1,"b":2,"c":3}
+  v2: {"b":2,"a":1,"c":3} (unsorted unless json.Deterministic(true))
+
+field name case: {"USER_ID":"u1"} into json:"user_id"
+  v1: "u1" err=<nil>
+  v2: "" err=<nil>
+
+duplicate names
+  v1: map[a:2] err=<nil>
+  v2: map[a:1] err=jsontext: duplicate object member name "a"
+
+invalid UTF-8 in a string
+  v1: "bad�byte"
+  v2: error: jsontext: invalid UTF-8
+
+trailing newline
+  v1: Encoder.Encode "1\n"
+  v2: MarshalWrite "1", MarshalEncode "1\n"
+
+empty body
+  v1: Decoder.Decode: EOF (io.EOF: true)
+  v2: UnmarshalRead: jsontext: unexpected EOF (io.EOF: false, io.ErrUnexpectedEOF: true)
+
+call-site option and a v1-style UnmarshalJSON method
+  v1: n/a
+  v2: AllowDuplicateNames(true) at the call, inside the method: map[k:v] err=jsontext: duplicate object member name "k" (outer err=<nil>)

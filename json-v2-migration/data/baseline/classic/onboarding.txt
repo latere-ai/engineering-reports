@@ -1,0 +1,42 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    4105	     30186 ns/op	  13.02 MB/s	   20805 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    5302	     26289 ns/op	  14.95 MB/s	   20800 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    5052	     24537 ns/op	  16.02 MB/s	   20802 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    5552	     22653 ns/op	  17.35 MB/s	   20802 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    5588	     23540 ns/op	  16.70 MB/s	   20801 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      31	   3994793 ns/op	  47.52 MB/s	 4319553 B/op	   51768 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      24	   4701670 ns/op	  40.38 MB/s	 4398346 B/op	   51772 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      30	   4243100 ns/op	  44.74 MB/s	 4368671 B/op	   51771 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      31	   3980987 ns/op	  47.69 MB/s	 4371983 B/op	   51772 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      22	   4568011 ns/op	  41.56 MB/s	 4350266 B/op	   51771 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     100	   1010207 ns/op	 150.20 MB/s	  569328 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     132	    942107 ns/op	 161.06 MB/s	  582142 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     135	    967864 ns/op	 156.77 MB/s	  587912 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     127	    952270 ns/op	 159.34 MB/s	  577441 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     124	    941472 ns/op	 161.16 MB/s	  575295 B/op	    4734 allocs/op
+PASS
+ok  	latere.ai/x/onboarding/cmd/vocab	2.126s
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    3978	     32101 ns/op	  12.24 MB/s	   20803 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    3662	     29285 ns/op	  13.42 MB/s	   20802 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    4839	     27019 ns/op	  14.55 MB/s	   20802 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    3856	     31011 ns/op	  12.67 MB/s	   20804 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/small-18         	    4214	     31114 ns/op	  12.63 MB/s	   20803 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      28	   4293382 ns/op	  44.22 MB/s	 4420944 B/op	   51774 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      24	   4505443 ns/op	  42.13 MB/s	 4355561 B/op	   51770 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      30	   4358617 ns/op	  43.55 MB/s	 4403088 B/op	   51772 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      28	   4259555 ns/op	  44.57 MB/s	 4421110 B/op	   51774 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      28	   4976634 ns/op	  38.15 MB/s	 4401917 B/op	   51772 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     123	    961790 ns/op	 157.76 MB/s	  597429 B/op	    4735 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     100	   1038661 ns/op	 146.08 MB/s	  569362 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     123	    959358 ns/op	 158.16 MB/s	  571705 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     132	    918485 ns/op	 165.20 MB/s	  574160 B/op	    4734 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     126	    948989 ns/op	 159.89 MB/s	  573959 B/op	    4734 allocs/op
+PASS
+ok  	latere.ai/x/onboarding/cmd/vocab	2.095s

@@ -1,0 +1,410 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   29707	      3866 ns/op	 201.23 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1309	     89144 ns/op	 261.16 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1034594 ns/op	 263.19 MB/s	  380258 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   17200	      5997 ns/op	 137.06 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    1510	     68126 ns/op	 160.22 MB/s	   52268 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     100	   1005731 ns/op	 171.09 MB/s	  828954 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   24433	      4847 ns/op	 285.36 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1863	     62127 ns/op	 313.57 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     120	    989497 ns/op	 311.69 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     802	    161401 ns/op	  55.15 MB/s	   19738 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     573	    207988 ns/op	 159.73 MB/s	   63791 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      70	   1602249 ns/op	 323.85 MB/s	 1338039 B/op	      24 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2460	     48777 ns/op	 182.48 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     720	    163556 ns/op	 203.13 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      45	   2427364 ns/op	 213.77 MB/s	 1476002 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3068	     34061 ns/op	  11.54 MB/s	    1706 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1712	     72659 ns/op	 110.05 MB/s	   24111 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     222	    532308 ns/op	 270.44 MB/s	  424164 B/op	    5407 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	    9759	     11908 ns/op	  33.00 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2356	     50375 ns/op	 158.73 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     157	    758338 ns/op	 189.83 MB/s	  657045 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   36607	      3185 ns/op	 244.29 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1378	     85749 ns/op	 271.50 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1031706 ns/op	 263.92 MB/s	  380312 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   24250	      4843 ns/op	 169.75 MB/s	    3793 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    1978	     61609 ns/op	 177.17 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     122	    973858 ns/op	 176.68 MB/s	  828955 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   26023	      4593 ns/op	 301.14 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1941	     62296 ns/op	 312.72 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     100	   1041101 ns/op	 296.24 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     896	    144373 ns/op	  61.65 MB/s	   19785 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     536	    216138 ns/op	 153.71 MB/s	   63991 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      73	   1497178 ns/op	 346.58 MB/s	 1362779 B/op	      24 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2401	     48184 ns/op	 184.73 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     738	    160636 ns/op	 206.82 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      45	   2468700 ns/op	 210.19 MB/s	 1475994 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3730	     29566 ns/op	  13.29 MB/s	    1721 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    2139	     66196 ns/op	 120.79 MB/s	   24096 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     229	    531753 ns/op	 270.72 MB/s	  428769 B/op	    5408 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	    9298	     11083 ns/op	  35.46 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2436	     50793 ns/op	 157.42 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     157	    759738 ns/op	 189.48 MB/s	  649526 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   37795	      3172 ns/op	 245.29 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1351	     88804 ns/op	 262.16 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1020949 ns/op	 266.71 MB/s	  380258 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   26073	      4539 ns/op	 181.12 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    1813	     60301 ns/op	 181.01 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     126	    949514 ns/op	 181.21 MB/s	  829001 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   27019	      4486 ns/op	 308.27 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1887	     59692 ns/op	 326.36 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     123	    971362 ns/op	 317.51 MB/s	  201211 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     693	    193849 ns/op	  45.92 MB/s	   19759 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     556	    231797 ns/op	 143.33 MB/s	   63708 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      63	   1755345 ns/op	 295.61 MB/s	 1304941 B/op	      23 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2494	     50996 ns/op	 174.54 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     728	    162291 ns/op	 204.71 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      45	   2375666 ns/op	 218.42 MB/s	 1475992 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3466	     30194 ns/op	  13.02 MB/s	    1721 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1550	     85923 ns/op	  93.06 MB/s	   24138 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     229	    518978 ns/op	 277.38 MB/s	  428747 B/op	    5407 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	   10000	     11061 ns/op	  35.53 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2276	     50681 ns/op	 157.77 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     156	    762977 ns/op	 188.68 MB/s	  660544 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   37896	      3147 ns/op	 247.25 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1370	     87689 ns/op	 265.50 MB/s	   30724 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1027110 ns/op	 265.11 MB/s	  380260 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   26035	      4464 ns/op	 184.13 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    2041	     58977 ns/op	 185.07 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     123	    967471 ns/op	 177.85 MB/s	  829001 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   25660	      4638 ns/op	 298.17 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1936	     62526 ns/op	 311.57 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     120	    992975 ns/op	 310.60 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     766	    155523 ns/op	  57.23 MB/s	   19749 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     585	    209284 ns/op	 158.75 MB/s	   63543 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      70	   1481786 ns/op	 350.18 MB/s	 1248068 B/op	      22 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2461	     48383 ns/op	 183.97 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     732	    161635 ns/op	 205.54 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      44	   2388205 ns/op	 217.27 MB/s	 1475994 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3644	     31498 ns/op	  12.48 MB/s	    1721 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1617	     74993 ns/op	 106.62 MB/s	   24092 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     124	    880911 ns/op	 163.42 MB/s	  428386 B/op	    5407 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	    9987	     10996 ns/op	  35.74 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2469	     51018 ns/op	 156.73 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     148	    797989 ns/op	 180.40 MB/s	  657427 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   37351	      3108 ns/op	 250.31 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1352	     89465 ns/op	 260.23 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1031611 ns/op	 263.95 MB/s	  380260 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   25408	      4629 ns/op	 177.56 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    1992	     60796 ns/op	 179.54 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     126	    949515 ns/op	 181.21 MB/s	  828958 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   26868	      4609 ns/op	 300.05 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1782	     62041 ns/op	 314.00 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     126	    953591 ns/op	 323.42 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     908	    143937 ns/op	  61.84 MB/s	   19759 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     444	    258537 ns/op	 128.50 MB/s	   63798 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      75	   1566904 ns/op	 331.16 MB/s	 1364269 B/op	      24 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2506	     48505 ns/op	 183.51 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     736	    161969 ns/op	 205.12 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      49	   2393863 ns/op	 216.76 MB/s	 1475992 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3258	     32102 ns/op	  12.24 MB/s	    1706 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    2065	     65543 ns/op	 122.00 MB/s	   24122 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     231	    511929 ns/op	 281.20 MB/s	  428694 B/op	    5407 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	   10000	     10953 ns/op	  35.88 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2384	     50335 ns/op	 158.85 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     157	    756503 ns/op	 190.29 MB/s	  650361 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   38361	      3045 ns/op	 255.53 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1390	     86901 ns/op	 267.90 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1008814 ns/op	 269.91 MB/s	  380258 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   26276	      4497 ns/op	 182.77 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    2010	     60246 ns/op	 181.17 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     124	    954827 ns/op	 180.21 MB/s	  828956 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   26797	      4496 ns/op	 307.60 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    2018	     59834 ns/op	 325.58 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     123	    963876 ns/op	 319.97 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     744	    170125 ns/op	  52.32 MB/s	   19775 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     574	    214885 ns/op	 154.61 MB/s	   63560 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      75	   1563284 ns/op	 331.93 MB/s	 1322103 B/op	      23 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2366	     49809 ns/op	 178.70 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     726	    162850 ns/op	 204.01 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      46	   2423345 ns/op	 214.12 MB/s	 1475996 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3536	     32775 ns/op	  11.99 MB/s	    1721 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1402	     84374 ns/op	  94.77 MB/s	   24158 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     226	    540697 ns/op	 266.24 MB/s	  428832 B/op	    5407 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	    9590	     11158 ns/op	  35.22 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2367	     52110 ns/op	 153.44 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     153	    777924 ns/op	 185.05 MB/s	  658447 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   38842	      3102 ns/op	 250.84 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1270	     88008 ns/op	 264.53 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1039890 ns/op	 261.85 MB/s	  380259 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   24745	      4705 ns/op	 174.72 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    2016	     62117 ns/op	 175.72 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     124	    952260 ns/op	 180.69 MB/s	  828958 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   26569	      4583 ns/op	 301.75 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    2019	     61183 ns/op	 318.41 MB/s	   12058 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     100	   1002937 ns/op	 307.51 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     745	    159360 ns/op	  55.85 MB/s	   19752 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     576	    220851 ns/op	 150.43 MB/s	   63785 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      75	   1463763 ns/op	 354.49 MB/s	 1308158 B/op	      23 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2448	     50157 ns/op	 177.46 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     748	    163966 ns/op	 202.62 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      50	   2391124 ns/op	 217.01 MB/s	 1475992 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3975	     29989 ns/op	  13.10 MB/s	    1707 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1628	     77596 ns/op	 103.05 MB/s	   24122 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     224	    527967 ns/op	 272.66 MB/s	  426502 B/op	    5407 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	   10000	     11266 ns/op	  34.89 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2404	     49702 ns/op	 160.88 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     158	    764158 ns/op	 188.38 MB/s	  661891 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   37656	      3143 ns/op	 247.53 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1442	     87534 ns/op	 265.97 MB/s	   30723 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1054405 ns/op	 258.24 MB/s	  380258 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   25332	      4680 ns/op	 175.65 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    2014	     60125 ns/op	 181.54 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     127	    938602 ns/op	 183.32 MB/s	  828957 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   25404	      4695 ns/op	 294.59 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1803	     66732 ns/op	 291.93 MB/s	   12059 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     100	   1053761 ns/op	 292.68 MB/s	  201210 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     916	    141988 ns/op	  62.69 MB/s	   19740 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     433	    254755 ns/op	 130.41 MB/s	   63371 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      73	   1454614 ns/op	 356.72 MB/s	 1261953 B/op	      22 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2360	     49203 ns/op	 180.90 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     732	    160837 ns/op	 206.56 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      48	   2405589 ns/op	 215.70 MB/s	 1475996 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3482	     30662 ns/op	  12.82 MB/s	    1721 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1982	     64557 ns/op	 123.86 MB/s	   24096 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     222	    539032 ns/op	 267.06 MB/s	  431269 B/op	    5408 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	    9908	     11197 ns/op	  35.10 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2509	     50843 ns/op	 157.27 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     156	    769438 ns/op	 187.09 MB/s	  655496 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   34855	      3331 ns/op	 233.60 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1280	     92590 ns/op	 251.44 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1037184 ns/op	 262.53 MB/s	  380257 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   25831	      4618 ns/op	 178.01 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    2032	     60330 ns/op	 180.92 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     129	    926293 ns/op	 185.76 MB/s	  828954 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   27004	      4421 ns/op	 312.83 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1982	     61465 ns/op	 316.94 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     123	    959972 ns/op	 321.28 MB/s	  201208 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     675	    198158 ns/op	  44.92 MB/s	   19754 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     561	    213620 ns/op	 155.52 MB/s	   63697 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      75	   1622029 ns/op	 319.91 MB/s	 1266130 B/op	      22 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2242	     49818 ns/op	 178.67 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     729	    163724 ns/op	 202.92 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      46	   2417600 ns/op	 214.63 MB/s	 1475994 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3638	     31429 ns/op	  12.50 MB/s	    1721 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1431	     84182 ns/op	  94.98 MB/s	   24128 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     229	    522785 ns/op	 275.36 MB/s	  440238 B/op	    5408 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	   10000	     10998 ns/op	  35.73 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2472	     48495 ns/op	 164.88 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     163	    731441 ns/op	 196.81 MB/s	  654666 B/op	    5439 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/alerts
+cpu: Apple M5 Pro
+BenchmarkJSONDependabotAlertsDecode/small-18         	   37168	      3123 ns/op	 249.16 MB/s	    1736 B/op	      29 allocs/op
+BenchmarkJSONDependabotAlertsDecode/medium-18        	    1359	     87521 ns/op	 266.00 MB/s	   30720 B/op	     389 allocs/op
+BenchmarkJSONDependabotAlertsDecode/large-18         	     100	   1016018 ns/op	 268.00 MB/s	  380311 B/op	    4185 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/extract
+cpu: Apple M5 Pro
+BenchmarkJSONBunLockDecode/small-18         	   24163	      5012 ns/op	 164.02 MB/s	    3792 B/op	      50 allocs/op
+BenchmarkJSONBunLockDecode/medium-18        	    1778	     64702 ns/op	 168.70 MB/s	   52264 B/op	     628 allocs/op
+BenchmarkJSONBunLockDecode/large-18         	     100	   1012948 ns/op	 169.87 MB/s	  828957 B/op	    9644 allocs/op
+BenchmarkJSONNpmLockDecode/small-18         	   24410	      4865 ns/op	 284.27 MB/s	    1176 B/op	      24 allocs/op
+BenchmarkJSONNpmLockDecode/medium-18        	    1899	     65698 ns/op	 296.52 MB/s	   12056 B/op	     179 allocs/op
+BenchmarkJSONNpmLockDecode/large-18         	     100	   1033941 ns/op	 298.29 MB/s	  201209 B/op	    2445 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/report
+cpu: Apple M5 Pro
+BenchmarkJSONReportSave/small-18         	     792	    159795 ns/op	  55.70 MB/s	   19746 B/op	      13 allocs/op
+BenchmarkJSONReportSave/medium-18        	     567	    211225 ns/op	 157.29 MB/s	   63928 B/op	      13 allocs/op
+BenchmarkJSONReportSave/large-18         	      74	   1482511 ns/op	 350.01 MB/s	 1285439 B/op	      23 allocs/op
+BenchmarkJSONReportLoad/small-18         	    2460	     48226 ns/op	 184.57 MB/s	   22296 B/op	     181 allocs/op
+BenchmarkJSONReportLoad/medium-18        	     736	    163418 ns/op	 203.30 MB/s	  100168 B/op	     931 allocs/op
+BenchmarkJSONReportLoad/large-18         	      45	   2372080 ns/op	 218.75 MB/s	 1475992 B/op	   15755 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/census/internal/scan
+cpu: Apple M5 Pro
+BenchmarkJSONLookupCacheSave/small-18         	    3666	     31540 ns/op	  12.46 MB/s	    1706 B/op	      22 allocs/op
+BenchmarkJSONLookupCacheSave/medium-18        	    1641	     76403 ns/op	 104.66 MB/s	   24091 B/op	     307 allocs/op
+BenchmarkJSONLookupCacheSave/large-18         	     220	    535341 ns/op	 268.90 MB/s	  436110 B/op	    5408 allocs/op
+BenchmarkJSONLookupCacheLoad/small-18         	   10000	     11267 ns/op	  34.88 MB/s	    2064 B/op	      29 allocs/op
+BenchmarkJSONLookupCacheLoad/medium-18        	    2378	     50417 ns/op	 158.60 MB/s	   30248 B/op	     323 allocs/op
+BenchmarkJSONLookupCacheLoad/large-18         	     158	    758254 ns/op	 189.85 MB/s	  651102 B/op	    5439 allocs/op
+PASS

@@ -1,0 +1,80 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    3950	     26895 ns/op	  14.61 MB/s	   20804 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3545878 ns/op	  53.54 MB/s	 4306616 B/op	   51768 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     156	    763096 ns/op	 198.84 MB/s	  567989 B/op	    4733 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    5300	     21277 ns/op	  18.47 MB/s	   20804 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3588113 ns/op	  52.91 MB/s	 4389373 B/op	   51773 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     153	    778645 ns/op	 194.87 MB/s	  593647 B/op	    4735 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    5260	     21398 ns/op	  18.37 MB/s	   20804 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3603003 ns/op	  52.69 MB/s	 4356008 B/op	   51771 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     151	    785110 ns/op	 193.26 MB/s	  591535 B/op	    4735 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    4677	     21617 ns/op	  18.18 MB/s	   20800 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3600938 ns/op	  52.72 MB/s	 4306779 B/op	   51768 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     148	    802730 ns/op	 189.02 MB/s	  590001 B/op	    4735 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    5262	     21576 ns/op	  18.21 MB/s	   20804 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3610836 ns/op	  52.57 MB/s	 4323334 B/op	   51769 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     150	    798401 ns/op	 190.04 MB/s	  616822 B/op	    4736 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    4905	     21872 ns/op	  17.97 MB/s	   20802 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3601022 ns/op	  52.72 MB/s	 4371799 B/op	   51771 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     147	    819420 ns/op	 185.17 MB/s	  572746 B/op	    4734 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    5137	     21592 ns/op	  18.20 MB/s	   20803 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      31	   3729210 ns/op	  50.90 MB/s	 4404472 B/op	   51773 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     152	    784388 ns/op	 193.44 MB/s	  580433 B/op	    4734 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    5217	     21697 ns/op	  18.11 MB/s	   20804 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      31	   3646594 ns/op	  52.06 MB/s	 4337523 B/op	   51770 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     151	    790138 ns/op	 192.03 MB/s	  584538 B/op	    4734 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    4639	     22209 ns/op	  17.70 MB/s	   20803 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      30	   3635922 ns/op	  52.21 MB/s	 4334906 B/op	   51770 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     154	    772873 ns/op	 196.32 MB/s	  582691 B/op	    4734 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/onboarding/cmd/vocab
+cpu: Apple M5 Pro
+BenchmarkJSONVocabExportEncode/small-18         	    4752	     23080 ns/op	  17.03 MB/s	   20805 B/op	     225 allocs/op
+BenchmarkJSONVocabExportEncode/large-18         	      32	   3617117 ns/op	  52.48 MB/s	 4371982 B/op	   51771 allocs/op
+BenchmarkJSONVocabFileRoundTrip-18              	     153	    777742 ns/op	 195.09 MB/s	  590203 B/op	    4735 allocs/op
+PASS

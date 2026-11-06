@@ -1,0 +1,160 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   22334	      4526 ns/op	 313.94 MB/s	    9146 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    8686	     14254 ns/op	 796.96 MB/s	   49435 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     592	    202677 ns/op	 766.11 MB/s	  631346 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   72348	      1656 ns/op	 483.60 MB/s	    1818 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     12039 ns/op	 739.57 MB/s	   20553 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     662	    176720 ns/op	 597.07 MB/s	  250886 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20348	      5876 ns/op	 255.26 MB/s	    9786 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   58560	      1972 ns/op	 152.13 MB/s	    4486 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19759	      6062 ns/op	1689.28 MB/s	   15053 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1382	     87358 ns/op	2344.38 MB/s	  223840 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   77515	      1558 ns/op	  91.15 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   30663	      3659 ns/op	 388.41 MB/s	    9146 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    9092	     14479 ns/op	 784.59 MB/s	   49435 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     586	    208558 ns/op	 744.50 MB/s	  631354 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   68698	      1737 ns/op	 461.16 MB/s	    1819 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     11628 ns/op	 765.77 MB/s	   20561 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     694	    174540 ns/op	 604.53 MB/s	  250827 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20179	      5913 ns/op	 253.69 MB/s	    9786 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   58483	      1989 ns/op	 150.84 MB/s	    4485 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19581	      6224 ns/op	1645.15 MB/s	   15053 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1365	     88101 ns/op	2324.61 MB/s	  226376 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   77160	      1586 ns/op	  89.53 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   31999	      3736 ns/op	 380.40 MB/s	    9146 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    7467	     15135 ns/op	 750.56 MB/s	   49432 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     574	    205760 ns/op	 754.63 MB/s	  631362 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   69286	      1715 ns/op	 467.11 MB/s	    1818 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     12138 ns/op	 733.58 MB/s	   20557 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     691	    175919 ns/op	 599.79 MB/s	  250829 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20262	      5921 ns/op	 253.35 MB/s	    9788 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   59700	      1986 ns/op	 151.04 MB/s	    4487 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19752	      6076 ns/op	1685.21 MB/s	   15050 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1372	     86841 ns/op	2358.34 MB/s	  222922 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   77367	      1557 ns/op	  91.17 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   31994	      3584 ns/op	 396.50 MB/s	    9146 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    8270	     14879 ns/op	 763.51 MB/s	   49435 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     578	    208104 ns/op	 746.13 MB/s	  631386 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   68491	      1732 ns/op	 462.55 MB/s	    1819 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     11934 ns/op	 746.08 MB/s	   20555 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     688	    174825 ns/op	 603.54 MB/s	  250903 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20193	      5979 ns/op	 250.86 MB/s	    9787 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   59703	      2024 ns/op	 148.26 MB/s	    4486 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19411	      6171 ns/op	1659.35 MB/s	   15051 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1364	     88517 ns/op	2313.67 MB/s	  223946 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   75716	      1572 ns/op	  90.31 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   31545	      3641 ns/op	 390.23 MB/s	    9145 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    8822	     14412 ns/op	 788.25 MB/s	   49431 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     560	    205258 ns/op	 756.47 MB/s	  631375 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   70096	      1697 ns/op	 472.10 MB/s	    1819 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     11785 ns/op	 755.54 MB/s	   20560 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     687	    175953 ns/op	 599.67 MB/s	  250808 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20061	      5929 ns/op	 252.98 MB/s	    9789 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   60218	      2015 ns/op	 148.92 MB/s	    4485 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19598	      6241 ns/op	1640.69 MB/s	   15050 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1356	     87596 ns/op	2338.00 MB/s	  222672 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   77881	      1586 ns/op	  89.53 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   31924	      3608 ns/op	 393.83 MB/s	    9145 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    8785	     14732 ns/op	 771.10 MB/s	   49427 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     570	    208229 ns/op	 745.68 MB/s	  631440 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   69967	      1698 ns/op	 471.69 MB/s	    1818 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     12023 ns/op	 740.60 MB/s	   20559 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     670	    176675 ns/op	 597.22 MB/s	  250892 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20496	      5874 ns/op	 255.35 MB/s	    9789 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   59281	      1975 ns/op	 151.89 MB/s	    4486 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19473	      6149 ns/op	1665.18 MB/s	   15045 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1359	     91046 ns/op	2249.41 MB/s	  223634 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   75247	      1565 ns/op	  90.72 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   32122	      3618 ns/op	 392.79 MB/s	    9148 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    7681	     14312 ns/op	 793.75 MB/s	   49434 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     588	    204017 ns/op	 761.08 MB/s	  631420 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   70099	      1684 ns/op	 475.74 MB/s	    1819 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     11543 ns/op	 771.40 MB/s	   20557 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     703	    181007 ns/op	 582.93 MB/s	  250866 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   19735	      6028 ns/op	 248.82 MB/s	    9789 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   53488	      2033 ns/op	 147.58 MB/s	    4486 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19618	      6150 ns/op	1665.18 MB/s	   15058 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1342	     88068 ns/op	2325.47 MB/s	  225385 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   77140	      1554 ns/op	  91.35 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   31736	      3617 ns/op	 392.84 MB/s	    9147 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    9121	     14994 ns/op	 757.62 MB/s	   49431 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     586	    209091 ns/op	 742.60 MB/s	  631411 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   70089	      1685 ns/op	 475.33 MB/s	    1818 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     12554 ns/op	 709.26 MB/s	   20557 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     661	    177357 ns/op	 594.93 MB/s	  250836 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20054	      5996 ns/op	 250.15 MB/s	    9790 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   58112	      2035 ns/op	 147.44 MB/s	    4486 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   18806	      6378 ns/op	1605.46 MB/s	   15054 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1340	     89637 ns/op	2284.77 MB/s	  224846 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   75979	      1578 ns/op	  89.97 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   32298	      3604 ns/op	 394.28 MB/s	    9146 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    8967	     15482 ns/op	 733.76 MB/s	   49438 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     572	    206534 ns/op	 751.80 MB/s	  631433 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   68845	      1717 ns/op	 466.47 MB/s	    1818 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     11562 ns/op	 770.12 MB/s	   20554 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     698	    172531 ns/op	 611.57 MB/s	  250904 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   20409	      5892 ns/op	 254.57 MB/s	    9789 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   60178	      2034 ns/op	 147.51 MB/s	    4487 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   18933	      6260 ns/op	1635.84 MB/s	   15055 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1410	     87425 ns/op	2342.57 MB/s	  223609 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   77382	      1555 ns/op	  91.34 MB/s	     915 B/op	      22 allocs/op
+PASS
+goos: darwin
+goarch: arm64
+pkg: latere.ai/x/managed-agents/latere
+cpu: Apple M5 Pro
+BenchmarkJSONSessionEventsDecode/small-18       	   31629	      3642 ns/op	 390.13 MB/s	    9147 B/op	      48 allocs/op
+BenchmarkJSONSessionEventsDecode/medium-18      	    9048	     14753 ns/op	 770.02 MB/s	   49438 B/op	      85 allocs/op
+BenchmarkJSONSessionEventsDecode/large-18       	     589	    206758 ns/op	 750.98 MB/s	  631436 B/op	     857 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/small-18         	   68842	      1724 ns/op	 464.49 MB/s	    1819 B/op	      18 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/medium-18        	   10000	     11787 ns/op	 755.39 MB/s	   20559 B/op	      86 allocs/op
+BenchmarkJSONTranscriptNormalizeUnmarshal/large-18         	     660	    175435 ns/op	 601.44 MB/s	  250853 B/op	    1711 allocs/op
+BenchmarkJSONReplayUnmarshal-18                            	   19848	      6041 ns/op	 248.32 MB/s	    9790 B/op	      80 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/small-18              	   60559	      1972 ns/op	 152.13 MB/s	    4486 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/medium-18             	   19549	      6094 ns/op	1680.25 MB/s	   15049 B/op	      45 allocs/op
+BenchmarkJSONSessionMessageRoundTrip/large-18              	    1378	     87492 ns/op	2340.79 MB/s	  225783 B/op	      46 allocs/op
+BenchmarkJSONLocatorRoundTrip-18                           	   76740	      1561 ns/op	  90.97 MB/s	     915 B/op	      22 allocs/op
+PASS

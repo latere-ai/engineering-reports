@@ -1,0 +1,72 @@
+goos: darwin
+goarch: arm64
+pkg: latere.ai/internal/handler
+cpu: Apple M5 Pro
+BenchmarkJSONAdminLinksListEncode/small-18         	   61419	      1691 ns/op	 477.35 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   76090	      1667 ns/op	 484.00 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   70087	      1636 ns/op	 493.25 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   75892	      1496 ns/op	 539.32 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   68760	      1625 ns/op	 496.55 MB/s	    1890 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    7587	     18406 ns/op	 767.50 MB/s	   15436 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    7075	     18587 ns/op	 760.03 MB/s	   15425 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    6687	     17935 ns/op	 787.66 MB/s	   15411 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    7638	     18786 ns/op	 751.99 MB/s	   15461 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    7310	     18875 ns/op	 748.45 MB/s	   15413 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     321	    352537 ns/op	 803.58 MB/s	  331255 B/op	      12 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     304	    385799 ns/op	 734.30 MB/s	  318469 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     343	    361845 ns/op	 782.91 MB/s	  328496 B/op	      12 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     290	    367076 ns/op	 771.75 MB/s	  335873 B/op	      12 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     332	    360593 ns/op	 785.63 MB/s	  329831 B/op	      12 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   39384	      3436 ns/op	  76.84 MB/s	    6898 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   36922	      3525 ns/op	  74.90 MB/s	    6903 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   32562	      3612 ns/op	  73.08 MB/s	    6896 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   37728	      3289 ns/op	  80.26 MB/s	    6902 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   40904	      3158 ns/op	  83.60 MB/s	    6900 B/op	      24 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   96417	      1298 ns/op	 365.84 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   73608	      1409 ns/op	 337.02 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   91062	      1373 ns/op	 345.99 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   99943	      1376 ns/op	 345.22 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   91710	      1303 ns/op	 364.46 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  494318	       255.2 ns/op	 313.53 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  529051	       261.9 ns/op	 305.47 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  412962	       272.7 ns/op	 293.39 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  538206	       259.6 ns/op	 308.19 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  543538	       253.8 ns/op	 315.24 MB/s	     384 B/op	       6 allocs/op
+PASS
+ok  	latere.ai/internal/handler	4.122s
+goos: darwin
+goarch: arm64
+pkg: latere.ai/internal/handler
+cpu: Apple M5 Pro
+BenchmarkJSONAdminLinksListEncode/small-18         	   63234	      1877 ns/op	 430.01 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   63536	      1953 ns/op	 413.25 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   60997	      2519 ns/op	 320.42 MB/s	    1891 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   50666	      2033 ns/op	 396.92 MB/s	    1890 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/small-18         	   56913	      2064 ns/op	 391.04 MB/s	    1890 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    6666	     21832 ns/op	 647.09 MB/s	   15459 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    6069	     22000 ns/op	 642.14 MB/s	   15439 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    6148	     21862 ns/op	 646.18 MB/s	   15396 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    5829	     21509 ns/op	 656.79 MB/s	   15398 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/medium-18        	    6007	     22542 ns/op	 626.69 MB/s	   15429 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     291	    404669 ns/op	 700.06 MB/s	  325124 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     315	    383256 ns/op	 739.17 MB/s	  312498 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     308	    396386 ns/op	 714.69 MB/s	  318062 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     313	    380412 ns/op	 744.70 MB/s	  297871 B/op	      11 allocs/op
+BenchmarkJSONAdminLinksListEncode/large-18         	     310	    399610 ns/op	 708.92 MB/s	  312900 B/op	      11 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   31570	      3929 ns/op	  67.19 MB/s	    6898 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   31634	      4186 ns/op	  63.07 MB/s	    6899 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   30396	      4058 ns/op	  65.06 MB/s	    6901 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   23732	      4415 ns/op	  59.80 MB/s	    6898 B/op	      24 allocs/op
+BenchmarkJSONLinkInputDecode-18                    	   31744	      3856 ns/op	  68.46 MB/s	    6904 B/op	      24 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   72051	      1595 ns/op	 297.87 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   79904	      1594 ns/op	 298.08 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   72698	      1552 ns/op	 305.99 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	   89776	      1337 ns/op	 355.34 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONMeResponseEncode-18                   	  100435	      1386 ns/op	 342.64 MB/s	    1778 B/op	      11 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  419445	       268.8 ns/op	 297.67 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  450189	       266.5 ns/op	 300.18 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  458262	       267.8 ns/op	 298.75 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  519207	       267.2 ns/op	 299.40 MB/s	     384 B/op	       6 allocs/op
+BenchmarkJSONYAMLStringEncode-18                   	  516045	       270.2 ns/op	 296.07 MB/s	     384 B/op	       6 allocs/op
+PASS
+ok  	latere.ai/internal/handler	4.244s
