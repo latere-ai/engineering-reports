@@ -171,11 +171,12 @@ had become strict about duplicate names or invalid UTF-8.
 Each repository landed as one commit, `json: move to encoding/json/v2`,
 only after its full gate passed: lint, license notices, coverage floors,
 the whole test suite, end-to-end suites against real Postgres and kind
-clusters, and an image build. The logs record 71 gate runs for the 29
-migration commits. 34 failed, and each failure was fixed in the code or the
-test before the push; the causes are tabled in [PROCESS.md](PROCESS.md).
-Other work kept landing in the same repositories all night, so the landing
-script rebased onto it and never pushed a commit it had not written.
+clusters, and an image build. The logs keep 67 gate runs for the migration
+commits and their follow-ups; 31 failed and one was stopped, and each
+failure was fixed in the code or the test before the push. The causes are
+tabled in [PROCESS.md](PROCESS.md). Other work kept landing in the same
+repositories all night, so the landing script rebased onto it and never
+pushed a commit it had not written.
 
 ### 7. Ban the v1 import
 
@@ -271,31 +272,38 @@ time.
   <img alt="Geometric mean change in time per operation for each repository: toolchain only, and toolchain plus migration" src="figures/per-repo.svg">
 </picture>
 
-Every repository but one got faster. The largest gains are in the services
-whose hot paths carry model and tool traffic: the agent runtime (topos)
-went to 0.62 of its time, the tool gateway (pons) to 0.71, the chat backend
-(faber) to 0.72. The sandbox host (cella) is the exception, at 1.06. To keep
-durations as integer nanoseconds on its worker protocol, the migration
-wrapped two message types in v1-style `MarshalJSON` methods. Under v2 each
-such method encodes into a buffer of its own, which the encoder then checks
-again, and the state messages that carry those types take twice as long.
-v2's own `MarshalJSONTo`, which writes into the caller's encoder, keeps the
-bytes without the second pass. The migration added v1-style methods in
-three files, two of them these; everywhere else the agents wrote 32 methods
-of v2's kind.
+25 of the 29 repositories got faster, with the whole 95% interval of their
+geometric mean below 1. The largest gains are in the services whose hot
+paths carry model and tool traffic: the agent runtime (topos) went to 0.62
+of its time, the tool gateway (pons) to 0.71, the chat backend (faber) to
+0.72. Three small repositories with six benchmarks each show no clear
+change (the company site at 0.99, the book's code at 0.89 and the payment
+service at 0.97, each interval crossing 1).
+
+The sandbox host (cella) is the exception: 12 benchmarks faster, 12 slower,
+1.06 overall. To keep durations as integer nanoseconds on its worker
+protocol, the migration wrapped two message types in v1-style `MarshalJSON`
+methods, and its state messages took 1.9 times as long as before. Giving
+the state type v2's own `MarshalJSONTo`, which writes into the caller's
+encoder instead of returning bytes, brought that to 1.26 times in a scratch
+copy, so the v1-style method is most of the cost; the rest we have not
+traced. The migration added v1-style methods in three files, two of them
+these; everywhere else the agents wrote 32 methods of v2's kind.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/distribution-dark.svg">
   <img alt="Distribution of per-benchmark ratios of time per operation" src="figures/distribution.svg">
 </picture>
 
-Per benchmark the median ratio is 0.86, and the middle 80% run from 0.62
-to 1.02. The slower benchmarks cluster where the wire policy keeps v1's
-bytes or leniency, and pays for it: sorted map keys in a file that is
-stored and compared (a cache file, 1.36 times the time), the v1-style
-methods above, and a `jsontext.Decoder` kept where only the first value of
-the input counts, on bodies of a few hundred bytes. Each of those pins is
-deliberate and has a test; the price is now measured.
+Per benchmark the median ratio is 0.86, and the middle 80% run from 0.62 to
+1.02. The slower benchmarks cluster where the code keeps v1's bytes or
+behavior and pays for it: sorted map keys in a file that is stored and
+compared (a cache file, 1.36 times the time), the v1-style methods above,
+and a `jsontext.Decoder` built for each small body. One service builds that
+decoder to read only the first value, which needs it; another builds it to
+refuse text after the value, which v2's `Unmarshal` already does on its
+own, and that request decode takes 1.68 times as long. The price of each
+pin is now measured.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/memory-dark.svg">

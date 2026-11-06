@@ -192,14 +192,16 @@ The landing ran in three rounds plus stragglers, each repository as one
 commit, `json: move to encoding/json/v2`, pushed only after its gate and the
 whole `go test ./...` of every module passed.
 
-| Round | When | Repositories pushed | Gate failures fixed before the next round |
+| Round | When | Repositories pushed | Repositories that needed another fix first |
 |---|---|---|---|
 | 1, three lanes in parallel | 20:43 to 21:47 | sdk-go, census, pay, managed-agents, onboarding, pkg, ci-gate, latere-cli, arca | 13 |
 | 2, one at a time | 22:03 to 00:10 | latere-ai, auth, ai-as-an-infrastructure, origo, lectio, forma, insula, sermo, apps, agon | 8 |
-| 3, one at a time | 00:10 to 02:10 | lux, cella, topos, replichai, examen, faber, pons, limen, gradus, platform | 3 |
+| 3, one at a time | 00:10 to 02:10 | lux, cella, topos, replichai, examen, faber, pons, limen, gradus, platform | 5 |
 
-The logs record 71 gate runs for the migration commits; 34 of them
-failed. By cause:
+The logs keep 67 gate runs for the migration commits and their follow-ups
+(a later run of the same repository in the same round overwrote some); 35
+passed, 31 failed and one was stopped. The lux release ran the gate three
+more times, and two of those lost a host port to another cluster. By cause:
 
 | Cause | Repositories | Fix |
 |---|---|---|
