@@ -441,7 +441,10 @@ one comes from a check run that failed.
   now calls v2 is unused and fails `nolintlint`: remove it. `errorlint`
   flags `err == io.EOF` and `err != io.EOF` after `jsontext.Decoder.ReadToken` or `ReadValue`;
   write `errors.Is(err, io.EOF)`. `unconvert` flags `jsontext.Value(x)` when
-  `x` already has that type.
+  `x` already has that type. The first three are reported upstream:
+  [breml/errchkjson#90](https://github.com/breml/errchkjson/issues/90),
+  [securego/gosec#1820](https://github.com/securego/gosec/issues/1820) and
+  [polyfloyd/go-errorlint#117](https://codeberg.org/polyfloyd/go-errorlint/issues/117).
 - **The go directive.** v2 needs `go 1.27` in `go.mod`. Raising it turns on
   Go 1.27's modernizers (`for range N`, `embedlit`) in every file the
   change touches, and a library that supported older Go releases drops

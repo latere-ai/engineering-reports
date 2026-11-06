@@ -155,7 +155,9 @@ Some results were not what we expected:
 - The `format:` tag option is not in the standard library's v2. A field
   carrying one makes the whole struct fail to encode, at run time.
 - `time.Duration` has no default v2 representation; encoding one is an
-  error.
+  error. `go vet` reports neither this nor the `format:` option before the
+  code runs; we asked for a check in
+  [golang/go#82895](https://github.com/golang/go/issues/82895).
 - v1's `omitempty` goes by the Go value (false, 0, nil, empty); v2's goes by
   the JSON it would write (`null`, `""`, `{}`, `[]`). The same tag omits
   different fields.
@@ -342,7 +344,11 @@ corrected 65 fields across the repositories.
 `gosec`'s secret-marshaling check don't recognize v2 calls, so their
 `//nolint` directives became unused and failed `nolintlint`. `errorlint`
 now flags `err != io.EOF` after `jsontext.Decoder.ReadToken`, which v1's
-`Decoder` didn't need. Raising the `go` directive to 1.27 turned on Go
+`Decoder` didn't need. We reported all three:
+[breml/errchkjson#90](https://github.com/breml/errchkjson/issues/90),
+[securego/gosec#1820](https://github.com/securego/gosec/issues/1820) and
+[polyfloyd/go-errorlint#117](https://codeberg.org/polyfloyd/go-errorlint/issues/117).
+Raising the `go` directive to 1.27 turned on Go
 1.27's own modernizers (the `go fix` rewrites of old idioms) in every file
 we touched.
 
