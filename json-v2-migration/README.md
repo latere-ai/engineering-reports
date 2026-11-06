@@ -209,7 +209,13 @@ exactly like a request for something that doesn't exist. Those are
 byte-equality tests by design. We fixed the rule rather than each test:
 the shared error writer sorts its details again (error bodies are a cold
 path), response shapes that are fixed became structs, and tests that
-re-encode a map ask for `Deterministic`.
+re-encode a map ask for `Deterministic`. Because one green run proves
+nothing about a random order, we reran every test package the migration
+touched three times after it landed. 421 of 426 passed every run. Four of
+the other five fail the same way on the code from before the migration,
+because they cannot repeat in one process, and the fifth only runs past
+Go's 10-minute default timeout when it is repeated. All five pass as
+separate runs.
 
 **Escaping is part of the bytes a server compares.** v2 doesn't escape
 `<`, `>` and `&`, which is harmless for anything that parses JSON, and we
@@ -349,6 +355,9 @@ that holds the repositories' checkouts):
    computes the statistics, and `go run ./tools/figures -stats stats.json
    -census data/census-pre.tsv -timeline data/timeline.tsv` draws the
    figures.
+5. `scripts/flake.sh trees/after data/shas-after.txt flake` reruns every
+   test package the migration changed three times
+   ([data/flake/](data/flake)).
 
 [PROCESS.md](PROCESS.md) is the full log of the day: every step, every gate
 failure and its fix.

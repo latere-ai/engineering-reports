@@ -293,12 +293,15 @@ Each one failed a gate at least once.
   Every test that compares a body built from a map byte for byte, and every
   test that decodes a map and marshals it again, fails at random. A three-key
   map comes out in v1's order about one run in three, so one green run proves
-  nothing; rerun such packages several times. Fixes, by rule: a response or
-  stored body with a fixed set of members becomes a struct whose fields are
-  declared in sorted key order (its bytes then equal v1's); an error body,
-  which a test compares to prove two refusals are indistinguishable, is
-  written with `json.Deterministic(true)`; a test that re-marshals a map
-  passes `json.Deterministic(true)`.
+  nothing; rerun such packages several times. Rerun them as separate
+  processes, or check a `-count=3` failure against the code before the
+  change: a test that leaves a fixed database key, a package counter or a
+  process limit behind fails `-count=3` without any JSON in it. Fixes, by
+  rule: a response or stored body with a fixed set of members becomes a
+  struct whose fields are declared in sorted key order (its bytes then equal
+  v1's); an error body, which a test compares to prove two refusals are
+  indistinguishable, is written with `json.Deterministic(true)`; a test that
+  re-marshals a map passes `json.Deterministic(true)`.
 - **Escaping is part of the bytes a server compares.** v1 always escaped
   `<`, `>`, `&`, U+2028 and U+2029; v2 escapes none of them by default. The
   Kubernetes API server still encodes with v1's rules, and a JSON Patch

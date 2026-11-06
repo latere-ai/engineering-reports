@@ -233,7 +233,31 @@ ci-gate v0.70.0 adds `encoding/json` to the shared `depguard` deny list,
 with `encoding/json/v2` and `encoding/json/jsontext` allowed by name. A
 census over every repository's `main` at release time found no v1 import
 outside string literals in a linter's own test fixtures and one
-`//go:build ignore` benchmark driver. Repositories take the new ci-gate
-through the daily bump job, which runs each repository's whole bar on it
-before it moves the pin.
+`//go:build ignore` benchmark driver in lux, which moved to v2 that morning
+(d3d571d). Repositories take the new ci-gate through the daily bump job,
+which runs each repository's whole bar on it before it moves the pin.
+
+## 6. Looking for map-order flakes (03:26 to 04:54)
+
+A test that compares map-built JSON byte for byte fails at random under v2,
+so it can pass the single run its gate gives it and land anyway.
+`scripts/flake.sh` reran every package whose test files a migration commit
+changed, three times each, in the clean tree of that commit: 426 packages
+in 32 modules of 29 repositories. 421 passed all three runs.
+
+Each of the other five was run again in the tree of the migration's parent
+commit with `-count=3`, and in the migrated tree as separate processes
+([data/flake/triage.txt](data/flake/triage.txt)). None is a migration flake:
+
+| Package | Why `-count=3` failed | Before the migration |
+|---|---|---|
+| auth `internal/handler` | a fixed organization id inserted into one database per process | fails the same way |
+| lectio `internal/convert` | a test leaves a 2^62 address-space limit on its own process | fails the same way |
+| platform `internal/sessions` | queries count rows an earlier repeat left in the shared database | fails the same way |
+| insula `internal/api` | a delivery name grows by one byte per call and passes its 128-byte limit by the third repeat; one run also leaves about 3,670 sockets in TIME_WAIT, so a run right after another runs out of local ports | fails the same way; the same socket count |
+| cella `cmd/cellad` | three repeats of a long package pass Go's 10-minute default timeout | not needed: three separate runs pass |
+
+All five pass as separate runs in the migrated tree, insula's from a quiet
+machine. The four that cannot repeat in one process fail the same way on
+the code from before the migration.
 

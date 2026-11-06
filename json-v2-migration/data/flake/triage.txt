@@ -1,0 +1,30 @@
+# Each failure of the -count=3 sweep (sweep.txt), run again. "before" is the
+# tree of the migration commit's parent, "after" the migration commit.
+# A test that also fails in "before" under -count=3, and passes in "after"
+# as separate processes, fails because it cannot repeat in one process,
+# not because of the migration.
+
+auth internal/handler TestOrgLookup
+  before -count=3                FAIL  duplicate key on deleted_organizations: a fixed id inserted into one database per process
+  after  3 separate runs         ok ok ok
+
+lectio internal/convert TestTheSuiteRunsUnderTheMemoryLimit
+  before -count=3                FAIL  Limit() with a missing program leaves the 2^62 address-space limit on the test process; the next repeat inherits it
+  after  3 separate runs         ok ok ok
+
+platform internal/sessions TestPostgresDeletion
+  before whole package -count=3  FAIL  the purge and files queries count rows an earlier repeat left in the shared database
+  after  whole package -count=3  FAIL  the same two failures
+  after  3 separate runs         ok ok ok
+
+insula internal/api TestARenamedOwnerMovesTheAppsAddresses
+  before -count=3                FAIL  deliver() names each delivery "evt-" plus one more "x" from a package counter; by the third repeat the name passes the 128-byte limit
+  after  run from a quiet start  ok ok ok ok (two triage runs, two socket counts)
+  after  run straight after another run   FAIL  connect: can't assign requested address
+  sockets in TIME_WAIT after one run: before 3657, 3667; after 3672, 3673
+  (runs back to back stack their sockets: one run leaves about 3,670 in both trees, each stays 30 s, and macOS has 16,384 local ports)
+
+cella cmd/cellad TestObservabilityEndToEnd
+  after  -count=3                FAIL  panic: test timed out after 10m0s (three repeats of a package that takes several minutes)
+  after  -count=3 -timeout 60m   FAIL  TestServeWithAdmission: connect: can't assign requested address (the same port exhaustion, right after insula's runs)
+  after  3 separate runs         ok ok ok
